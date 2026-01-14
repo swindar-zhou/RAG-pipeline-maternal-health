@@ -2,6 +2,8 @@
 
 **iTREDS Project** - Extract healthcare program data from California county websites using LLMs.
 
+> **Note**: This codebase has been restructured for better organization, type safety, and evaluation capabilities. See [ARCHITECTURE.md](ARCHITECTURE.md) for details.
+
 ## Quick Start (3-phase pipeline)
 
 ```bash
@@ -151,47 +153,101 @@ Phase outputs:
   - `data/structured/California_<County>_Healthcare_Data.csv`
   - Plus a combined file `California_County_Healthcare_Data.csv` for convenience
 
-## Pilot on Fewer Counties or Full Run
+## Running the Pipeline
+
+### Full Pipeline (Recommended)
+```bash
+# Run all 3 phases for 10 counties
+python run_pipeline.py
+```
 
 The `run_pipeline.py` script targets 10 counties by default:
 - Alameda, Fresno, Sacramento, Kern, Los Angeles, San Francisco, Orange, Riverside, Santa Clara, Contra Costa
 
-To run individual phases or customize counties:
-- **Phase 1 only**: `python scraper_discovery.py` (modify the county list in the script)
-- **Phase 2 only**: `python scraper_extract.py` (processes `data/discovery_results.json`)
-- **Phase 3 only**: `python scraper_structure.py` (processes `data/raw/` files)
+### Individual Phases
+```bash
+# Phase 1 only: Discovery
+python scraper_discovery.py
 
-For the legacy all-in-one script:
-```python
-# python scraper.py
-# Inside it, you may uncomment the slice to limit counties:
-# counties_to_process = counties_to_process[:5]
+# Phase 2 only: Deep extraction (requires Phase 1 output)
+python scraper_extract.py
+
+# Phase 3 only: LLM structuring (requires Phase 2 output)
+python scraper_structure.py
 ```
 
-## Files
+### Legacy All-in-One
+```bash
+# Old single-script approach (still supported)
+python scraper.py
+```
 
-### Core Scripts
+### Custom Counties
+Edit the county list in `scraper_discovery.py` or `run_pipeline.py`:
+```python
+TARGET_COUNTIES = ["San Diego", "Los Angeles"]  # Your selection
+```
+
+## Project Structure
+
+### Entry Points (Scripts)
 - `scraper_discovery.py` - Phase 1: Discovery (collect program links for counties)
 - `scraper_extract.py` - Phase 2: Deep extraction (raw page JSON with contacts/PDFs)
 - `scraper_structure.py` - Phase 3: LLM structuring → CSV (budget‑guarded)
 - `run_pipeline.py` - Orchestrates all 3 phases for 10 preselected counties
 - `scraper.py` - Legacy all-in-one scraper (OpenAI/Anthropic/Ollama)
+- `test_setup.py` - Connectivity checks for API providers
 
-### Configuration & Setup
-- `test_setup.py` - Connectivity checks for API providers (OpenAI/Anthropic/Ollama)
+### Core Modules (`src/`)
+- `src/config.py` - Shared constants (county mappings, settings, keywords)
+- `src/utils.py` - Shared utilities (CSV writer, common helpers)
+
+### Type Safety (`schemas/`)
+- `schemas/discovery.py` - Phase 1 Pydantic schemas
+- `schemas/extraction.py` - Phase 2 Pydantic schemas
+- `schemas/structured.py` - Phase 3 Pydantic schemas
+
+### Agentic System (`agents/`)
+- `agents/discovery_agent.py` - Agentic Phase 1 with tools and state management
+
+### Evaluation Framework (`eval/`)
+- `eval/gold_schema.py` - Gold dataset Pydantic schemas
+- `eval/metrics.py` - Metric calculation functions (Recall@K, precision/recall, etc.)
+- `eval/run_eval.py` - Main evaluation script
+- `eval/README.md` - Evaluation framework documentation
+
+### Configuration & Documentation
 - `.env.example` - Template for environment configuration
 - `.env` - Your local configuration (gitignored, create from `.env.example`)
 - `requirements.txt` - Python dependencies
-
-### Documentation & Assets
-- `workflow-demo/workflow-ref.md` - Detailed workflow documentation
-- `workflow-demo/workflow-visuals.jsx` - React component for workflow visualization
+- `README.md` - This file (main documentation)
+- `EVALUATION_GUIDE.md` - Evaluation framework quick start guide
+- `workflow-demo/` - Workflow visualization assets
 
 ## Folder Structure
 
 ```
 iTREDS-gov-database-project-1/
-├── data/
+├── src/                              # Core shared modules
+│   ├── __init__.py                  # Package exports
+│   ├── config.py                    # Constants, county mappings, settings
+│   └── utils.py                     # Shared utilities (CSV writer, etc.)
+├── schemas/                          # Pydantic schemas for type-safe data structures
+│   ├── __init__.py
+│   ├── discovery.py                 # Phase 1 schemas
+│   ├── extraction.py                # Phase 2 schemas
+│   └── structured.py                # Phase 3 schemas
+├── agents/                           # Agentic system components
+│   ├── __init__.py
+│   └── discovery_agent.py           # Agentic Phase 1 with tools and state management
+├── eval/                             # Evaluation framework
+│   ├── gold_schema.py               # Gold dataset schemas
+│   ├── metrics.py                   # Metric calculation functions
+│   ├── run_eval.py                  # Main evaluation script
+│   ├── gold.jsonl.example           # Example gold dataset
+│   ├── README.md                    # Evaluation documentation
+│   └── results/                     # Evaluation results (CSV/JSON)
+├── data/                             # Pipeline outputs
 │   ├── discovery_results.json        # Phase 1 output: discovered program links per county
 │   ├── raw/                          # Phase 2 output: raw page content per county
 │   │   ├── {county-slug}/
@@ -207,18 +263,90 @@ iTREDS-gov-database-project-1/
 ├── workflow-demo/                    # Workflow visualization assets
 │   ├── workflow-ref.md              # Workflow documentation
 │   └── workflow-visuals.jsx         # React component for workflow visualization
-├── scraper_discovery.py              # Phase 1: Discovery script
-├── scraper_extract.py                # Phase 2: Deep extraction script
-├── scraper_structure.py              # Phase 3: LLM structuring script
+├── scraper_discovery.py              # Phase 1: Discovery script (entry point)
+├── scraper_extract.py                # Phase 2: Deep extraction script (entry point)
+├── scraper_structure.py              # Phase 3: LLM structuring script (entry point)
 ├── scraper.py                        # Legacy all-in-one scraper
 ├── run_pipeline.py                   # Batch runner for 10 counties (orchestrates all 3 phases)
 ├── test_setup.py                     # Connectivity checks for API providers
 ├── requirements.txt                  # Python dependencies
 ├── .env.example                      # Environment configuration template
-├── .env                              # Your local config (gitignored, not in repo)
+├── .env                              # Your local config (gitignored, create from .env.example)
 ├── .gitignore                        # Git ignore rules
+├── README.md                         # This file
+├── EVALUATION_GUIDE.md              # Evaluation framework guide
 └── California_County_Healthcare_Data.csv  # Phase 3 combined CSV output (optional)
 ```
+
+## Evaluation Framework
+
+The project includes a rigorous evaluation framework with gold dataset and metrics tracking.
+
+### Quick Start
+
+1. **Create gold dataset**: Label 10-20 counties with 3-5 programs each in `eval/gold.jsonl`
+   ```bash
+   # See eval/gold.jsonl.example for format
+   ```
+
+2. **Run evaluation**:
+   ```bash
+   python eval/run_eval.py
+   ```
+
+3. **View results**: Metrics saved to `eval/results/metrics_{run_id}.csv` and `.json`
+
+### Metrics Tracked
+
+**Phase 1 (Discovery)**
+- Recall@10, Recall@20: % of gold programs found in top K links
+- Pages crawled per county
+
+**Phase 2 (Extraction)**
+- Contact precision/recall: Phone/email extraction accuracy
+- PDF precision/recall: Application/eligibility PDF detection
+
+**Phase 3 (Structuring)**
+- Schema validity rate: % passing Pydantic validation
+- Critical field missing rate: % missing eligibility/apply/contact
+- Field exact match rate: % matching gold labels
+
+See `eval/README.md` for detailed documentation.
+
+## Agentic System
+
+Phase 1 discovery can use an agentic system with tools and state management:
+
+```python
+from agents.discovery_agent import DiscoveryAgent
+
+agent = DiscoveryAgent()
+result = agent.run("San Diego", "https://www.sandiegocounty.gov/")
+```
+
+The agent implements a state machine with tools:
+- **Search Tool**: Find health department links
+- **Scoring Tool**: Score links by relevance
+- **Classification Tool**: Classify pages as program pages
+- **Verification Tool**: Verify pages have required signals
+
+See `agents/discovery_agent.py` for implementation.
+
+## Code Organization
+
+The codebase is organized into clear modules:
+
+- **`src/`** - Core shared modules (config, utilities) used by all scripts
+- **`schemas/`** - Pydantic schemas for type-safe data validation
+- **`agents/`** - Agentic system components with tools and state management
+- **`eval/`** - Evaluation framework with metrics and gold dataset support
+- **Root scripts** - Entry points for each phase (import from `src/` and `schemas/`)
+
+This structure:
+- Eliminates code duplication (constants, utilities in `src/`)
+- Provides type safety (Pydantic schemas)
+- Enables evaluation (metrics tracking)
+- Supports agentic workflows (tools + state management)
 
 ## Budget Guardrails (OpenAI)
 - `scraper_structure.py` truncates input text to 10k chars and caps `max_tokens` to 1500.
