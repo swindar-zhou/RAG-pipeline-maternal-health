@@ -6,8 +6,23 @@
 
 ## Quick Start (3-phase pipeline)
 
+> **⚠️ Important**: If you get `ModuleNotFoundError` (e.g., `No module named 'requests'`), install dependencies first:
+> ```bash
+> # Option 1: Use setup script (recommended)
+> ./setup.sh
+> 
+> # Option 2: Manual installation
+> pip install -r requirements.txt
+> 
+> # Option 3: Use virtual environment (if permission errors)
+> python3 -m venv .venv
+> source .venv/bin/activate
+> pip install -r requirements.txt
+> ```
+> See [SETUP.md](SETUP.md) or [QUICK_START.md](QUICK_START.md) for detailed setup instructions.
+
 ```bash
-# 1) Install dependencies
+# 1) Install dependencies (if not already installed)
 pip install -r requirements.txt
 
 # 2) Configure your provider
@@ -188,6 +203,18 @@ Edit the county list in `scraper_discovery.py` or `run_pipeline.py`:
 TARGET_COUNTIES = ["San Diego", "Los Angeles"]  # Your selection
 ```
 
+### Check Data Status
+```bash
+# See which counties have data and which are missing
+python collect_missing_counties.py
+```
+
+### Improve Discovery for Failed Counties
+If some counties have empty programs arrays, use agentic discovery:
+```bash
+python improve_discovery.py
+```
+
 ## Project Structure
 
 ### Entry Points (Scripts)
@@ -220,6 +247,9 @@ TARGET_COUNTIES = ["San Diego", "Los Angeles"]  # Your selection
 - `.env.example` - Template for environment configuration
 - `.env` - Your local configuration (gitignored, create from `.env.example`)
 - `requirements.txt` - Python dependencies
+- `SETUP.md` - Detailed setup instructions
+- `QUICK_START.md` - Quick guide for collecting more county data
+- `setup.sh` - Automated setup script
 - `README.md` - This file (main documentation)
 - `EVALUATION_GUIDE.md` - Evaluation framework quick start guide
 - `workflow-demo/` - Workflow visualization assets
@@ -245,8 +275,17 @@ iTREDS-gov-database-project-1/
 │   ├── metrics.py                   # Metric calculation functions
 │   ├── run_eval.py                  # Main evaluation script
 │   ├── gold.jsonl.example           # Example gold dataset
+│   ├── gold.jsonl                   # Gold dataset (15 counties, 45 programs)
 │   ├── README.md                    # Evaluation documentation
 │   └── results/                     # Evaluation results (CSV/JSON)
+├── tests/                            # Integration tests
+│   ├── conftest.py                  # Shared fixtures
+│   ├── test_phase1_discovery.py     # Phase 1 tests
+│   ├── test_phase2_extraction.py    # Phase 2 tests
+│   ├── test_phase3_structuring.py   # Phase 3 tests
+│   ├── test_pipeline_integration.py # End-to-end tests
+│   ├── test_schemas.py              # Schema validation tests
+│   └── README.md                    # Test documentation
 ├── data/                             # Pipeline outputs
 │   ├── discovery_results.json        # Phase 1 output: discovered program links per county
 │   ├── raw/                          # Phase 2 output: raw page content per county
@@ -284,15 +323,16 @@ The project includes a rigorous evaluation framework with gold dataset and metri
 
 ### Quick Start
 
-1. **Create gold dataset**: Label 10-20 counties with 3-5 programs each in `eval/gold.jsonl`
-   ```bash
-   # See eval/gold.jsonl.example for format
-   ```
+1. **Gold dataset ready**: A gold dataset with 15 counties and 45 programs is available in `eval/gold.jsonl`
+   - Includes San Diego, Los Angeles, Orange, Riverside, and 11 other major counties
+   - Each county has 2-5 labeled programs (Medi-Cal, CalFresh, Behavioral Health, etc.)
 
 2. **Run evaluation**:
    ```bash
    python eval/run_eval.py
    ```
+   
+   This will calculate metrics for all counties in the gold dataset.
 
 3. **View results**: Metrics saved to `eval/results/metrics_{run_id}.csv` and `.json`
 
@@ -332,6 +372,30 @@ The agent implements a state machine with tools:
 
 See `agents/discovery_agent.py` for implementation.
 
+## Testing
+
+The project includes comprehensive integration tests:
+
+```bash
+# Run all tests
+pytest tests/
+
+# Run specific test file
+pytest tests/test_phase1_discovery.py
+
+# Run with coverage
+pytest tests/ --cov=. --cov-report=html
+```
+
+**Test Coverage:**
+- Phase 1 (Discovery) - Schema validation, health dept finding, program collection
+- Phase 2 (Extraction) - Contact extraction, PDF detection, page processing
+- Phase 3 (Structuring) - LLM extraction (mocked), schema validation
+- Full pipeline integration - End-to-end workflow tests
+- Schema validation - Pydantic schema tests
+
+See `tests/README.md` for detailed test documentation.
+
 ## Code Organization
 
 The codebase is organized into clear modules:
@@ -340,6 +404,7 @@ The codebase is organized into clear modules:
 - **`schemas/`** - Pydantic schemas for type-safe data validation
 - **`agents/`** - Agentic system components with tools and state management
 - **`eval/`** - Evaluation framework with metrics and gold dataset support
+- **`tests/`** - Integration tests for all pipeline phases
 - **Root scripts** - Entry points for each phase (import from `src/` and `schemas/`)
 
 This structure:
@@ -347,6 +412,7 @@ This structure:
 - Provides type safety (Pydantic schemas)
 - Enables evaluation (metrics tracking)
 - Supports agentic workflows (tools + state management)
+- Ensures reliability (comprehensive test suite)
 
 ## Budget Guardrails (OpenAI)
 - `scraper_structure.py` truncates input text to 10k chars and caps `max_tokens` to 1500.

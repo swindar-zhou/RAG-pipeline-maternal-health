@@ -3,9 +3,14 @@ Configuration constants and county mappings.
 """
 
 import os
-from dotenv import load_dotenv
 
-load_dotenv()
+# Try to load .env file, but don't fail if dotenv is not installed
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    # dotenv not installed, continue without it
+    pass
 
 # Project constants
 STATE_NAME = "California"
@@ -27,7 +32,7 @@ CALIFORNIA_COUNTIES = {
     "Humboldt": "https://www.humboldtgov.org/",
     "Imperial": "https://www.co.imperial.ca.us/",
     "Inyo": "https://www.inyocounty.us/",
-    "Kern": "https://www.kerncounty.com/",
+    "Kern": "https://www.kernpublichealth.com/",
     "Kings": "https://www.countyofkings.com/",
     "Lake": "https://www.lakecountyca.gov/",
     "Lassen": "https://www.lassencounty.org/",
@@ -97,6 +102,18 @@ REQUEST_TIMEOUT = 20
 DELAY_BETWEEN_REQUESTS = 2
 MAX_CONTENT_LENGTH = 12000
 MAX_TEXT_CHARS = 20000
+
+# Known health department URLs (from discovery_results.json)
+# These can be used as seed URLs or fallbacks during discovery
+HEALTH_DEPT_URLS = {
+    "Alameda": "https://www.acgov.org/government/dotgov.htm",
+    "Sacramento": "https://dhs.saccounty.gov/Pages/DHS-Home.aspx",
+    "Los Angeles": "https://www.lacounty.gov/",
+    "San Francisco": "https://www.sf.gov/departments--department-public-health",
+    "Orange": "https://www.ochealthinfo.com/",
+    "Santa Clara": "https://publichealth.santaclaracounty.gov/home",
+    "Contra Costa": "https://www.cchealth.org/",
+}
 
 # LLM settings
 MAX_INPUT_CHARS = 10000

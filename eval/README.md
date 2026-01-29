@@ -65,9 +65,44 @@ This will:
 - **Critical Field Missing Rate**: % of programs missing eligibility/apply/contact
 - **Field Exact Match Rate**: % of fields that exactly match gold labels
 
-## Creating Gold Dataset
+## Gold Dataset
 
-Start with 10-20 counties, 3-5 programs each. Label:
+A gold dataset has been created with **15 counties** and **45 programs** total:
+
+### Counties Included
+1. **San Diego** (5 programs) - Complete with real data from pipeline
+2. **Los Angeles** (2 programs) - Real data from pipeline
+3. **Orange** (3 programs)
+4. **Riverside** (3 programs)
+5. **San Bernardino** (3 programs)
+6. **Santa Clara** (3 programs)
+7. **Sacramento** (3 programs)
+8. **Fresno** (3 programs)
+9. **Kern** (2 programs)
+10. **Alameda** (3 programs)
+11. **Contra Costa** (3 programs)
+12. **San Francisco** (3 programs)
+13. **San Mateo** (3 programs)
+14. **Ventura** (3 programs)
+15. **Santa Barbara** (3 programs)
+
+### Common Programs Labeled
+- **Medi-Cal** - Health coverage program (all counties)
+- **CalFresh** - Food assistance (most counties)
+- **Behavioral Health Services** - Mental health services (many counties)
+- **Public Health Services** - Public health programs (many counties)
+- **In-Home Supportive Services** - Home care (San Diego)
+- **WIC** - Women, Infants, Children nutrition (some counties)
+
+### Creating Additional Gold Entries
+
+To add more counties or programs, add JSON lines to `gold.jsonl`:
+
+```json
+{"county_name": "County Name", "county_url": "https://...", "programs": [...]}
+```
+
+Each program should include:
 - Official program URLs
 - Program names
 - Eligibility requirements

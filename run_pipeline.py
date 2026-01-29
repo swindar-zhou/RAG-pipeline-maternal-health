@@ -14,9 +14,11 @@ import time
 from typing import List, Dict
 from datetime import datetime
 
+# Import shared config
+from src.config import CALIFORNIA_COUNTIES
+
 # Phase 1 helpers
 from scraper_discovery import (
-    CALIFORNIA_COUNTIES,
     run_discovery_for_county,
 )
 
@@ -33,7 +35,8 @@ from scraper_structure import (
     DISCOVERY_PATH as STRUCT_DISCOVERY_PATH,
 )
 
-from scraper import save_to_csv, STATE_NAME  # reuse CSV writer
+from src.utils import save_to_csv
+from src.config import STATE_NAME
 
 DATA_DIR = "data"
 DISCOVERY_PATH = os.path.join(DATA_DIR, "discovery_results.json")

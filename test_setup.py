@@ -7,9 +7,12 @@ Run this before the full scraper!
 import requests
 from bs4 import BeautifulSoup
 import os
-from dotenv import load_dotenv
-
-load_dotenv()
+# Try to load .env file, but don't fail if dotenv is not installed
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 
 def test_scraping():
     """Test basic web scraping on Alameda County."""

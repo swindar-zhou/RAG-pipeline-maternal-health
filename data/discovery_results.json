@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-12-02T19:35:46.903257",
+  "generated_at": "2026-01-29T09:30:34.302377",
   "results": [
     {
       "county_name": "Alameda",
@@ -18,13 +18,20 @@
     {
       "county_name": "Sacramento",
       "county_url": "https://www.saccounty.net/",
-      "health_dept_url": "https://www.saccounty.net/content/saccounty/us/en/SacCounty-News.html",
-      "maternal_section_url": "https://www.saccounty.net/content/saccounty/us/en/articles.html",
-      "programs": []
+      "health_dept_url": "https://dhs.saccounty.gov/Pages/DHS-Home.aspx",
+      "maternal_section_url": "https://dhs.saccounty.gov/Pages/DHS-Home.aspx",
+      "programs": [
+        {
+          "name": "Eat Well, Stay Healthy, and be Active",
+          "url": "https://dhs.saccounty.gov/PRI/WIC/Pages/Women-Infants-and-Children-Home.aspx",
+          "link_text": "Eat Well, Stay Healthy, and be Active",
+          "nav_path": "Main → Health Dept → Maternal/Child"
+        }
+      ]
     },
     {
       "county_name": "Kern",
-      "county_url": "https://www.kerncounty.com/",
+      "county_url": "https://www.kernpublichealth.com/",
       "health_dept_url": "",
       "maternal_section_url": "",
       "programs": []
@@ -70,15 +77,64 @@
     {
       "county_name": "San Francisco",
       "county_url": "https://sf.gov/",
-      "health_dept_url": "https://sf.gov/#main-content",
-      "maternal_section_url": "https://sf.gov/#main-content",
-      "programs": []
+      "health_dept_url": "https://www.sf.gov/departments--department-public-health",
+      "maternal_section_url": "https://www.sf.gov/departments/department-public-health/maternal-child-and-adolescent-health",
+      "programs": [
+        {
+          "name": "Deliver Birth Justice - Perinatal Equity InitiativeWe are working to reduce the impact of racism on black birthing people in San Francisco and across the Bay Area. Here's how the San Francisco Department of Public Health is addressing maternal health disparities.",
+          "url": "https://www.sf.gov/perinatal-equity-initiative",
+          "link_text": "Deliver Birth Justice - Perinatal Equity InitiativeWe are working to reduce the impact of racism on black birthing people in San Francisco and across the Bay Area. Here's how the San Francisco Department of Public Health is addressing maternal health disparities.",
+          "nav_path": "Main → Health Dept → Maternal/Child"
+        },
+        {
+          "name": "Find a WIC office Near YouWomen, Infants and Children (WIC) provides access to healthy food, nutrition education, breastfeeding support and more.",
+          "url": "https://sf.gov/information/wic-clinic-hours-and-locations",
+          "link_text": "Find a WIC office Near YouWomen, Infants and Children (WIC) provides access to healthy food, nutrition education, breastfeeding support and more.",
+          "nav_path": "Main → Health Dept → Maternal/Child"
+        },
+        {
+          "name": "Nurse home visiting programIf you are pregnant or have a new baby, a public health nurse can visit you at home.",
+          "url": "https://www.sf.gov/nurse-home-visiting-program/",
+          "link_text": "Nurse home visiting programIf you are pregnant or have a new baby, a public health nurse can visit you at home.",
+          "nav_path": "Main → Health Dept → Maternal/Child"
+        },
+        {
+          "name": "WIC supplemental nutrition programHelping families get healthy food, breastfeeding support and more.",
+          "url": "https://www.sf.gov/wic-supplemental-nutrition-program/",
+          "link_text": "WIC supplemental nutrition programHelping families get healthy food, breastfeeding support and more.",
+          "nav_path": "Main → Health Dept → Maternal/Child"
+        },
+        {
+          "name": "Family Planning ProgramFamily planning empowers people to choose if and when they have children.",
+          "url": "https://www.sf.gov/information--family-planning-program/",
+          "link_text": "Family Planning ProgramFamily planning empowers people to choose if and when they have children.",
+          "nav_path": "Main → Health Dept → Maternal/Child"
+        },
+        {
+          "name": "San Francisco Black Infant Health ProgramOur goal is to improve black infant and maternal health. We empower Black or African American pregnant people to make healthy choices for a brighter future.",
+          "url": "https://www.sf.gov/departments/san-francisco-black-infant-health-program",
+          "link_text": "San Francisco Black Infant Health ProgramOur goal is to improve black infant and maternal health. We empower Black or African American pregnant people to make healthy choices for a brighter future.",
+          "nav_path": "Main → Health Dept → Maternal/Child"
+        },
+        {
+          "name": "Skip to main content",
+          "url": "https://www.sf.gov/departments/department-public-health/maternal-child-and-adolescent-health#main-content",
+          "link_text": "Skip to main content",
+          "nav_path": "Main → Health Dept → Maternal/Child"
+        },
+        {
+          "name": "Child Protective ServicesReport suspected child abuse, neglect, or exploitation.",
+          "url": "https://www.sfhsa.org/services/protection-safety/child-protective-services",
+          "link_text": "Child Protective ServicesReport suspected child abuse, neglect, or exploitation.",
+          "nav_path": "Main → Health Dept → Maternal/Child"
+        }
+      ]
     },
     {
       "county_name": "Orange",
       "county_url": "https://www.ocgov.com/",
-      "health_dept_url": "https://www.ocgov.com/about-county/orange-county-hall-fame",
-      "maternal_section_url": "",
+      "health_dept_url": "https://www.ochealthinfo.com/",
+      "maternal_section_url": "https://www.ochealthinfo.com/oclinks",
       "programs": []
     },
     {
@@ -91,15 +147,15 @@
     {
       "county_name": "Santa Clara",
       "county_url": "https://www.sccgov.org/",
-      "health_dept_url": "",
+      "health_dept_url": "https://publichealth.santaclaracounty.gov/home",
       "maternal_section_url": "",
       "programs": []
     },
     {
       "county_name": "Contra Costa",
       "county_url": "https://www.contracosta.ca.gov/",
-      "health_dept_url": "https://www.contracosta.ca.gov/#cc3e031053-0ffc-426b-a55f-771292c83bd0",
-      "maternal_section_url": "https://www.contracosta.ca.gov/#cc3e031053-0ffc-426b-a55f-771292c83bd0",
+      "health_dept_url": "https://www.cchealth.org/",
+      "maternal_section_url": "",
       "programs": []
     }
   ]

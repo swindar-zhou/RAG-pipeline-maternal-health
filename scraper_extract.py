@@ -18,13 +18,12 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 from urllib.parse import urlparse, urljoin
 
+# Import shared config
+from src.config import REQUEST_TIMEOUT, DELAY_BETWEEN_REQUESTS, MAX_TEXT_CHARS
+
 # -----------------------------------------------------------------------------
 # Config
 # -----------------------------------------------------------------------------
-
-REQUEST_TIMEOUT = 20
-DELAY_BETWEEN_REQUESTS = 2  # polite delay between page fetches
-MAX_TEXT_CHARS = 20000
 INPUT_PATH = os.path.join("data", "discovery_results.json")
 RAW_DIR = os.path.join("data", "raw")
 

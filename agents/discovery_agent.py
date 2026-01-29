@@ -16,6 +16,7 @@ from urllib.parse import urljoin, urlparse
 from bs4 import BeautifulSoup
 
 from schemas.discovery import DiscoveryResult, ProgramLink
+from src.config import HEALTH_DEPT_URLS
 
 
 class DiscoveryState(Enum):
@@ -227,6 +228,13 @@ class DiscoveryAgent:
                 state.current_state = DiscoveryState.SEARCH
             
             elif state.current_state == DiscoveryState.SEARCH:
+                # Check for known health department URL first
+                known_dept_url = HEALTH_DEPT_URLS.get(state.county_name)
+                if known_dept_url:
+                    state.health_dept_url = known_dept_url
+                    state.current_state = DiscoveryState.SCORE
+                    continue
+                
                 # Search for health department
                 health_links = self.tool_search_health_dept(state)
                 

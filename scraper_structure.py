@@ -14,12 +14,16 @@ import glob
 import time
 from typing import Dict, List, Optional
 from datetime import datetime
-from dotenv import load_dotenv
+# Try to load .env file, but don't fail if dotenv is not installed
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 
-# Import CSV writer from existing scraper (does not execute main)
-from scraper import save_to_csv, STATE_NAME  # reuse project constants/CSV writer
-
-load_dotenv()
+# Import shared utilities and config
+from src.utils import save_to_csv
+from src.config import STATE_NAME, MAX_INPUT_CHARS, OPENAI_MODEL, OPENAI_MAX_TOKENS, TEMPERATURE, SLEEP_BETWEEN_CALLS
 
 # -----------------------------------------------------------------------------
 # Config
@@ -32,12 +36,7 @@ RAW_DIR = os.path.join("data", "raw")
 DISCOVERY_PATH = os.path.join("data", "discovery_results.json")
 OUTPUT_FILE = "California_County_Healthcare_Data.csv"
 
-# Budget guardrails
-MAX_INPUT_CHARS = 10000   # truncate raw text sent to LLM
-OPENAI_MODEL = "gpt-4o-mini"
-OPENAI_MAX_TOKENS = 1500  # response cap
-TEMPERATURE = 0.1
-SLEEP_BETWEEN_CALLS = 0.5
+# Budget guardrails (imported from src.config)
 
 # -----------------------------------------------------------------------------
 # Utilities

@@ -16,10 +16,12 @@ import re
 from bs4 import BeautifulSoup
 from datetime import datetime
 from typing import List, Dict, Optional, Tuple
-from dotenv import load_dotenv
-
-# Load environment variables
-load_dotenv()
+# Try to load .env file, but don't fail if dotenv is not installed
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 
 # =============================================================================
 # CONFIGURATION - Edit these settings
@@ -65,7 +67,7 @@ CALIFORNIA_COUNTIES = {
     "Humboldt": "https://www.humboldtgov.org/",
     "Imperial": "https://www.co.imperial.ca.us/",
     "Inyo": "https://www.inyocounty.us/",
-    "Kern": "https://www.kerncounty.com/",
+    "Kern": "https://www.kernpublichealth.com/",
     "Kings": "https://www.countyofkings.com/",
     "Lake": "https://www.lakecountyca.gov/",
     "Lassen": "https://www.lassencounty.org/",
