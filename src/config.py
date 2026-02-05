@@ -84,17 +84,40 @@ DEPT_KEYWORDS = [
     "health and human services", "hhs", "hhsa", "department of public health",
 ]
 
+# Keywords for finding maternal health sections (high priority)
 SECTION_KEYWORDS = [
+    # Primary maternal health terms
     "maternal health", "maternal child health", "mch", "mcah",
+    "maternal child family health", "maternal child adolescent health",
     "women's health", "family health", "perinatal", "reproductive health",
-    "prenatal", "postpartum",
+    "prenatal", "postpartum", "pregnancy", "pregnant",
+    # Exclude these general terms that dilute focus (per advisor feedback)
+    # Keeping focus on maternal-specific sections
 ]
 
+# Keywords for identifying specific maternal health programs (per advisor feedback)
+# Focus on well-defined maternal health programs, not general health services
 PROGRAM_KEYWORDS = [
-    "healthy start", "wic", "home visiting", "miechv",
-    "black infant health", "first 5", "nurse-family partnership",
-    "title v", "perinatal equity", "postpartum", "breastfeeding",
-    "lactation", "family planning", "parents as teachers", "nfp"
+    # Federal/State maternal health programs
+    "wic", "women infants children",
+    "home visiting", "miechv", "maternal infant early childhood",
+    "healthy start", "black infant health", "bih",
+    "nurse-family partnership", "nfp", "parents as teachers",
+    "first 5", "title v", "title five",
+    # Maternal-specific services
+    "prenatal care", "prenatal services", "prenatal program",
+    "postpartum", "postpartum support", "postpartum care",
+    "perinatal", "perinatal services", "perinatal equity",
+    "breastfeeding", "lactation", "lactation support",
+    "midwife", "midwifery", "doula",
+    "childbirth", "birth", "labor and delivery",
+    "family planning", "reproductive health",
+    "infant mortality", "maternal mortality",
+    # California-specific programs
+    "comprehensive perinatal services program", "cpsp",
+    "california home visiting program", "chvp",
+    "adolescent family life program", "aflp",
+    "perinatal outreach and education", "poem",
 ]
 
 # Scraping settings
@@ -103,16 +126,31 @@ DELAY_BETWEEN_REQUESTS = 2
 MAX_CONTENT_LENGTH = 12000
 MAX_TEXT_CHARS = 20000
 
-# Known health department URLs (from discovery_results.json)
-# These can be used as seed URLs or fallbacks during discovery
+# Validated maternal health section URLs (from advisor's manual review)
+# These are the correct entry points for maternal health programs in each county
+MATERNAL_HEALTH_URLS = {
+    "San Diego": "https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/maternal_child_family_health_services.html",
+    "Los Angeles": "http://publichealth.lacounty.gov/mch/",
+    "Sacramento": "https://dhs.saccounty.gov/PUB/Program/Pages/SP-Maternal-Child-and-Adolescent-Health-Program.aspx",
+    "San Francisco": "https://www.sf.gov/departments--department-public-health--maternal-child-and-adolescent-health",
+}
+
+# State-level reference pages (for training/learning what maternal health programs look like)
+STATE_REFERENCE_URLS = {
+    "California": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/Pages/Domains/Maternal-Health.aspx",
+    "Florida_pregnancy": "https://www.floridahealth.gov/individual-family-health/womens-health/pregnancy/",
+    "Florida_wic": "https://www.floridahealth.gov/individual-family-health/womens-health/wic/",
+}
+
+# Known health department URLs (general entry points, fallback if no maternal URL)
 HEALTH_DEPT_URLS = {
-    "Alameda": "https://www.acgov.org/government/dotgov.htm",
-    "Sacramento": "https://dhs.saccounty.gov/Pages/DHS-Home.aspx",
+    "Alameda": "https://www.acgov.org/services/",
+    "Sacramento": "https://dhs.saccounty.gov/PUB/Pages/PUB-Home.aspx",
     "Los Angeles": "https://www.lacounty.gov/",
     "San Francisco": "https://www.sf.gov/departments--department-public-health",
-    "Orange": "https://www.ochealthinfo.com/",
-    "Santa Clara": "https://publichealth.santaclaracounty.gov/home",
-    "Contra Costa": "https://www.cchealth.org/",
+    "Orange": "https://www.ochealthinfo.com/services-programs",
+    "Santa Clara": "https://publichealth.santaclaracounty.gov/services",
+    "Contra Costa": "https://www.cchealth.org/services-and-programs/",
 }
 
 # LLM settings

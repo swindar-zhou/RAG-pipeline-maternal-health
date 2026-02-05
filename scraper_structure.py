@@ -25,6 +25,9 @@ except ImportError:
 from src.utils import save_to_csv
 from src.config import STATE_NAME, MAX_INPUT_CHARS, OPENAI_MODEL, OPENAI_MAX_TOKENS, TEMPERATURE, SLEEP_BETWEEN_CALLS
 
+# Import taxonomy for maternal health focus (per advisor feedback)
+from src.maternal_taxonomy import generate_few_shot_examples, MATERNAL_PROGRAM_TYPES
+
 # -----------------------------------------------------------------------------
 # Config
 # -----------------------------------------------------------------------------
@@ -54,14 +57,47 @@ def load_discovery(path: str) -> Dict[str, Dict]:
 def iter_raw_pages() -> List[str]:
     return glob.glob(os.path.join(RAW_DIR, "*", "*.json"))
 
+def get_maternal_categories() -> str:
+    """Get the list of maternal health categories from taxonomy."""
+    categories = list(set(pt.category for pt in MATERNAL_PROGRAM_TYPES))
+    return " | ".join(sorted(categories))
+
+
 def build_prompt(county_name: str, county_url: str, page: Dict) -> str:
+    """
+    Build LLM prompt with maternal health focus and few-shot examples.
+    
+    Per advisor feedback: Use state-level programs as training data to help
+    the model recognize what constitutes a maternal health program.
+    """
     text = page.get("text", "")[:MAX_INPUT_CHARS]
     contacts = page.get("contacts", {})
     pdf_links = page.get("pdf_links", [])
     page_url = page.get("page_url", "")
     link_text = page.get("link_text", "")
     nav_path = page.get("nav_path", "")
-    return f"""You are extracting structured healthcare program data from a {STATE_NAME} county website page.
+    
+    # Generate few-shot examples from taxonomy (per advisor's training data suggestion)
+    few_shot = generate_few_shot_examples()
+    
+    # Get maternal-specific categories
+    maternal_categories = get_maternal_categories()
+    
+    return f"""You are extracting structured MATERNAL HEALTH program data from a {STATE_NAME} county website page.
+
+IMPORTANT: Focus ONLY on maternal health programs. These include programs for:
+- Pregnant women, new mothers, and infants
+- WIC, home visiting, prenatal care, postpartum support
+- Breastfeeding/lactation support
+- Family planning and reproductive health
+- Programs addressing infant/maternal mortality
+
+Do NOT extract general health programs like Medi-Cal, CalFresh, behavioral health, senior services, etc.
+
+EXAMPLES OF MATERNAL HEALTH PROGRAMS (from California and Florida state health departments):
+{few_shot}
+
+---
 
 COUNTY: {county_name} County
 COUNTY WEBSITE: {county_url}
@@ -75,7 +111,10 @@ PAGE CONTENT:
 {text}
 
 ---
-TASK: Return a JSON object with a single program entry using this schema:
+TASK: If this page describes a MATERNAL HEALTH program, return a JSON object using this schema.
+If the page is NOT about maternal health, return {{"programs": [], "notes": "Not a maternal health program"}}.
+
+Schema:
 {{
   "county_name": "{county_name}",
   "state": "{STATE_NAME}",
@@ -85,11 +124,12 @@ TASK: Return a JSON object with a single program entry using this schema:
   "health_department_contact_phone": "Phone or 'Not found'",
   "programs": [
     {{
-      "program_name": "Name of healthcare program",
-      "program_category": "Maternal Health | Mental Health | Substance Abuse | Immunization | Chronic Disease | Emergency Services | Primary Care | Dental | Vision | Other",
+      "program_name": "Name of maternal health program",
+      "program_category": "{maternal_categories} | Other",
       "program_description": "Brief description (1-2 sentences)",
-      "target_population": "Who the program serves",
+      "target_population": "Who the program serves (e.g., pregnant women, new mothers, infants)",
       "eligibility_requirements": "Requirements or 'Not specified'",
+      "services_provided": ["list", "of", "services"],
       "application_process": "How to apply or 'Not specified'",
       "required_documentation": "Documents needed or 'Not specified'",
       "financial_assistance_available": "Yes | No | Unknown",
@@ -100,9 +140,10 @@ TASK: Return a JSON object with a single program entry using this schema:
 }}
 
 RULES:
-1) Extract only from provided content/metadata; never invent facts.
-2) If a field is missing, use 'Not found' or 'Not specified' as appropriate.
-3) Return ONLY the JSON object, no extra text.
+1) Extract ONLY maternal health programs. Skip general health services.
+2) Extract only from provided content/metadata; never invent facts.
+3) If a field is missing, use 'Not found' or 'Not specified' as appropriate.
+4) Return ONLY the JSON object, no extra text.
 """
 
 def extract_program_openai(prompt: str) -> Optional[Dict]:

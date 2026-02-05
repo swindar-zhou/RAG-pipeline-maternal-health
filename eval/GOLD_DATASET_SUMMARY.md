@@ -2,14 +2,65 @@
 
 ## Overview
 
-The gold dataset (`eval/gold.jsonl`) contains **15 California counties** with **45 total programs** labeled for evaluation.
+This project uses **two gold datasets**:
 
-## Counties and Programs
+1. **`gold_maternal.jsonl`** (Primary) - Focused on maternal health programs per advisor feedback
+2. **`gold.jsonl`** (Legacy) - General health programs, kept for reference
+
+## Maternal Health Gold Dataset
+
+### Summary
+
+| Metric | Value |
+|--------|-------|
+| Counties | 4 (validated by advisor) |
+| Total Programs | 10 |
+| Focus | Maternal health only |
+
+### Counties and Programs
+
+| County | Programs | Key Maternal Programs |
+|--------|:--------:|----------------------|
+| San Diego | 3 | WIC, Black Infant Health, Nurse-Family Partnership |
+| Los Angeles | 3 | WIC, Black Infant Health, Nurse-Family Partnership |
+| Sacramento | 2 | MCAH, WIC |
+| San Francisco | 2 | MCAH, WIC |
+
+### Program Categories (Maternal Focus)
+
+| Category | Programs | Description |
+|----------|:--------:|-------------|
+| **WIC/Nutrition** | 4 | Women, Infants, and Children nutrition programs |
+| **Home Visiting** | 4 | NFP, Black Infant Health, MIECHV |
+| **Maternal Health** | 2 | MCAH comprehensive services |
+
+### Validated Maternal Health URLs
+
+These entry points were manually validated by advisor:
+
+```
+San Diego:    sandiegocounty.gov/.../maternal_child_family_health_services.html
+Los Angeles:  publichealth.lacounty.gov/mch/
+Sacramento:   dhs.saccounty.gov/.../MCAH-Program.aspx
+San Francisco: sf.gov/.../maternal-child-and-adolescent-health
+```
+
+## Legacy Gold Dataset
+
+### Summary
+
+| Metric | Value |
+|--------|-------|
+| Counties | 15 |
+| Total Programs | 45 |
+| Focus | General health programs |
+
+### Counties
 
 | County | Programs | Key Programs |
-|--------|----------|-------------|
-| San Diego | 5 | Medi-Cal, CalFresh, IHSS, Behavioral Health, Public Health |
-| Los Angeles | 2 | Medi-Cal, Mental Health Services |
+|--------|:--------:|-------------|
+| San Diego | 5 | Medi-Cal, CalFresh, IHSS, Behavioral Health |
+| Los Angeles | 2 | Medi-Cal, Mental Health |
 | Orange | 3 | Medi-Cal, CalFresh, Behavioral Health |
 | Riverside | 3 | Medi-Cal, CalFresh, Public Health |
 | San Bernardino | 3 | Medi-Cal, CalFresh, Behavioral Health |
@@ -24,43 +75,85 @@ The gold dataset (`eval/gold.jsonl`) contains **15 California counties** with **
 | Ventura | 3 | Medi-Cal, CalFresh, Public Health |
 | Santa Barbara | 3 | Medi-Cal, CalFresh, Public Health |
 
-## Program Categories
+**Note**: Per advisor feedback, these general health programs (Medi-Cal, CalFresh) should **not** be mixed with maternal health analysis. Use `gold_maternal.jsonl` for maternal health evaluation.
 
-- **Primary Care**: Medi-Cal (15 counties)
-- **Other**: CalFresh, Public Health Services, IHSS
-- **Mental Health**: Behavioral Health Services
+## Pipeline Results (Feb 2026)
 
-## Data Sources
+### Discovery Phase Results
 
-- **San Diego**: Real data extracted from pipeline (structured CSV + raw JSON)
-- **Los Angeles**: Real data extracted from pipeline
-- **Other counties**: Realistic entries based on common California county healthcare programs
+| County | Maternal Programs Discovered | Top Categories |
+|--------|:----------------------------:|----------------|
+| San Diego | 3 | Perinatal Care, Health Equity |
+| Los Angeles | 11 | Breastfeeding, Perinatal Care, Birth Support |
+| Sacramento | 5 | Breastfeeding, Maternal Child Health |
+| San Francisco | 8 | WIC, Home Visiting, Health Equity |
+| **Total** | **27** | |
 
-## Validation
+### Structuring Phase Results
 
-All entries are validated against the `GoldCounty` Pydantic schema:
-- ✓ All 15 counties pass validation
-- ✓ All 45 programs have required fields
-- ✓ URLs, contact info, and program details are properly formatted
+| County | Programs Extracted |
+|--------|:------------------:|
+| San Diego | 9 |
+| Los Angeles | 20 |
+| Sacramento | 5 |
+| San Francisco | 12 |
+| **Total** | **46** |
 
-## Usage
+## Schema Validation
 
-The gold dataset is used by `eval/run_eval.py` to:
-1. Calculate Recall@K for Phase 1 (Discovery)
-2. Calculate precision/recall for Phase 2 (Extraction)
-3. Calculate schema validity and field matching for Phase 3 (Structuring)
+### Maternal Health Schema Fields
+
+```python
+{
+    "county_name": str,           # Required
+    "county_url": str,            # Required
+    "maternal_health_url": str,   # Validated entry point
+    "has_maternal_programs": bool,
+    "programs": [
+        {
+            "program_name": str,
+            "program_url": str,
+            "category": str,      # WIC, Home Visiting, Health Equity, etc.
+            "description": str,
+            "target_population": str,
+            "eligibility_requirements": str,
+            "services_provided": List[str],
+            "contact_phone": Optional[str],
+            "contact_email": Optional[str]
+        }
+    ]
+}
+```
 
 ## Expanding the Dataset
 
-To add more counties or programs:
-1. Add a new JSON line to `eval/gold.jsonl`
-2. Follow the format in `gold.jsonl.example`
-3. Validate using: `python -c "from eval.gold_schema import GoldCounty; import json; GoldCounty(**json.loads(line))"`
+### Adding New Counties
+
+1. **Find maternal health section** on county website
+2. **Add to `src/config.py`**:
+   ```python
+   MATERNAL_HEALTH_URLS["County Name"] = "https://..."
+   ```
+3. **Run discovery** to verify programs are found
+4. **Add gold entry** to `gold_maternal.jsonl`
+5. **Run evaluation** to measure performance
+
+### Expected Programs per County
+
+A typical California county maternal health section may include:
+
+- WIC (Women, Infants, Children)
+- Black Infant Health (if applicable)
+- Nurse-Family Partnership or home visiting
+- MCAH (Maternal, Child, Adolescent Health)
+- Breastfeeding/lactation support
+- Prenatal care coordination
+- Teen pregnancy programs
 
 ## Next Steps
 
-- [ ] Add more programs per county (target: 5-7 programs each)
-- [ ] Add edge case counties (rural, small counties)
-- [ ] Add more program categories (WIC, Home Visiting, etc.)
-- [ ] Include PDF links for application forms
-- [ ] Add contact emails where available
+- [ ] Expand to more California counties (target: 10-15 validated)
+- [ ] Add Florida counties using state reference URLs
+- [ ] Include specific program URLs for gold entries
+- [ ] Add contact information where available
+- [ ] Create evaluation metrics specific to maternal health detection

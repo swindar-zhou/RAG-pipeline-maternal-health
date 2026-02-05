@@ -1,162 +1,260 @@
 {
-  "generated_at": "2026-01-29T09:30:34.302377",
+  "generated_at": "2026-02-05T00:01:43.638862",
+  "description": "Discovery results for 4 validated maternal health counties",
+  "counties_processed": [
+    "San Diego",
+    "Los Angeles",
+    "Sacramento",
+    "San Francisco"
+  ],
   "results": [
     {
-      "county_name": "Alameda",
-      "county_url": "https://www.acgov.org/",
-      "health_dept_url": "https://www.acgov.org/government/dotgov.htm",
-      "maternal_section_url": "https://www.acgov.org/government/dotgov.htm",
-      "programs": []
-    },
-    {
-      "county_name": "Fresno",
-      "county_url": "https://www.co.fresno.ca.us/",
+      "county_name": "San Diego",
+      "county_url": "https://www.sandiegocounty.gov/",
       "health_dept_url": "",
-      "maternal_section_url": "",
-      "programs": []
-    },
-    {
-      "county_name": "Sacramento",
-      "county_url": "https://www.saccounty.net/",
-      "health_dept_url": "https://dhs.saccounty.gov/Pages/DHS-Home.aspx",
-      "maternal_section_url": "https://dhs.saccounty.gov/Pages/DHS-Home.aspx",
+      "maternal_section_url": "https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/maternal_child_family_health_services.html",
       "programs": [
         {
-          "name": "Eat Well, Stay Healthy, and be Active",
-          "url": "https://dhs.saccounty.gov/PRI/WIC/Pages/Women-Infants-and-Children-Home.aspx",
-          "link_text": "Eat Well, Stay Healthy, and be Active",
-          "nav_path": "Main → Health Dept → Maternal/Child"
+          "name": "Perinatal\n      Care Network (PCN)",
+          "url": "https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/perinatal_care_network.html",
+          "link_text": "Perinatal\n      Care Network (PCN)",
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Perinatal Care",
+          "relevance_score": 6.8
+        },
+        {
+          "name": "Black\n      Infant Health (BIH) Program",
+          "url": "https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/black_infant_health_program.html",
+          "link_text": "Black\n      Infant Health (BIH) Program",
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Health Equity",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "Perinatal\n      Equity Initiative (PEI)",
+          "url": "https://blacklegacynowsd.com/?msclkid=bc9739eabd0411ec8c2a1f6b894251d0",
+          "link_text": "Perinatal\n      Equity Initiative (PEI)",
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Perinatal Care",
+          "relevance_score": 4.6
         }
       ]
     },
     {
-      "county_name": "Kern",
-      "county_url": "https://www.kernpublichealth.com/",
-      "health_dept_url": "",
-      "maternal_section_url": "",
-      "programs": []
-    },
-    {
       "county_name": "Los Angeles",
       "county_url": "https://www.lacounty.gov/",
-      "health_dept_url": "https://www.lacounty.gov/",
-      "maternal_section_url": "https://www.lacounty.gov/",
+      "health_dept_url": "",
+      "maternal_section_url": "http://publichealth.lacounty.gov/mch/",
       "programs": [
         {
-          "name": "",
-          "url": "https://lacounty.gov/services/pay/",
-          "link_text": "",
-          "nav_path": "Main → Health Dept → Maternal/Child"
+          "name": "Breastfeeding",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/Breastfeeding/Pages/General.aspx",
+          "link_text": "Breastfeeding",
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Breastfeeding",
+          "relevance_score": 6.2
         },
         {
-          "name": "",
-          "url": "https://lacounty.gov/services/apply-for/",
-          "link_text": "",
-          "nav_path": "Main → Health Dept → Maternal/Child"
+          "name": "CDPH: Health Considerations for People who are Pregnant or Breastfeeding",
+          "url": "https://www.cdph.ca.gov/Programs/CCDPHP/sapb/cannabis/Pages/Pregnant-and-Breastfeeding.aspx",
+          "link_text": "CDPH: Health Considerations for People who are Pregnant or Breastfeeding",
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Breastfeeding",
+          "relevance_score": 5.6
         },
         {
-          "name": "",
-          "url": "https://lacounty.gov/services/register-as-a/",
-          "link_text": "",
-          "nav_path": "Main → Health Dept → Maternal/Child"
+          "name": "Find a Medi-Cal Prenatal Provider",
+          "url": "http://www.publichealth.lacounty.gov/mch/CPSP/cpspproviders/providerlist.htm",
+          "link_text": "Find a Medi-Cal Prenatal Provider",
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Perinatal Care",
+          "relevance_score": 5.2
         },
         {
-          "name": "",
-          "url": "https://lacounty.gov/services/report/",
-          "link_text": "",
-          "nav_path": "Main → Health Dept → Maternal/Child"
+          "name": "Click here to learn more",
+          "url": "https://www.blackinfantsandfamilies.org/doulas",
+          "link_text": "Click here to learn more",
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Birth Support",
+          "relevance_score": 4.6
         },
         {
-          "name": "",
-          "url": "https://lacounty.gov/services/request-documents/",
-          "link_text": "",
-          "nav_path": "Main → Health Dept → Maternal/Child"
+          "name": "Click here to learn more",
+          "url": "http://publichealth.lacounty.gov/mch/BIH/bih.htm",
+          "link_text": "Click here to learn more",
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Health Equity",
+          "relevance_score": 4.6
+        },
+        {
+          "name": "Provider Trainings",
+          "url": "http://publichealth.lacounty.gov/mch/cpsp/CPSPwebpages/cpsp_rev.htm",
+          "link_text": "Provider Trainings",
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Perinatal Care",
+          "relevance_score": 4.6
+        },
+        {
+          "name": "Preparing for the Chest/Breastfeeding Journey",
+          "url": "http://publichealth.lacounty.gov/mch/docs/prenatal-toolkit.pdf",
+          "link_text": "Preparing for the Chest/Breastfeeding Journey",
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Breastfeeding",
+          "relevance_score": 4.6
+        },
+        {
+          "name": "Learn More",
+          "url": "http://publichealth.lacounty.gov/mch/cpsp/cpspproviders/providerlist.htm",
+          "link_text": "Learn More",
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Perinatal Care",
+          "relevance_score": 4.6
+        },
+        {
+          "name": "Learn More",
+          "url": "http://publichealth.lacounty.gov/mch/BIH/BIH%20%20SUBCONTRACTOR%20CONTACT%20INFORMATION%202017.pdf",
+          "link_text": "Learn More",
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Health Equity",
+          "relevance_score": 4.6
+        },
+        {
+          "name": "CDPH’s Data Dashboards",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/surveillance/Pages/default.aspx#backtoTop",
+          "link_text": "CDPH’s Data Dashboards",
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Maternal Child Health",
+          "relevance_score": 3.6
+        },
+        {
+          "name": "Click here to learn more",
+          "url": "http://www.publichealth.lacounty.gov/mch/MCAH%20Data%20Resources/MCAH%20Data%20Resources.htm",
+          "link_text": "Click here to learn more",
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Maternal Child Health",
+          "relevance_score": 2.6
+        }
+      ]
+    },
+    {
+      "county_name": "Sacramento",
+      "county_url": "https://www.saccounty.net/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://dhs.saccounty.gov/PUB/Program/Pages/SP-Maternal-Child-and-Adolescent-Health-Program.aspx",
+      "programs": [
+        {
+          "name": "Breastfeeding Resources",
+          "url": "https://dhs.saccounty.gov/PUB/Pages/Maternal-Adolescent-Health/GI-Breastfeeding-Resources.aspx",
+          "link_text": "Breastfeeding Resources",
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Breastfeeding",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "Postpartum Awareness & Support",
+          "url": "http://www.bemomaware.com/",
+          "link_text": "Postpartum Awareness & Support",
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Perinatal Care",
+          "relevance_score": 4.6
+        },
+        {
+          "name": "Pregnancy Resource Guide",
+          "url": "https://dhs.saccounty.gov/PUB/Documents/Maternal-Child-Adolescent-Health/Community%20Nursing/Final%202025%20Sacramento%20County%20MCAH%20Resource%20Guide%20%28pdf%29-updated%2011-2025.pdf",
+          "link_text": "Pregnancy Resource Guide",
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Maternal Child Health",
+          "relevance_score": 3.6
+        },
+        {
+          "name": "MCAH Advisory Board",
+          "url": "https://dhs.saccounty.gov/PUB/Pages/Maternal-Adolescent-Health/GI-Maternal-Child-and-Adolescent-Health-Advisory-Board.aspx",
+          "link_text": "MCAH Advisory Board",
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Maternal Child Health",
+          "relevance_score": 3.6
+        },
+        {
+          "name": "MCAH Client Referral Form",
+          "url": "https://gcc02.safelinks.protection.outlook.com/?url=https://saccountyct.sjc1.qualtrics.com/jfe/form/SV_4SMhvMWwcW68UE6?Q_CHL%3Dqr&data=05%7c02%7cMichelN%40saccounty.gov%7c39992665e30f483dcc9208ddcfaaab2b%7c2b077431a3b04b1cbb77f66a1132daa2%7c0%7c0%7c638895054116835935%7cUnknown%7cTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7c0%7c%7c%7c&sdata=3wUqSqe4WBmH9hR9L4ccAaumQI0SpFiVAsOZDX7rYaA%3D&reserved=0",
+          "link_text": "MCAH Client Referral Form",
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Maternal Child Health",
+          "relevance_score": 2.6
         }
       ]
     },
     {
       "county_name": "San Francisco",
       "county_url": "https://sf.gov/",
-      "health_dept_url": "https://www.sf.gov/departments--department-public-health",
-      "maternal_section_url": "https://www.sf.gov/departments/department-public-health/maternal-child-and-adolescent-health",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.sf.gov/departments--department-public-health--maternal-child-and-adolescent-health",
       "programs": [
         {
           "name": "Deliver Birth Justice - Perinatal Equity InitiativeWe are working to reduce the impact of racism on black birthing people in San Francisco and across the Bay Area. Here's how the San Francisco Department of Public Health is addressing maternal health disparities.",
           "url": "https://www.sf.gov/perinatal-equity-initiative",
           "link_text": "Deliver Birth Justice - Perinatal Equity InitiativeWe are working to reduce the impact of racism on black birthing people in San Francisco and across the Bay Area. Here's how the San Francisco Department of Public Health is addressing maternal health disparities.",
-          "nav_path": "Main → Health Dept → Maternal/Child"
-        },
-        {
-          "name": "Find a WIC office Near YouWomen, Infants and Children (WIC) provides access to healthy food, nutrition education, breastfeeding support and more.",
-          "url": "https://sf.gov/information/wic-clinic-hours-and-locations",
-          "link_text": "Find a WIC office Near YouWomen, Infants and Children (WIC) provides access to healthy food, nutrition education, breastfeeding support and more.",
-          "nav_path": "Main → Health Dept → Maternal/Child"
-        },
-        {
-          "name": "Nurse home visiting programIf you are pregnant or have a new baby, a public health nurse can visit you at home.",
-          "url": "https://www.sf.gov/nurse-home-visiting-program/",
-          "link_text": "Nurse home visiting programIf you are pregnant or have a new baby, a public health nurse can visit you at home.",
-          "nav_path": "Main → Health Dept → Maternal/Child"
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Health Equity",
+          "relevance_score": 6.2
         },
         {
           "name": "WIC supplemental nutrition programHelping families get healthy food, breastfeeding support and more.",
           "url": "https://www.sf.gov/wic-supplemental-nutrition-program/",
           "link_text": "WIC supplemental nutrition programHelping families get healthy food, breastfeeding support and more.",
-          "nav_path": "Main → Health Dept → Maternal/Child"
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Nutrition",
+          "relevance_score": 5.8
+        },
+        {
+          "name": "Find a WIC office Near YouWomen, Infants and Children (WIC) provides access to healthy food, nutrition education, breastfeeding support and more.",
+          "url": "https://sf.gov/information/wic-clinic-hours-and-locations",
+          "link_text": "Find a WIC office Near YouWomen, Infants and Children (WIC) provides access to healthy food, nutrition education, breastfeeding support and more.",
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Nurse home visiting programIf you are pregnant or have a new baby, a public health nurse can visit you at home.",
+          "url": "https://www.sf.gov/nurse-home-visiting-program/",
+          "link_text": "Nurse home visiting programIf you are pregnant or have a new baby, a public health nurse can visit you at home.",
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Home Visiting",
+          "relevance_score": 5.2
         },
         {
           "name": "Family Planning ProgramFamily planning empowers people to choose if and when they have children.",
           "url": "https://www.sf.gov/information--family-planning-program/",
           "link_text": "Family Planning ProgramFamily planning empowers people to choose if and when they have children.",
-          "nav_path": "Main → Health Dept → Maternal/Child"
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Family Planning",
+          "relevance_score": 4.6
         },
         {
           "name": "San Francisco Black Infant Health ProgramOur goal is to improve black infant and maternal health. We empower Black or African American pregnant people to make healthy choices for a brighter future.",
           "url": "https://www.sf.gov/departments/san-francisco-black-infant-health-program",
           "link_text": "San Francisco Black Infant Health ProgramOur goal is to improve black infant and maternal health. We empower Black or African American pregnant people to make healthy choices for a brighter future.",
-          "nav_path": "Main → Health Dept → Maternal/Child"
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Health Equity",
+          "relevance_score": 4.6
         },
         {
-          "name": "Skip to main content",
-          "url": "https://www.sf.gov/departments/department-public-health/maternal-child-and-adolescent-health#main-content",
-          "link_text": "Skip to main content",
-          "nav_path": "Main → Health Dept → Maternal/Child"
+          "name": "Teenage Pregnancy and Parenting ProgramWe serve young parents under the age of 19 who are journeying through parenthood with children aged 8 and under.",
+          "url": "https://www.sf.gov/teenage-pregnancy-and-parenting-program/",
+          "link_text": "Teenage Pregnancy and Parenting ProgramWe serve young parents under the age of 19 who are journeying through parenthood with children aged 8 and under.",
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Adolescent Health",
+          "relevance_score": 2.6
         },
         {
-          "name": "Child Protective ServicesReport suspected child abuse, neglect, or exploitation.",
-          "url": "https://www.sfhsa.org/services/protection-safety/child-protective-services",
-          "link_text": "Child Protective ServicesReport suspected child abuse, neglect, or exploitation.",
-          "nav_path": "Main → Health Dept → Maternal/Child"
+          "name": "Child Care Health Program (CCHP)We serve children ages 0-5 in San Francisco preschools, family child care homes, and family resource centers, along with their families and providers.",
+          "url": "https://www.sf.gov/child-care-health-program-cchp/",
+          "link_text": "Child Care Health Program (CCHP)We serve children ages 0-5 in San Francisco preschools, family child care homes, and family resource centers, along with their families and providers.",
+          "nav_path": "Validated Maternal Health Section",
+          "category": "Early Childhood",
+          "relevance_score": 2.6
         }
       ]
-    },
-    {
-      "county_name": "Orange",
-      "county_url": "https://www.ocgov.com/",
-      "health_dept_url": "https://www.ochealthinfo.com/",
-      "maternal_section_url": "https://www.ochealthinfo.com/oclinks",
-      "programs": []
-    },
-    {
-      "county_name": "Riverside",
-      "county_url": "https://www.rivco.org/",
-      "health_dept_url": "",
-      "maternal_section_url": "",
-      "programs": []
-    },
-    {
-      "county_name": "Santa Clara",
-      "county_url": "https://www.sccgov.org/",
-      "health_dept_url": "https://publichealth.santaclaracounty.gov/home",
-      "maternal_section_url": "",
-      "programs": []
-    },
-    {
-      "county_name": "Contra Costa",
-      "county_url": "https://www.contracosta.ca.gov/",
-      "health_dept_url": "https://www.cchealth.org/",
-      "maternal_section_url": "",
-      "programs": []
     }
   ]
 }
