@@ -1,22 +1,25 @@
-# gitignore template for LangChain products, e.g., LangGraph, LangSmith
-# website: https://www.langchain.com/
-# website: https://www.langchain.com/langgraph
-
-# LangGraph
-.langgraph_api/
+# Virtual environment
 .venv/
+venv/
 
 # Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-*.pyw
-*.pyz
-*.pywz
-*.pyzw
-*.pyzwz
-*.pyzwzw
 
-# Project-specific
+# Environment
 .env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+
+# Project outputs (optional - uncomment to ignore)
+# data/raw/
+# data/structured/
+# eval/results/
