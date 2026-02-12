@@ -211,21 +211,22 @@ These counties have manually validated maternal health URLs (from advisor):
 
 Per advisor feedback, the pipeline focuses exclusively on maternal health programs:
 
-- **Included**: WIC, Black Infant Health, Nurse-Family Partnership, MCAH, Perinatal Care, Breastfeeding Support, Teen Pregnancy Programs, Doula Programs
+- **Included**: WIC, Black Infant Health, Nurse-Family Partnership, MCAH, Perinatal Care, Breastfeeding Support, Teen Pregnancy Programs, Doula Programs, Fatherhood & Partner Engagement Programs
 - **Excluded**: Medi-Cal, CalFresh, Behavioral Health, Senior Services, and other general health programs
 
 ### Program Taxonomy
 
-The taxonomy in `src/maternal_taxonomy.py` defines **22 program types** across **13 categories**, aligned with the SDOH framework and White House Blueprint:
+The taxonomy in `src/maternal_taxonomy.py` defines **25 program types** across **14 categories**, aligned with the SDOH framework and White House Blueprint:
 
 | Blueprint Goal | SDOH Domain | Categories |
 |----------------|-------------|------------|
 | Goal 1: Access | Healthcare Access | Perinatal Care, Behavioral Health, Reproductive Health |
 | Goal 2: Quality | Quality of Care | Health Equity, Quality Improvement |
 | Goal 4: Workforce | Social Support | Home Visiting, Birth Support, Community Health, Breastfeeding |
-| Goal 5: Social | Nutrition, Economic | Nutrition, Adolescent Health, Early Childhood |
+| Goal 5: Social | Nutrition, Social Support | Nutrition, Adolescent Health, Early Childhood, Partner & Family Engagement |
 
 See `python src/maternal_taxonomy.py` for a full taxonomy summary.
+See [docs/INSIGHTS_FATHERHOOD_MATERNAL_HEALTH.md](docs/INSIGHTS_FATHERHOOD_MATERNAL_HEALTH.md) for research insights on how fatherhood programs impact maternal health.
 
 ## Documentation
 

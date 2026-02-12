@@ -27,6 +27,12 @@ SDOH Framework Domains (Solar & Irwin, 2010):
 - Intermediary Determinants: material circumstances, behaviors, biological factors
 - Health System: access, quality, coverage
 
+Paternal Involvement Evidence:
+- Yargawa, J., & Leonardi-Bee, J. (2015). Male involvement and maternal health outcomes:
+  systematic review and meta-analysis. J Epidemiol Community Health, 69(6), 604-612.
+- Florida Father First Initiative (HB 7065, 2022): https://fatherfirstfl.com/
+- ACF Office of Family Assistance Responsible Fatherhood grants.
+
 State-Level Reference Sources:
 - California CDPH MCAH: https://www.cdph.ca.gov/Programs/CFH/DMCAH/Pages/Domains/Maternal-Health.aspx
 - Florida DOH: https://www.floridahealth.gov/individual-family-health/womens-health/pregnancy/
@@ -441,6 +447,72 @@ MATERNAL_PROGRAM_TYPES: List[ProgramType] = [
         blueprint_goal=BlueprintGoal.GOAL_1_ACCESS,
         federal_program=True,
         examples=["Title V Program", "MCH Services", "MCAH Program", "MCFHS"],
+    ),
+    
+    # =========================================================================
+    # GOAL 5 (continued): PARTNER & FAMILY ENGAGEMENT
+    # SDOH Domain: Social Support
+    #
+    # Research basis: Male involvement during pregnancy/postpartum is associated
+    # with reduced postpartum depression (OR=0.34-0.36), improved healthcare
+    # utilization, and better postnatal care uptake (Yargawa & Leonardi-Bee,
+    # 2015, J Epidemiol Community Health). Florida's Father First initiative
+    # ($68.9M) and federal ACF Responsible Fatherhood grants demonstrate the
+    # growing integration of paternal support into the maternal health ecosystem.
+    # =========================================================================
+    
+    ProgramType(
+        name="Responsible Fatherhood Programs",
+        category="Partner & Family Engagement",
+        description="State and federally funded programs that engage fathers through parenting "
+                    "education, economic stability services, and mentorship to improve child and "
+                    "family outcomes. Includes initiatives like Florida's Father First and "
+                    "ACF-funded Responsible Fatherhood grants.",
+        keywords=[
+            "responsible fatherhood", "fatherhood initiative", "father first",
+            "fatherhood program", "father engagement", "dad program",
+            "fatherhood support", "father involvement", "paternal engagement",
+            "fatherhood grant", "father mentorship", "fatherhood services",
+        ],
+        sdoh_domain=SDOHDomain.SOCIAL_SUPPORT,
+        blueprint_goal=BlueprintGoal.GOAL_5_SOCIAL,
+        federal_program=False,
+        examples=["Father First FL", "ACF Responsible Fatherhood", "Alameda County Fatherhood Initiative"],
+    ),
+    ProgramType(
+        name="Co-Parenting Support Programs",
+        category="Partner & Family Engagement",
+        description="Programs providing education and support for healthy co-parenting relationships, "
+                    "communication skills, and collaborative parenting. Improves maternal well-being "
+                    "by reducing parental conflict and supporting shared caregiving.",
+        keywords=[
+            "co-parenting", "coparenting", "co-parent education",
+            "healthy relationship education", "parenting partnership",
+            "couple relationship", "partner communication",
+            "charmed", "relationship skills", "co-parenting support",
+        ],
+        sdoh_domain=SDOHDomain.SOCIAL_SUPPORT,
+        blueprint_goal=BlueprintGoal.GOAL_5_SOCIAL,
+        federal_program=False,
+        examples=["CHaRMED", "Just Beginning", "Co-Parenting Education Program"],
+    ),
+    ProgramType(
+        name="Paternal Perinatal Support",
+        category="Partner & Family Engagement",
+        description="Programs specifically targeting fathers and partners during the perinatal period "
+                    "(pregnancy through first year postpartum), including perinatal education for dads, "
+                    "partner support groups, and paternal mental health screening.",
+        keywords=[
+            "paternal perinatal", "father perinatal", "dad support pregnancy",
+            "partner support perinatal", "paternal mental health",
+            "father postpartum", "dad postpartum", "expectant father",
+            "boot camp for new dads", "daddy boot camp",
+            "partner perinatal education",
+        ],
+        sdoh_domain=SDOHDomain.SOCIAL_SUPPORT,
+        blueprint_goal=BlueprintGoal.GOAL_5_SOCIAL,
+        federal_program=False,
+        examples=["Boot Camp for New Dads", "Fresno Paternal Involvement Curriculum", "Perinatal Partner Support Group"],
     ),
 ]
 
