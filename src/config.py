@@ -4,13 +4,39 @@ Configuration constants and county mappings.
 
 import os
 
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ENV_PATH = os.path.join(PROJECT_ROOT, ".env")
+
+
+def _load_env_fallback(path: str, override: bool = True) -> None:
+    """Minimal .env loader used when python-dotenv is unavailable."""
+    if not os.path.exists(path):
+        return
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            for raw in f:
+                line = raw.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+                key, value = line.split("=", 1)
+                key = key.strip()
+                value = value.strip().strip("'").strip('"')
+                if not key:
+                    continue
+                if override or key not in os.environ:
+                    os.environ[key] = value
+    except Exception:
+        # Non-fatal: app can still run with existing env vars.
+        pass
+
+
 # Try to load .env file, but don't fail if dotenv is not installed
 try:
     from dotenv import load_dotenv
-    load_dotenv()
+    # Explicit path is robust when running scripts from any directory.
+    load_dotenv(dotenv_path=ENV_PATH, override=True)
 except ImportError:
-    # dotenv not installed, continue without it
-    pass
+    _load_env_fallback(ENV_PATH, override=True)
 
 # Project constants
 STATE_NAME = "California"

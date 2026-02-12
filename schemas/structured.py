@@ -9,18 +9,7 @@ from pydantic import BaseModel, Field, HttpUrl, validator
 class StructuredProgram(BaseModel):
     """A structured healthcare program entry."""
     program_name: str = Field(..., description="Program name")
-    program_category: Literal[
-        "Maternal Health",
-        "Mental Health",
-        "Substance Abuse",
-        "Immunization",
-        "Chronic Disease",
-        "Emergency Services",
-        "Primary Care",
-        "Dental",
-        "Vision",
-        "Other"
-    ] = Field(..., description="Program category")
+    program_category: str = Field(..., description="Maternal program category")
     program_description: str = Field(..., description="Brief description")
     target_population: str = Field(..., description="Who the program serves")
     eligibility_requirements: str = Field(..., description="Eligibility requirements or 'Not specified'")
@@ -35,6 +24,12 @@ class StructuredProgram(BaseModel):
         if v in ["Not specified", "Not found", ""]:
             return "Not specified"
         return v
+
+    @validator("program_category")
+    def normalize_program_category(cls, v):
+        """Normalize category string for downstream evaluation."""
+        value = (v or "").strip()
+        return value if value else "Other"
 
 
 class StructuredCounty(BaseModel):

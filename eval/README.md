@@ -2,6 +2,45 @@
 
 This directory contains the evaluation framework for the maternal health data extraction pipeline.
 
+## Theoretical Framework
+
+The program taxonomy and evaluation criteria are grounded in two complementary frameworks:
+
+### 1. Social Determinants of Health (SDOH)
+
+Based on Solar & Irwin (2010) WHO Conceptual Framework and related literature:
+
+> "The conditions in which people are born, grow, live, work and age... are shaped by the distribution of money, power and resources at global, national and local levels."  
+> — WHO Commission on Social Determinants of Health
+
+**SDOH Domains Used in This Taxonomy:**
+- Healthcare Access & Coverage
+- Quality of Care & Patient Voice
+- Social Support & Community
+- Economic Stability
+- Nutrition & Food Security
+- Education & Health Literacy
+- Neighborhood & Physical Environment
+
+**Key References:**
+- Braveman, P., Egerter, S., & Williams, D. R. (2011). The social determinants of health: coming of age. *Annual Review of Public Health*, 32(1), 381-398.
+- Braveman, P., & Gottlieb, L. (2014). The social determinants of health: it's time to consider the causes of the causes. *Public Health Reports*, 129(1_suppl2), 19-31.
+- Solar, O., & Irwin, A. (2010). A conceptual framework for action on the social determinants of health. WHO Document Production Services.
+
+### 2. White House Blueprint for Addressing the Maternal Health Crisis (2022)
+
+The Biden-Harris Administration's five-goal framework for addressing the maternal health crisis:
+
+| Goal | Focus Area | Example Programs |
+|------|------------|------------------|
+| **Goal 1** | Healthcare Access & Coverage | Prenatal care, Postpartum support, Medicaid extension |
+| **Goal 2** | Quality of Care & Patient Voice | Health equity initiatives, MMRCs, implicit bias training |
+| **Goal 3** | Data Collection & Research | MMRC data, PRAMS, research initiatives |
+| **Goal 4** | Perinatal Workforce | Doulas, midwives, CHWs, home visiting programs |
+| **Goal 5** | Social & Economic Supports | WIC, housing, food security, workplace protections |
+
+**Reference:** [White House Blueprint for Addressing the Maternal Health Crisis (June 2022)](https://bidenwhitehouse.archives.gov/wp-content/uploads/2022/06/Maternal-Health-Blueprint.pdf)
+
 ## Overview
 
 Per advisor feedback, this project focuses specifically on **maternal health programs** rather than general health services. The evaluation framework is designed to:
@@ -14,11 +53,9 @@ Per advisor feedback, this project focuses specifically on **maternal health pro
 | File | Description |
 |------|-------------|
 | `gold_maternal.jsonl` | Gold dataset focused on maternal health programs (4 validated counties) |
-| `gold.jsonl` | Legacy gold dataset with general health programs (15 counties) |
 | `gold_schema.py` | Pydantic schemas for gold dataset validation |
 | `metrics.py` | Metric calculation functions |
 | `run_eval.py` | Main evaluation script |
-| `gold.jsonl.example` | Example gold dataset entry format |
 
 ## Gold Datasets
 
@@ -35,16 +72,29 @@ Created based on advisor's manual review and validated URLs. Contains **4 counti
 
 ### Maternal Health Program Categories
 
-Based on state-level reference pages (California CDPH, Florida DOH):
+Organized by White House Blueprint Goals with SDOH Domain alignment:
 
-- **Nutrition**: WIC (Women, Infants, and Children)
-- **Home Visiting**: Nurse-Family Partnership, MIECHV, Parents as Teachers, Black Infant Health
+#### Goal 1: Healthcare Access & Coverage
+*SDOH Domain: Healthcare Access*
 - **Perinatal Care**: Prenatal Care, Postpartum Support, CPSP
+- **Behavioral Health**: Maternal Mental Health, Substance Use Services
+- **Reproductive Health**: Family Planning, Title X
+
+#### Goal 2: Quality of Care & Patient Voice
+*SDOH Domain: Quality of Care*
 - **Health Equity**: Black Infant Health, Healthy Start, Perinatal Equity Initiative
-- **Breastfeeding**: Lactation Support Programs
-- **Adolescent Health**: Teen Pregnancy Programs, AFLP
-- **Family Planning**: Reproductive Health Services
+- **Quality Improvement**: MMRCs, Perinatal Quality Collaboratives
+
+#### Goal 4: Perinatal Workforce
+*SDOH Domain: Social Support*
+- **Home Visiting**: Nurse-Family Partnership, MIECHV, Parents as Teachers
 - **Birth Support**: Doula Programs, Midwifery Services
+- **Community Health**: Community Health Workers, Lactation Support
+
+#### Goal 5: Social & Economic Supports
+*SDOH Domains: Nutrition, Economic Stability*
+- **Nutrition**: WIC (Women, Infants, and Children)
+- **Adolescent Health**: Teen Pregnancy Programs, AFLP
 - **Early Childhood**: First 5 Programs
 
 ## Gold Dataset Format (Maternal Health)
@@ -172,11 +222,47 @@ Per advisor recommendation, these state pages serve as reference for what consti
 
 ## Program Taxonomy
 
-The `src/maternal_taxonomy.py` file contains a comprehensive taxonomy of maternal health programs with:
+The `src/maternal_taxonomy.py` file contains a comprehensive taxonomy of maternal health programs grounded in the SDOH framework and White House Blueprint:
 
-- **19 program types** across **10 categories**
-- **118 keywords** for classification
-- **7 federal programs** (WIC, NFP, MIECHV, etc.)
-- Helper functions for classification and scoring
+### Taxonomy Statistics
 
-See `python src/maternal_taxonomy.py` for a full taxonomy summary.
+| Metric | Count |
+|--------|------:|
+| Program types | 22 |
+| Categories | 13 |
+| Keywords | 189 |
+| Federal programs | 7 |
+| SDOH domains | 4 |
+| Blueprint goals | 4 |
+
+### Categories
+
+Adolescent Health, Behavioral Health, Birth Support, Breastfeeding, Community Health, Early Childhood, Health Equity, Home Visiting, Maternal Child Health, Nutrition, Perinatal Care, Quality Improvement, Reproductive Health
+
+### Federal Programs
+
+| Program | Category | Blueprint Goal |
+|---------|----------|----------------|
+| WIC | Nutrition | Goal 5: Social & Economic Supports |
+| Nurse-Family Partnership | Home Visiting | Goal 4: Perinatal Workforce |
+| MIECHV | Home Visiting | Goal 4: Perinatal Workforce |
+| Healthy Families America | Home Visiting | Goal 4: Perinatal Workforce |
+| Parents as Teachers | Home Visiting | Goal 4: Perinatal Workforce |
+| Healthy Start | Health Equity | Goal 2: Quality of Care |
+| Title V MCH Block Grant | Maternal Child Health | Goal 1: Healthcare Access |
+
+### Usage
+
+```bash
+# Print full taxonomy summary
+python src/maternal_taxonomy.py
+
+# Use in code
+from src.maternal_taxonomy import (
+    classify_program,
+    is_maternal_health_program,
+    SDOHDomain,
+    BlueprintGoal,
+    get_programs_by_blueprint_goal,
+)
+```

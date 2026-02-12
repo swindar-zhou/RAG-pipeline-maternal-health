@@ -39,10 +39,42 @@ This project aims to create a **structured, searchable database** of county-leve
 
 **Target programs**: WIC, Black Infant Health, Nurse-Family Partnership, Perinatal Care Networks, Home Visiting Programs, Breastfeeding Support, Teen Pregnancy Programs, and other maternal/child health services
 
+### Theoretical Framework
+
+This project's program taxonomy is grounded in established public health frameworks:
+
+#### Social Determinants of Health (SDOH)
+
+Based on the WHO Conceptual Framework (Solar & Irwin, 2010), we recognize that maternal health outcomes are shaped by:
+- **Healthcare Access** - availability of prenatal, delivery, and postpartum care
+- **Quality of Care** - patient voice, equity, culturally appropriate care
+- **Social Support** - community health workers, doulas, home visiting
+- **Economic Stability** - nutrition programs, workplace protections
+- **Neighborhood Environment** - environmental exposures, housing
+
+#### White House Blueprint for Addressing the Maternal Health Crisis (2022)
+
+The Biden-Harris Administration's five-goal framework provides structure for our program categories:
+1. **Healthcare Access & Coverage** - comprehensive maternal health services
+2. **Quality of Care & Patient Voice** - accountable, equitable care systems
+3. **Data Collection & Research** - evidence-based practices
+4. **Perinatal Workforce** - doulas, midwives, community health workers
+5. **Social & Economic Supports** - WIC, housing, food security
+
 ### References
 
+**SDOH Framework:**
+- Braveman, P., Egerter, S., & Williams, D. R. (2011). The social determinants of health: coming of age. *Annual Review of Public Health*, 32(1), 381-398.
+- Braveman, P., & Gottlieb, L. (2014). The social determinants of health: it's time to consider the causes of the causes. *Public Health Reports*, 129(1_suppl2), 19-31.
+- Marmot, M., Allen, J., Bell, R., Bloomer, E., & Goldblatt, P. (2012). WHO European review of social determinants of health and the health divide. *The Lancet*, 380(9846), 1011-1029.
+- Solar, O., & Irwin, A. (2010). A conceptual framework for action on the social determinants of health. WHO Document Production Services.
+
+**Maternal Health Policy:**
+- White House. (2022). *Blueprint for Addressing the Maternal Health Crisis*. [Link](https://bidenwhitehouse.archives.gov/wp-content/uploads/2022/06/Maternal-Health-Blueprint.pdf)
 - March of Dimes. (2022). *Maternity Care Deserts Report*. [Link](https://www.marchofdimes.org/maternity-care-deserts-report)
 - California Department of Public Health. *Maternal, Child and Adolescent Health Division*. [Link](https://www.cdph.ca.gov/Programs/CFH/DMCAH/Pages/Domains/Maternal-Health.aspx)
+
+**Methods:**
 - Grimmer, J., Roberts, M. E., & Stewart, B. M. (2022). *Text as Data: A New Framework for Machine Learning and the Social Sciences*. Princeton University Press.
 
 ---
@@ -182,7 +214,18 @@ Per advisor feedback, the pipeline focuses exclusively on maternal health progra
 - **Included**: WIC, Black Infant Health, Nurse-Family Partnership, MCAH, Perinatal Care, Breastfeeding Support, Teen Pregnancy Programs, Doula Programs
 - **Excluded**: Medi-Cal, CalFresh, Behavioral Health, Senior Services, and other general health programs
 
-The taxonomy in `src/maternal_taxonomy.py` defines 19 program types across 10 categories.
+### Program Taxonomy
+
+The taxonomy in `src/maternal_taxonomy.py` defines **22 program types** across **13 categories**, aligned with the SDOH framework and White House Blueprint:
+
+| Blueprint Goal | SDOH Domain | Categories |
+|----------------|-------------|------------|
+| Goal 1: Access | Healthcare Access | Perinatal Care, Behavioral Health, Reproductive Health |
+| Goal 2: Quality | Quality of Care | Health Equity, Quality Improvement |
+| Goal 4: Workforce | Social Support | Home Visiting, Birth Support, Community Health, Breastfeeding |
+| Goal 5: Social | Nutrition, Economic | Nutrition, Adolescent Health, Early Childhood |
+
+See `python src/maternal_taxonomy.py` for a full taxonomy summary.
 
 ## Documentation
 

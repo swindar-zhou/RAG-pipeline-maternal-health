@@ -14,12 +14,42 @@ import glob
 import time
 from typing import Dict, List, Optional
 from datetime import datetime
+
+# Absolute path to project .env (robust to invocation cwd)
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+ENV_PATH = os.path.join(PROJECT_ROOT, ".env")
+
+
+def _load_env_fallback(path: str, override: bool = True) -> None:
+    """Minimal .env loader used when python-dotenv is unavailable."""
+    if not os.path.exists(path):
+        return
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            for raw in f:
+                line = raw.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+                key, value = line.split("=", 1)
+                key = key.strip()
+                value = value.strip().strip("'").strip('"')
+                if not key:
+                    continue
+                if override or key not in os.environ:
+                    os.environ[key] = value
+    except Exception:
+        # Keep behavior non-fatal.
+        pass
+
+
 # Try to load .env file, but don't fail if dotenv is not installed
 try:
     from dotenv import load_dotenv
-    load_dotenv()
+    # Use explicit path to avoid missing .env when cwd differs.
+    # override=True ensures an empty exported var doesn't mask .env values.
+    load_dotenv(dotenv_path=ENV_PATH, override=True)
 except ImportError:
-    pass
+    _load_env_fallback(ENV_PATH, override=True)
 
 # Import shared utilities and config
 from src.utils import save_to_csv
@@ -27,6 +57,7 @@ from src.config import STATE_NAME, MAX_INPUT_CHARS, OPENAI_MODEL, OPENAI_MAX_TOK
 
 # Import taxonomy for maternal health focus (per advisor feedback)
 from src.maternal_taxonomy import generate_few_shot_examples, MATERNAL_PROGRAM_TYPES
+from src.llm_program_classifier import LLMProgramClassifier
 
 # -----------------------------------------------------------------------------
 # Config
@@ -37,7 +68,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 
 RAW_DIR = os.path.join("data", "raw")
 DISCOVERY_PATH = os.path.join("data", "discovery_results.json")
-OUTPUT_FILE = "California_County_Healthcare_Data.csv"
+OUTPUT_FILE = "California_County_Healthcare_Data_2.csv"
 
 # Budget guardrails (imported from src.config)
 
@@ -171,6 +202,77 @@ def extract_program_openai(prompt: str) -> Optional[Dict]:
         print(f"   ✗ OpenAI extraction error: {e}")
         return None
 
+
+def check_openai_runtime() -> bool:
+    """
+    Validate runtime prerequisites once before processing files.
+    Prevents repeated per-file errors when dependency/runtime is misconfigured.
+    """
+    if not OPENAI_API_KEY:
+        print("✗ OPENAI_API_KEY not set")
+        return False
+    try:
+        import openai  # noqa: F401
+    except Exception as e:
+        print("\n✗ OpenAI client not available in current Python environment.")
+        print(f"  Python executable: {os.sys.executable}")
+        print(f"  Import error: {e}")
+        print("  Fix:")
+        print("    1) Activate project venv: source .venv/bin/activate")
+        print("    2) Install deps: pip install -r requirements.txt")
+        print("    3) Re-run: python3 scraper_structure.py")
+        return False
+    return True
+
+
+def apply_llm_category_classification(
+    result: Dict,
+    classifier: Optional[LLMProgramClassifier],
+) -> Dict:
+    """
+    Re-classify extracted programs using description-based LLM categorization.
+
+    This second pass improves category consistency by using program descriptions
+    and services (not only keyword overlap in the extraction prompt).
+    """
+    if not classifier:
+        return result
+    programs = result.get("programs", [])
+    if not isinstance(programs, list) or not programs:
+        return result
+
+    classifications = classifier.classify_programs(programs)
+    if not classifications:
+        return result
+
+    by_name: Dict[str, Dict] = {}
+    for c in classifications:
+        by_name[c.program_name.strip().lower()] = {
+            "program_category": c.program_category,
+            "program_type": c.program_type,
+            "sdoh_domain": c.sdoh_domain,
+            "blueprint_goal": c.blueprint_goal,
+            "classification_confidence": c.confidence,
+            "classification_rationale": c.rationale,
+        }
+
+    for p in programs:
+        name = str(p.get("program_name", "")).strip().lower()
+        if not name or name not in by_name:
+            continue
+        predicted = by_name[name]
+        original_category = p.get("program_category")
+        p["program_category_original"] = original_category
+        p["program_category"] = predicted["program_category"]
+        p["program_type"] = predicted["program_type"]
+        p["sdoh_domain"] = predicted["sdoh_domain"]
+        p["blueprint_goal"] = predicted["blueprint_goal"]
+        p["classification_confidence"] = predicted["classification_confidence"]
+        p["classification_rationale"] = predicted["classification_rationale"]
+
+    result["programs"] = programs
+    return result
+
 # -----------------------------------------------------------------------------
 # Main
 # -----------------------------------------------------------------------------
@@ -182,6 +284,9 @@ def main():
     if API_PROVIDER != "openai":
         print("⚠ This script currently supports OpenAI only. Set API_PROVIDER=openai in .env")
         return
+    if not check_openai_runtime():
+        return
+    classifier = LLMProgramClassifier(api_key=OPENAI_API_KEY) if OPENAI_API_KEY else None
     county_meta = load_discovery(DISCOVERY_PATH)
     files = iter_raw_pages()
     if not files:
@@ -206,6 +311,7 @@ def main():
         if not result:
             print(f"   ⚠ Skipping (no result) for {os.path.basename(path)}")
             continue
+        result = apply_llm_category_classification(result, classifier)
         # Initialize county object if needed
         if county_name not in county_to_data:
             county_to_data[county_name] = {
