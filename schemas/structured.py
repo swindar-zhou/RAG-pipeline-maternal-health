@@ -52,8 +52,7 @@ class StructuredCounty(BaseModel):
         for program in self.programs:
             critical_missing = (
                 program.eligibility_requirements in ["Not specified", "Not found", ""] or
-                program.application_process in ["Not specified", "Not found", ""] or
-                self.health_department_contact_phone in ["Not found", ""]
+                program.application_process in ["Not specified", "Not found", ""]
             )
             if critical_missing:
                 missing_count += 1

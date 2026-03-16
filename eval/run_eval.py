@@ -16,7 +16,7 @@ from pathlib import Path
 
 from schemas.discovery import DiscoveryResult
 from schemas.extraction import RawPage
-from schemas.structured import StructuredCounty
+from schemas.structured import StructuredCounty, StructuredProgram
 from eval.gold_schema import GoldCounty
 from eval.metrics import (
     CountyMetrics,
@@ -27,7 +27,7 @@ from eval.metrics import (
 
 
 # Paths
-GOLD_DATASET_PATH = os.path.join("eval", "gold.jsonl")
+GOLD_DATASET_PATH = os.path.join("eval", "gold_maternal.jsonl")
 DISCOVERY_PATH = os.path.join("data", "discovery_results.json")
 RAW_DIR = os.path.join("data", "raw")
 STRUCTURED_DIR = os.path.join("data", "structured")
@@ -115,19 +115,61 @@ def load_raw_pages_for_county(county_name: str) -> List[RawPage]:
     return pages
 
 
-def load_structured_for_county(county_name: str) -> Optional[StructuredCounty]:
-    """Load structured data for a county."""
-    # Try per-county CSV first, then look for combined CSV
+def load_structured_for_county(county_name: str, structured_dir: str = STRUCTURED_DIR) -> Optional[StructuredCounty]:
+    """Load structured data for a county by parsing its per-county CSV."""
     county_slug = county_name.replace(" ", "_")
-    csv_path = os.path.join(STRUCTURED_DIR, f"California_{county_slug}_Healthcare_Data.csv")
-    
-    if not os.path.exists(csv_path):
-        # Try combined CSV (would need parsing)
+
+    # Search recursively so versioned subdirs (v1/, v2/) are included
+    search_dir = Path(structured_dir)
+    candidates = list(search_dir.rglob(f"*{county_slug}*.csv"))
+    if not candidates:
         return None
-    
-    # For now, return None - CSV parsing would need to be implemented
-    # In a real system, you'd parse CSV back to StructuredCounty
-    return None
+    csv_path = candidates[0]
+
+    programs = []
+    county_url = ""
+    health_dept_name = ""
+    health_dept_email = ""
+    health_dept_phone = ""
+
+    with open(csv_path, "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            county_url = row.get("County_Website_URL", "")
+            health_dept_name = row.get("Health_Department_Name", "")
+            health_dept_email = row.get("Health_Department_Contact_Email", "")
+            health_dept_phone = row.get("Health_Department_Contact_Phone", "")
+            program_name = row.get("Program_Name", "").strip()
+            if not program_name:
+                continue
+            try:
+                programs.append(StructuredProgram(
+                    program_name=program_name,
+                    program_category=row.get("Program_Category", ""),
+                    program_description=row.get("Program_Description", ""),
+                    target_population=row.get("Target_Population", ""),
+                    eligibility_requirements=row.get("Eligibility_Requirements", "Not specified"),
+                    application_process=row.get("Application_Process", "Not specified"),
+                    required_documentation=row.get("Required_Documentation", "Not specified"),
+                    financial_assistance_available=row.get("Financial_Assistance_Available", "Unknown"),
+                    program_website_url=row.get("Program_Website_URL", ""),
+                ))
+            except Exception:
+                continue
+
+    if not programs:
+        return None
+
+    return StructuredCounty(
+        county_name=county_name,
+        state="California",
+        county_website_url=county_url,
+        health_department_name=health_dept_name,
+        health_department_contact_email=health_dept_email,
+        health_department_contact_phone=health_dept_phone,
+        programs=programs,
+        notes="",
+    )
 
 
 def run_evaluation() -> Dict:
@@ -220,6 +262,7 @@ def run_evaluation() -> Dict:
     
     results_summary = {
         "run_id": run_id,
+        "model": os.getenv("OPENAI_MODEL", "gpt-4o-mini"),
         "timestamp": datetime.now().isoformat(),
         "counties_evaluated": len(county_metrics),
         "aggregate_metrics": {
@@ -244,7 +287,7 @@ def run_evaluation() -> Dict:
         writer = csv.writer(f)
         writer.writerow([
             "County", "Recall@20", "Contact_Precision", "Contact_Recall",
-            "Schema_Validity", "Missing_Fields"
+            "Schema_Validity", "Missing_Fields", "Field_Exact_Match"
         ])
         for name, metrics in county_metrics.items():
             writer.writerow([
@@ -254,6 +297,7 @@ def run_evaluation() -> Dict:
                 f"{metrics.phase2.contact_recall:.4f}",
                 f"{metrics.phase3.schema_validity_rate:.4f}",
                 f"{metrics.phase3.critical_field_missing_rate:.4f}",
+                f"{metrics.phase3.field_exact_match_rate:.4f}",
             ])
     print(f"✓ Saved CSV to {csv_path}")
     

@@ -1,0 +1,349 @@
+{
+  "domain_name": "mental_health",
+  "display_name": "Mental Health",
+  "state_name": "California",
+
+  "_framework_note": "Taxonomy grounded in SAMHSA's Mental Health and Substance Use framework, California's Mental Health Services Act (MHSA/Prop 63), and SDOH framework (Solar & Irwin, 2010). framework_dimension_1 = SDOH domain, framework_dimension_2 = MHSA Priority Area. Key references: SAMHSA (2023) National Survey on Drug Use and Health; CA DHCS Behavioral Health; MHSA (Prop 63, 2004).",
+
+  "counties": {
+    "Alameda": "https://www.acgov.org/",
+    "Alpine": "https://www.alpinecountyca.gov/",
+    "Amador": "https://www.amadorgov.org/",
+    "Butte": "https://www.buttecounty.net/",
+    "Calaveras": "https://www.calaverasgov.us/",
+    "Colusa": "https://www.countyofcolusa.org/",
+    "Contra Costa": "https://www.contracosta.ca.gov/",
+    "Del Norte": "https://www.dnco.org/",
+    "El Dorado": "https://www.edcgov.us/",
+    "Fresno": "https://www.co.fresno.ca.us/",
+    "Glenn": "https://www.countyofglenn.net/",
+    "Humboldt": "https://www.humboldtgov.org/",
+    "Imperial": "https://www.co.imperial.ca.us/",
+    "Inyo": "https://www.inyocounty.us/",
+    "Kern": "https://www.kernpublichealth.com/",
+    "Kings": "https://www.countyofkings.com/",
+    "Lake": "https://www.lakecountyca.gov/",
+    "Lassen": "https://www.lassencounty.org/",
+    "Los Angeles": "https://www.lacounty.gov/",
+    "Madera": "https://www.maderacounty.com/",
+    "Marin": "https://www.marincounty.org/",
+    "Mariposa": "https://www.mariposacounty.org/",
+    "Mendocino": "https://www.mendocinocounty.org/",
+    "Merced": "https://www.co.merced.ca.us/",
+    "Modoc": "https://www.co.modoc.ca.us/",
+    "Mono": "https://monocounty.ca.gov/",
+    "Monterey": "https://www.co.monterey.ca.us/",
+    "Napa": "https://www.countyofnapa.org/",
+    "Nevada": "https://www.mynevadacounty.com/",
+    "Orange": "https://www.ocgov.com/",
+    "Placer": "https://www.placer.ca.gov/",
+    "Plumas": "https://www.plumascounty.us/",
+    "Riverside": "https://www.rivco.org/",
+    "Sacramento": "https://www.saccounty.net/",
+    "San Benito": "https://www.cosb.us/",
+    "San Bernardino": "https://www.sbcounty.gov/",
+    "San Diego": "https://www.sandiegocounty.gov/",
+    "San Francisco": "https://sf.gov/",
+    "San Joaquin": "https://www.sjgov.org/",
+    "San Luis Obispo": "https://www.slocounty.ca.gov/",
+    "San Mateo": "https://www.smcgov.org/",
+    "Santa Barbara": "https://www.countyofsb.org/",
+    "Santa Clara": "https://www.sccgov.org/",
+    "Santa Cruz": "https://www.santacruzcounty.us/",
+    "Shasta": "https://www.co.shasta.ca.us/",
+    "Sierra": "https://www.sierracounty.ca.gov/",
+    "Siskiyou": "https://www.co.siskiyou.ca.us/",
+    "Solano": "https://www.solanocounty.com/",
+    "Sonoma": "https://sonomacounty.ca.gov/",
+    "Stanislaus": "https://www.stancounty.com/",
+    "Sutter": "https://www.suttercounty.org/",
+    "Tehama": "https://www.co.tehama.ca.us/",
+    "Trinity": "https://www.trinitycounty.org/",
+    "Tulare": "https://tularecounty.ca.gov/",
+    "Tuolumne": "https://www.tuolumnecounty.ca.gov/",
+    "Ventura": "https://www.ventura.org/",
+    "Yolo": "https://www.yolocounty.org/",
+    "Yuba": "https://www.yuba.org/"
+  },
+
+  "validated_section_urls": {
+    "_note": "Populate these with manually verified behavioral health section URLs before running the pipeline. Examples below are starting points.",
+    "Los Angeles": "https://dmh.lacounty.gov/",
+    "San Diego": "https://www.sandiegocounty.gov/content/sdc/hhsa/programs/bhs.html",
+    "Sacramento": "https://dhs.saccounty.gov/BHS/Pages/BHS-Home.aspx",
+    "San Francisco": "https://www.sf.gov/departments--department-public-health--behavioral-health-services"
+  },
+
+  "health_dept_urls": {
+    "Alameda": "https://www.acbhcs.org/",
+    "Los Angeles": "https://dmh.lacounty.gov/",
+    "Sacramento": "https://dhs.saccounty.gov/BHS/Pages/BHS-Home.aspx",
+    "San Francisco": "https://www.sf.gov/departments--department-public-health--behavioral-health-services",
+    "Orange": "https://www.ochealthinfo.com/bhs",
+    "Santa Clara": "https://bhsd.sccgov.org/",
+    "Contra Costa": "https://www.cchealth.org/behavioral-health/"
+  },
+
+  "dept_keywords": [
+    "behavioral health", "mental health", "behavioral health services",
+    "department of mental health", "mental health services",
+    "health and human services", "hhs", "hhsa", "department of public health"
+  ],
+
+  "section_keywords": [
+    "mental health", "behavioral health", "psychiatric services",
+    "mental health services", "crisis services", "substance use",
+    "community mental health", "outpatient mental health",
+    "psychological services", "counseling services",
+    "mhsa", "prop 63", "mental health services act"
+  ],
+
+  "program_keywords": [
+    "crisis stabilization", "crisis intervention", "crisis services",
+    "psychiatric emergency", "mobile crisis", "crisis hotline",
+    "988", "suicide prevention",
+    "outpatient mental health", "outpatient therapy", "outpatient counseling",
+    "community mental health center", "cmhc",
+    "assertive community treatment", "act team",
+    "full service partnership", "fsp",
+    "mental health services act", "mhsa", "prop 63",
+    "peer support", "peer specialist", "peer counselor", "recovery support",
+    "clubhouse", "wellness center",
+    "intensive outpatient", "iop",
+    "partial hospitalization", "php",
+    "psychiatric rehabilitation", "psychosocial rehabilitation",
+    "supported employment", "ies", "individual placement and support",
+    "supported housing", "housing support mental health",
+    "children's mental health", "youth mental health",
+    "early psychosis", "first episode psychosis", "navigate",
+    "dual diagnosis", "co-occurring", "integrated treatment",
+    "substance use disorder", "sud treatment", "recovery services",
+    "medication assisted treatment", "mat", "suboxone", "methadone",
+    "epsdt", "early periodic screening",
+    "school-based mental health", "school mental health"
+  ],
+
+  "exclusion_keywords": [
+    "prenatal", "maternal", "wic", "perinatal", "infant", "postpartum",
+    "pregnancy", "labor and delivery", "obstetric", "breastfeeding",
+    "senior", "elderly", "aging", "older adults",
+    "birth certificate", "death certificate", "marriage certificate",
+    "vital records", "recorder-clerk",
+    "environmental health", "food safety", "restaurant inspection",
+    "animal", "pet", "rabies",
+    "dental", "vision",
+    "public records", "foia", "customer service",
+    "employment", "job", "career"
+  ],
+
+  "program_types": [
+    {
+      "name": "Crisis Stabilization Services",
+      "category": "Crisis Services",
+      "description": "Short-term, intensive services for individuals experiencing acute psychiatric crises, including crisis stabilization units (CSUs), mobile crisis teams, and 24/7 crisis hotlines",
+      "keywords": [
+        "crisis stabilization", "crisis stabilization unit", "csu",
+        "mobile crisis", "crisis intervention", "psychiatric emergency",
+        "crisis hotline", "988", "suicide prevention", "crisis response",
+        "behavioral health emergency", "psychiatric crisis"
+      ],
+      "framework_dimension_1": "Healthcare Access & Coverage",
+      "framework_dimension_2": "MHSA Priority: Crisis Intervention",
+      "federal_program": false,
+      "examples": ["Crisis Stabilization Unit", "Mobile Crisis Team", "988 Suicide & Crisis Lifeline"]
+    },
+    {
+      "name": "Outpatient Mental Health Services",
+      "category": "Outpatient Care",
+      "description": "Ongoing outpatient therapy, psychiatric medication management, and case management for individuals with mild-to-moderate mental health conditions",
+      "keywords": [
+        "outpatient mental health", "outpatient therapy", "outpatient counseling",
+        "individual therapy", "group therapy", "psychiatric services",
+        "medication management", "case management mental health",
+        "mental health clinic", "mental health treatment"
+      ],
+      "framework_dimension_1": "Healthcare Access & Coverage",
+      "framework_dimension_2": "MHSA Priority: Community Services & Supports",
+      "federal_program": false,
+      "examples": ["Outpatient Mental Health Clinic", "Community Mental Health Center", "Psychiatric Outpatient Services"]
+    },
+    {
+      "name": "Full Service Partnership",
+      "category": "Intensive Community Services",
+      "description": "California MHSA-funded wraparound services providing whatever it takes support for individuals with serious mental illness, including housing, employment, and 24/7 crisis support",
+      "keywords": [
+        "full service partnership", "fsp", "wraparound services",
+        "whatever it takes", "serious mental illness", "smi",
+        "intensive services mental health", "mhsa funded"
+      ],
+      "framework_dimension_1": "Social Support & Community",
+      "framework_dimension_2": "MHSA Priority: Community Services & Supports",
+      "federal_program": false,
+      "examples": ["Full Service Partnership", "FSP Program", "MHSA Wraparound"]
+    },
+    {
+      "name": "Assertive Community Treatment",
+      "category": "Intensive Community Services",
+      "description": "Evidence-based, multidisciplinary team approach providing intensive community-based treatment for individuals with severe and persistent mental illness",
+      "keywords": [
+        "assertive community treatment", "act team", "act program",
+        "severe mental illness treatment", "persistent mental illness",
+        "community-based treatment", "multidisciplinary team"
+      ],
+      "framework_dimension_1": "Healthcare Access & Coverage",
+      "framework_dimension_2": "MHSA Priority: Community Services & Supports",
+      "federal_program": false,
+      "examples": ["ACT Team", "Assertive Community Treatment Program"]
+    },
+    {
+      "name": "Peer Support Services",
+      "category": "Recovery Support",
+      "description": "Services delivered by individuals with lived experience of mental health or substance use challenges, including peer specialists, recovery coaches, and wellness centers",
+      "keywords": [
+        "peer support", "peer specialist", "peer counselor",
+        "peer recovery", "lived experience", "recovery coach",
+        "wellness center", "clubhouse", "consumer-run",
+        "mental health recovery", "psychiatric survivor"
+      ],
+      "framework_dimension_1": "Social Support & Community",
+      "framework_dimension_2": "MHSA Priority: Community Services & Supports",
+      "federal_program": false,
+      "examples": ["Peer Support Program", "Recovery Support Center", "Clubhouse"]
+    },
+    {
+      "name": "Substance Use Disorder Treatment",
+      "category": "Substance Use",
+      "description": "Treatment services for substance use disorders including detoxification, residential treatment, intensive outpatient programs, and medication-assisted treatment (MAT)",
+      "keywords": [
+        "substance use disorder", "sud treatment", "drug treatment",
+        "alcohol treatment", "addiction treatment",
+        "medication assisted treatment", "mat", "suboxone", "methadone", "vivitrol",
+        "detox", "detoxification", "residential treatment",
+        "intensive outpatient", "iop", "recovery services"
+      ],
+      "framework_dimension_1": "Healthcare Access & Coverage",
+      "framework_dimension_2": "MHSA Priority: Community Services & Supports",
+      "federal_program": false,
+      "examples": ["Substance Use Treatment Program", "MAT Program", "Drug & Alcohol Services"]
+    },
+    {
+      "name": "Co-Occurring Disorder Services",
+      "category": "Integrated Treatment",
+      "description": "Integrated treatment for individuals with co-occurring mental health and substance use disorders, using dual diagnosis or integrated treatment models",
+      "keywords": [
+        "dual diagnosis", "co-occurring", "co-occurring disorder",
+        "integrated treatment", "comorbid mental health",
+        "mental health and substance use", "behavioral health integration"
+      ],
+      "framework_dimension_1": "Healthcare Access & Coverage",
+      "framework_dimension_2": "MHSA Priority: Community Services & Supports",
+      "federal_program": false,
+      "examples": ["Dual Diagnosis Program", "Integrated Behavioral Health Services", "Co-Occurring Treatment"]
+    },
+    {
+      "name": "Children & Youth Mental Health",
+      "category": "Children & Youth",
+      "description": "Mental health services specifically designed for children and adolescents, including school-based mental health, EPSDT, and early intervention programs",
+      "keywords": [
+        "children's mental health", "youth mental health", "child psychiatry",
+        "epsdt", "early periodic screening", "school-based mental health",
+        "school mental health", "adolescent mental health",
+        "child and adolescent mental health", "camh",
+        "early intervention mental health", "child therapy"
+      ],
+      "framework_dimension_1": "Healthcare Access & Coverage",
+      "framework_dimension_2": "MHSA Priority: Prevention & Early Intervention",
+      "federal_program": false,
+      "examples": ["Children's Mental Health Services", "School-Based Mental Health", "EPSDT Program"]
+    },
+    {
+      "name": "Early Psychosis Intervention",
+      "category": "Early Intervention",
+      "description": "Specialized programs for individuals experiencing a first episode of psychosis, providing coordinated specialty care to improve long-term outcomes",
+      "keywords": [
+        "early psychosis", "first episode psychosis", "fep",
+        "coordinated specialty care", "csc", "navigate program",
+        "ontrack", "early intervention psychosis", "prodromal"
+      ],
+      "framework_dimension_1": "Quality of Care",
+      "framework_dimension_2": "MHSA Priority: Prevention & Early Intervention",
+      "federal_program": false,
+      "examples": ["OnTrackNY", "NAVIGATE Program", "Early Psychosis Program", "First Episode Psychosis Clinic"]
+    },
+    {
+      "name": "Psychiatric Rehabilitation",
+      "category": "Rehabilitation & Recovery",
+      "description": "Programs helping individuals with serious mental illness develop skills and access supports for living, working, and participating in the community",
+      "keywords": [
+        "psychiatric rehabilitation", "psychosocial rehabilitation",
+        "skills training", "independent living skills",
+        "supported employment", "individual placement and support", "ips",
+        "vocational rehabilitation mental health",
+        "day treatment", "day program mental health"
+      ],
+      "framework_dimension_1": "Economic Stability",
+      "framework_dimension_2": "MHSA Priority: Community Services & Supports",
+      "federal_program": false,
+      "examples": ["Psychiatric Rehabilitation Program", "Supported Employment", "IPS Program"]
+    },
+    {
+      "name": "Supported Housing for Mental Health",
+      "category": "Housing & Stabilization",
+      "description": "Housing support services for individuals with mental illness, including permanent supportive housing, transitional housing, and housing navigation",
+      "keywords": [
+        "supported housing", "supportive housing mental health",
+        "housing support mental health", "mental health housing",
+        "permanent supportive housing", "transitional housing mental health",
+        "housing navigation", "housing first", "no place like home"
+      ],
+      "framework_dimension_1": "Neighborhood & Physical Environment",
+      "framework_dimension_2": "MHSA Priority: Community Services & Supports",
+      "federal_program": false,
+      "examples": ["Supported Housing Program", "Housing First", "No Place Like Home", "Mental Health Housing Services"]
+    },
+    {
+      "name": "Prevention & Mental Health Promotion",
+      "category": "Prevention",
+      "description": "Community-based programs aimed at preventing mental health conditions and promoting mental wellness, including stigma reduction, mental health literacy, and resilience-building",
+      "keywords": [
+        "mental health prevention", "mental health promotion",
+        "stigma reduction", "mental health literacy", "mental wellness",
+        "resilience program", "stress management",
+        "mental health awareness", "community education mental health",
+        "prevention and early intervention", "pei"
+      ],
+      "framework_dimension_1": "Education & Health Literacy",
+      "framework_dimension_2": "MHSA Priority: Prevention & Early Intervention",
+      "federal_program": false,
+      "examples": ["Mental Health Prevention Program", "Stigma Reduction Campaign", "PEI Program"]
+    }
+  ],
+
+  "llm_domain_focus_description": "Focus ONLY on mental health and behavioral health programs. These include programs that provide mental health treatment, crisis services, substance use treatment, peer support, and psychiatric rehabilitation for community members.",
+
+  "llm_inclusion_bullets": [
+    "Crisis stabilization units, mobile crisis teams, and 24/7 crisis lines (including 988)",
+    "Outpatient mental health therapy, psychiatric medication management, and case management",
+    "Full Service Partnership (FSP) and assertive community treatment (ACT) programs",
+    "Peer support services, wellness centers, and recovery support programs",
+    "Substance use disorder treatment, detox, residential treatment, and MAT programs",
+    "Co-occurring/dual diagnosis treatment programs",
+    "Children and youth mental health services, including school-based and EPSDT",
+    "Early psychosis intervention and coordinated specialty care programs",
+    "Psychiatric rehabilitation, supported employment, and independent living skills",
+    "Supported housing programs for individuals with mental illness",
+    "Prevention and early intervention (PEI) programs funded by MHSA/Prop 63"
+  ],
+
+  "llm_exclusion_bullets": [
+    "General medical or physical health programs not related to mental health",
+    "Maternal health, prenatal, or perinatal programs (unless specifically for mental health during pregnancy)",
+    "Senior or aging services not specifically addressing mental health",
+    "General social services like CalWORKs, CalFresh, or foster care (unless embedded in a mental health program)",
+    "Administrative services, vital records, or licensing offices",
+    "Environmental health or food safety programs",
+    "General immunization or vaccination programs"
+  ],
+
+  "output_file_prefix": "California_MentalHealth"
+}

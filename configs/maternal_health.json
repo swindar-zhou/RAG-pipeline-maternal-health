@@ -1,0 +1,524 @@
+{
+  "domain_name": "maternal_health",
+  "display_name": "Maternal Health",
+  "state_name": "California",
+
+  "counties": {
+    "Alameda": "https://www.acgov.org/",
+    "Alpine": "https://www.alpinecountyca.gov/",
+    "Amador": "https://www.amadorgov.org/",
+    "Butte": "https://www.buttecounty.net/",
+    "Calaveras": "https://www.calaverasgov.us/",
+    "Colusa": "https://www.countyofcolusa.org/",
+    "Contra Costa": "https://www.contracosta.ca.gov/",
+    "Del Norte": "https://www.co.del-norte.ca.us/",
+    "El Dorado": "https://www.edcgov.us/",
+    "Fresno": "https://www.co.fresno.ca.us/",
+    "Glenn": "https://www.countyofglenn.net/",
+    "Humboldt": "https://humboldtgov.org/2537/Humboldt-Countys-Homepage",
+    "Imperial": "https://imperialcounty.org/",
+    "Inyo": "https://www.inyocounty.us/",
+    "Kern": "https://www.kernpublichealth.com/",
+    "Kings": "https://www.countyofkings.com/",
+    "Lake": "https://www.lakecountyca.gov/",
+    "Lassen": "https://www.lassencounty.org/",
+    "Los Angeles": "https://www.lacounty.gov/",
+    "Madera": "https://www.maderacounty.com/",
+    "Marin": "https://www.marincounty.org/",
+    "Mariposa": "https://www.mariposacounty.org/",
+    "Mendocino": "https://www.mendocinocounty.org/",
+    "Merced": "https://www.co.merced.ca.us/",
+    "Modoc": "https://www.co.modoc.ca.us/",
+    "Mono": "https://monocounty.ca.gov/",
+    "Monterey": "https://www.co.monterey.ca.us/",
+    "Napa": "https://www.countyofnapa.org/",
+    "Nevada": "https://www.mynevadacounty.com/",
+    "Orange": "https://www.ocgov.com/",
+    "Placer": "https://www.placer.ca.gov/",
+    "Plumas": "https://www.plumascounty.us/",
+    "Riverside": "https://rivco.gov/",
+    "Sacramento": "https://www.saccounty.net/",
+    "San Benito": "https://www.cosb.us/",
+    "San Bernardino": "https://www.sbcounty.gov/",
+    "San Diego": "https://www.sandiegocounty.gov/",
+    "San Francisco": "https://sf.gov/",
+    "San Joaquin": "https://www.sjgov.org/",
+    "San Luis Obispo": "https://www.slocounty.ca.gov/",
+    "San Mateo": "https://www.smcgov.org/",
+    "Santa Barbara": "https://www.countyofsb.org/",
+    "Santa Clara": "https://www.sccgov.org/",
+    "Santa Cruz": "https://www.santacruzcounty.us/",
+    "Shasta": "https://www.shastacounty.gov/",
+    "Sierra": "https://www.sierracounty.ca.gov/",
+    "Siskiyou": "https://www.co.siskiyou.ca.us/",
+    "Solano": "https://www.solanocounty.com/",
+    "Sonoma": "https://sonomacounty.ca.gov/",
+    "Stanislaus": "https://www.stancounty.com/",
+    "Sutter": "https://www.suttercounty.org/",
+    "Tehama": "https://www.co.tehama.ca.us/",
+    "Trinity": "https://www.trinitycounty.org/",
+    "Tulare": "https://tularecounty.ca.gov/",
+    "Tuolumne": "https://www.tuolumnecounty.ca.gov/",
+    "Ventura": "https://www.ventura.org/",
+    "Yolo": "https://www.yolocounty.org/",
+    "Yuba": "https://www.yuba.org/"
+  },
+
+  "validated_section_urls": {
+    "San Diego": "https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/maternal_child_family_health_services.html",
+    "Los Angeles": "http://publichealth.lacounty.gov/mch/",
+    "Sacramento": "https://dhs.saccounty.gov/PUB/Program/Pages/SP-Maternal-Child-and-Adolescent-Health-Program.aspx",
+    "San Francisco": "https://www.sf.gov/departments--department-public-health--maternal-child-and-adolescent-health"
+  },
+
+  "health_dept_urls": {
+    "Alameda": "https://www.acgov.org/services/",
+    "Sacramento": "https://dhs.saccounty.gov/PUB/Pages/PUB-Home.aspx",
+    "Los Angeles": "https://www.lacounty.gov/",
+    "San Francisco": "https://www.sf.gov/departments--department-public-health",
+    "Orange": "https://www.ochealthinfo.com/services-programs",
+    "Santa Clara": "https://publichealth.santaclaracounty.gov/services",
+    "Contra Costa": "https://www.cchealth.org/services-and-programs/"
+  },
+
+  "dept_keywords": [
+    "health department", "health services", "public health",
+    "health and human services", "hhs", "hhsa", "department of public health"
+  ],
+
+  "section_keywords": [
+    "maternal health", "maternal child health", "mch", "mcah",
+    "maternal child family health", "maternal child adolescent health",
+    "women's health", "family health", "perinatal", "reproductive health",
+    "prenatal", "postpartum", "pregnancy", "pregnant"
+  ],
+
+  "program_keywords": [
+    "wic", "women infants children",
+    "home visiting", "miechv", "maternal infant early childhood",
+    "healthy start", "black infant health", "bih",
+    "nurse-family partnership", "nfp", "parents as teachers",
+    "first 5", "title v", "title five",
+    "prenatal care", "prenatal services", "prenatal program",
+    "postpartum", "postpartum support", "postpartum care",
+    "perinatal", "perinatal services", "perinatal equity",
+    "breastfeeding", "lactation", "lactation support",
+    "midwife", "midwifery", "doula",
+    "childbirth", "birth", "labor and delivery",
+    "family planning", "reproductive health",
+    "infant mortality", "maternal mortality",
+    "comprehensive perinatal services program", "cpsp",
+    "california home visiting program", "chvp",
+    "adolescent family life program", "aflp",
+    "perinatal outreach and education", "poem"
+  ],
+
+  "exclusion_keywords": [
+    "medi-cal", "medicaid", "medicare", "calfresh", "food stamps", "snap",
+    "senior", "elderly", "aging", "older adults", "adult protective", "elder abuse",
+    "behavioral health", "substance abuse", "addiction", "drug treatment",
+    "housing", "homeless", "shelter",
+    "child protective", "foster care", "adoption", "calworks", "tanf",
+    "veteran", "va services",
+    "birth certificate", "death certificate", "marriage certificate",
+    "vital records", "recorder-clerk",
+    "tobacco", "tobacco control", "immunization", "flu shot", "vaccination",
+    "dental", "vision", "animal", "pet", "rabies",
+    "environmental health", "food safety", "restaurant inspection",
+    "public records", "foia", "customer service", "call center",
+    "employment", "job", "career", "workforce"
+  ],
+
+  "program_types": [
+    {
+      "name": "Comprehensive Perinatal Services Program",
+      "category": "Perinatal Care",
+      "description": "Enhanced prenatal and postpartum care for Medi-Cal eligible women, including health education, nutrition, and psychosocial assessments",
+      "keywords": [
+        "comprehensive perinatal services", "cpsp", "perinatal services program",
+        "enhanced prenatal care", "medi-cal prenatal", "perinatal care",
+        "perinatal", "perinatal care network", "pcn",
+        "perinatal services", "perinatal program", "perinatal health",
+        "perinatal outreach"
+      ],
+      "framework_dimension_1": "Healthcare Access & Coverage",
+      "framework_dimension_2": "Goal 1: Healthcare Access & Coverage",
+      "federal_program": false,
+      "examples": ["CPSP", "Perinatal Care Network", "Comprehensive Perinatal Services"]
+    },
+    {
+      "name": "Prenatal Care Programs",
+      "category": "Perinatal Care",
+      "description": "General prenatal care and pregnancy services ensuring access to quality care during pregnancy",
+      "keywords": [
+        "prenatal care", "prenatal services", "prenatal program",
+        "pregnancy care", "pregnancy services", "prenatal clinic",
+        "prenatal health", "maternity care", "obstetric care",
+        "prenatal visit", "ob-gyn", "obgyn"
+      ],
+      "framework_dimension_1": "Healthcare Access & Coverage",
+      "framework_dimension_2": "Goal 1: Healthcare Access & Coverage",
+      "federal_program": false,
+      "examples": ["Prenatal Care Program", "Pregnancy Services", "Maternity Clinic"]
+    },
+    {
+      "name": "Postpartum Care & Support",
+      "category": "Perinatal Care",
+      "description": "Services for mothers after childbirth including physical health, mental health support, and care coordination",
+      "keywords": [
+        "postpartum", "postpartum support", "postpartum care",
+        "postpartum depression", "postpartum services",
+        "after birth", "new mother support", "postpartum visit",
+        "fourth trimester", "maternal recovery"
+      ],
+      "framework_dimension_1": "Healthcare Access & Coverage",
+      "framework_dimension_2": "Goal 1: Healthcare Access & Coverage",
+      "federal_program": false,
+      "examples": ["Postpartum Support Program", "New Mother Services"]
+    },
+    {
+      "name": "Maternal Mental Health Services",
+      "category": "Behavioral Health",
+      "description": "Mental health services for pregnant and postpartum individuals, including screening, counseling, and treatment for perinatal mood disorders",
+      "keywords": [
+        "maternal mental health", "perinatal mental health",
+        "postpartum depression", "perinatal mood", "pregnancy depression",
+        "maternal anxiety", "perinatal psychiatry", "maternal behavioral health",
+        "perinatal mood disorder", "prenatal depression"
+      ],
+      "framework_dimension_1": "Healthcare Access & Coverage",
+      "framework_dimension_2": "Goal 1: Healthcare Access & Coverage",
+      "federal_program": false,
+      "examples": ["Maternal Mental Health Program", "Perinatal Mood Support"]
+    },
+    {
+      "name": "Substance Use Disorder Services",
+      "category": "Behavioral Health",
+      "description": "Perinatal addiction services and support for pregnant and postpartum individuals with substance use disorders",
+      "keywords": [
+        "perinatal addiction", "substance use pregnancy", "neonatal abstinence",
+        "opioid pregnancy", "maternal substance use", "recovery pregnancy",
+        "neonatal withdrawal", "medication assisted treatment pregnancy"
+      ],
+      "framework_dimension_1": "Healthcare Access & Coverage",
+      "framework_dimension_2": "Goal 1: Healthcare Access & Coverage",
+      "federal_program": false,
+      "examples": ["Perinatal Substance Use Program", "Recovery Support for Moms"]
+    },
+    {
+      "name": "Family Planning Services",
+      "category": "Reproductive Health",
+      "description": "Reproductive health and family planning services including preconception health, contraception, and Title X services",
+      "keywords": [
+        "family planning", "reproductive health", "birth control",
+        "contraception", "family planning services", "title x",
+        "preconception", "preconception health", "planned parenthood",
+        "reproductive services"
+      ],
+      "framework_dimension_1": "Healthcare Access & Coverage",
+      "framework_dimension_2": "Goal 1: Healthcare Access & Coverage",
+      "federal_program": false,
+      "examples": ["Family Planning Program", "Title X Services"]
+    },
+    {
+      "name": "Black Infant Health",
+      "category": "Health Equity",
+      "description": "California program addressing African American infant mortality through culturally-specific group education, peer support, and case management",
+      "keywords": [
+        "black infant health", "bih", "african american infant",
+        "black maternal health", "infant mortality reduction",
+        "racial equity maternal", "birth equity", "black mothers",
+        "african american maternal", "aaimm"
+      ],
+      "framework_dimension_1": "Quality of Care & Patient Voice",
+      "framework_dimension_2": "Goal 2: Quality of Care & Patient Voice",
+      "federal_program": false,
+      "examples": ["Black Infant Health Program", "BIH", "AAIMM"]
+    },
+    {
+      "name": "Perinatal Equity Initiative",
+      "category": "Health Equity",
+      "description": "Programs focused on reducing racial disparities in maternal and infant health outcomes, addressing implicit bias and structural racism",
+      "keywords": [
+        "perinatal equity", "birth equity", "maternal equity",
+        "racial disparities birth", "health equity maternal",
+        "equity initiative", "maternal mortality disparity",
+        "black maternal mortality", "implicit bias training"
+      ],
+      "framework_dimension_1": "Quality of Care & Patient Voice",
+      "framework_dimension_2": "Goal 2: Quality of Care & Patient Voice",
+      "federal_program": false,
+      "examples": ["Perinatal Equity Initiative", "Birth Equity Program"]
+    },
+    {
+      "name": "Healthy Start",
+      "category": "Health Equity",
+      "description": "Federal program to reduce infant mortality and improve perinatal outcomes in high-risk communities through community health workers and outreach",
+      "keywords": [
+        "healthy start", "infant mortality", "high-risk communities",
+        "community health workers", "perinatal outcomes",
+        "fetal infant mortality", "fimr"
+      ],
+      "framework_dimension_1": "Quality of Care & Patient Voice",
+      "framework_dimension_2": "Goal 2: Quality of Care & Patient Voice",
+      "federal_program": true,
+      "examples": ["Healthy Start Initiative", "Healthy Start Program"]
+    },
+    {
+      "name": "Maternal Mortality Review",
+      "category": "Quality Improvement",
+      "description": "Maternal Mortality Review Committees (MMRCs) that analyze pregnancy-related deaths to identify preventable factors and improve systems of care",
+      "keywords": [
+        "maternal mortality review", "mmrc", "pregnancy related death",
+        "maternal death review", "perinatal quality", "quality improvement",
+        "aim alliance", "perinatal quality collaborative", "pqc"
+      ],
+      "framework_dimension_1": "Quality of Care & Patient Voice",
+      "framework_dimension_2": "Goal 2: Quality of Care & Patient Voice",
+      "federal_program": false,
+      "examples": ["MMRC", "Perinatal Quality Collaborative"]
+    },
+    {
+      "name": "Nurse-Family Partnership",
+      "category": "Home Visiting",
+      "description": "Evidence-based nurse home visiting program for first-time, low-income mothers from pregnancy through child's second birthday",
+      "keywords": [
+        "nurse-family partnership", "nfp", "nurse family partnership",
+        "nurse home visiting", "first-time mothers", "nurse home visits",
+        "public health nurse", "phn"
+      ],
+      "framework_dimension_1": "Social Support & Community",
+      "framework_dimension_2": "Goal 4: Perinatal Workforce",
+      "federal_program": true,
+      "examples": ["Nurse-Family Partnership", "NFP Program"]
+    },
+    {
+      "name": "MIECHV Home Visiting",
+      "category": "Home Visiting",
+      "description": "Maternal, Infant, and Early Childhood Home Visiting - federal program supporting voluntary evidence-based home visiting for at-risk families",
+      "keywords": [
+        "miechv", "maternal infant early childhood home visiting",
+        "home visiting program", "early childhood home visiting",
+        "california home visiting", "chvp"
+      ],
+      "framework_dimension_1": "Social Support & Community",
+      "framework_dimension_2": "Goal 4: Perinatal Workforce",
+      "federal_program": true,
+      "examples": ["MIECHV Program", "Home Visiting Initiative", "CHVP"]
+    },
+    {
+      "name": "Healthy Families America",
+      "category": "Home Visiting",
+      "description": "Home visiting program for new and expectant families at-risk for child maltreatment, promoting positive parenting",
+      "keywords": [
+        "healthy families", "healthy families america", "hfa",
+        "family support home visiting"
+      ],
+      "framework_dimension_1": "Social Support & Community",
+      "framework_dimension_2": "Goal 4: Perinatal Workforce",
+      "federal_program": true,
+      "examples": ["Healthy Families America", "Healthy Families Program"]
+    },
+    {
+      "name": "Parents as Teachers",
+      "category": "Home Visiting",
+      "description": "Home visiting program focused on parent education and child development from pregnancy through kindergarten",
+      "keywords": [
+        "parents as teachers", "pat program", "parent education",
+        "parent-child interaction"
+      ],
+      "framework_dimension_1": "Social Support & Community",
+      "framework_dimension_2": "Goal 4: Perinatal Workforce",
+      "federal_program": true,
+      "examples": ["Parents as Teachers", "PAT Program"]
+    },
+    {
+      "name": "Doula Services",
+      "category": "Birth Support",
+      "description": "Community-based doula support during pregnancy, birth, and postpartum. Associated with lower rates of pregnancy complications and improved outcomes.",
+      "keywords": [
+        "doula", "birth doula", "community doula", "doula services",
+        "birth support", "labor support", "birth companion",
+        "doula program", "aaimm doula"
+      ],
+      "framework_dimension_1": "Social Support & Community",
+      "framework_dimension_2": "Goal 4: Perinatal Workforce",
+      "federal_program": false,
+      "examples": ["Doula Program", "Community Doula Services", "AAIMM Doula"]
+    },
+    {
+      "name": "Midwifery Services",
+      "category": "Birth Support",
+      "description": "Licensed midwife-led prenatal, birth, and postpartum care. Includes certified nurse midwives (CNM) and licensed midwives.",
+      "keywords": [
+        "midwife", "midwifery", "certified nurse midwife",
+        "cnm", "licensed midwife", "birth center", "freestanding birth center"
+      ],
+      "framework_dimension_1": "Social Support & Community",
+      "framework_dimension_2": "Goal 4: Perinatal Workforce",
+      "federal_program": false,
+      "examples": ["Midwifery Program", "Birth Center", "CNM Services"]
+    },
+    {
+      "name": "Community Health Workers",
+      "category": "Community Health",
+      "description": "Community health workers (promotores) providing outreach, education, and care navigation for pregnant and postpartum individuals",
+      "keywords": [
+        "community health worker", "promotora", "promotores",
+        "health navigator", "care coordination", "patient navigator",
+        "community outreach", "chw"
+      ],
+      "framework_dimension_1": "Social Support & Community",
+      "framework_dimension_2": "Goal 4: Perinatal Workforce",
+      "federal_program": false,
+      "examples": ["CHW Program", "Promotoras de Salud"]
+    },
+    {
+      "name": "Lactation Support",
+      "category": "Breastfeeding",
+      "description": "Breastfeeding education and lactation consultant services to support breastfeeding initiation and continuation",
+      "keywords": [
+        "breastfeeding", "lactation", "lactation support",
+        "lactation consultant", "breastfeeding education",
+        "nursing mother", "breast pump", "milk bank", "ibclc",
+        "breastfeeding peer counselor"
+      ],
+      "framework_dimension_1": "Social Support & Community",
+      "framework_dimension_2": "Goal 4: Perinatal Workforce",
+      "federal_program": false,
+      "examples": ["Breastfeeding Support Program", "Lactation Services"]
+    },
+    {
+      "name": "WIC Program",
+      "category": "Nutrition",
+      "description": "Women, Infants, and Children - supplemental nutrition program providing food benefits, nutrition education, and breastfeeding support",
+      "keywords": [
+        "wic", "women infants children", "women, infants, and children",
+        "supplemental nutrition", "wic program", "wic clinic",
+        "wic benefits", "wic foods", "wic eligibility"
+      ],
+      "framework_dimension_1": "Nutrition & Food Security",
+      "framework_dimension_2": "Goal 5: Social & Economic Supports",
+      "federal_program": true,
+      "examples": ["WIC Program", "WIC Nutrition Services", "WIC Clinic"]
+    },
+    {
+      "name": "Teen Pregnancy & Parenting Programs",
+      "category": "Adolescent Health",
+      "description": "Comprehensive services for pregnant and parenting teens including case management, education support, and healthcare access",
+      "keywords": [
+        "adolescent family life", "aflp", "teen pregnancy",
+        "pregnant teens", "parenting teens", "adolescent pregnancy",
+        "teen parent", "young parent", "teenage pregnancy",
+        "tapp", "teen parenting"
+      ],
+      "framework_dimension_1": "Social Support & Community",
+      "framework_dimension_2": "Goal 5: Social & Economic Supports",
+      "federal_program": false,
+      "examples": ["AFLP", "Teen Pregnancy Program", "TAPP"]
+    },
+    {
+      "name": "First 5 Programs",
+      "category": "Early Childhood",
+      "description": "California First 5 programs supporting children ages 0-5 and their families with health, development, and school readiness services",
+      "keywords": [
+        "first 5", "first five", "proposition 10", "prop 10",
+        "children ages 0-5", "early childhood", "kindergarten readiness"
+      ],
+      "framework_dimension_1": "Social Support & Community",
+      "framework_dimension_2": "Goal 5: Social & Economic Supports",
+      "federal_program": false,
+      "examples": ["First 5 California", "First 5 LA", "First 5 Commission"]
+    },
+    {
+      "name": "Title V MCH Block Grant",
+      "category": "Maternal Child Health",
+      "description": "Federal Title V Maternal and Child Health Services Block Grant funding state programs for mothers and children",
+      "keywords": [
+        "title v", "title five", "mch block grant",
+        "maternal child health block", "mch services",
+        "mcah", "maternal child adolescent health",
+        "mch program", "mcfhs"
+      ],
+      "framework_dimension_1": "Healthcare Access & Coverage",
+      "framework_dimension_2": "Goal 1: Healthcare Access & Coverage",
+      "federal_program": true,
+      "examples": ["Title V Program", "MCH Services", "MCAH Program", "MCFHS"]
+    },
+    {
+      "name": "Responsible Fatherhood Programs",
+      "category": "Partner & Family Engagement",
+      "description": "State and federally funded programs that engage fathers through parenting education, economic stability services, and mentorship to improve child and family outcomes",
+      "keywords": [
+        "responsible fatherhood", "fatherhood initiative", "father first",
+        "fatherhood program", "father engagement", "dad program",
+        "fatherhood support", "father involvement", "paternal engagement",
+        "fatherhood grant", "father mentorship", "fatherhood services"
+      ],
+      "framework_dimension_1": "Social Support & Community",
+      "framework_dimension_2": "Goal 5: Social & Economic Supports",
+      "federal_program": false,
+      "examples": ["Father First FL", "ACF Responsible Fatherhood", "Alameda County Fatherhood Initiative"]
+    },
+    {
+      "name": "Co-Parenting Support Programs",
+      "category": "Partner & Family Engagement",
+      "description": "Programs providing education and support for healthy co-parenting relationships, communication skills, and collaborative parenting",
+      "keywords": [
+        "co-parenting", "coparenting", "co-parent education",
+        "healthy relationship education", "parenting partnership",
+        "couple relationship", "partner communication",
+        "charmed", "relationship skills", "co-parenting support"
+      ],
+      "framework_dimension_1": "Social Support & Community",
+      "framework_dimension_2": "Goal 5: Social & Economic Supports",
+      "federal_program": false,
+      "examples": ["CHaRMED", "Just Beginning", "Co-Parenting Education Program"]
+    },
+    {
+      "name": "Paternal Perinatal Support",
+      "category": "Partner & Family Engagement",
+      "description": "Programs specifically targeting fathers and partners during the perinatal period, including perinatal education for dads, partner support groups, and paternal mental health screening",
+      "keywords": [
+        "paternal perinatal", "father perinatal", "dad support pregnancy",
+        "partner support perinatal", "paternal mental health",
+        "father postpartum", "dad postpartum", "expectant father",
+        "boot camp for new dads", "daddy boot camp",
+        "partner perinatal education"
+      ],
+      "framework_dimension_1": "Social Support & Community",
+      "framework_dimension_2": "Goal 5: Social & Economic Supports",
+      "federal_program": false,
+      "examples": ["Boot Camp for New Dads", "Fresno Paternal Involvement Curriculum", "Perinatal Partner Support Group"]
+    }
+  ],
+
+  "llm_domain_focus_description": "Focus ONLY on maternal health programs. These include programs specifically designed for pregnant women, new mothers, infants, and families during the perinatal period.",
+
+  "llm_inclusion_bullets": [
+    "Pregnant women, new mothers, and infants",
+    "WIC, home visiting (MIECHV, NFP, Healthy Families), prenatal care, postpartum support",
+    "Breastfeeding and lactation support",
+    "Family planning and reproductive health (Title X)",
+    "Doula and midwifery services",
+    "Programs addressing maternal or infant mortality",
+    "Perinatal mental health and substance use services",
+    "Black Infant Health, perinatal equity initiatives",
+    "Teen pregnancy and parenting programs (AFLP, TAPP)",
+    "Fatherhood and co-parenting programs that support the maternal health ecosystem"
+  ],
+
+  "llm_exclusion_bullets": [
+    "General health programs like Medi-Cal, CalFresh, or general insurance enrollment",
+    "General behavioral health or substance use programs not specific to pregnancy/postpartum",
+    "Senior services, aging programs, or adult protective services",
+    "General social services like foster care, adoption, or CalWORKs",
+    "Immunization, dental, or vision programs not specifically for pregnant/postpartum women",
+    "Environmental health, food safety, or administrative services",
+    "General housing or homeless programs (unless specifically for pregnant women)"
+  ],
+
+  "output_file_prefix": "California_Maternal",
+
+  "_framework_note": "Taxonomy grounded in Solar & Irwin (2010) SDOH framework and White House Blueprint for Addressing the Maternal Health Crisis (2022). framework_dimension_1 = SDOH domain, framework_dimension_2 = Blueprint Goal."
+}
