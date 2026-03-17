@@ -1,0 +1,75 @@
+
+================================================================
+GAP DETECTION REPORT - CA
+================================================================
+  Counties scanned:      35
+  Total extractions:     577
+  Matched to registry:   423
+  Unmatched rate:        26.7%
+  Gap candidates:        40
+  Alias miss signals:    21
+
+  TOP GAP CANDIDATES (by gap_score):
+
+    [0.53] Teenage Pregnancy and Parenting Program (TAPP)
+           Signal:  NOVEL - likely new registry entry needed
+           Found in 9 pages across: County v2, County, San Francisco, San Francisco Healthcare Data
+           Sample: "The Teenage Pregnancy and Parenting program (TAPP) provides comprehensive case management for expectant and parenting te..."
+
+    [0.52] Los Angeles Mommy and Baby Project (LAMB)
+           Signal:  NOVEL - likely new registry entry needed
+           Found in 11 pages across: Los Angeles Healthcare Data, County v2, Los Angeles, County v1
+           Closest registry match: WIC (similarity: 0.25)
+           Sample: "Program aimed at improving maternal and infant health outcomes through education and support...."
+
+    [0.51] Project HOPE
+           Signal:  NOVEL - likely new registry entry needed
+           Found in 6 pages across: County, Los Angeles
+           Sample: "Project HOPE is a pilot program to support families experiencing homelessness, providing essential support during pregna..."
+
+    [0.48] African American Infant & Maternal Mortality Prevention Initiative (AAIMM)
+           Signal:  NOVEL - likely new registry entry needed
+           Found in 12 pages across: Los Angeles Healthcare Data, County v2, Los Angeles, County v1
+           Closest registry match: BIH_CA (similarity: 0.38)
+           Sample: "Program aimed at reducing infant and maternal mortality rates among African American communities...."
+
+    [0.48] Maternal, Child, and Adolescent Health
+           Signal:  NOVEL - likely new registry entry needed
+           Found in 9 pages across: County v2, County, San Francisco, San Francisco Healthcare Data
+           Closest registry match: TITLE_V_MCH (similarity: 0.33)
+           Sample: "We provide services to pregnant people and families with children and we collaborate with health professionals to improv..."
+
+    [0.47] Perinatal Equity Initiative (PEI)
+           Signal:  NOVEL - likely new registry entry needed
+           Found in 7 pages across: County v2, County, San Diego, San Diego Healthcare Data
+           Closest registry match: PCN_CA (similarity: 0.31)
+           Sample: "Initiative aimed at improving birth and maternal health outcomes for African-American families in San Diego County by ad..."
+
+    [0.47] Nurse home visiting program
+           Signal:  VARIANT - may need new Tier 3 entry or alias expansion
+           Found in 14 pages across: County v2, County, San Francisco, San Francisco Healthcare Data
+           Closest registry match: NFP (similarity: 0.53)
+           Sample: "If you are pregnant or have a new baby, a public health nurse can visit you at home to provide support and guidance...."
+
+    [0.43] Bemomaware
+           Signal:  NOVEL - likely new registry entry needed
+           Found in 2 pages across: California Sacramento Healthcare Data, County v1
+           Sample: "Connect to Care for Maternal Mental Health with Bemomaware, part of the Sacramento Maternal Mental Health Collaborative...."
+
+    [0.43] Planned Parenthood
+           Signal:  NOVEL - likely new registry entry needed
+           Found in 2 pages across: County, Sonoma
+           Sample: "Offers education about birth control, abortion, and sexual health and well-being...."
+
+    [0.43] The Village Fund
+           Signal:  NOVEL - likely new registry entry needed
+           Found in 2 pages across: County, Los Angeles
+           Sample: "The Village Fund provides financial support to families in need...."
+
+  TOP ALIAS MISS SIGNALS:
+
+    FQHC - alias matcher said absent in 15 counties but page text suggests presence
+      Sample text: "prenatal care.” “helped me get seen by a doctor – if my friend was having medical problems, i’d recommend.” “me siento t"
+
+    MEDICAID_PRENATAL - alias matcher said absent in 6 counties but page text suggests presence
+      Sample text: "parent guide: medi-cal coverage of therapeutic formula – english | spanish parent guide: private or military insurance c"

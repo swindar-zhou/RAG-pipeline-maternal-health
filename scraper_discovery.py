@@ -1,307 +1,411 @@
 #!/usr/bin/env python3
 """
-Phase 1 - Discovery Scraper (Pilot: 5 Counties)
+Phase 1 - Discovery Scraper v2 (Search-first)
+==============================================
+Strategy: use DuckDuckGo search to find the exact MCH page on each
+county's health department website, then fetch that page and extract
+program links.
 
-Finds Health Department pages → Maternal/Child Health sections → candidate
-program links for maternal health using heuristic scoring. Persists results
-to data/discovery_results.json without calling any LLMs.
+No HEAD probing. No nav-chain heuristics. No scoring pyramids.
+Search → fetch → extract. That's it.
+
+INSTALL:  pip install aiohttp beautifulsoup4 lxml duckduckgo-search
+USAGE:
+  python scraper_discovery_v2.py                        # all 58 counties
+  python scraper_discovery_v2.py --county Alameda Fresno
+  python scraper_discovery_v2.py --concurrency 4
 """
 
+from __future__ import annotations
+
+import argparse
+import asyncio
+import json
 import os
 import re
-import json
 import time
-import requests
-from bs4 import BeautifulSoup
+from collections import Counter
 from datetime import datetime
+from typing import Callable, Dict, List, Optional, Set, Tuple
 from urllib.parse import urljoin, urlparse
-from typing import List, Dict, Optional, Tuple
 
-# Import shared configuration
-from src.config import (
-    CALIFORNIA_COUNTIES,
-    HEALTH_DEPT_URLS,
-    MATERNAL_HEALTH_URLS,  # Validated maternal health URLs from advisor
-    REQUEST_TIMEOUT,
-    DELAY_BETWEEN_REQUESTS,
-    DEPT_KEYWORDS,
-    SECTION_KEYWORDS,
-    PROGRAM_KEYWORDS,
-)
+import aiohttp
+from bs4 import BeautifulSoup
+from ddgs import DDGS
 
-# Import maternal health taxonomy for improved classification
-from src.maternal_taxonomy import (
-    classify_program,
-    is_maternal_health_program,
-    is_non_maternal_program,
-    score_maternal_relevance,
-)
+from src.config import CALIFORNIA_COUNTIES, HEALTH_DEPT_URLS, MATERNAL_HEALTH_URLS
+from src.maternal_taxonomy import classify_program, is_maternal_health_program, is_non_maternal_program, score_maternal_relevance
+from src.federal_program_registry import get_aliases_flat
 
-# -----------------------------------------------------------------------------
-# Configuration
-# -----------------------------------------------------------------------------
+# ─────────────────────────────────────────────────────────────────────────────
+# Constants
+# ─────────────────────────────────────────────────────────────────────────────
 
-PILOT_COUNTIES = ["San Diego", "Alameda", "Fresno", "Sacramento", "Kern"]
+FETCH_TIMEOUT   = 15
+CONCURRENCY     = 4    # keep low — DDG rate-limits aggressive callers
+DDG_DELAY       = 1.5  # seconds between DDG calls (avoid 202 rate-limit)
+MAX_PROG_LINKS  = 30
+MIN_PROG_SCORE  = 1.0  # minimum score for a link to be a program candidate
 
-# -----------------------------------------------------------------------------
-# Helpers
-# -----------------------------------------------------------------------------
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/120.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+}
 
-def fetch_soup(url: str) -> Optional[BeautifulSoup]:
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    }
+_CA_ALIASES: Set[str] = set(get_aliases_flat("CA").keys())
+
+# Search query templates — tried in order until one returns a result
+# on the county's own domain
+SEARCH_TEMPLATES = [
+    '"{county}" county health department WIC maternal prenatal California',
+    '"{county}" county "maternal child health" OR "MCAH" OR "WIC" California',
+    '"{county}" county health "home visiting" OR "prenatal" OR "Black Infant Health"',
+]
+
+# UI chrome link text — skip these before scoring
+_SKIP_TEXT: Set[str] = {
+    "skip to main content", "skip to content", "click here to learn more",
+    "click here", "learn more", "read more", "more information",
+    "staff login", "login", "sign in", "back to top", "home",
+    "contact us", "sitemap", "accessibility", "translate", "search",
+    "menu", "close", "español", "",
+}
+
+_SKIP_URL_SEGS: Set[str] = {
+    "login", "sign-in", "logout", "admin", "news", "press-release",
+    "blog", "event", "calendar", "permit", "job", "career",
+    "agendas", "minutes", "board", "facebook.com", "twitter.com",
+    "instagram.com", "youtube.com",
+}
+
+# ─────────────────────────────────────────────────────────────────────────────
+# DuckDuckGo search (sync, called in executor to avoid blocking event loop)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _ddg_search(query: str, max_results: int = 8) -> List[Dict]:
+    """
+    Run a DDG text search and return result dicts with 'href' and 'title'.
+    Returns [] on any error (rate-limit, network, etc.).
+    """
     try:
-        resp = requests.get(url, headers=headers, timeout=REQUEST_TIMEOUT)
-        resp.raise_for_status()
-        soup = BeautifulSoup(resp.content, "lxml")
-        for el in soup(["script", "style", "nav", "footer", "header", "aside", "noscript"]):
-            el.decompose()
-        return soup
+        ddgs = DDGS()
+        results = list(ddgs.text(query, max_results=max_results))
+        return results
+    except Exception as e:
+        return []
+
+
+def _county_domain(county_name: str) -> Optional[str]:
+    """
+    Derive the expected county domain from HEALTH_DEPT_URLS or CALIFORNIA_COUNTIES.
+    Returns e.g. 'acgov.org' or 'co.alameda.ca.us'.
+    """
+    base = HEALTH_DEPT_URLS.get(county_name) or CALIFORNIA_COUNTIES.get(county_name, "")
+    if not base:
+        return None
+    netloc = urlparse(base).netloc.lstrip("www.")
+    return netloc or None
+
+
+def _find_mch_url_via_search(county_name: str) -> Optional[str]:
+    """
+    Try each search template until we get a result URL on the county's domain.
+    Returns the best matching URL or None.
+    Adds a small delay between calls to avoid DDG rate-limiting.
+    """
+    domain = _county_domain(county_name)
+
+    for template in SEARCH_TEMPLATES:
+        query = template.format(county=county_name)
+        results = _ddg_search(query, max_results=8)
+        time.sleep(DDG_DELAY)
+
+        if not results:
+            continue
+
+        # Prefer results on the county's own domain
+        if domain:
+            for r in results:
+                href = r.get("href", "")
+                if domain in href:
+                    return href
+
+        # Fallback: return first result that looks like a .gov or .us page
+        for r in results:
+            href = r.get("href", "")
+            if re.search(r"\.(gov|us|ca\.us)(/|$)", href):
+                return href
+
+    return None
+
+# ─────────────────────────────────────────────────────────────────────────────
+# HTTP fetch
+# ─────────────────────────────────────────────────────────────────────────────
+
+async def _get(session: aiohttp.ClientSession, url: str) -> Optional[str]:
+    try:
+        async with session.get(
+            url, headers=HEADERS,
+            timeout=aiohttp.ClientTimeout(total=FETCH_TIMEOUT),
+            allow_redirects=True,
+        ) as r:
+            if r.status >= 400:
+                return None
+            return await r.text(errors="replace")
     except Exception:
         return None
 
-def normalize_url(base_url: str, href: str) -> str:
+
+def _parse_links(html: str, base_url: str) -> List[Tuple[str, str]]:
     try:
-        return urljoin(base_url, href)
+        soup = BeautifulSoup(html, "lxml")
     except Exception:
-        return href
-
-def extract_links(soup: BeautifulSoup, base_url: str) -> List[Tuple[str, str]]:
-    links: List[Tuple[str, str]] = []
+        soup = BeautifulSoup(html, "html.parser")
+    for el in soup(["script", "style", "nav", "footer", "header", "aside", "noscript"]):
+        el.decompose()
+    out: List[Tuple[str, str]] = []
     for a in soup.find_all("a", href=True):
-        href = normalize_url(base_url, a["href"])
-        text = a.get_text(strip=True)
-        links.append((href, text))
-    return links
+        href = urljoin(base_url, a["href"])
+        text = a.get_text(separator=" ", strip=True)
+        if href.startswith("http"):
+            out.append((href, text))
+    return out
 
-def is_same_domain(base_url: str, candidate_url: str) -> bool:
+
+def same_domain(base: str, candidate: str) -> bool:
     try:
-        b = urlparse(base_url)
-        c = urlparse(candidate_url)
-        return (c.netloc == b.netloc) or (c.netloc.endswith("." + b.netloc))
+        b = urlparse(base).netloc
+        c = urlparse(candidate).netloc
+        return c == b or c.endswith("." + b)
     except Exception:
         return False
 
-def score_link(href: str, text: str, level: str) -> int:
-    value = 0
-    t = (text or "").lower()
-    h = (href or "").lower()
-    def contains_any(words: List[str]) -> bool:
-        return any(w in t or w in h for w in words)
-    if level == "dept":
-        if contains_any(DEPT_KEYWORDS):
-            value += 3
-        if "/health" in h or "/public-health" in h:
-            value += 2
-    elif level == "section":
-        if contains_any(SECTION_KEYWORDS):
-            value += 3
-        if any(seg in h for seg in ["/mch", "/mcah", "/maternal", "/perinatal", "/family-health"]):
-            value += 2
-    elif level == "program":
-        if contains_any(PROGRAM_KEYWORDS):
-            value += 2
-        if any(seg in h for seg in ["/apply", "/program", "/services", "/maternal", "/perinatal"]):
-            value += 1
-    if any(d in h for d in ["facebook.com", "twitter.com", "instagram.com", "youtube.com", "linkedin.com"]):
-        value -= 3
-    return value
+# ─────────────────────────────────────────────────────────────────────────────
+# Program link scoring and extraction
+# ─────────────────────────────────────────────────────────────────────────────
 
-def choose_best_link(links: List[Tuple[str, str]], base_url: str, level: str) -> Optional[str]:
-    best = None
-    best_score = -999
+def _score_program_link(href: str, text: str) -> float:
+    combined = (text + " " + href).lower()
+    path_segs = set(re.split(r"[/\-_.]", urlparse(href).path.lower()))
+
+    if path_segs & _SKIP_URL_SEGS:
+        return 0.0
+    if text.lower().strip() in _SKIP_TEXT:
+        return 0.0
+
+    score = 0.0
+
+    # Registry alias hit — strongest signal
+    if any(alias in combined for alias in _CA_ALIASES):
+        score += 3.0
+
+    # Maternal taxonomy signals
+    if is_maternal_health_program(text, href):
+        score += 2.0
+        score += score_maternal_relevance(text, href)
+
+    # Penalties
+    if any(d in href for d in ["facebook.com", "twitter.com", "instagram.com", "youtube.com"]):
+        score -= 5.0
+    if is_non_maternal_program(text, href):
+        score -= 3.0
+
+    return score
+
+
+def _extract_program_links(html: str, base_url: str) -> List[Dict]:
+    links = _parse_links(html, base_url)
+    scored: List[Tuple[float, str, str]] = []
+    seen: Set[str] = set()
+
     for href, text in links:
-        if not href.startswith("http"):
+        if href in seen or not same_domain(base_url, href):
             continue
-        if not is_same_domain(base_url, href):
-            continue
-        sc = score_link(href, text, level)
-        if sc > best_score:
-            best_score = sc
-            best = href
-    return best
-
-def find_health_dept_page(county_root_url: str) -> Optional[str]:
-    soup = fetch_soup(county_root_url)
-    if not soup:
-        return None
-    links = extract_links(soup, county_root_url)
-    return choose_best_link(links, county_root_url, "dept")
-
-def find_maternal_section(health_dept_url: str) -> Optional[str]:
-    soup = fetch_soup(health_dept_url)
-    if not soup:
-        return None
-    links = extract_links(soup, health_dept_url)
-    return choose_best_link(links, health_dept_url, "section")
-
-def collect_program_links(seed_url: str, max_links: int = 25, strict_maternal: bool = True) -> List[Dict[str, str]]:
-    """
-    Collect program links from a seed URL, using taxonomy-based classification.
-    
-    Per advisor feedback: focus on maternal health programs, exclude general health services.
-    
-    Args:
-        seed_url: The URL to scrape for program links
-        max_links: Maximum number of links to return
-        strict_maternal: If True, only return programs that are classified as maternal health.
-                        If False, return all programs that aren't explicitly excluded.
-    """
-    soup = fetch_soup(seed_url)
-    if not soup:
-        return []
-    links = extract_links(soup, seed_url)
-    scored: List[Tuple[float, str, str, Optional[str]]] = []  # (score, href, text, category)
-    
-    for href, text in links:
-        if not href.startswith("http"):
-            continue
-        
-        # Skip non-maternal programs (per advisor: don't mix with general health)
-        if is_non_maternal_program(text, href):
-            continue
-        
-        # Check if it's a confirmed maternal health program
-        is_confirmed_maternal = is_maternal_health_program(text, href)
-        
-        # In strict mode, skip programs that aren't confirmed maternal health
-        if strict_maternal and not is_confirmed_maternal:
-            continue
-        
-        # Base score from keyword matching
-        keyword_score = score_link(href, text, "program")
-        
-        # Taxonomy-based score boost
-        taxonomy_score = score_maternal_relevance(text, href)
-        
-        # Combined score
-        total_score = keyword_score + (taxonomy_score * 3)  # Weight taxonomy higher
-        
-        # Boost confirmed maternal programs
-        if is_confirmed_maternal:
-            total_score += 2
-        
-        if total_score <= 0:
-            continue
-        
-        # Classify the program
-        classification = classify_program(text, href)
-        category = classification.category if classification else None
-        
-        scored.append((total_score, href, text, category))
-    
-    scored.sort(key=lambda t: t[0], reverse=True)
-    seen = set()
-    programs: List[Dict[str, str]] = []
-    
-    for score, href, text, category in scored:
-        if href in seen:
+        sc = _score_program_link(href, text)
+        if sc < MIN_PROG_SCORE:
             continue
         seen.add(href)
-        programs.append({
+        scored.append((sc, href, text))
+
+    scored.sort(reverse=True)
+    results: List[Dict] = []
+    for sc, href, text in scored[:MAX_PROG_LINKS]:
+        classification = classify_program(text, href)
+        results.append({
             "name": text or "",
             "url": href,
             "link_text": text or "",
-            "nav_path": "",
-            "category": category or "Unknown",
-            "relevance_score": round(score, 2),
+            "nav_path": f"search → {base_url}",
+            "category": classification.category if classification else "Unknown",
+            "relevance_score": round(sc, 2),
         })
-        if len(programs) >= max_links:
-            break
-    return programs
+    return results
 
-# -----------------------------------------------------------------------------
-# Workflow
-# -----------------------------------------------------------------------------
+# ─────────────────────────────────────────────────────────────────────────────
+# Per-county discovery
+# ─────────────────────────────────────────────────────────────────────────────
 
-def run_discovery_for_county(county_name: str, county_root_url: str) -> Dict:
-    """
-    Run discovery for a county, prioritizing validated maternal health URLs.
-    
-    Priority order (per advisor feedback):
-    1. MATERNAL_HEALTH_URLS - validated maternal health section URLs
-    2. HEALTH_DEPT_URLS - general health department entry points
-    3. Heuristic discovery from county root URL
-    """
-    print(f"→ Discovery: {county_name}")
+async def _discover_one(
+    session: aiohttp.ClientSession,
+    county_name: str,
+    county_root_url: str,
+    semaphore: asyncio.Semaphore,
+    progress_cb: Callable[[str], None],
+) -> Dict:
     result: Dict = {
         "county_name": county_name,
         "county_url": county_root_url,
         "health_dept_url": "",
         "maternal_section_url": "",
-        "programs": []
+        "discovery_tier": "",
+        "programs": [],
     }
-    
-    # Priority 1: Check for validated maternal health URL (from advisor's manual review)
-    maternal_url = MATERNAL_HEALTH_URLS.get(county_name)
-    if maternal_url:
-        print(f"   ✓ Using validated maternal health URL: {maternal_url}")
-        result["maternal_section_url"] = maternal_url
-        # Skip health dept discovery, go straight to program collection
-        programs = collect_program_links(maternal_url)
-        for p in programs:
-            p["nav_path"] = "Validated Maternal Health Section"
-        result["programs"] = programs
-        print(f"   ✓ Found {len(programs)} candidate program links")
-        return result
-    
-    # Priority 2: Check for known health department URL
-    known_dept_url = HEALTH_DEPT_URLS.get(county_name)
-    if known_dept_url:
-        print(f"   ✓ Using known health department URL: {known_dept_url}")
-        result["health_dept_url"] = known_dept_url
-        dept = known_dept_url
-    else:
-        # Priority 3: Heuristic discovery from county root
-        dept = find_health_dept_page(county_root_url)
-        if dept:
-            result["health_dept_url"] = dept
-        else:
-            print("   ⚠ Health department page not found; continuing from root")
-            dept = county_root_url
-    
-    time.sleep(1)
-    mch = find_maternal_section(dept)
-    if mch:
-        result["maternal_section_url"] = mch
-    else:
-        print("   ⚠ Maternal section not found; using health department page")
-        mch = dept
-    time.sleep(1)
-    programs = collect_program_links(mch)
-    for p in programs:
-        p["nav_path"] = "Main → Health Dept → Maternal/Child" if result["maternal_section_url"] else "Main → Health Dept"
-    result["programs"] = programs
-    print(f"   ✓ Found {len(programs)} candidate program links")
+
+    async with semaphore:
+
+        mch_url: Optional[str] = None
+
+        # ── Tier 1: use validated URL directly (no search needed) ─────────────
+        validated = MATERNAL_HEALTH_URLS.get(county_name)
+        if validated:
+            mch_url = validated
+            result["maternal_section_url"] = mch_url
+            result["discovery_tier"] = "tier1_validated"
+
+        # ── Tier 2: DuckDuckGo search for county MCH page ─────────────────────
+        if not mch_url:
+            # Run blocking DDG call in a thread so it doesn't stall the event loop
+            loop = asyncio.get_event_loop()
+            mch_url = await loop.run_in_executor(
+                None, _find_mch_url_via_search, county_name
+            )
+            if mch_url:
+                result["maternal_section_url"] = mch_url
+                result["discovery_tier"] = "tier2_search"
+
+        # ── Tier 3: fall back to known health dept URL or county root ─────────
+        if not mch_url:
+            mch_url = HEALTH_DEPT_URLS.get(county_name) or county_root_url
+            result["health_dept_url"] = mch_url
+            result["discovery_tier"] = "tier3_fallback"
+
+        # ── Fetch the MCH page and extract program links ──────────────────────
+        html = await _get(session, mch_url)
+        if html:
+            result["programs"] = _extract_program_links(html, mch_url)
+
+    n = len(result["programs"])
+    tier = result["discovery_tier"]
+    icon = "✓" if n > 0 else "○"
+    progress_cb(f"→ Discovery: {county_name:<22} [{tier:<18}]  {n} program links")
     return result
 
-def run_discovery_pilot() -> None:
-    os.makedirs("data", exist_ok=True)
-    results: List[Dict] = []
-    for name in PILOT_COUNTIES:
-        base = CALIFORNIA_COUNTIES.get(name)
-        if not base:
-            print(f"   ⚠ County not found in mapping: {name}")
-            continue
-        try:
-            res = run_discovery_for_county(name, base)
-            results.append(res)
-        except Exception as e:
-            print(f"   ✗ Discovery error for {name}: {e}")
-        time.sleep(DELAY_BETWEEN_REQUESTS)
-    out_path = os.path.join("data", "discovery_results.json")
-    with open(out_path, "w", encoding="utf-8") as f:
-        json.dump({"generated_at": datetime.now().isoformat(), "results": results}, f, ensure_ascii=False, indent=2)
-    print(f"\n✓ Discovery results saved to {out_path}")
+# ─────────────────────────────────────────────────────────────────────────────
+# Batch runner
+# ─────────────────────────────────────────────────────────────────────────────
 
-def main():
-    print("\n" + "="*60)
-    print("🔎 Phase 1 - Discovery (Pilot: 5 Counties)")
-    print("="*60 + "\n")
-    run_discovery_pilot()
+async def _run_all(county_names: List[str], concurrency: int) -> List[Dict]:
+    semaphore = asyncio.Semaphore(concurrency)
+    connector = aiohttp.TCPConnector(limit=concurrency * 2, ssl=False)
+    printed: List[str] = []
+
+    def progress_cb(msg: str):
+        print(msg, flush=True)
+        printed.append(msg)
+
+    async with aiohttp.ClientSession(connector=connector) as session:
+        tasks = [
+            _discover_one(session, name, CALIFORNIA_COUNTIES[name], semaphore, progress_cb)
+            for name in county_names
+            if name in CALIFORNIA_COUNTIES
+        ]
+        raw = await asyncio.gather(*tasks, return_exceptions=True)
+
+    results: List[Dict] = []
+    for name, r in zip(county_names, raw):
+        if isinstance(r, Exception):
+            print(f"  ✗ {name}: {r}")
+            results.append({
+                "county_name": name, "county_url": "", "health_dept_url": "",
+                "maternal_section_url": "", "discovery_tier": "error", "programs": [],
+            })
+        else:
+            results.append(r)
+    return results
+
+
+def _print_summary(results: List[Dict]) -> None:
+    tiers = Counter(r.get("discovery_tier", "?") for r in results)
+    total = sum(len(r["programs"]) for r in results)
+    zero = [r["county_name"] for r in results if not r["programs"]]
+
+    print(f"\n{'─'*60}")
+    print("Discovery summary:")
+    for tier, count in sorted(tiers.items()):
+        print(f"  {tier:<25}: {count} counties")
+    print(f"\n  Total program links: {total}")
+    print(f"  Counties with hits:  {len(results) - len(zero)}/{len(results)}")
+    if zero:
+        print(f"\n  Zero-result counties ({len(zero)}) — add manually to MATERNAL_HEALTH_URLS:")
+        for name in zero:
+            print(f"    {name}")
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Public API — drop-in for run_pipeline.py
+# ─────────────────────────────────────────────────────────────────────────────
+
+def run_discovery_for_county(county_name: str, county_root_url: str) -> Dict:
+    """Sync drop-in replacement for run_pipeline.py."""
+    printed: List[str] = []
+
+    async def _inner() -> Dict:
+        connector = aiohttp.TCPConnector(ssl=False)
+        sem = asyncio.Semaphore(1)
+        async with aiohttp.ClientSession(connector=connector) as session:
+            return await _discover_one(
+                session, county_name, county_root_url, sem,
+                progress_cb=lambda msg: printed.append(msg),
+            )
+
+    result = asyncio.run(_inner())
+    for msg in printed:
+        print(msg, flush=True)
+    return result
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CLI
+# ─────────────────────────────────────────────────────────────────────────────
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Phase 1 Discovery — search-first")
+    parser.add_argument("--county", nargs="*", help="Specific county names")
+    parser.add_argument("--concurrency", type=int, default=CONCURRENCY,
+                        help=f"Max concurrent tasks (default: {CONCURRENCY})")
+    args = parser.parse_args()
+
+    target = args.county if args.county else list(CALIFORNIA_COUNTIES.keys())
+
+    print(f"\n{'='*60}")
+    print(f"🔎 Phase 1 Discovery — search-first — {len(target)} counties")
+    print(f"   Concurrency: {args.concurrency}")
+    print(f"{'='*60}\n")
+
+    results = asyncio.run(_run_all(target, args.concurrency))
+    _print_summary(results)
+
+    os.makedirs("data", exist_ok=True)
+    out = os.path.join("data", "discovery_results.json")
+    with open(out, "w", encoding="utf-8") as f:
+        json.dump(
+            {"generated_at": datetime.now().isoformat(), "results": results},
+            f, ensure_ascii=False, indent=2,
+        )
+    print(f"\n✓ Saved → {out}")
+
 
 if __name__ == "__main__":
     main()
-
-

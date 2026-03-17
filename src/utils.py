@@ -3,10 +3,35 @@ Shared utility functions.
 """
 
 import csv
+import os
+import re
 from typing import List, Dict
 from datetime import datetime
 
 from .config import STATE_NAME, DATA_COLLECTOR_NAME
+
+
+STRUCTURED_BASE = os.path.join("data", "structured")
+
+
+def get_next_structured_version_dir() -> str:
+    """
+    Scans data/structured/ for existing vN folders and returns the path
+    to the next version (e.g. if v1 and v2 exist, returns 'data/structured/v3').
+    Creates the directory before returning.
+    """
+    os.makedirs(STRUCTURED_BASE, exist_ok=True)
+    existing = [
+        int(m.group(1))
+        for d in os.listdir(STRUCTURED_BASE)
+        if os.path.isdir(os.path.join(STRUCTURED_BASE, d))
+        for m in [re.match(r"^v(\d+)$", d)]
+        if m
+    ]
+    next_version = max(existing, default=0) + 1
+    version_dir = os.path.join(STRUCTURED_BASE, f"v{next_version}")
+    os.makedirs(version_dir, exist_ok=True)
+    return version_dir
 
 
 def save_to_csv(results: List[Dict], filename: str) -> None:

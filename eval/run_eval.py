@@ -24,6 +24,7 @@ from eval.metrics import (
     calculate_phase2_metrics,
     calculate_phase3_metrics,
 )
+from eval.gap_detector import run_gap_analysis_from_pipeline_output
 
 
 # Paths
@@ -300,7 +301,23 @@ def run_evaluation() -> Dict:
                 f"{metrics.phase3.field_exact_match_rate:.4f}",
             ])
     print(f"✓ Saved CSV to {csv_path}")
-    
+
+    # Run gap analysis against the same pipeline output
+    print("\n" + "="*60)
+    print("🔎 Running Gap Analysis")
+    print("="*60)
+    gap_report = run_gap_analysis_from_pipeline_output(
+        structured_csv_dir=STRUCTURED_DIR,
+        raw_json_dir=RAW_DIR,
+        state_code="CA",
+        output_dir=os.path.join("data", "gap_analysis"),
+    )
+    results_summary["gap_analysis"] = {
+        "unmatched_rate": gap_report.unmatched_rate,
+        "gap_candidates": len(gap_report.candidates),
+        "alias_miss_signals": len(gap_report.absence_signals),
+    }
+
     return results_summary
 
 

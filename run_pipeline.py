@@ -28,32 +28,15 @@ from scraper_extract import (
 )
 
 # Phase 3 helpers
-from scraper_structure import (
-    extract_program_openai,
-    build_prompt,
-    RAW_DIR as STRUCT_RAW_DIR,
-    DISCOVERY_PATH as STRUCT_DISCOVERY_PATH,
-)
+from scraper_structure import main as run_structure_main
 
-from src.utils import save_to_csv
-from src.config import STATE_NAME
+from eval.gap_detector import run_gap_analysis_from_pipeline_output
 
 DATA_DIR = "data"
 DISCOVERY_PATH = os.path.join(DATA_DIR, "discovery_results.json")
 RAW_DIR = os.path.join(DATA_DIR, "raw")
 
-TARGET_COUNTIES = [
-    "Alameda",
-    "Fresno",
-    "Sacramento",
-    "Kern",
-    "Los Angeles",
-    "San Francisco",
-    "Orange",
-    "Riverside",
-    "Santa Clara",
-    "Contra Costa",
-]
+TARGET_COUNTIES = list(CALIFORNIA_COUNTIES.keys())  # all 58 CA counties
 
 def run_phase_1(county_names: List[str]) -> List[Dict]:
     print("\n=== Phase 1: Discovery ===")
@@ -95,74 +78,24 @@ def run_phase_2(discovery_results: List[Dict]) -> None:
 
 def run_phase_3(discovery_results: List[Dict]) -> None:
     print("\n=== Phase 3: LLM Structuring ===")
-    # Map county -> county_url
-    county_meta = {r.get("county_name",""): r for r in discovery_results}
-    # Collect raw files for selected counties
-    structured_by_county: Dict[str, Dict] = {}
-    # Walk raw directory
-    for county in county_meta.keys():
-        county_slug = county.strip().lower().replace(" ", "-")
-        county_dir = os.path.join(RAW_DIR, county_slug)
-        if not os.path.isdir(county_dir):
-            continue
-        for fname in os.listdir(county_dir):
-            if not fname.endswith(".json"):
-                continue
-            path = os.path.join(county_dir, fname)
-            try:
-                with open(path, "r", encoding="utf-8") as f:
-                    page = json.load(f)
-            except Exception as e:
-                print(f"   ✗ Failed to read {path}: {e}")
-                continue
-            county_name = page.get("county", county)
-            county_url = county_meta.get(county_name, {}).get("county_url", "")
-            prompt = build_prompt(county_name, county_url, page)
-            result = extract_program_openai(prompt)
-            time.sleep(0.5)
-            if not result:
-                print(f"   ⚠ No result for {fname}")
-                continue
-            if county_name not in structured_by_county:
-                structured_by_county[county_name] = {
-                    "county_name": county_name,
-                    "state": STATE_NAME,
-                    "county_website_url": county_url,
-                    "health_department_name": result.get("health_department_name", "Not found"),
-                    "health_department_contact_email": result.get("health_department_contact_email", "Not found"),
-                    "health_department_contact_phone": result.get("health_department_contact_phone", "Not found"),
-                    "programs": [],
-                    "notes": ""
-                }
-            structured_by_county[county_name]["programs"].extend(result.get("programs", []))
-            if result.get("notes"):
-                prev = structured_by_county[county_name].get("notes", "")
-                structured_by_county[county_name]["notes"] = (prev + " " + str(result["notes"])).strip()
-            print(f"   ✓ Structured: {fname} → {len(result.get('programs', []))} program(s)")
-    results_list = list(structured_by_county.values())
-    if not results_list:
-        print("⚠ No structured results produced")
-        return
-    # Save per-county CSVs under data/structured
-    os.makedirs(os.path.join("data", "structured"), exist_ok=True)
-    def safe_name(name: str) -> str:
-        return name.replace(" ", "_")
-    for county in results_list:
-        fname = os.path.join("data", "structured", f"{STATE_NAME}_{safe_name(county.get('county_name','Unknown'))}_Healthcare_Data.csv")
-        save_to_csv([county], fname)
-        print(f"✓ Wrote county CSV: {fname}")
-    # Combined CSV (optional)
-    # save_to_csv(results_list, "California_County_Healthcare_Data.csv")
-    # print("✓ Combined CSV: California_County_Healthcare_Data.csv")
+    run_structure_main()
 
 def main():
     print("\n" + "="*60)
-    print("🚀 Run Pipeline for 10 Counties")
+    print(f"🚀 Run Pipeline for {len(TARGET_COUNTIES)} Counties")
     print("="*60)
     print("Counties:", ", ".join(TARGET_COUNTIES))
     results = run_phase_1(TARGET_COUNTIES)
     run_phase_2(results)
     run_phase_3(results)
+
+    print("\n=== Gap Analysis ===")
+    run_gap_analysis_from_pipeline_output(
+        structured_csv_dir=os.path.join("data", "structured"),
+        raw_json_dir=RAW_DIR,
+        state_code="CA",
+        output_dir=os.path.join("data", "gap_analysis"),
+    )
     print("\nDone.")
 
 if __name__ == "__main__":

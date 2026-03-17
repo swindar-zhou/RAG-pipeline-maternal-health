@@ -1,6 +1,6 @@
 # Maternal Health Data Extraction Pipeline
 
-**iTREDS Project** - Extract maternal health program data from California county websites using LLMs.
+**iTREDS Project** - Extract maternal health program data from U.S. county websites using LLMs.
 
 ## Background
 
@@ -34,8 +34,9 @@ This project aims to create a **structured, searchable database** of county-leve
 1. **Automated discovery** - Using web scraping to find maternal health program pages on county websites
 2. **Information extraction** - Using LLMs to extract program details (eligibility, services, contacts)
 3. **Standardized output** - Producing structured data that can be analyzed and compared across counties
+4. **Gap analysis** - Detecting programs missing from the registry using TF-IDF semantic matching
 
-**Initial focus**: California (58 counties), with validated data from 4 major counties (San Diego, Los Angeles, Sacramento, San Francisco)
+**Current scope**: California (all 58 counties)
 
 **Target programs**: WIC, Black Infant Health, Nurse-Family Partnership, Perinatal Care Networks, Home Visiting Programs, Breastfeeding Support, Teen Pregnancy Programs, and other maternal/child health services
 
@@ -81,7 +82,7 @@ The Biden-Harris Administration's five-goal framework provides structure for our
 
 ## Overview
 
-This pipeline discovers and extracts **maternal health programs** (WIC, Black Infant Health, Nurse-Family Partnership, etc.) from county government websites. It uses a 3-phase approach: Discovery → Extraction → Structuring.
+This pipeline discovers and extracts **maternal health programs** (WIC, Black Infant Health, Nurse-Family Partnership, etc.) from all 58 California county government websites. It uses a 3-phase approach — Discovery → Extraction → Structuring — followed by automated Gap Analysis.
 
 ## Quick Start
 
@@ -95,7 +96,7 @@ pip install -r requirements.txt
 cp .env.example .env
 # Edit .env and add your OpenAI API key
 
-# 3. Run the pipeline
+# 3. Run the full pipeline
 python run_pipeline.py
 ```
 
@@ -104,25 +105,56 @@ python run_pipeline.py
 ```
 PHASE 1: DISCOVERY          PHASE 2: EXTRACTION           PHASE 3: STRUCTURING
 ┌──────────────────┐        ┌────────────────────┐        ┌─────────────────────┐
-│ Find Maternal    │   ──▶  │ Fetch Program      │   ──▶  │ LLM → Structured    │
-│ Health Pages     │        │ Page Content       │        │ CSV Output          │
-│ (WIC, BIH, NFP)  │        │ (text, contacts)   │        │                     │
+│ DuckDuckGo search│   ──▶  │ Fetch Program      │   ──▶  │ LLM → Structured    │
+│ + validated URLs │        │ Page Content       │        │ CSV Output (vN)     │
+│ + fallback crawl │        │ (text, contacts,   │        │ + registry match    │
+│                  │        │  PDF links)        │        │ + gap candidates    │
 └──────────────────┘        └────────────────────┘        └─────────────────────┘
+                                                                    │
+                                                                    ▼
+                                                         ┌─────────────────────┐
+                                                         │ GAP ANALYSIS        │
+                                                         │ TF-IDF similarity   │
+                                                         │ vs. 31-program      │
+                                                         │ federal registry    │
+                                                         └─────────────────────┘
 ```
 
-### Phase 1 - Discovery
-- Navigates: County → Health Dept → Maternal/Child Health → Programs
-- Uses keyword scoring and taxonomy-based classification
-- Filters to maternal health programs only (per advisor feedback)
+### Phase 1 — Discovery (`scraper_discovery.py`)
 
-### Phase 2 - Extraction  
+3-tier strategy per county:
+- **Tier 1**: Use advisor-validated MCH URLs directly (highest precision)
+- **Tier 2**: DuckDuckGo search for county MCH page on the county's own domain
+- **Tier 3**: Fall back to known health dept URL or county root
+
+Link scoring uses a 2-layer taxonomy:
+- **Layer 1**: Federal Program Registry aliases (31 known programs, +3.0 score) — high precision
+- **Layer 2**: Maternal taxonomy keywords (`src/maternal_taxonomy.py`, +2.0) — broader recall
+
+### Phase 2 — Extraction (`scraper_extract.py`)
+
 - Fetches each discovered program page
-- Extracts: text content, phone/email contacts, PDF links
+- Extracts: full text content, phone/email contacts, PDF links, registry signals
 
-### Phase 3 - Structuring
-- Sends content to LLM (GPT-4o-mini)
-- Returns structured JSON with program details
-- Outputs CSV files per county
+### Phase 3 — Structuring (`scraper_structure.py`)
+
+- Sends page content to GPT-4o-mini with registry-grounded prompt
+- Async batch LLM calls (up to 5 concurrent) — ~3x faster than sequential
+- Each extracted program is matched to a `program_id` from the Federal Program Registry
+- Unmatched programs flagged as gap candidates
+- Output saved to a new versioned directory (`data/structured/vN`) on every run
+
+### Gap Analysis (`eval/gap_detector.py`)
+
+- Reads Phase 3 output CSVs and Phase 2 raw JSON files
+- TF-IDF cosine similarity compares unmatched extractions against registry
+- 3 signal types: novel programs, alias misses, LLM/alias disagreement
+- Output: `data/gap_analysis/gap_report.txt`
+
+**Latest gap report summary (35 counties):**
+- 577 total extractions, 423 matched to registry (73.3%)
+- 40 gap candidates identified, including TAPP, LAMB, AAIMM, PEI
+- 21 alias miss signals (e.g., FQHC, MEDICAID_PRENATAL)
 
 ## Configuration
 
@@ -137,82 +169,86 @@ DATA_COLLECTOR_NAME=Your Name
 ## Project Structure
 
 ```
-├── run_pipeline.py           # Main entry point (runs all 3 phases)
-├── scraper_discovery.py      # Phase 1: Discovery
-├── scraper_extract.py        # Phase 2: Extraction
-├── scraper_structure.py      # Phase 3: LLM Structuring
+├── run_pipeline.py              # Main entry point — runs all 3 phases + gap analysis
+├── scraper_discovery.py         # Phase 1: Search-first discovery (DuckDuckGo + fallback)
+├── scraper_extract.py           # Phase 2: Page content extraction
+├── scraper_structure.py         # Phase 3: Async LLM structuring (registry-grounded)
 │
-├── src/                      # Core modules
-│   ├── config.py             # County URLs, keywords, settings
-│   ├── maternal_taxonomy.py  # Maternal health program taxonomy
-│   └── utils.py              # Shared utilities
+├── src/
+│   ├── config.py                # County URLs, API settings, budget guardrails
+│   ├── federal_program_registry.py  # 31-program ground-truth registry (CA/IN/TX)
+│   ├── maternal_taxonomy.py     # Keyword taxonomy (25 types, 14 categories)
+│   ├── llm_program_classifier.py    # (legacy) LLM-based re-classification
+│   └── utils.py                 # save_to_csv, get_next_structured_version_dir
 │
-├── schemas/                  # Pydantic data schemas
-│   ├── discovery.py
-│   ├── extraction.py
-│   └── structured.py
+├── eval/
+│   ├── gap_detector.py          # TF-IDF gap analysis vs. federal registry
+│   ├── run_eval.py              # Evaluation runner
+│   ├── gold_maternal.jsonl      # Gold dataset (validated counties)
+│   ├── gold_schema.py
+│   └── metrics.py
 │
-├── agents/                   # Agentic discovery system
-│   └── discovery_agent.py
+├── data/
+│   ├── discovery_results.json   # Phase 1 output (all 58 counties)
+│   ├── raw/{county}/*.json      # Phase 2 output (per-page JSON)
+│   ├── structured/              # Phase 3 output (auto-versioned)
+│   │   ├── v1/ … v4/            # Each run creates a new vN folder
+│   │   └── vN/California_{County}_Healthcare_Data.csv
+│   └── gap_analysis/
+│       └── gap_report.txt       # Latest gap detection report
 │
-├── eval/                     # Evaluation framework
-│   ├── gold_maternal.jsonl   # Gold dataset (4 validated counties)
-│   ├── metrics.py            # Metric calculations
-│   └── run_eval.py           # Evaluation script
-│
-├── tests/                    # Integration tests
-├── data/                     # Pipeline outputs
-│   ├── discovery_results.json
-│   ├── raw/                  # Phase 2 JSON files
-│   └── structured/           # Phase 3 CSV files
-│
-└── docs/                     # Documentation
+└── docs/
     ├── QUICK_START.md
     ├── ARCHITECTURE.md
-    └── ...
+    └── INSIGHTS_FATHERHOOD_MATERNAL_HEALTH.md
 ```
 
 ## Running the Pipeline
 
 ```bash
-# Full pipeline (recommended)
+# Full pipeline — all 58 counties (recommended)
 python run_pipeline.py
 
 # Individual phases
-python scraper_discovery.py   # Phase 1
-python scraper_extract.py     # Phase 2  
-python scraper_structure.py   # Phase 3
+python scraper_discovery.py              # Phase 1 only
+python scraper_discovery.py --county "Alameda" "Fresno"   # specific counties
+python scraper_extract.py                # Phase 2 only
+python scraper_structure.py             # Phase 3 only
 
-# Run tests
-pytest tests/
+# Gap analysis only (uses existing data/structured and data/raw)
+python eval/gap_detector.py
 
-# Run evaluation
+# Evaluation
 python eval/run_eval.py
 ```
 
 ## Output
 
-- `data/discovery_results.json` - Discovered program links
-- `data/raw/{county}/*.json` - Raw page content
-- `data/structured/California_{County}_Healthcare_Data.csv` - Final structured data
+| Path | Description |
+|------|-------------|
+| `data/discovery_results.json` | Discovered program links per county |
+| `data/raw/{county}/*.json` | Raw page content (text, contacts, PDF links) |
+| `data/structured/vN/` | Structured CSVs — new folder created every run |
+| `data/gap_analysis/gap_report.txt` | Gap detection report |
 
-## Validated Counties
+## Federal Program Registry
 
-These counties have manually validated maternal health URLs (from advisor):
+`src/federal_program_registry.py` defines **31 known maternal health programs** used as ground truth for matching and gap detection:
 
-| County | Programs Found |
-|--------|:--------------:|
-| San Diego | 9 |
-| Los Angeles | 20 |
-| Sacramento | 5 |
-| San Francisco | 12 |
+| Tier | Description | Count |
+|------|-------------|-------|
+| Tier 1 | Universal — every county should list these (WIC, NFP, FQHC, …) | 11 |
+| Tier 2 | State-wide — CA-funded, most counties receive funding | 3 |
+| Tier 3 | Selective — CA-specific or evidence-based models (BIH, LAMB, PEI, …) | 17 |
+
+Key programs: WIC, Black Infant Health (BIH), Nurse-Family Partnership (NFP), MCAH/Title V, Perinatal Care Network (PCN), Home Visiting, FQHC, Medi-Cal Prenatal, Doula programs.
 
 ## Maternal Health Focus
 
 Per advisor feedback, the pipeline focuses exclusively on maternal health programs:
 
 - **Included**: WIC, Black Infant Health, Nurse-Family Partnership, MCAH, Perinatal Care, Breastfeeding Support, Teen Pregnancy Programs, Doula Programs, Fatherhood & Partner Engagement Programs
-- **Excluded**: Medi-Cal, CalFresh, Behavioral Health, Senior Services, and other general health programs
+- **Excluded**: Medi-Cal (general), CalFresh, Behavioral Health, Senior Services, and other non-maternal programs
 
 ### Program Taxonomy
 
@@ -225,12 +261,9 @@ The taxonomy in `src/maternal_taxonomy.py` defines **25 program types** across *
 | Goal 4: Workforce | Social Support | Home Visiting, Birth Support, Community Health, Breastfeeding |
 | Goal 5: Social | Nutrition, Social Support | Nutrition, Adolescent Health, Early Childhood, Partner & Family Engagement |
 
-See `python src/maternal_taxonomy.py` for a full taxonomy summary.
-See [docs/INSIGHTS_FATHERHOOD_MATERNAL_HEALTH.md](docs/INSIGHTS_FATHERHOOD_MATERNAL_HEALTH.md) for research insights on how fatherhood programs impact maternal health.
-
 ## Documentation
 
 - [Quick Start Guide](docs/QUICK_START.md)
 - [Architecture Overview](docs/ARCHITECTURE.md)
 - [Evaluation Guide](eval/README.md)
-- [Troubleshooting](docs/TROUBLESHOOTING.md)
+- [Fatherhood & Maternal Health Insights](docs/INSIGHTS_FATHERHOOD_MATERNAL_HEALTH.md)

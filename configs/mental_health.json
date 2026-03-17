@@ -13,12 +13,12 @@
     "Calaveras": "https://www.calaverasgov.us/",
     "Colusa": "https://www.countyofcolusa.org/",
     "Contra Costa": "https://www.contracosta.ca.gov/",
-    "Del Norte": "https://www.dnco.org/",
+    "Del Norte": "https://www.co.del-norte.ca.us/",
     "El Dorado": "https://www.edcgov.us/",
     "Fresno": "https://www.co.fresno.ca.us/",
     "Glenn": "https://www.countyofglenn.net/",
-    "Humboldt": "https://www.humboldtgov.org/",
-    "Imperial": "https://www.co.imperial.ca.us/",
+    "Humboldt": "https://humboldtgov.org/2537/Humboldt-Countys-Homepage",
+    "Imperial": "https://imperialcounty.org/",
     "Inyo": "https://www.inyocounty.us/",
     "Kern": "https://www.kernpublichealth.com/",
     "Kings": "https://www.countyofkings.com/",
@@ -38,7 +38,7 @@
     "Orange": "https://www.ocgov.com/",
     "Placer": "https://www.placer.ca.gov/",
     "Plumas": "https://www.plumascounty.us/",
-    "Riverside": "https://www.rivco.org/",
+    "Riverside": "https://rivco.gov/",
     "Sacramento": "https://www.saccounty.net/",
     "San Benito": "https://www.cosb.us/",
     "San Bernardino": "https://www.sbcounty.gov/",
@@ -50,7 +50,7 @@
     "Santa Barbara": "https://www.countyofsb.org/",
     "Santa Clara": "https://www.sccgov.org/",
     "Santa Cruz": "https://www.santacruzcounty.us/",
-    "Shasta": "https://www.co.shasta.ca.us/",
+    "Shasta": "https://www.shastacounty.gov/",
     "Sierra": "https://www.sierracounty.ca.gov/",
     "Siskiyou": "https://www.co.siskiyou.ca.us/",
     "Solano": "https://www.solanocounty.com/",
@@ -65,6 +65,7 @@
     "Yolo": "https://www.yolocounty.org/",
     "Yuba": "https://www.yuba.org/"
   },
+
 
   "validated_section_urls": {
     "_note": "Populate these with manually verified behavioral health section URLs before running the pipeline. Examples below are starting points.",
