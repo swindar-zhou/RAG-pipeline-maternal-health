@@ -155,10 +155,23 @@ MAX_TEXT_CHARS = 20000
 # Validated maternal health section URLs (from advisor's manual review)
 # These are the correct entry points for maternal health programs in each county
 MATERNAL_HEALTH_URLS = {
-    "San Diego": "https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/maternal_child_family_health_services.html",
-    "Los Angeles": "http://publichealth.lacounty.gov/mch/",
-    "Sacramento": "https://dhs.saccounty.gov/PUB/Program/Pages/SP-Maternal-Child-and-Adolescent-Health-Program.aspx",
-    "San Francisco": "https://www.sf.gov/departments--department-public-health--maternal-child-and-adolescent-health",
+    # Gold-standard validated (Phase 1 ground truth)
+    "San Diego":      "https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/maternal_child_family_health_services.html",
+    "Los Angeles":    "http://publichealth.lacounty.gov/mch/",
+    "Sacramento":     "https://dhs.saccounty.gov/PUB/Program/Pages/SP-Maternal-Child-and-Adolescent-Health-Program.aspx",
+    "San Francisco":  "https://www.sf.gov/departments--department-public-health--maternal-child-and-adolescent-health",
+    # Volatile counties — stabilize with validated seeds
+    "Contra Costa":   "https://cchealth.org/services-and-programs/maternal-child-and-adolescent-health/",
+    "Riverside":      "https://www.rivcoeh.org/Programs/Maternal-Child-and-Adolescent-Health",
+    "Santa Cruz":     "https://www.santacruzcounty.us/Health-Human-Services/Public-Health/Programs-and-Services/Maternal-Child-Adolescent-Health",
+    "Kern":           "https://www.kernpublichealth.com/programs/mcah/",
+    # Persistently-zero counties — direct MCH entry points
+    "El Dorado":      "https://www.edcgov.us/Government/PublicHealth/MCAH/Pages/MCAH.aspx",
+    "Fresno":         "https://www.co.fresno.ca.us/departments/public-health-and-animal-services/public-health/programs-services/maternal-child-adolescent-health-mcah",
+    "Mendocino":      "https://www.mendocinocounty.org/government/health-human-services/public-health/programs-services/maternal-child-adolescent-health",
+    "Santa Clara":    "https://publichealth.santaclaracounty.gov/programs-services/maternal-child-and-adolescent-health-mcah",
+    "Shasta":         "https://www.co.shasta.ca.us/departments/health-and-human-services/public-health/community-health/maternal-child-adolescent-health",
+    "Tuolumne":       "https://www.tuolumnecounty.ca.gov/175/Public-Health",
 }
 
 # State-level reference pages (for training/learning what maternal health programs look like)
@@ -170,13 +183,29 @@ STATE_REFERENCE_URLS = {
 
 # Known health department URLs (general entry points, fallback if no maternal URL)
 HEALTH_DEPT_URLS = {
-    "Alameda": "https://www.acgov.org/services/",
-    "Sacramento": "https://dhs.saccounty.gov/PUB/Pages/PUB-Home.aspx",
-    "Los Angeles": "https://www.lacounty.gov/",
-    "San Francisco": "https://www.sf.gov/departments--department-public-health",
-    "Orange": "https://www.ochealthinfo.com/services-programs",
-    "Santa Clara": "https://publichealth.santaclaracounty.gov/services",
-    "Contra Costa": "https://www.cchealth.org/services-and-programs/",
+    "Alameda":        "https://www.acgov.org/services/",
+    "Sacramento":     "https://dhs.saccounty.gov/PUB/Pages/PUB-Home.aspx",
+    "Los Angeles":    "https://www.lacounty.gov/",
+    "San Francisco":  "https://www.sf.gov/departments--department-public-health",
+    "Orange":         "https://www.ochealthinfo.com/services-programs",
+    "Santa Clara":    "https://publichealth.santaclaracounty.gov/services",
+    "Contra Costa":   "https://www.cchealth.org/services-and-programs/",
+    # Tier-3 fallback improvements for hard-to-discover counties
+    "El Dorado":      "https://www.edcgov.us/Government/PublicHealth/Pages/Public-Health.aspx",
+    "Fresno":         "https://www.co.fresno.ca.us/departments/public-health-and-animal-services/public-health",
+    "Mendocino":      "https://www.mendocinocounty.org/government/health-human-services/public-health",
+    "Shasta":         "https://www.co.shasta.ca.us/departments/health-and-human-services/public-health",
+    "Tuolumne":       "https://www.tuolumnecounty.ca.gov/175/Public-Health",
+    "Kern":           "https://www.kernpublichealth.com/",
+    "Riverside":      "https://www.rivcoeh.org/",
+    "Santa Cruz":     "https://www.santacruzcounty.us/Health-Human-Services/Public-Health",
+    "Yolo":           "https://www.yolocounty.org/health-human-services/public-health",
+    "San Joaquin":    "https://www.sjgov.org/department/phss",
+    "Merced":         "https://www.co.merced.ca.us/116/Public-Health",
+    "San Mateo":      "https://www.smchealth.org/programs-services",
+    "Madera":         "https://maderacounty.com/government/public-health",
+    "Yuba":           "https://www.yuba.org/departments/health-human-services/public-health/",
+    "Glenn":          "https://www.countyofglenn.net/govt/departments/health-human-services/public-health/",
 }
 
 # LLM settings

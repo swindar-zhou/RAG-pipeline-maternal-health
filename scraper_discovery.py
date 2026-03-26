@@ -45,7 +45,9 @@ FETCH_TIMEOUT   = 15
 CONCURRENCY     = 4    # keep low — DDG rate-limits aggressive callers
 DDG_DELAY       = 1.5  # seconds between DDG calls (avoid 202 rate-limit)
 MAX_PROG_LINKS  = 30
-MIN_PROG_SCORE  = 1.0  # minimum score for a link to be a program candidate
+# Minimum score for a link to be considered a program candidate during the
+# "strict" discovery pass. We also run a relaxed pass if strict finds nothing.
+MIN_PROG_SCORE  = 1.0
 
 HEADERS = {
     "User-Agent": (
@@ -58,12 +60,48 @@ HEADERS = {
 
 _CA_ALIASES: Set[str] = set(get_aliases_flat("CA").keys())
 
+# Lightweight maternal keywords used only for the relaxed discovery fallback.
+# This avoids dropping entire counties when the taxonomy-based scoring misses
+# due to naming/markup differences on county sites.
+_BASIC_MATERNAL_KEYWORDS: Set[str] = {
+    "wic",
+    "prenatal",
+    "postpartum",
+    "pregnancy",
+    "maternal",
+    "mch",
+    "mcah",
+    "perinatal",
+    "home visiting",
+    "doula",
+    "midwife",
+    "midwifery",
+    "breastfeeding",
+    "lactation",
+    "black infant health",
+    "bih",
+    "healthy start",
+    "first 5",
+    "teen pregnancy",
+    "title v",
+    "family planning",
+    "reproductive health",
+}
+
+
+def _basic_maternal_hit(href: str, text: str) -> bool:
+    combined = (text + " " + href).lower()
+    return any(kw in combined for kw in _BASIC_MATERNAL_KEYWORDS)
+
 # Search query templates — tried in order until one returns a result
 # on the county's own domain
 SEARCH_TEMPLATES = [
     '"{county}" county health department WIC maternal prenatal California',
     '"{county}" county "maternal child health" OR "MCAH" OR "WIC" California',
     '"{county}" county health "home visiting" OR "prenatal" OR "Black Infant Health"',
+    '"{county}" county "maternal child adolescent health" WIC',
+    '"{county}" county health department "women infants children" prenatal postpartum',
+    '"{county}" county WIC program "apply" California',
 ]
 
 # UI chrome link text — skip these before scoring
@@ -86,17 +124,25 @@ _SKIP_URL_SEGS: Set[str] = {
 # DuckDuckGo search (sync, called in executor to avoid blocking event loop)
 # ─────────────────────────────────────────────────────────────────────────────
 
-def _ddg_search(query: str, max_results: int = 8) -> List[Dict]:
+def _ddg_search(query: str, max_results: int = 8, retries: int = 3) -> List[Dict]:
     """
     Run a DDG text search and return result dicts with 'href' and 'title'.
-    Returns [] on any error (rate-limit, network, etc.).
+    Retries with exponential backoff on rate-limit (202) or empty results.
+    Returns [] on persistent failure.
     """
-    try:
-        ddgs = DDGS()
-        results = list(ddgs.text(query, max_results=max_results))
-        return results
-    except Exception as e:
-        return []
+    for attempt in range(retries):
+        try:
+            ddgs = DDGS()
+            results = list(ddgs.text(query, max_results=max_results))
+            if results:
+                return results
+            # Empty result — might be transient rate-limit, wait and retry
+            if attempt < retries - 1:
+                time.sleep(DDG_DELAY * (2 ** attempt))
+        except Exception:
+            if attempt < retries - 1:
+                time.sleep(DDG_DELAY * (2 ** attempt))
+    return []
 
 
 def _county_domain(county_name: str) -> Optional[str]:
@@ -131,16 +177,67 @@ def _find_mch_url_via_search(county_name: str) -> Optional[str]:
         if domain:
             for r in results:
                 href = r.get("href", "")
+                if not href:
+                    continue
+                href_l = href.lower()
+                if href_l.endswith(".pdf") or "/.pdf" in href_l or "pdf" in href_l:
+                    continue
                 if domain in href:
                     return href
 
-        # Fallback: return first result that looks like a .gov or .us page
+        # Fallback: return first non-PDF result that looks like a .gov/.us page
         for r in results:
             href = r.get("href", "")
-            if re.search(r"\.(gov|us|ca\.us)(/|$)", href):
-                return href
+            href_l = (href or "").lower()
+            if not re.search(r"\.(gov|us|ca\.us)(/|$)", href_l):
+                continue
+            if href_l.endswith(".pdf") or "/.pdf" in href_l or "pdf" in href_l:
+                continue
+            return href
 
     return None
+
+
+def _find_mch_url_candidates_via_search(
+    county_name: str,
+    *,
+    max_candidates: int = 6,
+) -> List[str]:
+    """
+    Return multiple candidate MCH seed URLs for a county.
+
+    Used when the first seed yields 0 program links; we want recall over precision.
+    """
+    domain = _county_domain(county_name)
+    candidates: List[str] = []
+    seen: Set[str] = set()
+
+    for template in SEARCH_TEMPLATES:
+        query = template.format(county=county_name)
+        results = _ddg_search(query, max_results=8)
+        time.sleep(DDG_DELAY)
+        for r in results:
+            href = r.get("href", "")
+            if not href or not href.startswith("http"):
+                continue
+            href_l = href.lower()
+            if href_l.endswith(".pdf") or "/.pdf" in href_l or "pdf" in href_l:
+                continue
+            if href in seen:
+                continue
+
+            # Prefer same-domain candidates when possible.
+            if domain and domain in href:
+                candidates.append(href)
+                seen.add(href)
+            elif not domain and re.search(r"\.(gov|us|ca\.us)(/|$)", href_l):
+                candidates.append(href)
+                seen.add(href)
+
+            if len(candidates) >= max_candidates:
+                return candidates
+
+    return candidates[:max_candidates]
 
 # ─────────────────────────────────────────────────────────────────────────────
 # HTTP fetch
@@ -204,6 +301,8 @@ def _score_program_link(href: str, text: str) -> float:
         score += 3.0
 
     # Maternal taxonomy signals
+    # Note: this is intentionally conservative (strict pass). We rely on the
+    # relaxed fallback when strict fails to find any candidates.
     if is_maternal_health_program(text, href):
         score += 2.0
         score += score_maternal_relevance(text, href)
@@ -217,23 +316,37 @@ def _score_program_link(href: str, text: str) -> float:
     return score
 
 
-def _extract_program_links(html: str, base_url: str) -> List[Dict]:
+def _extract_program_links(
+    html: str,
+    base_url: str,
+    *,
+    min_score: float = MIN_PROG_SCORE,
+    max_links: int = MAX_PROG_LINKS,
+    allow_external: bool = False,
+) -> List[Dict]:
     links = _parse_links(html, base_url)
     scored: List[Tuple[float, str, str]] = []
     seen: Set[str] = set()
 
     for href, text in links:
-        if href in seen or not same_domain(base_url, href):
+        if href in seen:
+            continue
+        if not allow_external and not same_domain(base_url, href):
             continue
         sc = _score_program_link(href, text)
-        if sc < MIN_PROG_SCORE:
-            continue
+        if sc < min_score:
+            # Relaxed fallback: include links that match basic maternal keywords
+            # even if the taxonomy score didn't fire.
+            if min_score <= 0.1 and _basic_maternal_hit(href, text):
+                sc = 0.2
+            else:
+                continue
         seen.add(href)
         scored.append((sc, href, text))
 
     scored.sort(reverse=True)
     results: List[Dict] = []
-    for sc, href, text in scored[:MAX_PROG_LINKS]:
+    for sc, href, text in scored[:max_links]:
         classification = classify_program(text, href)
         results.append({
             "name": text or "",
@@ -244,6 +357,57 @@ def _extract_program_links(html: str, base_url: str) -> List[Dict]:
             "relevance_score": round(sc, 2),
         })
     return results
+
+
+def _maybe_add_seed_program(html: str, seed_url: str) -> Optional[Dict]:
+    """
+    If the "maternal section URL" is actually a program landing page (common for
+    WIC/perinatal entry points), add the seed page itself as a discovered program.
+    """
+    seed_l = (seed_url or "").lower()
+    if seed_l.endswith(".pdf") or "/.pdf" in seed_l or "pdf" in seed_l:
+        return None
+    try:
+        soup = BeautifulSoup(html, "lxml")
+    except Exception:
+        soup = BeautifulSoup(html, "html.parser")
+
+    # Extract a small text snippet for taxonomy matching.
+    for el in soup(["script", "style", "nav", "footer", "header", "aside", "noscript"]):
+        el.decompose()
+
+    title = ""
+    if soup.title and soup.title.get_text(strip=True):
+        title = soup.title.get_text(strip=True)
+
+    h1 = ""
+    for tag in soup.find_all("h1"):
+        t = tag.get_text(separator=" ", strip=True)
+        if t:
+            h1 = t
+            break
+
+    name = h1 or title or "Maternal Program"
+
+    text = soup.get_text(separator=" ", strip=True)
+    text = text[:8000]
+
+    # If taxonomy classification fails, we still want to keep the seed as a
+    # candidate program when we can tell it's maternal-content-like.
+    classification = classify_program(text, seed_url)
+    maternal_like = _basic_maternal_hit(seed_url, name) or _basic_maternal_hit(seed_url, text[:1500])
+    if not classification and not maternal_like:
+        return None
+
+    rel = score_maternal_relevance(text, seed_url)
+    return {
+        "name": name,
+        "url": seed_url,
+        "link_text": name,
+        "nav_path": f"seed → {seed_url}",
+        "category": classification.category if classification else "Unknown",
+        "relevance_score": round(2.0 + rel * 2.0, 2),
+    }
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Per-county discovery
@@ -268,35 +432,99 @@ async def _discover_one(
     async with semaphore:
 
         mch_url: Optional[str] = None
+        html: Optional[str] = None
 
-        # ── Tier 1: use validated URL directly (no search needed) ─────────────
+        # ── Tier 1: validated URL — only commit if fetch succeeds ─────────────
         validated = MATERNAL_HEALTH_URLS.get(county_name)
         if validated:
-            mch_url = validated
-            result["maternal_section_url"] = mch_url
-            result["discovery_tier"] = "tier1_validated"
+            html = await _get(session, validated)
+            if html:
+                mch_url = validated
+                result["maternal_section_url"] = mch_url
+                result["discovery_tier"] = "tier1_validated"
+            # If fetch failed (404/timeout), fall through to tier2 below
 
         # ── Tier 2: DuckDuckGo search for county MCH page ─────────────────────
         if not mch_url:
-            # Run blocking DDG call in a thread so it doesn't stall the event loop
             loop = asyncio.get_event_loop()
-            mch_url = await loop.run_in_executor(
+            search_url = await loop.run_in_executor(
                 None, _find_mch_url_via_search, county_name
             )
-            if mch_url:
+            if search_url:
+                mch_url = search_url
+                html = await _get(session, mch_url)
                 result["maternal_section_url"] = mch_url
                 result["discovery_tier"] = "tier2_search"
 
-        # ── Tier 3: fall back to known health dept URL or county root ─────────
+        # ── Tier 3: known health dept URL or county root ───────────────────────
         if not mch_url:
             mch_url = HEALTH_DEPT_URLS.get(county_name) or county_root_url
+            html = await _get(session, mch_url)
             result["health_dept_url"] = mch_url
             result["discovery_tier"] = "tier3_fallback"
 
-        # ── Fetch the MCH page and extract program links ──────────────────────
-        html = await _get(session, mch_url)
+        # ── Extract program links ──────────────────────────────────────────────
+        programs: List[Dict] = []
         if html:
-            result["programs"] = _extract_program_links(html, mch_url)
+            programs = _extract_program_links(html, mch_url)
+            if not programs:
+                # Relaxed pass: lower score threshold + allow basic maternal keywords.
+                programs = _extract_program_links(
+                    html,
+                    mch_url,
+                    min_score=0.1,
+                    max_links=min(80, MAX_PROG_LINKS * 3),
+                    allow_external=True,
+                )
+                result["discovery_tier"] = f"{result['discovery_tier']}_relaxed_extract"
+
+            # If seed page itself looks like a program landing page, include it.
+            if not programs:
+                seed_prog = _maybe_add_seed_program(html, mch_url)
+                if seed_prog:
+                    programs = [seed_prog]
+                    result["discovery_tier"] = f"{result['discovery_tier']}_seed_program"
+
+        # ── Multi-seed fallback: runs regardless of whether primary fetch worked ─
+        if not programs:
+            loop = asyncio.get_event_loop()
+            seed_candidates = await loop.run_in_executor(
+                None, _find_mch_url_candidates_via_search, county_name
+            )
+            # Always append known health dept + county root as last resorts.
+            seed_candidates.extend([
+                HEALTH_DEPT_URLS.get(county_name) or county_root_url,
+                county_root_url,
+            ])
+            # De-dupe while preserving order.
+            uniq: List[str] = []
+            seen_u: Set[str] = set()
+            for s in seed_candidates:
+                if not s or s in seen_u:
+                    continue
+                seen_u.add(s)
+                uniq.append(s)
+            # Try up to 4 additional seeds.
+            for candidate_seed in uniq[:4]:
+                if candidate_seed == mch_url:
+                    continue
+                cand_html = await _get(session, candidate_seed)
+                if not cand_html:
+                    continue
+                programs = _extract_program_links(
+                    cand_html,
+                    candidate_seed,
+                    min_score=0.1,
+                    max_links=min(80, MAX_PROG_LINKS * 3),
+                    allow_external=True,
+                )
+                if programs:
+                    mch_url = candidate_seed
+                    result["maternal_section_url"] = candidate_seed
+                    result["discovery_tier"] = f"{result['discovery_tier']}_alt_seed"
+                    break
+
+        result["programs"] = programs
 
     n = len(result["programs"])
     tier = result["discovery_tier"]
