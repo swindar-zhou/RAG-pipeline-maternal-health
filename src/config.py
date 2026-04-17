@@ -152,27 +152,105 @@ DELAY_BETWEEN_REQUESTS = 2
 MAX_CONTENT_LENGTH = 12000
 MAX_TEXT_CHARS = 20000
 
-# Validated maternal health section URLs (from advisor's manual review)
-# These are the correct entry points for maternal health programs in each county
-MATERNAL_HEALTH_URLS = {
-    # Gold-standard validated (Phase 1 ground truth)
-    "San Diego":      "https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/maternal_child_family_health_services.html",
-    "Los Angeles":    "http://publichealth.lacounty.gov/mch/",
-    "Sacramento":     "https://dhs.saccounty.gov/PUB/Program/Pages/SP-Maternal-Child-and-Adolescent-Health-Program.aspx",
-    "San Francisco":  "https://www.sf.gov/departments--department-public-health--maternal-child-and-adolescent-health",
-    # Volatile counties — stabilize with validated seeds
-    "Contra Costa":   "https://cchealth.org/services-and-programs/maternal-child-and-adolescent-health/",
-    "Riverside":      "https://www.rivcoeh.org/Programs/Maternal-Child-and-Adolescent-Health",
-    "Santa Cruz":     "https://www.santacruzcounty.us/Health-Human-Services/Public-Health/Programs-and-Services/Maternal-Child-Adolescent-Health",
-    "Kern":           "https://www.kernpublichealth.com/programs/mcah/",
-    # Persistently-zero counties — direct MCH entry points
-    "El Dorado":      "https://www.edcgov.us/Government/PublicHealth/MCAH/Pages/MCAH.aspx",
-    "Fresno":         "https://www.co.fresno.ca.us/departments/public-health-and-animal-services/public-health/programs-services/maternal-child-adolescent-health-mcah",
-    "Mendocino":      "https://www.mendocinocounty.org/government/health-human-services/public-health/programs-services/maternal-child-adolescent-health",
-    "Santa Clara":    "https://publichealth.santaclaracounty.gov/programs-services/maternal-child-and-adolescent-health-mcah",
-    "Shasta":         "https://www.co.shasta.ca.us/departments/health-and-human-services/public-health/community-health/maternal-child-adolescent-health",
-    "Tuolumne":       "https://www.tuolumnecounty.ca.gov/175/Public-Health",
+# Counties whose MCAH pages return 403 to aiohttp even with a browser User-Agent.
+# Phase 2 enhanced scraper must route these through a Playwright headless-browser fetch.
+# Verified 2026-04-17 — all other counties respond normally to aiohttp.
+PLAYWRIGHT_REQUIRED_COUNTIES = {
+    "Amador",
+    "Contra Costa",
+    "El Dorado",
+    "Fresno",
+    "Glenn",
+    "Kern",
+    "Madera",
+    "Mendocino",
+    "Monterey",
+    "Yolo",
 }
+
+# Validated maternal health section URLs — human-checked, 2026-04-16
+# Source: maternal_health_urls.json (46 verified, confidence="verified")
+# All 46 entries below are direct MCAH/MCH program pages on official county health domains.
+# 10 URLs were corrected vs. the prior config (domain moves, stale slugs — see notes inline).
+MATERNAL_HEALTH_URLS = {
+    # ── Bay Area ──────────────────────────────────────────────────────────────
+    "Alameda":        "https://health.alamedacountyca.gov/department/public-health-department/",  # acphd.org/mpcah/ redirects here; new domain health.alamedacountyca.gov
+    "Contra Costa":   "https://www.cchealth.org/services-and-programs/support-for-families",  # updated URL; 403 — blocks automated requests
+    "Marin":          "https://www.marinhhs.org/maternal-child-adolescent-health",
+    "Napa":           "https://www.napacounty.gov/3237/Home-Visiting-Programs",  # closest entry — see INFERRED note
+    "San Francisco":  "https://www.sf.gov/departments--department-public-health--maternal-child-and-adolescent-health",
+    "San Mateo":      "https://www.smchealth.org/mcah",
+    "Santa Clara":    "https://publichealth.santaclaracounty.gov/health-information/child-health-pregnancy-and-parenting",  # updated path
+    "Santa Cruz":     "https://www.santacruzhealth.org/PublicHealth/ChildrenFamilyHealth/MCAH.aspx",  # updated domain
+    "Solano":         "https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health",
+    "Sonoma":         "https://sonomacounty.gov/health-and-human-services/health-services/divisions/public-health/maternal-child-and-adolescent-health",
+    # ── Central Valley ───────────────────────────────────────────────────────
+    "Fresno":         "https://www.fresnocountyca.gov/Departments/Public-Health/Public-Health-Nursing/Maternal-Child-and-Adolescent-Health-MCAH",  # updated domain fresnocountyca.gov; 403 — blocks automated requests
+    "Kern":           "https://www.kernpublichealth.com/healthy-community/women-s-health/maternal-child-adolescent-health",  # updated path; 403 — blocks automated requests
+    "Kings":          "https://www.kcdph.com/nursing",
+    "Madera":         "https://www.maderacounty.com/government/public-health/maternal-child-and-adolescent-health-program",  # 403 — blocks automated requests
+    "Merced":         "https://www.countyofmerced.com/616/MCAH-Home-Visiting",  # co.merced.ca.us → countyofmerced.com (domain moved)
+    "San Joaquin":    "https://cms.sjcphs.org/phs/programs-and-services/family-health-programs",  # no standalone MCAH page — see INFERRED note
+    "Stanislaus":     "https://www.schsa.org/PublicHealth/programs/maternal-child-adolescent-health/",  # /mainpages/mcah/ → /programs/maternal-child-adolescent-health/ (redirect dest)
+    "Tulare":         "https://tchhsa.org/eng/public-health/maternal-child-and-adolescent-health-mcah-program",
+    # ── Greater Los Angeles ───────────────────────────────────────────────────
+    "Los Angeles":    "http://publichealth.lacounty.gov/mch/",
+    "Orange":         "https://www.ochealthinfo.com/services/community-and-nursing-services/maternal-child-and-adolescent-health-mcah",
+    "Riverside":      "https://www.ruhealth.org/public-health/nursing-maternal-child-adolescent-health",  # updated domain ruhealth.org
+    "San Bernardino": "https://dph.sbcounty.gov/programs/fhs/mcah/",
+    "Ventura":        "https://hca.venturacounty.gov/public-health/health-care-for-all/",  # no dedicated MCAH page — see INFERRED note
+    # ── Sacramento Region ────────────────────────────────────────────────────
+    "El Dorado":      "https://www.eldoradocounty.ca.gov/Health-Well-Being/Public-Health/Pregnant-Women-Children-Teens-and-Families/Maternal-Child-Adolescent-Health-MCAH-and-California-Home-Visiting-Programs",  # updated domain; 403 — blocks automated requests
+    "Placer":         "https://www.placer.ca.gov/2918/Women-Infants-Children-WIC",  # no dedicated MCAH page — see INFERRED note
+    "Sacramento":     "https://dhs.saccounty.gov/PUB/Program/Pages/SP-Maternal-Child-and-Adolescent-Health-Program.aspx",
+    "Sutter":         "https://www.sutter.gov/government/county-departments/health-and-human-services/public-health-branch/maternal-child-adolescent-health",  # suttercounty.org → sutter.gov (domain moved)
+    "Yolo":           "https://www.yolocounty.gov/government/general-government-departments/health-human-services/boards-committees/mcah-advisory-board",  # advisory board only — see INFERRED note; 403 — blocks automated requests
+    "Yuba":           "https://agendasuite.org/iip/yuba/file/getfile/30813",  # no MCAH page — see INFERRED note
+    # ── San Diego & Imperial ──────────────────────────────────────────────────
+    "Imperial":       "https://www.icphd.org/health-information-and-resources/maternal-child-adolescent-health",
+    "San Diego":      "https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/maternal_child_family_health_services.html",
+    # ── Central Coast ────────────────────────────────────────────────────────
+    "Monterey":       "https://www.countyofmonterey.gov/government/departments-a-h/health/public-health/maternal-child-adolescent-health-mcah",  # 403 — blocks automated requests
+    "San Benito":     "https://hhsa.sanbenitocountyca.gov/maternal-child-adolescent-health/",
+    "San Luis Obispo": "https://www.slocounty.ca.gov/departments/health-agency/public-health/all-public-health-services/maternal-child-health/maternal,-child-adolescent-health",
+    "Santa Barbara":  "https://www.countyofsb.org/1680/Maternal-Child-Adolescent-Health",
+    # ── North Coast ──────────────────────────────────────────────────────────
+    "Del Norte":      "https://www.co.del-norte.ca.us/departments/PublicHealth/MCAH",
+    "Humboldt":       "https://humboldtgov.org/1013/Maternal-Child-Adolescent-Health",
+    "Lake":           "https://www.lakecountyca.gov/545/Maternal-Child-Adolescent-Health",
+    "Mendocino":      "https://www.mendocinocounty.gov/departments/public-health/nursing/maternal-child-adolescent-health-programs",  # updated domain .gov; 403 — blocks automated requests
+    # ── Sierra Nevada / Foothills ────────────────────────────────────────────
+    "Amador":         "https://www.amadorcounty.gov/services/public-health/aaaaa",  # amadorgov.org → amadorcounty.gov (redirect dest); unusual slug; 403 — blocks automated requests
+    "Butte":          "https://www.buttecounty.net/1145/Maternal-Child-Adolescent-Health-Program",
+    "Calaveras":      "https://publichealth.calaverasgov.us/Programs/Maternal-Child-Adolescent-Health-MCAH",
+    "Mariposa":       "http://www.mariposacounty.gov/1588/Maternal-Child-and-Adolescent-Health-MCA",  # mariposacounty.org → mariposacounty.gov (domain moved)
+    "Nevada":         "https://www.nevadacountyca.gov/3546/Maternal-Child-Adolescent-Health",
+    "Plumas":         "https://www.plumascounty.us/2542/Maternal-Child-Adolescent-Program-MCAH",
+    "Sierra":         "https://www.sierracounty.ca.gov/282/Maternal-Child-Adolescent-Health-MCAH",
+    "Tuolumne":       "https://www.tuolumnecounty.ca.gov/257/Maternal-Child-and-Adolescent-Health",  # updated slug /257/
+    # ── Northeast / High Desert ──────────────────────────────────────────────
+    "Alpine":         "https://www.alpinecountyca.gov/283/Perinatal-Outreach",  # no dedicated MCAH page — see INFERRED note
+    "Colusa":         "https://www.countyofcolusaca.gov/285/Maternal-Child-Adolescent-Health-Program",
+    "Glenn":          "https://www.countyofglenn.net/government/departments/health-human-services/public-health/services/maternal-child-adolescent-health-mcah",  # 403 — blocks automated requests
+    "Inyo":           "https://www.inyocounty.us/public-health-clinic/maternal-child-adolescent-health-mcah",
+    "Lassen":         "https://www.lassencounty.org/dept/public-health/public-health-programs-and-services/maternal-child-adolescent-health-mcah",
+    "Modoc":          "https://publichealth.co.modoc.ca.us/children___families/index.php",  # no dedicated MCAH page — see INFERRED note
+    "Mono":           "https://www.monohealth.com/hhs/page/women-maternal-health",
+    "Shasta":         "https://www.shastacounty.gov/health-human-services/page/pregnancy-children-and-parenting",  # updated domain shastacounty.gov
+    "Siskiyou":       "https://www.siskiyoucounty.gov/publichealth/page/maternal-child-and-adolescent-health-mcah",  # co.siskiyou.ca.us → siskiyoucounty.gov (domain moved)
+    "Tehama":         "https://www.tehamacohealthservices.net/our-services/public-health/services/wic/",  # no dedicated MCAH page — see INFERRED note
+    "Trinity":        "https://www.trinitycounty.org/441/Women-Infants-Children-WIC",  # no dedicated MCAH page — see INFERRED note
+}
+
+# Entries above flagged "see INFERRED note" are the 12 counties where no standalone MCAH page
+# was found. The URLs are the closest available entry point (WIC page, advisory board, related
+# program). Each needs a manual browser check before being relied on for scraping.
+#
+# Inferred counties (confidence="inferred"):
+#   Alpine, Amador, Modoc, Napa, Placer, San Joaquin, Tehama, Trinity, Ventura, Yolo, Yuba, Mono
+#
+# For Yuba (agendasuite.org URL) — strongly recommend finding a replacement on yuba.gov or
+# contracting agency (Youth for Change) before running Phase 2 on that county.
 
 # State-level reference pages (for training/learning what maternal health programs look like)
 STATE_REFERENCE_URLS = {

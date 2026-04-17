@@ -22,13 +22,26 @@ from scraper_discovery import (
     run_discovery_for_county,
 )
 
-# Phase 2 helpers
+# Phase 2 helpers — prefer the enhanced seed-crawl engine; fall back to basic extractor
+try:
+    from src.phase2_enhanced import run_phase2_enhanced as _run_phase2_enhanced
+    _ENHANCED_AVAILABLE = True
+except ImportError:
+    _ENHANCED_AVAILABLE = False
+
 from scraper_extract import (
     process_program_page,
 )
 
 # Phase 3 helpers
 from scraper_structure import main as run_structure_main
+
+# Phase 4 helpers — vectorstore build (optional, requires requirements-langchain.txt)
+try:
+    from src.vector_store import build_all_vectorstores as _build_vectorstores
+    _VECTORSTORE_AVAILABLE = True
+except ImportError:
+    _VECTORSTORE_AVAILABLE = False
 
 from eval.gap_detector import run_gap_analysis_from_pipeline_output
 
@@ -58,6 +71,16 @@ def run_phase_1(county_names: List[str]) -> List[Dict]:
 def run_phase_2(discovery_results: List[Dict]) -> None:
     print("\n=== Phase 2: Deep Extraction ===")
     os.makedirs(RAW_DIR, exist_ok=True)
+
+    if _ENHANCED_AVAILABLE:
+        # Seed-crawl path: starts from MATERNAL_HEALTH_URLS, crawls 2 levels deep,
+        # also extracts PDFs, uses Playwright for bot-blocked counties.
+        # Passes discovery_results as fallback for counties without a seed URL.
+        _run_phase2_enhanced(discovery_results=discovery_results)
+        return
+
+    # Basic fallback (scraper_extract.py) — used if requirements-langchain.txt not installed
+    print("  (enhanced scraper not available — using basic scraper_extract)")
     total = 0
     for entry in discovery_results:
         county = entry.get("county_name", "")
@@ -80,6 +103,16 @@ def run_phase_3(discovery_results: List[Dict]) -> None:
     print("\n=== Phase 3: LLM Structuring ===")
     run_structure_main()
 
+
+def run_phase_4(counties: List[str]) -> None:
+    """Build per-county ChromaDB vectorstores from Phase 2 raw data."""
+    print("\n=== Phase 4: Vectorstore Build ===")
+    if not _VECTORSTORE_AVAILABLE:
+        print("  Skipped — install requirements-langchain.txt to enable vectorstore build.")
+        return
+    _build_vectorstores(counties=counties)
+
+
 def main():
     print("\n" + "="*60)
     print(f"🚀 Run Pipeline for {len(TARGET_COUNTIES)} Counties")
@@ -88,6 +121,7 @@ def main():
     results = run_phase_1(TARGET_COUNTIES)
     run_phase_2(results)
     run_phase_3(results)
+    run_phase_4(TARGET_COUNTIES)
 
     print("\n=== Gap Analysis ===")
     run_gap_analysis_from_pipeline_output(
