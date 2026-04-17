@@ -1,19 +1,29 @@
 #!/usr/bin/env python3
 """
-Phase 1 - Discovery Scraper v2 (Search-first)
-==============================================
-Strategy: use DuckDuckGo search to find the exact MCH page on each
-county's health department website, then fetch that page and extract
-program links.
+MCAH URL Discovery — standalone utility
+========================================
+NOTE: This script is NOT part of the main pipeline.
+All 58 California county MCAH seed URLs are already human-verified and stored
+in src/config.py (MATERNAL_HEALTH_URLS).  The pipeline (run_pipeline.py)
+starts directly from those URLs and does NOT call this file.
 
+USE THIS SCRIPT ONLY when:
+  • You are onboarding a brand-new county not yet in MATERNAL_HEALTH_URLS.
+  • A county's MCAH URL has changed and you need to rediscover it.
+  • You want to audit / refresh the seed URL for one or more counties.
+
+After running this script, copy the discovered URL into
+src/config.py → MATERNAL_HEALTH_URLS and re-run the pipeline.
+
+Strategy: DuckDuckGo search → fetch MCAH landing page → extract program links.
 No HEAD probing. No nav-chain heuristics. No scoring pyramids.
 Search → fetch → extract. That's it.
 
 INSTALL:  pip install aiohttp beautifulsoup4 lxml duckduckgo-search
 USAGE:
-  python scraper_discovery_v2.py                        # all 58 counties
-  python scraper_discovery_v2.py --county Alameda Fresno
-  python scraper_discovery_v2.py --concurrency 4
+  python scraper_discovery.py                          # all 58 counties
+  python scraper_discovery.py --county "Alameda" "Fresno"
+  python scraper_discovery.py --concurrency 4
 """
 
 from __future__ import annotations

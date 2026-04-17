@@ -1,138 +1,215 @@
 #!/usr/bin/env python3
 """
-Run the 3-phase pipeline (Discovery → Extraction → Structuring) for a
-selected set of California counties.
+iTREDS California Maternal Health — 3-Phase Pipeline
+=====================================================
 
-Default counties (10, excluding San Diego which you already ran):
-  Alameda, Fresno, Sacramento, Kern, Los Angeles, San Francisco,
-  Orange, Riverside, Santa Clara, Contra Costa
+Now that all 58 MCAH seed URLs are human-verified and baked into
+src/config.py (MATERNAL_HEALTH_URLS), URL discovery via DuckDuckGo is no
+longer a pipeline step.  The three phases are:
+
+  Phase 1 — Crawl
+      BFS crawl from each county's verified seed URL (depth ≤ 2, up to 30
+      pages/county).  Playwright is used automatically for the 10 counties
+      that block aiohttp.  PDFs are extracted (≤ 5/county).
+      Output: data/raw/{county}/*.json
+
+  Phase 2 — Structure
+      Concurrent LLM (GPT-4o) calls turn raw pages into structured program
+      records, grounded against the federal program registry for reliable
+      program_id assignment and gap analysis.
+      Output: data/structured/v{N}/California_County_Healthcare_Data.csv
+
+  Phase 3 — Index
+      Per-county ChromaDB vectorstores are built from the raw pages so the
+      LangGraph ZIP → county → programs agent can answer user queries over
+      semantic search.
+      Output: data/vectorstore/{county}/
+
+After all three phases, a gap analysis report is written to
+data/gap_analysis/.
+
+USAGE
+  python run_pipeline.py                          # all 58 CA counties
+  python run_pipeline.py --counties "Fresno,Kern" # subset
+  python run_pipeline.py --phase 1                # single phase
+  python run_pipeline.py --skip-index             # skip Phase 3
+
+Adding a new county (not in MATERNAL_HEALTH_URLS):
+  Use scraper_discovery.py as a standalone utility to find its MCAH URL,
+  then add the entry to src/config.py before running the pipeline.
 """
 
+import argparse
 import os
-import json
 import time
-from typing import List, Dict
+import json
+from typing import List
 from datetime import datetime
 
-# Import shared config
-from src.config import CALIFORNIA_COUNTIES
+from src.config import CALIFORNIA_COUNTIES, MATERNAL_HEALTH_URLS
 
-# Phase 1 helpers
-from scraper_discovery import (
-    run_discovery_for_county,
-)
+# ── Phase 1: Crawl ────────────────────────────────────────────────────────────
+from src.phase2_enhanced import run_phase2_enhanced
 
-# Phase 2 helpers — prefer the enhanced seed-crawl engine; fall back to basic extractor
-try:
-    from src.phase2_enhanced import run_phase2_enhanced as _run_phase2_enhanced
-    _ENHANCED_AVAILABLE = True
-except ImportError:
-    _ENHANCED_AVAILABLE = False
-
-from scraper_extract import (
-    process_program_page,
-)
-
-# Phase 3 helpers
+# ── Phase 2: Structure ────────────────────────────────────────────────────────
 from scraper_structure import main as run_structure_main
 
-# Phase 4 helpers — vectorstore build (optional, requires requirements-langchain.txt)
+# ── Phase 3: Index (optional — requires requirements-langchain.txt) ───────────
 try:
     from src.vector_store import build_all_vectorstores as _build_vectorstores
     _VECTORSTORE_AVAILABLE = True
 except ImportError:
     _VECTORSTORE_AVAILABLE = False
 
+# ── Gap analysis ──────────────────────────────────────────────────────────────
 from eval.gap_detector import run_gap_analysis_from_pipeline_output
 
-DATA_DIR = "data"
-DISCOVERY_PATH = os.path.join(DATA_DIR, "discovery_results.json")
-RAW_DIR = os.path.join(DATA_DIR, "raw")
+# ─────────────────────────────────────────────────────────────────────────────
+DATA_DIR   = "data"
+RAW_DIR    = os.path.join(DATA_DIR, "raw")
 
-TARGET_COUNTIES = list(CALIFORNIA_COUNTIES.keys())  # all 58 CA counties
+# Default: all counties that have a verified seed URL.
+# Counties not yet in MATERNAL_HEALTH_URLS won't be crawled; run
+# scraper_discovery.py for those and add the URL to src/config.py first.
+TARGET_COUNTIES = list(MATERNAL_HEALTH_URLS.keys())
 
-def run_phase_1(county_names: List[str]) -> List[Dict]:
-    print("\n=== Phase 1: Discovery ===")
-    os.makedirs(DATA_DIR, exist_ok=True)
-    results: List[Dict] = []
-    for name in county_names:
-        base = CALIFORNIA_COUNTIES.get(name)
-        if not base:
-            print(f"   ⚠ County not found in mapping: {name}")
-            continue
-        res = run_discovery_for_county(name, base)
-        results.append(res)
-        time.sleep(1)
-    with open(DISCOVERY_PATH, "w", encoding="utf-8") as f:
-        json.dump({"generated_at": datetime.now().isoformat(), "results": results}, f, ensure_ascii=False, indent=2)
-    print(f"✓ Discovery saved: {DISCOVERY_PATH} ({len(results)} counties)")
-    return results
 
-def run_phase_2(discovery_results: List[Dict]) -> None:
-    print("\n=== Phase 2: Deep Extraction ===")
+# ─────────────────────────────────────────────────────────────────────────────
+# Phase 1 — Crawl
+# ─────────────────────────────────────────────────────────────────────────────
+
+def run_phase_1(counties: List[str]) -> None:
+    """
+    BFS-crawl each county's verified seed URL (MATERNAL_HEALTH_URLS).
+    Playwright is used automatically for bot-blocked counties.
+    Writes raw JSON pages to data/raw/{county}/.
+    """
+    print("\n=== Phase 1: Crawl ===")
     os.makedirs(RAW_DIR, exist_ok=True)
+    run_phase2_enhanced(
+        discovery_results=None,  # no Phase 0 discovery needed
+        counties=counties,
+    )
 
-    if _ENHANCED_AVAILABLE:
-        # Seed-crawl path: starts from MATERNAL_HEALTH_URLS, crawls 2 levels deep,
-        # also extracts PDFs, uses Playwright for bot-blocked counties.
-        # Passes discovery_results as fallback for counties without a seed URL.
-        _run_phase2_enhanced(discovery_results=discovery_results)
-        return
 
-    # Basic fallback (scraper_extract.py) — used if requirements-langchain.txt not installed
-    print("  (enhanced scraper not available — using basic scraper_extract)")
-    total = 0
-    for entry in discovery_results:
-        county = entry.get("county_name", "")
-        programs = entry.get("programs", [])
-        print(f"County: {county} — {len(programs)} pages")
-        for p in programs:
-            try:
-                out_path = process_program_page(county, p)
-                if out_path:
-                    print(f"   ✓ Saved raw: {out_path}")
-                    total += 1
-                else:
-                    print("   ⚠ Skipped (fetch failed)")
-            except Exception as e:
-                print(f"   ✗ Error: {e}")
-            time.sleep(0.5)
-    print(f"✓ Phase 2 complete. Raw pages saved: {total}")
+# ─────────────────────────────────────────────────────────────────────────────
+# Phase 2 — Structure
+# ─────────────────────────────────────────────────────────────────────────────
 
-def run_phase_3(discovery_results: List[Dict]) -> None:
-    print("\n=== Phase 3: LLM Structuring ===")
+def run_phase_2() -> None:
+    """
+    LLM-structure all raw pages in data/raw/.
+    County URLs come from MATERNAL_HEALTH_URLS (via scraper_structure._load_discovery)
+    so the LLM prompt always has a valid COUNTY WEBSITE value even when
+    scraper_discovery.py was not run.
+    """
+    print("\n=== Phase 2: Structure ===")
     run_structure_main()
 
 
-def run_phase_4(counties: List[str]) -> None:
-    """Build per-county ChromaDB vectorstores from Phase 2 raw data."""
-    print("\n=== Phase 4: Vectorstore Build ===")
+# ─────────────────────────────────────────────────────────────────────────────
+# Phase 3 — Index
+# ─────────────────────────────────────────────────────────────────────────────
+
+def run_phase_3(counties: List[str]) -> None:
+    """
+    Build per-county ChromaDB vectorstores from Phase 1 raw data.
+    Requires: pip install -r requirements-langchain.txt
+    """
+    print("\n=== Phase 3: Index ===")
     if not _VECTORSTORE_AVAILABLE:
         print("  Skipped — install requirements-langchain.txt to enable vectorstore build.")
         return
     _build_vectorstores(counties=counties)
 
 
-def main():
-    print("\n" + "="*60)
-    print(f"🚀 Run Pipeline for {len(TARGET_COUNTIES)} Counties")
-    print("="*60)
-    print("Counties:", ", ".join(TARGET_COUNTIES))
-    results = run_phase_1(TARGET_COUNTIES)
-    run_phase_2(results)
-    run_phase_3(results)
-    run_phase_4(TARGET_COUNTIES)
+# ─────────────────────────────────────────────────────────────────────────────
+# Gap analysis
+# ─────────────────────────────────────────────────────────────────────────────
 
+def run_gap_analysis() -> None:
     print("\n=== Gap Analysis ===")
     run_gap_analysis_from_pipeline_output(
-        structured_csv_dir=os.path.join("data", "structured"),
+        structured_csv_dir=os.path.join(DATA_DIR, "structured"),
         raw_json_dir=RAW_DIR,
         state_code="CA",
-        output_dir=os.path.join("data", "gap_analysis"),
+        output_dir=os.path.join(DATA_DIR, "gap_analysis"),
     )
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CLI
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _parse_args():
+    p = argparse.ArgumentParser(
+        description="iTREDS 3-phase pipeline: Crawl → Structure → Index",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=__doc__,
+    )
+    p.add_argument(
+        "--counties",
+        type=str,
+        default=None,
+        help=(
+            "Comma-separated county names to process. "
+            "Default: all 58 counties in MATERNAL_HEALTH_URLS."
+        ),
+    )
+    p.add_argument(
+        "--phase",
+        type=int,
+        choices=[1, 2, 3],
+        default=None,
+        help="Run only a single phase (1=Crawl, 2=Structure, 3=Index).",
+    )
+    p.add_argument(
+        "--skip-index",
+        action="store_true",
+        help="Skip Phase 3 (vectorstore build). Useful when LangChain deps are not installed.",
+    )
+    p.add_argument(
+        "--skip-gap",
+        action="store_true",
+        help="Skip the gap analysis step.",
+    )
+    return p.parse_args()
+
+
+def main():
+    args = _parse_args()
+
+    counties: List[str] = TARGET_COUNTIES
+    if args.counties:
+        counties = [c.strip() for c in args.counties.split(",") if c.strip()]
+        unknown = [c for c in counties if c not in CALIFORNIA_COUNTIES]
+        if unknown:
+            print(f"⚠  Unknown counties (not in CALIFORNIA_COUNTIES): {unknown}")
+            print("   Check spelling or add the county to src/config.py first.")
+
+    print("\n" + "=" * 60)
+    print(f"🚀  iTREDS Pipeline — {len(counties)} counties")
+    print("=" * 60)
+    print("Counties:", ", ".join(counties))
+    print()
+
+    if args.phase == 1:
+        run_phase_1(counties)
+    elif args.phase == 2:
+        run_phase_2()
+    elif args.phase == 3:
+        run_phase_3(counties)
+    else:
+        # Full pipeline
+        run_phase_1(counties)
+        run_phase_2()
+        if not args.skip_index:
+            run_phase_3(counties)
+        if not args.skip_gap:
+            run_gap_analysis()
+
     print("\nDone.")
+
 
 if __name__ == "__main__":
     main()
-
-
