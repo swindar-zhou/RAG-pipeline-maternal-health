@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Desktop_Commander__list_directory",
+      "mcp__Desktop_Commander__read_file",
+      "Bash(pip install:*)",
+      "Bash(python3 -c \"import aiohttp; print\\(aiohttp.__version__\\)\")",
+      "Bash(/opt/homebrew/bin/pip3 install:*)",
+      "Bash(python3 -m venv /tmp/url_check_venv)",
+      "Bash(/tmp/url_check_venv/bin/pip install:*)",
+      "Bash(python3 -c ':*)",
+      "Bash(head -5 cat /Users/JACKPING1_1/code-projects-26/iTREDS-gov-database-project-1/.claude/worktrees/peaceful-heisenberg/data/raw/san-francisco/*.json)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(list\\(d.keys\\(\\)\\)\\)\")",
+      "Bash(xargs python3:*)",
+      "Bash(python3 -m eval.benchmark)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(git push:*)",
+      "Bash(git remote:*)",
+      "Bash(gh pr create --title 'Phase C: LangChain/LangGraph seed-crawl pipeline, vectorstore, conversational agent + benchmarks' --draft --body ':*)"
+    ]
+  }
+}

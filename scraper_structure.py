@@ -62,6 +62,7 @@ from src.utils import save_to_csv, get_next_structured_version_dir
 from src.config import (
     STATE_NAME, MAX_INPUT_CHARS, OPENAI_MODEL,
     OPENAI_MAX_TOKENS, TEMPERATURE, SLEEP_BETWEEN_CALLS,
+    MATERNAL_HEALTH_URLS,
 )
 from src.federal_program_registry import (
     FEDERAL_PROGRAM_REGISTRY,
@@ -343,11 +344,41 @@ def _merge_county_meta(existing: Dict, new_result: Dict) -> Dict:
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _load_discovery(path: str) -> Dict[str, Dict]:
+    """
+    Build a county_name → {county_url, ...} mapping for Phase 2 prompts.
+
+    Priority (highest → lowest):
+      1. discovery_results.json  — written by scraper_discovery.py (optional)
+      2. MATERNAL_HEALTH_URLS    — 58 human-verified seed URLs baked into config
+
+    This means Phase 2 works correctly even when Phase 1 (discovery) was
+    skipped entirely, which is the normal case now that all 58 seeds are known.
+    """
+    # Seed every county from the verified URL config first
+    base: Dict[str, Dict] = {
+        county: {"county_url": url}
+        for county, url in MATERNAL_HEALTH_URLS.items()
+    }
+
     if not os.path.exists(path):
-        return {}
+        return base
+
     with open(path, encoding="utf-8") as f:
         data = json.load(f)
-    return {r.get("county_name", ""): r for r in data.get("results", [])}
+
+    # Merge: discovery entries override the seed baseline (they carry richer
+    # metadata), but counties absent from the JSON keep their seed URL.
+    for r in data.get("results", []):
+        name = r.get("county_name", "")
+        if name:
+            entry = dict(base.get(name, {}))  # start from seed URL baseline
+            entry.update(r)                   # overlay richer discovery fields
+            # Ensure county_url is always populated
+            if not entry.get("county_url"):
+                entry["county_url"] = base.get(name, {}).get("county_url", "")
+            base[name] = entry
+
+    return base
 
 
 async def _process_file(
