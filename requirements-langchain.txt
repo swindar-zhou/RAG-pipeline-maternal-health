@@ -2,8 +2,11 @@
 # Install with: pip install -r requirements-langchain.txt
 # Requires the base requirements.txt to already be installed.
 #
-# Playwright also needs a one-time browser install after pip install:
+# After pip install, run once to download the Chromium binary:
 #   playwright install chromium
+#
+# curl-cffi (bot-bypass Tier 1) is already in requirements.txt.
+# Playwright (Tier 2) is listed below for the 12 bot-blocked counties.
 
 -r requirements.txt
 

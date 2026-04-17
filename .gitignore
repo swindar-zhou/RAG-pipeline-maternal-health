@@ -19,7 +19,9 @@ __pycache__/
 # OS
 .DS_Store
 
-# Project outputs (optional - uncomment to ignore)
-# data/raw/
-# data/structured/
-# eval/results/
+# Project outputs — scraped data and LLM results are not tracked in git
+data/raw/
+data/structured/
+data/vectorstore/
+data/gap_analysis/
+eval/results/

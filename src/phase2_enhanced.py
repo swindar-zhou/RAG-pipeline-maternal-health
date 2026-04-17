@@ -133,21 +133,98 @@ async def _fetch_aiohttp(session: aiohttp.ClientSession, url: str) -> Optional[s
         return None
 
 
+def _fetch_curl_cffi_sync(url: str) -> Optional[str]:
+    """
+    Chrome TLS-fingerprint impersonation via curl-cffi.
+
+    curl-cffi spoofs the TLS ClientHello and HTTP/2 settings of a real Chrome
+    browser at the socket level.  This bypasses Cloudflare and most anti-bot
+    middleware that inspect TLS fingerprints (JA3/JA4), which plain aiohttp
+    and even headless Playwright (without patches) fail.
+
+    Returns raw HTML string, or None on any error.
+    """
+    try:
+        from curl_cffi import requests as cffi_requests  # type: ignore
+        resp = cffi_requests.get(
+            url,
+            impersonate="chrome124",
+            timeout=FETCH_TIMEOUT,
+            allow_redirects=True,
+        )
+        if resp.status_code >= 400:
+            return None
+        # Cloudflare managed challenge returns 200 with a JS interstitial —
+        # detect it and treat as a failure so Playwright can try next.
+        if "just a moment" in resp.text[:500].lower():
+            return None
+        return resp.text
+    except Exception:
+        return None
+
+
+async def _fetch_curl_cffi(url: str) -> Optional[str]:
+    """Async wrapper — runs the sync curl-cffi call in a thread pool."""
+    import asyncio
+    loop = asyncio.get_event_loop()
+    return await loop.run_in_executor(None, _fetch_curl_cffi_sync, url)
+
+
 async def _fetch_playwright(url: str) -> Optional[str]:
-    """Headless Chromium fetch — used for counties that block aiohttp (403)."""
+    """
+    Stealth headless Chromium fetch via Playwright.
+
+    Patches applied:
+      • --disable-blink-features=AutomationControlled  (removes navigator.webdriver)
+      • navigator.webdriver overridden to undefined via init script
+      • Realistic Accept-Language / platform headers injected
+
+    Used as the second tier for bot-blocked counties when curl-cffi fails
+    (e.g. sites that require JavaScript execution to render the DOM).
+    """
     try:
         from playwright.async_api import async_playwright
     except ImportError:
+        print("  [warn] playwright not installed — run: pip install playwright && playwright install chromium")
         return None
     try:
         async with async_playwright() as pw:
-            browser = await pw.chromium.launch(headless=True)
-            page = await browser.new_page()
-            await page.goto(url, wait_until="domcontentloaded", timeout=FETCH_TIMEOUT * 1000)
+            browser = await pw.chromium.launch(
+                headless=True,
+                args=[
+                    "--disable-blink-features=AutomationControlled",
+                    "--no-sandbox",
+                    "--disable-dev-shm-usage",
+                ],
+            )
+            ctx = await browser.new_context(
+                user_agent=BROWSER_HEADERS["User-Agent"],
+                locale="en-US",
+                extra_http_headers={
+                    "Accept-Language": "en-US,en;q=0.9",
+                    "Accept": BROWSER_HEADERS["Accept"],
+                },
+            )
+            # Patch navigator.webdriver to undefined so JS bot-checks pass
+            await ctx.add_init_script(
+                "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
+            )
+            page = await ctx.new_page()
+            # "networkidle" gives Cloudflare JS challenges time to resolve
+            try:
+                await page.goto(url, wait_until="networkidle", timeout=FETCH_TIMEOUT * 2 * 1000)
+            except Exception:
+                # Fallback to domcontentloaded if networkidle times out
+                await page.goto(url, wait_until="domcontentloaded", timeout=FETCH_TIMEOUT * 1000)
             html = await page.content()
             await browser.close()
+            # Surface Cloudflare blocks clearly so the operator can act
+            if "just a moment" in html[:500].lower():
+                print(f"  [cloudflare] Playwright hit Cloudflare managed challenge — {url}")
+                return None
             return html
-    except Exception:
+    except Exception as exc:
+        print(f"  [warn] Playwright fetch failed for {url}: {exc}")
         return None
 
 
@@ -156,12 +233,25 @@ async def fetch_html(
     url: str,
     session: aiohttp.ClientSession,
 ) -> Optional[str]:
-    """Route to Playwright for blocked counties, aiohttp for everything else."""
+    """
+    Three-tier fetch for bot-blocked counties; plain aiohttp for all others.
+
+    Tier 1 — curl-cffi  : Chrome TLS fingerprint spoofing (fast, no browser)
+    Tier 2 — Playwright : stealth headless Chromium (handles JS-rendered pages)
+    Tier 3 — aiohttp    : plain HTTP (last resort; will likely fail for blocked sites)
+    """
     if county in PLAYWRIGHT_REQUIRED_COUNTIES:
+        # Tier 1: curl-cffi (Chrome TLS impersonation)
+        html = await _fetch_curl_cffi(url)
+        if html:
+            return html
+        print(f"  [bot-block] curl-cffi failed for {county} — trying Playwright …")
+        # Tier 2: Playwright with stealth patches
         html = await _fetch_playwright(url)
         if html:
             return html
-        # If Playwright isn't installed, fall through to aiohttp as best-effort
+        print(f"  [bot-block] Playwright failed for {county} — falling back to aiohttp …")
+    # Tier 3 (or normal path): plain aiohttp
     return await _fetch_aiohttp(session, url)
 
 

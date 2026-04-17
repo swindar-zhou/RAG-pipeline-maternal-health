@@ -2,8 +2,9 @@
 requests==2.31.0
 beautifulsoup4==4.12.3
 lxml==5.1.0
-aiohttp>=3.9.0          # async HTTP — used in scraper_discovery.py and scraper_extract.py
-duckduckgo-search>=5.0  # DDG search API — used in scraper_discovery.py
+aiohttp>=3.9.0          # async HTTP — primary fetcher for non-blocked counties
+duckduckgo-search>=5.0  # DDG search API — used in scraper_discovery.py (utility only)
+curl-cffi>=0.7.0        # Chrome TLS fingerprint impersonation — Tier 1 for bot-blocked counties
 
 # LLM API clients
 openai==1.12.0
