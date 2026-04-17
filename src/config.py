@@ -152,10 +152,13 @@ DELAY_BETWEEN_REQUESTS = 2
 MAX_CONTENT_LENGTH = 12000
 MAX_TEXT_CHARS = 20000
 
-# Counties whose MCAH pages return 403 to aiohttp even with a browser User-Agent.
-# Phase 2 enhanced scraper must route these through a Playwright headless-browser fetch.
-# Verified 2026-04-17 — all other counties respond normally to aiohttp.
-PLAYWRIGHT_REQUIRED_COUNTIES = {
+# Counties whose MCAH pages block automated requests (403 / bot-detection).
+# For these counties the scraper uses a three-tier fetch chain:
+#   1. curl-cffi  — Chrome TLS fingerprint impersonation (fastest, no browser)
+#   2. Playwright — headless Chromium with stealth patches (JS-rendered pages)
+#   3. aiohttp    — plain HTTP fallback (rarely succeeds for these counties)
+# Updated 2026-04-17 based on Phase 1 zero-result run.
+BOT_BLOCKED_COUNTIES: set = {
     "Amador",
     "Contra Costa",
     "El Dorado",
@@ -165,8 +168,13 @@ PLAYWRIGHT_REQUIRED_COUNTIES = {
     "Madera",
     "Mendocino",
     "Monterey",
+    "Shasta",
+    "Tuolumne",
     "Yolo",
 }
+
+# Backward-compatible alias (phase2_enhanced.py imports this name)
+PLAYWRIGHT_REQUIRED_COUNTIES = BOT_BLOCKED_COUNTIES
 
 # Validated maternal health section URLs — human-checked, 2026-04-16
 # Source: maternal_health_urls.json (46 verified, confidence="verified")
