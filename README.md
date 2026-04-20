@@ -1,4 +1,4 @@
-# Closing the Maternal Health Information Gap: An Agentic RAG Pipeline for County-Level Program Discovery
+# Closing the Maternal Health Information Gap: An Agentic RAG Pipeline for County-Level Program Discovery ![alt text](women-feeding.png)
 
 ## Background
 
@@ -127,8 +127,8 @@ PHASE 1: DISCOVERY          PHASE 2: EXTRACTION           PHASE 3: STRUCTURING
 ┌──────────────────────────────────────────────────────┐
 │ PROGRAM FINDER  (src/knowledge_graph.py)             │
 │ ZIP code → county (pgeocode, offline)                │
-│   Path A: Structured CSV (fast, no LLM)             │
-│   Path B: RAG + GPT-4o-mini (fallback for           │
+│   Path A: Structured CSV (fast, no LLM)              │
+│   Path B: RAG + GPT-4o-mini (fallback for            │
 │           counties without structured CSV)           │
 └──────────────────────────────────────────────────────┘
 ```
