@@ -1,4 +1,6 @@
-# ![alt text](women-feeding.png) Closing the Maternal Health Information Gap: An Agentic RAG Pipeline for County-Level Program Discovery
+![alt text](women-feeding.png) 
+
+# Closing the Maternal Health Information Gap: An Agentic RAG Pipeline for County-Level Program Discovery
 
 ## Background
 
