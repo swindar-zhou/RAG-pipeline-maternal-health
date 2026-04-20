@@ -1,0 +1,2956 @@
+{
+  "generated_at": "2026-04-17T10:48:16.657956",
+  "results": [
+    {
+      "county_name": "Alameda",
+      "county_url": "https://www.acgov.org/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://health.alamedacountyca.gov/department/public-health-department/",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Women, Infants & Children (WIC) Supplemental Nutrition Program",
+          "url": "https://health.alamedacountyca.gov/unit/women-infants-children-wic-supplemental-nutrition-program/",
+          "link_text": "Women, Infants & Children (WIC) Supplemental Nutrition Program",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Nutrition",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Perinatal Services",
+          "url": "https://health.alamedacountyca.gov/program/perinatal-services-ph/",
+          "link_text": "Perinatal Services",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Perinatal Care",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Nurse Family Partnership",
+          "url": "https://health.alamedacountyca.gov/program/nurse-family-partnership-nfp/",
+          "link_text": "Nurse Family Partnership",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Home Visiting",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Fetal and Infant Mortality Review",
+          "url": "https://health.alamedacountyca.gov/program/fetal-and-infant-mortality-review-fimr/",
+          "link_text": "Fetal and Infant Mortality Review",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Health Equity",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Black Infant Health",
+          "url": "https://health.alamedacountyca.gov/program/black-infant-health-bih/",
+          "link_text": "Black Infant Health",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Health Equity",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "WIC Video Appointments",
+          "url": "https://health.alamedacountyca.gov/wic-video-appointments/",
+          "link_text": "WIC Video Appointments",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "WIC Food Benefits",
+          "url": "https://health.alamedacountyca.gov/wic-food-benefits/",
+          "link_text": "WIC Food Benefits",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "See If You Qualify",
+          "url": "https://health.alamedacountyca.gov/see-if-you-qualify-wic/",
+          "link_text": "See If You Qualify",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Resource Library",
+          "url": "https://health.alamedacountyca.gov/public-health-services/perinatal-hepatitis-b-program-resources/",
+          "link_text": "Resource Library",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Perinatal Care",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Eligibility",
+          "url": "https://health.alamedacountyca.gov/public-health-services/eligibility-for-the-perinatal-hepatitis-b-program/",
+          "link_text": "Eligibility",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Perinatal Care",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "About",
+          "url": "https://health.alamedacountyca.gov/public-health-services/about-perinatal-hepatitis-b/",
+          "link_text": "About",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Perinatal Care",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "WIC Dental Days",
+          "url": "https://health.alamedacountyca.gov/program/wic-dental-days/",
+          "link_text": "WIC Dental Days",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Perinatal Hepatitis B Prevention Program",
+          "url": "https://health.alamedacountyca.gov/program/perinatal-hepatitis-b-prevention-program/",
+          "link_text": "Perinatal Hepatitis B Prevention Program",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Perinatal Care",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Healthy Families Alameda County",
+          "url": "https://health.alamedacountyca.gov/program/healthy-families-alameda-county/",
+          "link_text": "Healthy Families Alameda County",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Home Visiting",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Preparing for a WIC Appointment",
+          "url": "https://health.alamedacountyca.gov/preparing-for-a-wic-appointment/",
+          "link_text": "Preparing for a WIC Appointment",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "For Providers",
+          "url": "https://health.alamedacountyca.gov/perinatal-hepatitis-b-for-providers/",
+          "link_text": "For Providers",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Perinatal Care",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Online WIC Classes",
+          "url": "https://health.alamedacountyca.gov/online-wic-classes/",
+          "link_text": "Online WIC Classes",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Locations and Hours",
+          "url": "https://health.alamedacountyca.gov/locations-and-hours-wic/",
+          "link_text": "Locations and Hours",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Family Resources",
+          "url": "https://health.alamedacountyca.gov/family-resources-wic/",
+          "link_text": "Family Resources",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "California WIC Card",
+          "url": "https://health.alamedacountyca.gov/california-wic-card/",
+          "link_text": "California WIC Card",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Apply for WIC",
+          "url": "https://health.alamedacountyca.gov/apply-for-wic/",
+          "link_text": "Apply for WIC",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Maternal, Paternal, Child, Adolescent Health",
+          "url": "https://health.alamedacountyca.gov/unit/maternal-paternal-child-adolescent-health/",
+          "link_text": "Maternal, Paternal, Child, Adolescent Health",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Unknown",
+          "relevance_score": 3.0
+        },
+        {
+          "name": "Find Alameda County Chronic Hepatitis Services",
+          "url": "https://health.alamedacountyca.gov/public-health-services/find-alameda-county-chronic-hepatitis-services/",
+          "link_text": "Find Alameda County Chronic Hepatitis Services",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Unknown",
+          "relevance_score": 3.0
+        },
+        {
+          "name": "School & Youth Nutrition Programs",
+          "url": "https://health.alamedacountyca.gov/program/school-youth-nutrition-programs/",
+          "link_text": "School & Youth Nutrition Programs",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Unknown",
+          "relevance_score": 3.0
+        },
+        {
+          "name": "Hepatitis B",
+          "url": "https://health.alamedacountyca.gov/program/hepatitis-b/",
+          "link_text": "Hepatitis B",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Unknown",
+          "relevance_score": 3.0
+        },
+        {
+          "name": "Hepatitis A",
+          "url": "https://health.alamedacountyca.gov/program/hepatitis-a/",
+          "link_text": "Hepatitis A",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Unknown",
+          "relevance_score": 3.0
+        },
+        {
+          "name": "Chronic Hepatitis Program",
+          "url": "https://health.alamedacountyca.gov/program/chronic-hepatitis-program/",
+          "link_text": "Chronic Hepatitis Program",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Unknown",
+          "relevance_score": 3.0
+        },
+        {
+          "name": "For Providers",
+          "url": "https://health.alamedacountyca.gov/for-providers-public-health/provider-reporting/hepatitis-b-for-providers/",
+          "link_text": "For Providers",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Unknown",
+          "relevance_score": 3.0
+        },
+        {
+          "name": "Perinatal Equity Initiative",
+          "url": "https://health.alamedacountyca.gov/program/perinatal-equity-initiative/",
+          "link_text": "Perinatal Equity Initiative",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Health Equity",
+          "relevance_score": 2.6
+        },
+        {
+          "name": "Preconception and Reproductive Health",
+          "url": "https://health.alamedacountyca.gov/program/preconception-and-reproductive-health/",
+          "link_text": "Preconception and Reproductive Health",
+          "nav_path": "search → https://health.alamedacountyca.gov/department/public-health-department/",
+          "category": "Reproductive Health",
+          "relevance_score": 2.4
+        }
+      ]
+    },
+    {
+      "county_name": "Alpine",
+      "county_url": "https://www.alpinecountyca.gov/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.alpinecountyca.gov/283/Perinatal-Outreach",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Healthy Families",
+          "url": "https://www.alpinecountyca.gov/285/Healthy-Families-Program",
+          "link_text": "Healthy Families",
+          "nav_path": "search → https://www.alpinecountyca.gov/283/Perinatal-Outreach",
+          "category": "Home Visiting",
+          "relevance_score": 5.2
+        }
+      ]
+    },
+    {
+      "county_name": "Amador",
+      "county_url": "https://www.amadorgov.org/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.amadorcounty.gov/services/public-health/maternal-child-adolescent-health-mcah/maternal-health-3580",
+      "discovery_tier": "tier2_search",
+      "programs": []
+    },
+    {
+      "county_name": "Butte",
+      "county_url": "https://www.buttecounty.net/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.buttecounty.net/1145/Maternal-Child-Adolescent-Health-Program",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Parents as Teachers (PDF)",
+          "url": "https://www.buttecounty.net/DocumentCenter/View/4687",
+          "link_text": "Parents as Teachers (PDF)",
+          "nav_path": "search → https://www.buttecounty.net/1145/Maternal-Child-Adolescent-Health-Program",
+          "category": "Home Visiting",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Non-Medi-Cal Doulas",
+          "url": "https://www.buttecounty.net/1145/Maternal-Child-Adolescent-Health-Program#tab98412d77-9554-4960-8f95-d395d5dd8a81_1",
+          "link_text": "Non-Medi-Cal Doulas",
+          "nav_path": "search → https://www.buttecounty.net/1145/Maternal-Child-Adolescent-Health-Program",
+          "category": "Birth Support",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Medi-Cal Approved Doulas",
+          "url": "https://www.buttecounty.net/1145/Maternal-Child-Adolescent-Health-Program#tab98412d77-9554-4960-8f95-d395d5dd8a81_0",
+          "link_text": "Medi-Cal Approved Doulas",
+          "nav_path": "search → https://www.buttecounty.net/1145/Maternal-Child-Adolescent-Health-Program",
+          "category": "Birth Support",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Breastfeeding Resource List (PDF)",
+          "url": "https://www.buttecounty.net/DocumentCenter/View/4688",
+          "link_text": "Breastfeeding Resource List (PDF)",
+          "nav_path": "search → https://www.buttecounty.net/1145/Maternal-Child-Adolescent-Health-Program",
+          "category": "Breastfeeding",
+          "relevance_score": 2.2
+        }
+      ]
+    },
+    {
+      "county_name": "Calaveras",
+      "county_url": "https://www.calaverasgov.us/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://publichealth.calaverasgov.us/Programs/Maternal-Child-Adolescent-Health-MCAH",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "California Home Visiting Program",
+          "url": "https://publichealth.calaverasgov.us/Programs/California-Home-Visiting-Program",
+          "link_text": "California Home Visiting Program",
+          "nav_path": "search → https://publichealth.calaverasgov.us/Programs/Maternal-Child-Adolescent-Health-MCAH",
+          "category": "Home Visiting",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Go to top",
+          "url": "https://publichealth.calaverasgov.us/Programs/Maternal-Child-Adolescent-Health-MCAH#top",
+          "link_text": "Go to top",
+          "nav_path": "search → https://publichealth.calaverasgov.us/Programs/Maternal-Child-Adolescent-Health-MCAH",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Maternal, Child, Adolescent Health (MCAH)",
+          "url": "https://publichealth.calaverasgov.us/Programs/Maternal-Child-Adolescent-Health-MCAH",
+          "link_text": "Maternal, Child, Adolescent Health (MCAH)",
+          "nav_path": "search → https://publichealth.calaverasgov.us/Programs/Maternal-Child-Adolescent-Health-MCAH",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        }
+      ]
+    },
+    {
+      "county_name": "Colusa",
+      "county_url": "https://www.countyofcolusa.org/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.countyofcolusaca.gov/285/Maternal-Child-Adolescent-Health-Program",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Colusa County Prenatal Care Services",
+          "url": "https://www.countyofcolusaca.gov/ImageRepository/Document?documentID=19412",
+          "link_text": "Colusa County Prenatal Care Services",
+          "nav_path": "search → https://www.countyofcolusaca.gov/285/Maternal-Child-Adolescent-Health-Program",
+          "category": "Perinatal Care",
+          "relevance_score": 2.2
+        }
+      ]
+    },
+    {
+      "county_name": "Contra Costa",
+      "county_url": "https://www.contracosta.ca.gov/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.cchealth.org/services-and-programs/support-for-families/wic",
+      "discovery_tier": "tier2_search",
+      "programs": []
+    },
+    {
+      "county_name": "Del Norte",
+      "county_url": "https://www.dnco.org/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.co.del-norte.ca.us/departments/PublicHealth/MCAH",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Maternal Child Adolescent Health (MCAH)",
+          "url": "https://www.co.del-norte.ca.us/departments/PublicHealth/MCAH",
+          "link_text": "Maternal Child Adolescent Health (MCAH)",
+          "nav_path": "search → https://www.co.del-norte.ca.us/departments/PublicHealth/MCAH",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Public Health Nursing Referral form-- MCAH.pdf",
+          "url": "https://www.co.del-norte.ca.us/media/PublicHealth/Public Health Nursing Referral form-- MCAH.pdf",
+          "link_text": "Public Health Nursing Referral form-- MCAH.pdf",
+          "nav_path": "search → https://www.co.del-norte.ca.us/departments/PublicHealth/MCAH",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Women Infants & Children (WIC)",
+          "url": "https://www.co.del-norte.ca.us/departments/PublicHealth/WIC",
+          "link_text": "Women Infants & Children (WIC)",
+          "nav_path": "search → https://www.co.del-norte.ca.us/departments/PublicHealth/MCAH",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Healthy Families Del Norte",
+          "url": "https://www.co.del-norte.ca.us/departments/PublicHealth/HealthyFamiliesDelNorte",
+          "link_text": "Healthy Families Del Norte",
+          "nav_path": "search → https://www.co.del-norte.ca.us/departments/PublicHealth/MCAH",
+          "category": "Home Visiting",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Maternal Mental Health Resources",
+          "url": "https://www.co.del-norte.ca.us/media/PublicHealth/Maternal Mental Health Resources.pdf",
+          "link_text": "Maternal Mental Health Resources",
+          "nav_path": "search → https://www.co.del-norte.ca.us/departments/PublicHealth/MCAH",
+          "category": "Behavioral Health",
+          "relevance_score": 2.2
+        }
+      ]
+    },
+    {
+      "county_name": "El Dorado",
+      "county_url": "https://www.edcgov.us/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.edcgov.us/Government/hhsa",
+      "discovery_tier": "tier2_search",
+      "programs": []
+    },
+    {
+      "county_name": "Fresno",
+      "county_url": "https://www.co.fresno.ca.us/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://wicprogram.us/wic_programs-city/fresno_ca",
+      "discovery_tier": "tier2_search",
+      "programs": [
+        {
+          "name": "California WIC Program",
+          "url": "https://wicprogram.us/wic-programs-state/california",
+          "link_text": "California WIC Program",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Breastfeeding vs. Formula: What WIC Moms Need to Know",
+          "url": "https://wicprogram.us/resources/breastfeeding-vs-formula-what-wic-moms-need-to-know",
+          "link_text": "Breastfeeding vs. Formula: What WIC Moms Need to Know",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Breastfeeding",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "United Health Centers of the San Joaquin Valley - Pinedale WIC",
+          "url": "https://wicprogram.us/wic-program-provider/united_health_centers_of_the_san_joaquin_valley_pinedale_wic_fresno_ca",
+          "link_text": "United Health Centers of the San Joaquin Valley - Pinedale WIC",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "United Health Centers of the San Joaquin Valley - Mckinley WIC",
+          "url": "https://wicprogram.us/wic-program-provider/united_health_centers_of_the_san_joaquin_valley_mckinley_wic_fresno_ca",
+          "link_text": "United Health Centers of the San Joaquin Valley - Mckinley WIC",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "United Health Centers of the San Joaquin Valley - Fresno Marks WIC",
+          "url": "https://wicprogram.us/wic-program-provider/united_health_centers_of_the_san_joaquin_valley_fresno_marks_wic_fresno_ca",
+          "link_text": "United Health Centers of the San Joaquin Valley - Fresno Marks WIC",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "United Health Centers of the San Joaquin Valley - Easton WIC",
+          "url": "https://wicprogram.us/wic-program-provider/united_health_centers_of_the_san_joaquin_valley_easton_wic_fresno_ca",
+          "link_text": "United Health Centers of the San Joaquin Valley - Easton WIC",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Fresno EOC WIC - Kings Canyon and Willow",
+          "url": "https://wicprogram.us/wic-program-provider/fresno_eoc_wic_kings_canyon_and_willow_fresno_ca",
+          "link_text": "Fresno EOC WIC - Kings Canyon and Willow",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Fresno EOC WIC - First Street",
+          "url": "https://wicprogram.us/wic-program-provider/fresno_eoc_wic_first_street_fresno_ca",
+          "link_text": "Fresno EOC WIC - First Street",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Fresno EOC WIC - East Shaw",
+          "url": "https://wicprogram.us/wic-program-provider/fresno_eoc_wic_east_shaw_fresno_ca",
+          "link_text": "Fresno EOC WIC - East Shaw",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Fresno EOC WIC - Downtown",
+          "url": "https://wicprogram.us/wic-program-provider/fresno_eoc_wic_downtown_fresno_ca",
+          "link_text": "Fresno EOC WIC - Downtown",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Fresno EOC WIC - Ashlan and West",
+          "url": "https://wicprogram.us/wic-program-provider/fresno_eoc_wic_ashlan_and_west_fresno_ca",
+          "link_text": "Fresno EOC WIC - Ashlan and West",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Clinica Sierra Vista - West Shaw Community Health Center WIC",
+          "url": "https://wicprogram.us/wic-program-provider/clinica_sierra_vista_west_shaw_community_health_center_wic_fresno_ca",
+          "link_text": "Clinica Sierra Vista - West Shaw Community Health Center WIC",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Clinica Sierra Vista - West Fresno Community Health Center WIC",
+          "url": "https://wicprogram.us/wic-program-provider/clinica_sierra_vista_west_fresno_community_health_center_wic_fresno_ca",
+          "link_text": "Clinica Sierra Vista - West Fresno Community Health Center WIC",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Clinica Sierra Vista - Orange and Butler Community Health Center WIC",
+          "url": "https://wicprogram.us/wic-program-provider/clinica_sierra_vista_orange_and_butler_community_health_center_wic_fresno_ca",
+          "link_text": "Clinica Sierra Vista - Orange and Butler Community Health Center WIC",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Clinica Sierra Vista - North Fine Community Health Center WIC",
+          "url": "https://wicprogram.us/wic-program-provider/clinica_sierra_vista_north_fine_community_health_center_wic_fresno_ca",
+          "link_text": "Clinica Sierra Vista - North Fine Community Health Center WIC",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Clinica Sierra Vista - Elm Community Health Center WIC",
+          "url": "https://wicprogram.us/wic-program-provider/clinica_sierra_vista_elm_community_health_center_wic_fresno_ca",
+          "link_text": "Clinica Sierra Vista - Elm Community Health Center WIC",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Register",
+          "url": "https://wicprogram.us/user/new",
+          "link_text": "Register",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "WIC-Approved Foods: A Complete List",
+          "url": "https://wicprogram.us/resources/wic-approved-foods-a-complete-list",
+          "link_text": "WIC-Approved Foods: A Complete List",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "What is WIC? An Overview of the Program",
+          "url": "https://wicprogram.us/resources/what-is-wic-an-overview-of-the-program",
+          "link_text": "What is WIC? An Overview of the Program",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Managing Food Allergies with WIC",
+          "url": "https://wicprogram.us/resources/managing-food-allergies-with-wic",
+          "link_text": "Managing Food Allergies with WIC",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "How WIC Works with Local Food Banks and Pantries",
+          "url": "https://wicprogram.us/resources/how-wic-works-with-local-food-banks-and-pantries",
+          "link_text": "How WIC Works with Local Food Banks and Pantries",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "General",
+          "url": "https://wicprogram.us/resources/category/general",
+          "link_text": "General",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Resources",
+          "url": "https://wicprogram.us/resources",
+          "link_text": "Resources",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Privacy Policy",
+          "url": "https://wicprogram.us/privacy",
+          "link_text": "Privacy Policy",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Contact",
+          "url": "https://wicprogram.us/contact",
+          "link_text": "Contact",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "About",
+          "url": "https://wicprogram.us/about",
+          "link_text": "About",
+          "nav_path": "search → https://wicprogram.us/wic_programs-city/fresno_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        }
+      ]
+    },
+    {
+      "county_name": "Glenn",
+      "county_url": "https://www.countyofglenn.net/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.countyofglenn.net/government/departments/health-human-services/public-health/women-infants-children-wic",
+      "discovery_tier": "tier2_search",
+      "programs": []
+    },
+    {
+      "county_name": "Humboldt",
+      "county_url": "https://www.humboldtgov.org/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://humboldtgov.org/1013/Maternal-Child-Adolescent-Health",
+      "discovery_tier": "tier1_validated_relaxed_extract",
+      "programs": [
+        {
+          "name": "Skip to Main Content",
+          "url": "https://humboldtgov.org/1013/Maternal-Child-Adolescent-Health#cc15267b2b-6a02-4673-aaeb-12985dc72a1f",
+          "link_text": "Skip to Main Content",
+          "nav_path": "search → https://humboldtgov.org/1013/Maternal-Child-Adolescent-Health",
+          "category": "Unknown",
+          "relevance_score": 0.2
+        },
+        {
+          "name": "Maternal, Child & Adolescent Health",
+          "url": "https://humboldtgov.org/1013/Maternal-Child-Adolescent-Health",
+          "link_text": "Maternal, Child & Adolescent Health",
+          "nav_path": "search → https://humboldtgov.org/1013/Maternal-Child-Adolescent-Health",
+          "category": "Unknown",
+          "relevance_score": 0.2
+        }
+      ]
+    },
+    {
+      "county_name": "Imperial",
+      "county_url": "https://www.co.imperial.ca.us/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.icphd.org/health-information-and-resources/maternal-child-adolescent-health",
+      "discovery_tier": "tier1_validated_relaxed_extract",
+      "programs": [
+        {
+          "name": "",
+          "url": "https://www.icphd.org/health-information-and-resources/maternal-child-adolescent-health/pregnancy",
+          "link_text": "",
+          "nav_path": "search → https://www.icphd.org/health-information-and-resources/maternal-child-adolescent-health",
+          "category": "Unknown",
+          "relevance_score": 0.2
+        },
+        {
+          "name": "Skip to main content",
+          "url": "https://www.icphd.org/health-information-and-resources/maternal-child-adolescent-health#main",
+          "link_text": "Skip to main content",
+          "nav_path": "search → https://www.icphd.org/health-information-and-resources/maternal-child-adolescent-health",
+          "category": "Unknown",
+          "relevance_score": 0.2
+        },
+        {
+          "name": "",
+          "url": "https://www.icphd.org/health-information-and-resources/maternal-child-adolescent-health",
+          "link_text": "",
+          "nav_path": "search → https://www.icphd.org/health-information-and-resources/maternal-child-adolescent-health",
+          "category": "Unknown",
+          "relevance_score": 0.2
+        }
+      ]
+    },
+    {
+      "county_name": "Inyo",
+      "county_url": "https://www.inyocounty.us/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.inyocounty.us/public-health-clinic/maternal-child-adolescent-health-mcah",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Welcome to WIC!",
+          "url": "https://www.inyocounty.us/wic/welcome-wic",
+          "link_text": "Welcome to WIC!",
+          "nav_path": "search → https://www.inyocounty.us/public-health-clinic/maternal-child-adolescent-health-mcah",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "WIC App",
+          "url": "https://www.inyocounty.us/wic-app",
+          "link_text": "WIC App",
+          "nav_path": "search → https://www.inyocounty.us/public-health-clinic/maternal-child-adolescent-health-mcah",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "WIC",
+          "url": "https://www.inyocounty.us/wic",
+          "link_text": "WIC",
+          "nav_path": "search → https://www.inyocounty.us/public-health-clinic/maternal-child-adolescent-health-mcah",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Do I Qualify?",
+          "url": "https://www.inyocounty.us/services/health-human-services/public-health-and-prevention-division/wic/do-i-qualify",
+          "link_text": "Do I Qualify?",
+          "nav_path": "search → https://www.inyocounty.us/public-health-clinic/maternal-child-adolescent-health-mcah",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Maternal Child & Adolescent Health (MCAH)",
+          "url": "https://www.inyocounty.us/public-health-clinic/maternal-child-adolescent-health-mcah",
+          "link_text": "Maternal Child & Adolescent Health (MCAH)",
+          "nav_path": "search → https://www.inyocounty.us/public-health-clinic/maternal-child-adolescent-health-mcah",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Mining Claims/Information",
+          "url": "https://www.inyocounty.us/services/treasurer-tax-collector/mining-claimsinformation",
+          "link_text": "Mining Claims/Information",
+          "nav_path": "search → https://www.inyocounty.us/public-health-clinic/maternal-child-adolescent-health-mcah",
+          "category": "Unknown",
+          "relevance_score": 3.0
+        },
+        {
+          "name": "Claims Against the County",
+          "url": "https://www.inyocounty.us/risk/claims-against-county",
+          "link_text": "Claims Against the County",
+          "nav_path": "search → https://www.inyocounty.us/public-health-clinic/maternal-child-adolescent-health-mcah",
+          "category": "Unknown",
+          "relevance_score": 3.0
+        },
+        {
+          "name": "Maternal Mental Health Matrix - SPANISH, 460.55 KB",
+          "url": "https://www.inyocounty.us/sites/default/files/2025-01/Maternal%20Mental%20Health%20Matrix%20-%20SPAN.pdf",
+          "link_text": "Maternal Mental Health Matrix - SPANISH, 460.55 KB",
+          "nav_path": "search → https://www.inyocounty.us/public-health-clinic/maternal-child-adolescent-health-mcah",
+          "category": "Behavioral Health",
+          "relevance_score": 2.2
+        },
+        {
+          "name": "Maternal Mental Health Matrix - ENGLISH, 436.4 KB",
+          "url": "https://www.inyocounty.us/sites/default/files/2025-01/Maternal%20Mental%20Health%20Matrix%20-%20ENG.pdf",
+          "link_text": "Maternal Mental Health Matrix - ENGLISH, 436.4 KB",
+          "nav_path": "search → https://www.inyocounty.us/public-health-clinic/maternal-child-adolescent-health-mcah",
+          "category": "Behavioral Health",
+          "relevance_score": 2.2
+        },
+        {
+          "name": "First 5",
+          "url": "https://www.inyocounty.us/first5",
+          "link_text": "First 5",
+          "nav_path": "search → https://www.inyocounty.us/public-health-clinic/maternal-child-adolescent-health-mcah",
+          "category": "Early Childhood",
+          "relevance_score": 2.2
+        },
+        {
+          "name": "Quality Improvement",
+          "url": "https://www.inyocounty.us/behavioral-health/quality-improvement",
+          "link_text": "Quality Improvement",
+          "nav_path": "search → https://www.inyocounty.us/public-health-clinic/maternal-child-adolescent-health-mcah",
+          "category": "Quality Improvement",
+          "relevance_score": 2.2
+        }
+      ]
+    },
+    {
+      "county_name": "Kern",
+      "county_url": "https://www.kernpublichealth.com/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.kernpublichealth.com/healthy-community/women-s-health/perinatal-outreach-program",
+      "discovery_tier": "tier2_search",
+      "programs": []
+    },
+    {
+      "county_name": "Kings",
+      "county_url": "https://www.countyofkings.com/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.kcdph.com/nursing",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Comprehensive Perinatal Services Program (CPSP)",
+          "url": "https://www.kcdph.com/cpsp",
+          "link_text": "Comprehensive Perinatal Services Program (CPSP)",
+          "nav_path": "search → https://www.kcdph.com/nursing",
+          "category": "Perinatal Care",
+          "relevance_score": 6.0
+        },
+        {
+          "name": "Preconception Health",
+          "url": "https://www.kcdph.com/preconceptionhealth",
+          "link_text": "Preconception Health",
+          "nav_path": "search → https://www.kcdph.com/nursing",
+          "category": "Reproductive Health",
+          "relevance_score": 2.4
+        },
+        {
+          "name": "Breastfeeding Support",
+          "url": "https://www.kcdph.com/breastfeedingsupport",
+          "link_text": "Breastfeeding Support",
+          "nav_path": "search → https://www.kcdph.com/nursing",
+          "category": "Breastfeeding",
+          "relevance_score": 2.2
+        }
+      ]
+    },
+    {
+      "county_name": "Lake",
+      "county_url": "https://www.lakecountyca.gov/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.lakecountyca.gov/545/Maternal-Child-Adolescent-Health",
+      "discovery_tier": "tier1_validated_relaxed_extract",
+      "programs": [
+        {
+          "name": "here",
+          "url": "https://mchb.hrsa.gov/",
+          "link_text": "here",
+          "nav_path": "search → https://www.lakecountyca.gov/545/Maternal-Child-Adolescent-Health",
+          "category": "Unknown",
+          "relevance_score": 3.0
+        },
+        {
+          "name": "Skip to Main Content",
+          "url": "https://www.lakecountyca.gov/545/Maternal-Child-Adolescent-Health#cc5f8c90dc-b4cb-431b-90ee-10648f8df655",
+          "link_text": "Skip to Main Content",
+          "nav_path": "search → https://www.lakecountyca.gov/545/Maternal-Child-Adolescent-Health",
+          "category": "Unknown",
+          "relevance_score": 0.2
+        }
+      ]
+    },
+    {
+      "county_name": "Lassen",
+      "county_url": "https://www.lassencounty.org/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.lassencounty.org/dept/public-health/public-health-programs-and-services/maternal-child-adolescent-health-mcah",
+      "discovery_tier": "tier1_validated_relaxed_extract",
+      "programs": [
+        {
+          "name": "WIC – Northeastern Rural Health Clinics",
+          "url": "https://northeasternhealth.org/wic/",
+          "link_text": "WIC – Northeastern Rural Health Clinics",
+          "nav_path": "search → https://www.lassencounty.org/dept/public-health/public-health-programs-and-services/maternal-child-adolescent-health-mcah",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Weekly Online Support Group | Join a Free Group Today",
+          "url": "https://postpartum.net/get-help/psi-online-support-meetings/",
+          "link_text": "Weekly Online Support Group | Join a Free Group Today",
+          "nav_path": "search → https://www.lassencounty.org/dept/public-health/public-health-programs-and-services/maternal-child-adolescent-health-mcah",
+          "category": "Perinatal Care",
+          "relevance_score": 2.2
+        },
+        {
+          "name": "Skip to main content",
+          "url": "https://www.lassencounty.org/dept/public-health/public-health-programs-and-services/maternal-child-adolescent-health-mcah#main-content",
+          "link_text": "Skip to main content",
+          "nav_path": "search → https://www.lassencounty.org/dept/public-health/public-health-programs-and-services/maternal-child-adolescent-health-mcah",
+          "category": "Maternal Child Health",
+          "relevance_score": 0.2
+        }
+      ]
+    },
+    {
+      "county_name": "Los Angeles",
+      "county_url": "https://www.lacounty.gov/",
+      "health_dept_url": "",
+      "maternal_section_url": "http://publichealth.lacounty.gov/mch/",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Find a\n                                                        Medi-Cal Prenatal Provider",
+          "url": "http://publichealth.lacounty.gov/mch/cpsp/CPSPwebpages/cpsp_rev.htm",
+          "link_text": "Find a\n                                                        Medi-Cal Prenatal Provider",
+          "nav_path": "search → http://publichealth.lacounty.gov/mch/",
+          "category": "Perinatal Care",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Provider Trainings",
+          "url": "https://admin.publichealth.lacounty.gov/mch/cpsp/CPSPwebpages/cpsp_training.htm",
+          "link_text": "Provider Trainings",
+          "nav_path": "search → http://publichealth.lacounty.gov/mch/",
+          "category": "Perinatal Care",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Preparing\n                                                        for the Chest/Breastfeeding Journey",
+          "url": "http://publichealth.lacounty.gov/mch/docs/prenatal-toolkit.pdf",
+          "link_text": "Preparing\n                                                        for the Chest/Breastfeeding Journey",
+          "nav_path": "search → http://publichealth.lacounty.gov/mch/",
+          "category": "Breastfeeding",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Click here to learn\n                                            more",
+          "url": "http://publichealth.lacounty.gov/mch/sids/sids.htm",
+          "link_text": "Click here to learn\n                                            more",
+          "nav_path": "search → http://publichealth.lacounty.gov/mch/",
+          "category": "Unknown",
+          "relevance_score": 3.0
+        },
+        {
+          "name": "Find Support Today",
+          "url": "http://publichealth.lacounty.gov/mch/#support",
+          "link_text": "Find Support Today",
+          "nav_path": "search → http://publichealth.lacounty.gov/mch/",
+          "category": "Unknown",
+          "relevance_score": 3.0
+        }
+      ]
+    },
+    {
+      "county_name": "Madera",
+      "county_url": "https://www.maderacounty.com/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.maderacounty.com/government/behavioral-health-services/about-bhs",
+      "discovery_tier": "tier2_search",
+      "programs": []
+    },
+    {
+      "county_name": "Marin",
+      "county_url": "https://www.marincounty.org/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.marinhhs.org/maternal-child-adolescent-health",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Perinatal Services Network",
+          "url": "https://www.marinhhs.org/Marin-PSN",
+          "link_text": "Perinatal Services Network",
+          "nav_path": "search → https://www.marinhhs.org/maternal-child-adolescent-health",
+          "category": "Perinatal Care",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "WIC",
+          "url": "https://www.marinhhs.org/wic",
+          "link_text": "WIC",
+          "nav_path": "search → https://www.marinhhs.org/maternal-child-adolescent-health",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Health Families Marin Home Visiting Program",
+          "url": "https://www.marinhhs.org/healthy-families-marin-home-visiting",
+          "link_text": "Health Families Marin Home Visiting Program",
+          "nav_path": "search → https://www.marinhhs.org/maternal-child-adolescent-health",
+          "category": "Home Visiting",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Maternal Mental Health Resource Inventory",
+          "url": "https://www.marinhhs.org/sites/default/files/files/servicepages/2018_04/maternal_mental_health_resource_inventory_v3.pdf",
+          "link_text": "Maternal Mental Health Resource Inventory",
+          "nav_path": "search → https://www.marinhhs.org/maternal-child-adolescent-health",
+          "category": "Behavioral Health",
+          "relevance_score": 2.2
+        },
+        {
+          "name": "Marin Breastfeeding Coalition",
+          "url": "https://www.marinhhs.org/marin-breastfeeding-coalition",
+          "link_text": "Marin Breastfeeding Coalition",
+          "nav_path": "search → https://www.marinhhs.org/maternal-child-adolescent-health",
+          "category": "Breastfeeding",
+          "relevance_score": 2.2
+        }
+      ]
+    },
+    {
+      "county_name": "Mariposa",
+      "county_url": "https://www.mariposacounty.org/",
+      "health_dept_url": "",
+      "maternal_section_url": "http://www.mariposacounty.gov/1588/Maternal-Child-and-Adolescent-Health-MCA",
+      "discovery_tier": "tier1_validated_relaxed_extract",
+      "programs": [
+        {
+          "name": "The California Home Visiting Program (CHVP)",
+          "url": "https://www.mariposacounty.org/2970/California-Home-Visiting-Program-CHVP",
+          "link_text": "The California Home Visiting Program (CHVP)",
+          "nav_path": "search → http://www.mariposacounty.gov/1588/Maternal-Child-and-Adolescent-Health-MCA",
+          "category": "Home Visiting",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "Healthy Families of America (HFA)",
+          "url": "https://www.healthyfamiliesamerica.org/",
+          "link_text": "Healthy Families of America (HFA)",
+          "nav_path": "search → http://www.mariposacounty.gov/1588/Maternal-Child-and-Adolescent-Health-MCA",
+          "category": "Home Visiting",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "About Healthy Families of America",
+          "url": "https://www.healthyfamiliesamerica.org/about-us/",
+          "link_text": "About Healthy Families of America",
+          "nav_path": "search → http://www.mariposacounty.gov/1588/Maternal-Child-and-Adolescent-Health-MCA",
+          "category": "Home Visiting",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Skip to Main Content",
+          "url": "http://www.mariposacounty.gov/1588/Maternal-Child-and-Adolescent-Health-MCA#ccd900dc37-51cd-424e-8c6f-5be6b2633829",
+          "link_text": "Skip to Main Content",
+          "nav_path": "search → http://www.mariposacounty.gov/1588/Maternal-Child-and-Adolescent-Health-MCA",
+          "category": "Unknown",
+          "relevance_score": 0.2
+        }
+      ]
+    },
+    {
+      "county_name": "Mendocino",
+      "county_url": "https://www.mendocinocounty.org/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.mendocinocounty.gov/departments/public-health/nursing/women-infants-children",
+      "discovery_tier": "tier2_search",
+      "programs": []
+    },
+    {
+      "county_name": "Merced",
+      "county_url": "https://www.co.merced.ca.us/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.countyofmerced.com/616/MCAH-Home-Visiting",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Maternal Child Adolescent Health Services Referral",
+          "url": "https://www.countyofmerced.com/DocumentCenter/View/37312",
+          "link_text": "Maternal Child Adolescent Health Services Referral",
+          "nav_path": "search → https://www.countyofmerced.com/616/MCAH-Home-Visiting",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        }
+      ]
+    },
+    {
+      "county_name": "Modoc",
+      "county_url": "https://www.co.modoc.ca.us/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://publichealth.co.modoc.ca.us/children___families/index.php",
+      "discovery_tier": "tier1_validated_relaxed_extract_seed_program",
+      "programs": [
+        {
+          "name": "Prevention Services",
+          "url": "https://publichealth.co.modoc.ca.us/children___families/index.php",
+          "link_text": "Prevention Services",
+          "nav_path": "seed → https://publichealth.co.modoc.ca.us/children___families/index.php",
+          "category": "Perinatal Care",
+          "relevance_score": 4.0
+        }
+      ]
+    },
+    {
+      "county_name": "Mono",
+      "county_url": "https://monocounty.ca.gov/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.monohealth.com/hhs/page/women-maternal-health",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "WIC",
+          "url": "https://www.monohealth.com/hhs/page/wic",
+          "link_text": "WIC",
+          "nav_path": "search → https://www.monohealth.com/hhs/page/women-maternal-health",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Sexual & Reproductive Health",
+          "url": "https://www.monohealth.com/hhs/page/sexual-reproductive-health-0",
+          "link_text": "Sexual & Reproductive Health",
+          "nav_path": "search → https://www.monohealth.com/hhs/page/women-maternal-health",
+          "category": "Reproductive Health",
+          "relevance_score": 2.2
+        }
+      ]
+    },
+    {
+      "county_name": "Monterey",
+      "county_url": "https://www.co.monterey.ca.us/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.countyofmonterey.gov/government/departments-a-h/health/public-health/women-infants-and-children-wic/wic-home/wic-services",
+      "discovery_tier": "tier2_search",
+      "programs": []
+    },
+    {
+      "county_name": "Napa",
+      "county_url": "https://www.countyofnapa.org/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.napacounty.gov/3237/Home-Visiting-Programs",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Perinatal Outreach and Parental Guidance",
+          "url": "https://www.napacounty.gov/453/Perinatal-Outreach-Education",
+          "link_text": "Perinatal Outreach and Parental Guidance",
+          "nav_path": "search → https://www.napacounty.gov/3237/Home-Visiting-Programs",
+          "category": "Perinatal Care",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Get Started: Fill Out a Home Visiting Referral Form",
+          "url": "https://www.napacounty.gov/DocumentCenter/View/22321/",
+          "link_text": "Get Started: Fill Out a Home Visiting Referral Form",
+          "nav_path": "search → https://www.napacounty.gov/3237/Home-Visiting-Programs",
+          "category": "Unknown",
+          "relevance_score": 3.0
+        },
+        {
+          "name": "Home Visiting Referral Form",
+          "url": "https://www.napacounty.gov/DocumentCenter/View/1577",
+          "link_text": "Home Visiting Referral Form",
+          "nav_path": "search → https://www.napacounty.gov/3237/Home-Visiting-Programs",
+          "category": "Unknown",
+          "relevance_score": 3.0
+        }
+      ]
+    },
+    {
+      "county_name": "Nevada",
+      "county_url": "https://www.mynevadacounty.com/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.nevadacountyca.gov/3546/Maternal-Child-Adolescent-Health",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Other Local Home Visiting Programs for Families",
+          "url": "https://www.nevadacountyca.gov/3546/Maternal-Child-Adolescent-Health#tab40cf4963-cbf7-4ba4-9951-f405d0667136_5",
+          "link_text": "Other Local Home Visiting Programs for Families",
+          "nav_path": "search → https://www.nevadacountyca.gov/3546/Maternal-Child-Adolescent-Health",
+          "category": "Home Visiting",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Maternal Mental Health/Moving Beyond Depression",
+          "url": "https://www.nevadacountyca.gov/3546/Maternal-Child-Adolescent-Health#tab40cf4963-cbf7-4ba4-9951-f405d0667136_4",
+          "link_text": "Maternal Mental Health/Moving Beyond Depression",
+          "nav_path": "search → https://www.nevadacountyca.gov/3546/Maternal-Child-Adolescent-Health",
+          "category": "Behavioral Health",
+          "relevance_score": 2.2
+        },
+        {
+          "name": "Cannabis Use During Pregnancy & Breastfeeding",
+          "url": "https://www.nevadacountyca.gov/3546/Maternal-Child-Adolescent-Health#tab40cf4963-cbf7-4ba4-9951-f405d0667136_2",
+          "link_text": "Cannabis Use During Pregnancy & Breastfeeding",
+          "nav_path": "search → https://www.nevadacountyca.gov/3546/Maternal-Child-Adolescent-Health",
+          "category": "Breastfeeding",
+          "relevance_score": 2.2
+        }
+      ]
+    },
+    {
+      "county_name": "Orange",
+      "county_url": "https://www.ocgov.com/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.ochealthinfo.com/services/community-and-nursing-services/maternal-child-and-adolescent-health-mcah",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Perinatal Mood and Anxiety Disorders (PMAD)",
+          "url": "https://www.ochealthinfo.com/phs/about/family/mcah/pmad",
+          "link_text": "Perinatal Mood and Anxiety Disorders (PMAD)",
+          "nav_path": "search → https://www.ochealthinfo.com/services/community-and-nursing-services/maternal-child-and-adolescent-health-mcah",
+          "category": "Behavioral Health",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "Pregnant and Parenting Teens",
+          "url": "https://www.ochealthinfo.com/phs/about/family/mcah/tppp",
+          "link_text": "Pregnant and Parenting Teens",
+          "nav_path": "search → https://www.ochealthinfo.com/services/community-and-nursing-services/maternal-child-and-adolescent-health-mcah",
+          "category": "Adolescent Health",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Breastfeeding",
+          "url": "https://www.ochealthinfo.com/phs/about/family/mcah/b",
+          "link_text": "Breastfeeding",
+          "nav_path": "search → https://www.ochealthinfo.com/services/community-and-nursing-services/maternal-child-and-adolescent-health-mcah",
+          "category": "Breastfeeding",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "OC Resources for Community Partners Serving the Maternal, Child, and Adolescent Population",
+          "url": "https://www.ochealthinfo.com/sites/healthcare/files/2024-10/OC_Resources_for_Community_Partners_Serving_MCAH_September_2024_FinalProtected.pdf",
+          "link_text": "OC Resources for Community Partners Serving the Maternal, Child, and Adolescent Population",
+          "nav_path": "search → https://www.ochealthinfo.com/services/community-and-nursing-services/maternal-child-and-adolescent-health-mcah",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Copy this page as a Link",
+          "url": "https://www.ochealthinfo.com/services/community-and-nursing-services/maternal-child-and-adolescent-health-mcah",
+          "link_text": "Copy this page as a Link",
+          "nav_path": "search → https://www.ochealthinfo.com/services/community-and-nursing-services/maternal-child-and-adolescent-health-mcah",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Women, Infant & Children (WIC) Nutrition Services",
+          "url": "https://www.ochealthinfo.com/phs/about/family/nutrition/wic",
+          "link_text": "Women, Infant & Children (WIC) Nutrition Services",
+          "nav_path": "search → https://www.ochealthinfo.com/services/community-and-nursing-services/maternal-child-and-adolescent-health-mcah",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Sudden Infant Death Syndrome (SIDS)",
+          "url": "https://www.ochealthinfo.com/phs/about/family/mcah/sids",
+          "link_text": "Sudden Infant Death Syndrome (SIDS)",
+          "nav_path": "search → https://www.ochealthinfo.com/services/community-and-nursing-services/maternal-child-and-adolescent-health-mcah",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Nurse-Family Partnership®",
+          "url": "https://www.ochealthinfo.com/phs/about/cns/cn/nf",
+          "link_text": "Nurse-Family Partnership®",
+          "nav_path": "search → https://www.ochealthinfo.com/services/community-and-nursing-services/maternal-child-and-adolescent-health-mcah",
+          "category": "Home Visiting",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Perinatal Substance Abuse Services (PSASI)",
+          "url": "https://www.ochealthinfo.com/phs/about/phn/specialized/psasi",
+          "link_text": "Perinatal Substance Abuse Services (PSASI)",
+          "nav_path": "search → https://www.ochealthinfo.com/services/community-and-nursing-services/maternal-child-and-adolescent-health-mcah",
+          "category": "Perinatal Care",
+          "relevance_score": 2.4
+        },
+        {
+          "name": "Revitalizing Culture through Breastfeeding and Chestfeeding",
+          "url": "https://www.ochealthinfo.com/sites/hca/files/2021-08/2021%2008%2012%20Final%20Flyer.pdf",
+          "link_text": "Revitalizing Culture through Breastfeeding and Chestfeeding",
+          "nav_path": "search → https://www.ochealthinfo.com/services/community-and-nursing-services/maternal-child-and-adolescent-health-mcah",
+          "category": "Breastfeeding",
+          "relevance_score": 2.2
+        },
+        {
+          "name": "Perinatal Assessment And Coordination Team (PACT)",
+          "url": "https://www.ochealthinfo.com/node/2646/",
+          "link_text": "Perinatal Assessment And Coordination Team (PACT)",
+          "nav_path": "search → https://www.ochealthinfo.com/services/community-and-nursing-services/maternal-child-and-adolescent-health-mcah",
+          "category": "Perinatal Care",
+          "relevance_score": 2.2
+        }
+      ]
+    },
+    {
+      "county_name": "Placer",
+      "county_url": "https://www.placer.ca.gov/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.placer.ca.gov/2918/Women-Infants-Children-WIC",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "emailing the WIC program",
+          "url": "https://www.placer.ca.gov/cdn-cgi/l/email-protection#74241815171106233d37340418151711065a17155a131b02",
+          "link_text": "emailing the WIC program",
+          "nav_path": "search → https://www.placer.ca.gov/2918/Women-Infants-Children-WIC",
+          "category": "Nutrition",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Kings Beach WIC Office",
+          "url": "https://www.placer.ca.gov/Directory.aspx?DID=111",
+          "link_text": "Kings Beach WIC Office",
+          "nav_path": "search → https://www.placer.ca.gov/2918/Women-Infants-Children-WIC",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Lincoln WIC Office",
+          "url": "https://www.placer.ca.gov/Directory.aspx?DID=110",
+          "link_text": "Lincoln WIC Office",
+          "nav_path": "search → https://www.placer.ca.gov/2918/Women-Infants-Children-WIC",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Rocklin County of Placer Sunset WIC Office",
+          "url": "https://www.placer.ca.gov/Directory.aspx?DID=109",
+          "link_text": "Rocklin County of Placer Sunset WIC Office",
+          "nav_path": "search → https://www.placer.ca.gov/2918/Women-Infants-Children-WIC",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Auburn HHS Center WIC Office",
+          "url": "https://www.placer.ca.gov/Directory.aspx?DID=108",
+          "link_text": "Auburn HHS Center WIC Office",
+          "nav_path": "search → https://www.placer.ca.gov/2918/Women-Infants-Children-WIC",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "What should I expect?",
+          "url": "https://www.placer.ca.gov/2918/Women-Infants-Children-WIC#tabf43f1800-0732-4416-af7a-0a67640c7691_3",
+          "link_text": "What should I expect?",
+          "nav_path": "search → https://www.placer.ca.gov/2918/Women-Infants-Children-WIC",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "What do I bring?",
+          "url": "https://www.placer.ca.gov/2918/Women-Infants-Children-WIC#tabf43f1800-0732-4416-af7a-0a67640c7691_2",
+          "link_text": "What do I bring?",
+          "nav_path": "search → https://www.placer.ca.gov/2918/Women-Infants-Children-WIC",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Where is WIC?",
+          "url": "https://www.placer.ca.gov/2918/Women-Infants-Children-WIC#tabf43f1800-0732-4416-af7a-0a67640c7691_1",
+          "link_text": "Where is WIC?",
+          "nav_path": "search → https://www.placer.ca.gov/2918/Women-Infants-Children-WIC",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Do I Qualify?",
+          "url": "https://www.placer.ca.gov/2918/Women-Infants-Children-WIC#tabf43f1800-0732-4416-af7a-0a67640c7691_0",
+          "link_text": "Do I Qualify?",
+          "nav_path": "search → https://www.placer.ca.gov/2918/Women-Infants-Children-WIC",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Enrolled in WIC",
+          "url": "https://www.placer.ca.gov/2918/Women-Infants-Children-WIC#tab484c9381-3a5b-4fee-974c-eb56e50f66d9_2",
+          "link_text": "Enrolled in WIC",
+          "nav_path": "search → https://www.placer.ca.gov/2918/Women-Infants-Children-WIC",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "New to WIC",
+          "url": "https://www.placer.ca.gov/2918/Women-Infants-Children-WIC#tab484c9381-3a5b-4fee-974c-eb56e50f66d9_1",
+          "link_text": "New to WIC",
+          "nav_path": "search → https://www.placer.ca.gov/2918/Women-Infants-Children-WIC",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Apply for Services",
+          "url": "https://www.placer.ca.gov/2918/Women-Infants-Children-WIC#tab484c9381-3a5b-4fee-974c-eb56e50f66d9_0",
+          "link_text": "Apply for Services",
+          "nav_path": "search → https://www.placer.ca.gov/2918/Women-Infants-Children-WIC",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        }
+      ]
+    },
+    {
+      "county_name": "Plumas",
+      "county_url": "https://www.plumascounty.us/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.plumascounty.us/2542/Maternal-Child-Adolescent-Program-MCAH",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Family First Home Visiting Program",
+          "url": "https://www.plumascounty.us/2238/Family-First-Home-Visiting-Program",
+          "link_text": "Family First Home Visiting Program",
+          "nav_path": "search → https://www.plumascounty.us/2542/Maternal-Child-Adolescent-Program-MCAH",
+          "category": "Home Visiting",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Disclaimer",
+          "url": "https://www.plumascounty.us/",
+          "link_text": "Disclaimer",
+          "nav_path": "search → https://www.plumascounty.us/2542/Maternal-Child-Adolescent-Program-MCAH",
+          "category": "Unknown",
+          "relevance_score": 3.0
+        }
+      ]
+    },
+    {
+      "county_name": "Riverside",
+      "county_url": "https://www.rivco.org/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.ruhealth.org/public-health/nursing-maternal-child-adolescent-health",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Healthy Families America",
+          "url": "https://www.ruhealth.org/public-health/healthy-families-america",
+          "link_text": "Healthy Families America",
+          "nav_path": "search → https://www.ruhealth.org/public-health/nursing-maternal-child-adolescent-health",
+          "category": "Home Visiting",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Printable MCAH/PHN Referral Form",
+          "url": "https://www.ruhealth.org/media/2836",
+          "link_text": "Printable MCAH/PHN Referral Form",
+          "nav_path": "search → https://www.ruhealth.org/public-health/nursing-maternal-child-adolescent-health",
+          "category": "Home Visiting",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Electronic MCAH/PHN Referral Form",
+          "url": "https://www.ruhealth.org/form/mcah-phn-referral-form",
+          "link_text": "Electronic MCAH/PHN Referral Form",
+          "nav_path": "search → https://www.ruhealth.org/public-health/nursing-maternal-child-adolescent-health",
+          "category": "Home Visiting",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "See More Videos",
+          "url": "https://www.ruhealth.org/videos?type=MCAH",
+          "link_text": "See More Videos",
+          "nav_path": "search → https://www.ruhealth.org/public-health/nursing-maternal-child-adolescent-health",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Parents as Teachers",
+          "url": "https://www.ruhealth.org/public-health/parents-teachers",
+          "link_text": "Parents as Teachers",
+          "nav_path": "search → https://www.ruhealth.org/public-health/nursing-maternal-child-adolescent-health",
+          "category": "Home Visiting",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Nurse-Family Partnership",
+          "url": "https://www.ruhealth.org/public-health/nurse-family-partnership",
+          "link_text": "Nurse-Family Partnership",
+          "nav_path": "search → https://www.ruhealth.org/public-health/nursing-maternal-child-adolescent-health",
+          "category": "Home Visiting",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Black Infant Health",
+          "url": "https://www.ruhealth.org/public-health/black-infant-health",
+          "link_text": "Black Infant Health",
+          "nav_path": "search → https://www.ruhealth.org/public-health/nursing-maternal-child-adolescent-health",
+          "category": "Health Equity",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Perinatal Equity Initiative",
+          "url": "https://www.ruhealth.org/perinatal-equity-initiative",
+          "link_text": "Perinatal Equity Initiative",
+          "nav_path": "search → https://www.ruhealth.org/public-health/nursing-maternal-child-adolescent-health",
+          "category": "Health Equity",
+          "relevance_score": 2.6
+        },
+        {
+          "name": "Adolescent Family Life Program",
+          "url": "https://www.ruhealth.org/public-health/adolescent-family-life-program",
+          "link_text": "Adolescent Family Life Program",
+          "nav_path": "search → https://www.ruhealth.org/public-health/nursing-maternal-child-adolescent-health",
+          "category": "Adolescent Health",
+          "relevance_score": 2.2
+        }
+      ]
+    },
+    {
+      "county_name": "Sacramento",
+      "county_url": "https://www.saccounty.net/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://dhs.saccounty.gov/PUB/Program/Pages/SP-Maternal-Child-and-Adolescent-Health-Program.aspx",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Pregnancy Resource Guide",
+          "url": "https://dhs.saccounty.gov/PUB/Documents/Maternal-Child-Adolescent-Health/Community%20Nursing/Final%202025%20Sacramento%20County%20MCAH%20Resource%20Guide%20%28pdf%29-updated%2011-2025.pdf",
+          "link_text": "Pregnancy Resource Guide",
+          "nav_path": "search → https://dhs.saccounty.gov/PUB/Program/Pages/SP-Maternal-Child-and-Adolescent-Health-Program.aspx",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Preconception Health",
+          "url": "https://dhs.saccounty.gov/PUB/Pages/Maternal-Adolescent-Health/GI-Preconception-Health-Campaign.aspx",
+          "link_text": "Preconception Health",
+          "nav_path": "search → https://dhs.saccounty.gov/PUB/Program/Pages/SP-Maternal-Child-and-Adolescent-Health-Program.aspx",
+          "category": "Reproductive Health",
+          "relevance_score": 2.4
+        },
+        {
+          "name": "Breastfeeding Resources",
+          "url": "https://dhs.saccounty.gov/PUB/Pages/Maternal-Adolescent-Health/GI-Breastfeeding-Resources.aspx",
+          "link_text": "Breastfeeding Resources",
+          "nav_path": "search → https://dhs.saccounty.gov/PUB/Program/Pages/SP-Maternal-Child-and-Adolescent-Health-Program.aspx",
+          "category": "Breastfeeding",
+          "relevance_score": 2.2
+        }
+      ]
+    },
+    {
+      "county_name": "San Benito",
+      "county_url": "https://www.cosb.us/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://hhsa.sanbenitocountyca.gov/maternal-child-adolescent-health/",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "San Benito Perinatal and Family Planning Services Directory",
+          "url": "https://hhsa.sanbenitocountyca.gov/wp-content/uploads/2025/10/San-Benito-Perinatal-Services-Directory-042525-1.pdf",
+          "link_text": "San Benito Perinatal and Family Planning Services Directory",
+          "nav_path": "search → https://hhsa.sanbenitocountyca.gov/maternal-child-adolescent-health/",
+          "category": "Reproductive Health",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "Goals of MCAH",
+          "url": "https://hhsa.sanbenitocountyca.gov/goals-of-mcah-2/",
+          "link_text": "Goals of MCAH",
+          "nav_path": "search → https://hhsa.sanbenitocountyca.gov/maternal-child-adolescent-health/",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "DISCLAIMER",
+          "url": "https://hhsa.sanbenitocountyca.gov/maternal-child-adolescent-health/#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjE4MTUiLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D",
+          "link_text": "DISCLAIMER",
+          "nav_path": "search → https://hhsa.sanbenitocountyca.gov/maternal-child-adolescent-health/",
+          "category": "Unknown",
+          "relevance_score": 3.0
+        }
+      ]
+    },
+    {
+      "county_name": "San Bernardino",
+      "county_url": "https://www.sbcounty.gov/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://dph.sbcounty.gov/programs/fhs/mcah/",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Perinatal Equity Initiative",
+          "url": "https://dph.sbcounty.gov/bih/pei/",
+          "link_text": "Perinatal Equity Initiative",
+          "nav_path": "search → https://dph.sbcounty.gov/programs/fhs/mcah/",
+          "category": "Health Equity",
+          "relevance_score": 5.8
+        },
+        {
+          "name": "Black Infant Health",
+          "url": "https://dph.sbcounty.gov/bih/",
+          "link_text": "Black Infant Health",
+          "nav_path": "search → https://dph.sbcounty.gov/programs/fhs/mcah/",
+          "category": "Health Equity",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Title V Survey Results and Focus Group Findings",
+          "url": "https://dph.sbcounty.gov/wp-content/uploads/sites/7/TVNA-Survey-Results-2024-final.pdf",
+          "link_text": "Title V Survey Results and Focus Group Findings",
+          "nav_path": "search → https://dph.sbcounty.gov/programs/fhs/mcah/",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Provider Resources",
+          "url": "https://dph.sbcounty.gov/programs/fhs/mcah/providerresources/",
+          "link_text": "Provider Resources",
+          "nav_path": "search → https://dph.sbcounty.gov/programs/fhs/mcah/",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Family Resources",
+          "url": "https://dph.sbcounty.gov/programs/fhs/mcah/familyresources/",
+          "link_text": "Family Resources",
+          "nav_path": "search → https://dph.sbcounty.gov/programs/fhs/mcah/",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Community Action Team",
+          "url": "https://dph.sbcounty.gov/programs/fhs/mcah/community-action-team/",
+          "link_text": "Community Action Team",
+          "nav_path": "search → https://dph.sbcounty.gov/programs/fhs/mcah/",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Maternal, Child & Adolescent Health",
+          "url": "https://dph.sbcounty.gov/programs/fhs/mcah/",
+          "link_text": "Maternal, Child & Adolescent Health",
+          "nav_path": "search → https://dph.sbcounty.gov/programs/fhs/mcah/",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "BIH/PEI",
+          "url": "https://dph.sbcounty.gov/programs/fhs/bih/",
+          "link_text": "BIH/PEI",
+          "nav_path": "search → https://dph.sbcounty.gov/programs/fhs/mcah/",
+          "category": "Health Equity",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Perinatal Equity Initiative (PEI)",
+          "url": "https://dph.sbcounty.gov/pei/",
+          "link_text": "Perinatal Equity Initiative (PEI)",
+          "nav_path": "search → https://dph.sbcounty.gov/programs/fhs/mcah/",
+          "category": "Health Equity",
+          "relevance_score": 2.6
+        }
+      ]
+    },
+    {
+      "county_name": "San Diego",
+      "county_url": "https://www.sandiegocounty.gov/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/maternal_child_family_health_services.html",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Perinatal\n      Care Network (PCN)",
+          "url": "https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/perinatal_care_network.html",
+          "link_text": "Perinatal\n      Care Network (PCN)",
+          "nav_path": "search → https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/maternal_child_family_health_services.html",
+          "category": "Perinatal Care",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "Black\n      Infant Health (BIH) Program",
+          "url": "https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/black_infant_health_program.html",
+          "link_text": "Black\n      Infant Health (BIH) Program",
+          "nav_path": "search → https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/maternal_child_family_health_services.html",
+          "category": "Health Equity",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "MCFHS\n  Statistics",
+          "url": "https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/maternal_child_family_health_services/MCFHSstatistics.html",
+          "link_text": "MCFHS\n  Statistics",
+          "nav_path": "search → https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/maternal_child_family_health_services.html",
+          "category": "Maternal Child Health",
+          "relevance_score": 2.2
+        }
+      ]
+    },
+    {
+      "county_name": "San Francisco",
+      "county_url": "https://sf.gov/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.sf.gov/departments--department-public-health--maternal-child-and-adolescent-health",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "WIC supplemental nutrition program Helping families get healthy food, breastfeeding support and more.",
+          "url": "https://www.sf.gov/wic-supplemental-nutrition-program/",
+          "link_text": "WIC supplemental nutrition program Helping families get healthy food, breastfeeding support and more.",
+          "nav_path": "search → https://www.sf.gov/departments--department-public-health--maternal-child-and-adolescent-health",
+          "category": "Nutrition",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "Nurse home visiting program If you are pregnant or have a new baby, a public health nurse can visit you at home.",
+          "url": "https://www.sf.gov/nurse-home-visiting-program/",
+          "link_text": "Nurse home visiting program If you are pregnant or have a new baby, a public health nurse can visit you at home.",
+          "nav_path": "search → https://www.sf.gov/departments--department-public-health--maternal-child-and-adolescent-health",
+          "category": "Home Visiting",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "Family Planning Services Family planning empowers people to choose if and when they have children.",
+          "url": "https://www.sf.gov/information--family-planning-services/",
+          "link_text": "Family Planning Services Family planning empowers people to choose if and when they have children.",
+          "nav_path": "search → https://www.sf.gov/departments--department-public-health--maternal-child-and-adolescent-health",
+          "category": "Reproductive Health",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Maternal Health Awareness San Francisco Department of Public Health (SFDPH) Maternal, Child and Adolescent Health Office (MCAH) is committed to helping prevent preterm birth and infant death. MCAH is connecting people with resources to prevent preterm birth.",
+          "url": "https://www.sf.gov/maternal-health-awareness/",
+          "link_text": "Maternal Health Awareness San Francisco Department of Public Health (SFDPH) Maternal, Child and Adolescent Health Office (MCAH) is committed to helping prevent preterm birth and infant death. MCAH is connecting people with resources to prevent preterm birth.",
+          "nav_path": "search → https://www.sf.gov/departments--department-public-health--maternal-child-and-adolescent-health",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "San Francisco Black Infant Health Program Our goal is to improve black infant and maternal health. We empower Black or African American pregnant people to make healthy choices for a brighter future.",
+          "url": "https://www.sf.gov/departments/san-francisco-black-infant-health-program",
+          "link_text": "San Francisco Black Infant Health Program Our goal is to improve black infant and maternal health. We empower Black or African American pregnant people to make healthy choices for a brighter future.",
+          "nav_path": "search → https://www.sf.gov/departments--department-public-health--maternal-child-and-adolescent-health",
+          "category": "Health Equity",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Get nutrition counseling at SFHN Primary Care Health Centers Make a nutrition appointment to talk with a registered dietitian nutritionist.",
+          "url": "https://www.sf.gov/get-nutrition-counseling-sfhn-primary-care-health-centers/",
+          "link_text": "Get nutrition counseling at SFHN Primary Care Health Centers Make a nutrition appointment to talk with a registered dietitian nutritionist.",
+          "nav_path": "search → https://www.sf.gov/departments--department-public-health--maternal-child-and-adolescent-health",
+          "category": "Unknown",
+          "relevance_score": 3.0
+        },
+        {
+          "name": "Deliver Birth Justice - Perinatal Equity Initiative We are working to reduce the impact of racism on black birthing people in San Francisco and across the Bay Area. Here's how the San Francisco Department of Public Health is addressing maternal health disparities.",
+          "url": "https://www.sf.gov/perinatal-equity-initiative",
+          "link_text": "Deliver Birth Justice - Perinatal Equity Initiative We are working to reduce the impact of racism on black birthing people in San Francisco and across the Bay Area. Here's how the San Francisco Department of Public Health is addressing maternal health disparities.",
+          "nav_path": "search → https://www.sf.gov/departments--department-public-health--maternal-child-and-adolescent-health",
+          "category": "Health Equity",
+          "relevance_score": 2.6
+        },
+        {
+          "name": "Teenage Pregnancy and Parenting Program We serve young parents under the age of 19 who are journeying through parenthood with children aged 8 and under.",
+          "url": "https://www.sf.gov/teenage-pregnancy-and-parenting-program/",
+          "link_text": "Teenage Pregnancy and Parenting Program We serve young parents under the age of 19 who are journeying through parenthood with children aged 8 and under.",
+          "nav_path": "search → https://www.sf.gov/departments--department-public-health--maternal-child-and-adolescent-health",
+          "category": "Adolescent Health",
+          "relevance_score": 2.4
+        },
+        {
+          "name": "Child Care Health Program (CCHP) We serve children ages 0-5 in San Francisco preschools, family child care homes, and family resource centers, along with their families and providers.",
+          "url": "https://www.sf.gov/child-care-health-program-cchp/",
+          "link_text": "Child Care Health Program (CCHP) We serve children ages 0-5 in San Francisco preschools, family child care homes, and family resource centers, along with their families and providers.",
+          "nav_path": "search → https://www.sf.gov/departments--department-public-health--maternal-child-and-adolescent-health",
+          "category": "Early Childhood",
+          "relevance_score": 2.2
+        },
+        {
+          "name": "CalWORKs Through the Public Health Nurse We provide linkage to services for pregnant people and families with children in San Francisco.",
+          "url": "https://www.sf.gov/calworks-through-public-health-nurse-0/",
+          "link_text": "CalWORKs Through the Public Health Nurse We provide linkage to services for pregnant people and families with children in San Francisco.",
+          "nav_path": "search → https://www.sf.gov/departments--department-public-health--maternal-child-and-adolescent-health",
+          "category": "Home Visiting",
+          "relevance_score": 2.2
+        }
+      ]
+    },
+    {
+      "county_name": "San Joaquin",
+      "county_url": "https://www.sjgov.org/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://cms.sjcphs.org/phs/programs-and-services/family-health-programs",
+      "discovery_tier": "tier1_validated_relaxed_extract",
+      "programs": [
+        {
+          "name": "Perinatal Equity Initiative",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/PEI/Pages/default.aspx",
+          "link_text": "Perinatal Equity Initiative",
+          "nav_path": "search → https://cms.sjcphs.org/phs/programs-and-services/family-health-programs",
+          "category": "Health Equity",
+          "relevance_score": 5.8
+        },
+        {
+          "name": "Healthy Families America website",
+          "url": "https://www.healthyfamiliesamerica.org/",
+          "link_text": "Healthy Families America website",
+          "nav_path": "search → https://cms.sjcphs.org/phs/programs-and-services/family-health-programs",
+          "category": "Home Visiting",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Perinatal Services Roundtable, Dec 3, 2025",
+          "url": "https://sjcphs.org/docs/default-source/phs-documents/family-health-docs/sjc-perinatal-services-roundtable.pdf",
+          "link_text": "Perinatal Services Roundtable, Dec 3, 2025",
+          "nav_path": "search → https://cms.sjcphs.org/phs/programs-and-services/family-health-programs",
+          "category": "Perinatal Care",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "CDPH Women, Infants & Children Program (WIC)",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DWICSN/Pages/Program-Landing1.aspx",
+          "link_text": "CDPH Women, Infants & Children Program (WIC)",
+          "nav_path": "search → https://cms.sjcphs.org/phs/programs-and-services/family-health-programs",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Healthy Families Video 3",
+          "url": "https://vimeo.com/920251420",
+          "link_text": "Healthy Families Video 3",
+          "nav_path": "search → https://cms.sjcphs.org/phs/programs-and-services/family-health-programs",
+          "category": "Home Visiting",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Healthy Families Video 2",
+          "url": "https://vimeo.com/920250443",
+          "link_text": "Healthy Families Video 2",
+          "nav_path": "search → https://cms.sjcphs.org/phs/programs-and-services/family-health-programs",
+          "category": "Home Visiting",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Healthy Families Video 1",
+          "url": "https://vimeo.com/918467661",
+          "link_text": "Healthy Families Video 1",
+          "nav_path": "search → https://cms.sjcphs.org/phs/programs-and-services/family-health-programs",
+          "category": "Home Visiting",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Working Together to Reduce Black Maternal Mortality",
+          "url": "https://www.cdc.gov/womens-health/features/maternal-mortality.html",
+          "link_text": "Working Together to Reduce Black Maternal Mortality",
+          "nav_path": "search → https://cms.sjcphs.org/phs/programs-and-services/family-health-programs",
+          "category": "Health Equity",
+          "relevance_score": 2.2
+        },
+        {
+          "name": "Breastfeeding Coalition of San Joaquin County",
+          "url": "https://www.breastfeedsjc.com/",
+          "link_text": "Breastfeeding Coalition of San Joaquin County",
+          "nav_path": "search → https://cms.sjcphs.org/phs/programs-and-services/family-health-programs",
+          "category": "Breastfeeding",
+          "relevance_score": 2.2
+        },
+        {
+          "name": "Health Contact Form",
+          "url": "https://sjcphs.org/docs/default-source/default-document-library/fillable-health-contact-form---phn01.pdf?Status=Temp&sfvrsn=b3ca3817_2",
+          "link_text": "Health Contact Form",
+          "nav_path": "search → https://cms.sjcphs.org/phs/programs-and-services/family-health-programs",
+          "category": "Home Visiting",
+          "relevance_score": 2.2
+        },
+        {
+          "name": "Racial Disparities in US Maternal and Infant Mortality Rates",
+          "url": "https://www.psychologytoday.com/us/blog/the-beginning/202003/racial-disparities-in-us-maternal-and-infant-mortality-rates",
+          "link_text": "Racial Disparities in US Maternal and Infant Mortality Rates",
+          "nav_path": "search → https://cms.sjcphs.org/phs/programs-and-services/family-health-programs",
+          "category": "Health Equity",
+          "relevance_score": 0.2
+        },
+        {
+          "name": "Pregnancy Mortality Surveillance System",
+          "url": "https://www.cdc.gov/maternal-mortality/php/pregnancy-mortality-surveillance/",
+          "link_text": "Pregnancy Mortality Surveillance System",
+          "nav_path": "search → https://cms.sjcphs.org/phs/programs-and-services/family-health-programs",
+          "category": "Unknown",
+          "relevance_score": 0.2
+        },
+        {
+          "name": "Battling Over Birth: Black Women & the Maternal Health Crisis in CA (PDF)",
+          "url": "https://sjcphs.org/docs/default-source/default-document-library/bwbj_battling-over-birth_execu_summary.pdf?sfvrsn=c604b3f7_5",
+          "link_text": "Battling Over Birth: Black Women & the Maternal Health Crisis in CA (PDF)",
+          "nav_path": "search → https://cms.sjcphs.org/phs/programs-and-services/family-health-programs",
+          "category": "Unknown",
+          "relevance_score": 0.2
+        },
+        {
+          "name": "Black Women's Maternal Health",
+          "url": "https://nationalpartnership.org/report/black-womens-maternal-health/",
+          "link_text": "Black Women's Maternal Health",
+          "nav_path": "search → https://cms.sjcphs.org/phs/programs-and-services/family-health-programs",
+          "category": "Unknown",
+          "relevance_score": 0.2
+        }
+      ]
+    },
+    {
+      "county_name": "San Luis Obispo",
+      "county_url": "https://www.slocounty.ca.gov/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.slocounty.ca.gov/departments/health-agency/public-health/all-public-health-services/maternal-child-health/maternal,-child-adolescent-health",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Women, Infants and Children (WIC)",
+          "url": "https://www.slocounty.ca.gov/departments/health-agency/public-health/all-public-health-services/maternal-child-health/women,-infants-and-children-(wic)",
+          "link_text": "Women, Infants and Children (WIC)",
+          "nav_path": "search → https://www.slocounty.ca.gov/departments/health-agency/public-health/all-public-health-services/maternal-child-health/maternal,-child-adolescent-health",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Nurse Home Visiting",
+          "url": "https://www.slocounty.ca.gov/departments/health-agency/public-health/all-public-health-services/maternal-child-health/nurse-home-visiting",
+          "link_text": "Nurse Home Visiting",
+          "nav_path": "search → https://www.slocounty.ca.gov/departments/health-agency/public-health/all-public-health-services/maternal-child-health/maternal,-child-adolescent-health",
+          "category": "Home Visiting",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Perinatal Mood and Anxiety Disorder (PMAD)",
+          "url": "https://www.slocounty.ca.gov/departments/health-agency/public-health/all-public-health-services/maternal-child-health/perinatal-mood-anxiety-disorder-(pmad)",
+          "link_text": "Perinatal Mood and Anxiety Disorder (PMAD)",
+          "nav_path": "search → https://www.slocounty.ca.gov/departments/health-agency/public-health/all-public-health-services/maternal-child-health/maternal,-child-adolescent-health",
+          "category": "Behavioral Health",
+          "relevance_score": 2.4
+        },
+        {
+          "name": "Substance Use in Pregnancy",
+          "url": "https://www.slocounty.ca.gov/departments/health-agency/public-health/all-public-health-services/maternal-child-health/perinatal-substance-use-prevention",
+          "link_text": "Substance Use in Pregnancy",
+          "nav_path": "search → https://www.slocounty.ca.gov/departments/health-agency/public-health/all-public-health-services/maternal-child-health/maternal,-child-adolescent-health",
+          "category": "Perinatal Care",
+          "relevance_score": 2.2
+        },
+        {
+          "name": "Reproductive Health Services",
+          "url": "https://www.slocounty.ca.gov/departments/health-agency/public-health/all-public-health-services/clinical-communicable-disease-services/sexual-and-reproductive-health",
+          "link_text": "Reproductive Health Services",
+          "nav_path": "search → https://www.slocounty.ca.gov/departments/health-agency/public-health/all-public-health-services/maternal-child-health/maternal,-child-adolescent-health",
+          "category": "Reproductive Health",
+          "relevance_score": 2.2
+        }
+      ]
+    },
+    {
+      "county_name": "San Mateo",
+      "county_url": "https://www.smcgov.org/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.smchealth.org/mcah",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Full Report",
+          "url": "https://www.smchealth.org/sites/main/files/file-attachments/smc_mcah_na_2009_full_report.pdf?1468733937",
+          "link_text": "Full Report",
+          "nav_path": "search → https://www.smchealth.org/mcah",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Executive Summary",
+          "url": "https://www.smchealth.org/sites/main/files/file-attachments/smc_mcah_na_2009_executive_summary.pdf?1468733937",
+          "link_text": "Executive Summary",
+          "nav_path": "search → https://www.smchealth.org/mcah",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Oct 2014",
+          "url": "https://www.smchealth.org/sites/main/files/file-attachments/mcah_physician_guide_to_health_resources_october_2014.pdf?1468733937",
+          "link_text": "Oct 2014",
+          "nav_path": "search → https://www.smchealth.org/mcah",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Skip to site navigation",
+          "url": "https://www.smchealth.org/mcah#navigation",
+          "link_text": "Skip to site navigation",
+          "nav_path": "search → https://www.smchealth.org/mcah",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Request new password",
+          "url": "https://www.smchealth.org/user/password",
+          "link_text": "Request new password",
+          "nav_path": "search → https://www.smchealth.org/mcah",
+          "category": "Unknown",
+          "relevance_score": 3.0
+        },
+        {
+          "name": "English | Spanish",
+          "url": "https://www.smchealth.org/sites/main/files/file-attachments/shaken_baby_flyer_6-2009.pdf?1468733937",
+          "link_text": "English | Spanish",
+          "nav_path": "search → https://www.smchealth.org/mcah",
+          "category": "Unknown",
+          "relevance_score": 3.0
+        },
+        {
+          "name": "English",
+          "url": "https://www.smchealth.org/sites/main/files/file-attachments/go_b4_u_show_brochure_v2_d5--final--rev-030510.pdf?1468733937",
+          "link_text": "English",
+          "nav_path": "search → https://www.smchealth.org/mcah",
+          "category": "Unknown",
+          "relevance_score": 3.0
+        },
+        {
+          "name": "Spanish",
+          "url": "https://www.smchealth.org/sites/main/files/file-attachments/go_b4_u_show_brochure_spanish--rev-030510pdf.pdf?1468733937",
+          "link_text": "Spanish",
+          "nav_path": "search → https://www.smchealth.org/mcah",
+          "category": "Unknown",
+          "relevance_score": 3.0
+        },
+        {
+          "name": "Support portal",
+          "url": "https://www.smchealth.org/help",
+          "link_text": "Support portal",
+          "nav_path": "search → https://www.smchealth.org/mcah",
+          "category": "Unknown",
+          "relevance_score": 3.0
+        }
+      ]
+    },
+    {
+      "county_name": "Santa Barbara",
+      "county_url": "https://www.countyofsb.org/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.countyofsb.org/1680/Maternal-Child-Adolescent-Health",
+      "discovery_tier": "tier1_validated_relaxed_extract",
+      "programs": [
+        {
+          "name": "Skip to Main Content",
+          "url": "https://www.countyofsb.org/1680/Maternal-Child-Adolescent-Health#cc5f8c90dc-b4cb-431b-90ee-10648f8df655",
+          "link_text": "Skip to Main Content",
+          "nav_path": "search → https://www.countyofsb.org/1680/Maternal-Child-Adolescent-Health",
+          "category": "Unknown",
+          "relevance_score": 0.2
+        }
+      ]
+    },
+    {
+      "county_name": "Santa Clara",
+      "county_url": "https://www.sccgov.org/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+      "discovery_tier": "tier2_search",
+      "programs": [
+        {
+          "name": "Release of Comprehensive Perinatal Services Program (CPSP) Frequently Asked Questions (FAQs)",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/LocalMCAH/Pages/Local-MCAH-Alert-CPSP-FAQs_FY2023_01-29-24.aspx",
+          "link_text": "Release of Comprehensive Perinatal Services Program (CPSP) Frequently Asked Questions (FAQs)",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Perinatal Care",
+          "relevance_score": 6.0
+        },
+        {
+          "name": "Comprehensive Perinatal Services Program",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/CPSP/Pages/default.aspx",
+          "link_text": "Comprehensive Perinatal Services Program",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Perinatal Care",
+          "relevance_score": 6.0
+        },
+        {
+          "name": "Perinatal Equity Initiative",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/PEI/Pages/default.aspx",
+          "link_text": "Perinatal Equity Initiative",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Health Equity",
+          "relevance_score": 5.8
+        },
+        {
+          "name": "Perinatal Equity Initiative Public Awareness Campaigns",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/PEI/Pages/Public-Awareness-Campaigns.aspx",
+          "link_text": "Perinatal Equity Initiative Public Awareness Campaigns",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Health Equity",
+          "relevance_score": 5.8
+        },
+        {
+          "name": "California Home Visiting Program",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/CHVP/Pages/default.aspx",
+          "link_text": "California Home Visiting Program",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Home Visiting",
+          "relevance_score": 5.8
+        },
+        {
+          "name": "Regional Perinatal Programs of California",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/RPPC/Pages/default.aspx",
+          "link_text": "Regional Perinatal Programs of California",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Perinatal Care",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "Transition of the Perinatal Services Coordinators (PSCs) Activities — October 6, 2023",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/LocalMCAH/Pages/Transition-of-the-PSCs-activities_May-16-2023.aspx",
+          "link_text": "Transition of the Perinatal Services Coordinators (PSCs) Activities — October 6, 2023",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Perinatal Care",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "Fetal and Infant Mortality Review",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/FIMR/Pages/default.aspx",
+          "link_text": "Fetal and Infant Mortality Review",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Health Equity",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "CPSP/MCAH Prenatal Programs in Your County",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/CPSP/Pages/Sites.aspx",
+          "link_text": "CPSP/MCAH Prenatal Programs in Your County",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Perinatal Care",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "CHVP Memo #23-04: Notice of Award for MIECHV",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/CHVP/Pages/CHVP-23-04.aspx",
+          "link_text": "CHVP Memo #23-04: Notice of Award for MIECHV",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Home Visiting",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "Lactation Accommodation",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/Breastfeeding/Pages/Lactation-Accommodation.aspx",
+          "link_text": "Lactation Accommodation",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Breastfeeding",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "Lactation Accommodation: For Parents",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/Breastfeeding/Pages/Lactation-Accommodation-for-Parents.aspx",
+          "link_text": "Lactation Accommodation: For Parents",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Breastfeeding",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "Lactation Accommodation: For Employers",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/Breastfeeding/Pages/Lactation-Accommodation-for-Employers.aspx",
+          "link_text": "Lactation Accommodation: For Employers",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Breastfeeding",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "Lactation Accommodation: For Child Care Providers",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/Breastfeeding/Pages/Lactation-Accommodation-for-Child-Care-Workers.aspx",
+          "link_text": "Lactation Accommodation: For Child Care Providers",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Breastfeeding",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "Lactation Accommodation Laws for Workplace, Jails and School",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/Breastfeeding/Pages/Lactation-Accommodation-Laws.aspx",
+          "link_text": "Lactation Accommodation Laws for Workplace, Jails and School",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Breastfeeding",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "Lactation Accommodation: For Community Partners",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/Breastfeeding/Pages/Lactation-Accommodation-For-Community-Partners.aspx",
+          "link_text": "Lactation Accommodation: For Community Partners",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Breastfeeding",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "Hospital Quality Improvement",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/Breastfeeding/Pages/Breastfeeding-Hospital-Quality-Improvement.aspx",
+          "link_text": "Hospital Quality Improvement",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Quality Improvement",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "Black Infant Health Program",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/BIH/Pages/default.aspx",
+          "link_text": "Black Infant Health Program",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Health Equity",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "SisterStory: Stories from Black Infant Health",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/BIH/Pages/SisterStory.aspx",
+          "link_text": "SisterStory: Stories from Black Infant Health",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Health Equity",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "Notice of Intent to Award: Updated Annual Allocations for the Black Infant Health Program for State Fiscal Years 2024/25 and 2025/26",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/BIH/Pages/Notice-of-Intent-to-Award-24-26.aspx",
+          "link_text": "Notice of Intent to Award: Updated Annual Allocations for the Black Infant Health Program for State Fiscal Years 2024/25 and 2025/26",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Health Equity",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "Maternal and Infant Mortality/Morbidity",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/BIH/Pages/Maternal-and-Infant-Mortality.aspx",
+          "link_text": "Maternal and Infant Mortality/Morbidity",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Health Equity",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "Evaluation of the California Black Infant Health Program",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/BIH/Pages/Evaluation.aspx",
+          "link_text": "Evaluation of the California Black Infant Health Program",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Health Equity",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "Adolescent Family Life Program",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/AFLP/Pages/default.aspx",
+          "link_text": "Adolescent Family Life Program",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Adolescent Health",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "Stories from the Adolescent Family Life Program",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/AFLP/Pages/Stories.aspx",
+          "link_text": "Stories from the Adolescent Family Life Program",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Adolescent Health",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "WIC Foods",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DWICSN/Pages/WICFoods.aspx",
+          "link_text": "WIC Foods",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Nutrition",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Breastfeeding Resources for Health Care Providers",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DWICSN/Pages/Breastfeeding-Resources-for-Health-Care-Providers.aspx",
+          "link_text": "Breastfeeding Resources for Health Care Providers",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Breastfeeding",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Preconception",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/Preconception/Pages/Default.aspx",
+          "link_text": "Preconception",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Reproductive Health",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Maternal Mental Health Report",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/MIHA/Pages/Maternal-Mental-Health-Report.aspx",
+          "link_text": "Maternal Mental Health Report",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Behavioral Health",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Local FIMR Coordinators",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/FIMR/Pages/Sites.aspx",
+          "link_text": "Local FIMR Coordinators",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Health Equity",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Provider Resource Document",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/CPSP/Pages/Provider-Resource-Document.aspx",
+          "link_text": "Provider Resource Document",
+          "nav_path": "search → https://www.cdph.ca.gov/programs/cfh/DWICSN/pages/program-landing1.aspx",
+          "category": "Perinatal Care",
+          "relevance_score": 5.4
+        }
+      ]
+    },
+    {
+      "county_name": "Santa Cruz",
+      "county_url": "https://www.santacruzcounty.us/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.santacruzhealth.org/PublicHealth/ChildrenFamilyHealth/MCAH.aspx",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Nurse Home Visiting Programs",
+          "url": "https://www.santacruzhealth.org/PublicHealth/ChildrenFamilyHealth/NurseHomeVisitingPrograms.aspx",
+          "link_text": "Nurse Home Visiting Programs",
+          "nav_path": "search → https://www.santacruzhealth.org/PublicHealth/ChildrenFamilyHealth/MCAH.aspx",
+          "category": "Home Visiting",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Breastfeeding Coalition",
+          "url": "https://www.santacruzhealth.org/PublicHealth/ChildrenFamilyHealth/MCAH/BreastfeedingCoalition.aspx",
+          "link_text": "Breastfeeding Coalition",
+          "nav_path": "search → https://www.santacruzhealth.org/PublicHealth/ChildrenFamilyHealth/MCAH.aspx",
+          "category": "Breastfeeding",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "MCAH Title V",
+          "url": "https://www.santacruzhealth.org/Portals/7/Pdfs/PublicHealth/FamilyHealth/MCAH Title V_SpanishTranslation.pdf?ver=I7h9RQAhqaOcJHK_gTekVg%3d%3d",
+          "link_text": "MCAH Title V",
+          "nav_path": "search → https://www.santacruzhealth.org/PublicHealth/ChildrenFamilyHealth/MCAH.aspx",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "MCAH Title V (Spanish)",
+          "url": "https://www.santacruzhealth.org/Portals/7/Pdfs/PublicHealth/BirthAndDeath/BIRTH%20REPORT%202022%20FINAL.pdf",
+          "link_text": "MCAH Title V (Spanish)",
+          "nav_path": "search → https://www.santacruzhealth.org/PublicHealth/ChildrenFamilyHealth/MCAH.aspx",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Sudden Infant Death Syndrome Program",
+          "url": "https://www.santacruzhealth.org/PublicHealth/ChildrenFamilyHealth/MCAH/SIDS.aspx",
+          "link_text": "Sudden Infant Death Syndrome Program",
+          "nav_path": "search → https://www.santacruzhealth.org/PublicHealth/ChildrenFamilyHealth/MCAH.aspx",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Pregnancy and Post-Partum Guide",
+          "url": "https://www.santacruzhealth.org/PublicHealth/ChildrenFamilyHealth/MCAH/PregnancyandPost-PartumGuide.aspx",
+          "link_text": "Pregnancy and Post-Partum Guide",
+          "nav_path": "search → https://www.santacruzhealth.org/PublicHealth/ChildrenFamilyHealth/MCAH.aspx",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "TOP",
+          "url": "https://www.santacruzhealth.org/PublicHealth/ChildrenFamilyHealth/MCAH.aspx#topbar",
+          "link_text": "TOP",
+          "nav_path": "search → https://www.santacruzhealth.org/PublicHealth/ChildrenFamilyHealth/MCAH.aspx",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Maternal, Child and Adolescent Health (MCAH)",
+          "url": "https://www.santacruzhealth.org/PublicHealth/ChildrenFamilyHealth/MCAH.aspx",
+          "link_text": "Maternal, Child and Adolescent Health (MCAH)",
+          "nav_path": "search → https://www.santacruzhealth.org/PublicHealth/ChildrenFamilyHealth/MCAH.aspx",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Nurse Family Partnership",
+          "url": "https://www.santacruzhealth.org/PublicHealth/ChildrenFamilyHealth/NurseHomeVisitingPrograms/NurseFamilyPartnership.aspx",
+          "link_text": "Nurse Family Partnership",
+          "nav_path": "search → https://www.santacruzhealth.org/PublicHealth/ChildrenFamilyHealth/MCAH.aspx",
+          "category": "Home Visiting",
+          "relevance_score": 2.2
+        }
+      ]
+    },
+    {
+      "county_name": "Shasta",
+      "county_url": "https://www.co.shasta.ca.us/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.shastacounty.gov/health-human-services/page/women-infants-children-wic",
+      "discovery_tier": "tier2_search",
+      "programs": []
+    },
+    {
+      "county_name": "Sierra",
+      "county_url": "https://www.sierracounty.ca.gov/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.sierracounty.ca.gov/282/Maternal-Child-Adolescent-Health-MCAH",
+      "discovery_tier": "tier1_validated_relaxed_extract",
+      "programs": [
+        {
+          "name": "California Department of Public Health",
+          "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/Pages/default.aspx",
+          "link_text": "California Department of Public Health",
+          "nav_path": "search → https://www.sierracounty.ca.gov/282/Maternal-Child-Adolescent-Health-MCAH",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Marijuana Pregnancy and Breastfeeding",
+          "url": "https://www.cdph.ca.gov/Programs/DO/letstalkcannabis/Pages/pregnantbreastfeedingwomen.aspx",
+          "link_text": "Marijuana Pregnancy and Breastfeeding",
+          "nav_path": "search → https://www.sierracounty.ca.gov/282/Maternal-Child-Adolescent-Health-MCAH",
+          "category": "Breastfeeding",
+          "relevance_score": 2.2
+        },
+        {
+          "name": "Skip to Main Content",
+          "url": "https://www.sierracounty.ca.gov/282/Maternal-Child-Adolescent-Health-MCAH#ccb661f106-f313-4df9-8276-be0288918f3b",
+          "link_text": "Skip to Main Content",
+          "nav_path": "search → https://www.sierracounty.ca.gov/282/Maternal-Child-Adolescent-Health-MCAH",
+          "category": "Maternal Child Health",
+          "relevance_score": 0.2
+        }
+      ]
+    },
+    {
+      "county_name": "Siskiyou",
+      "county_url": "https://www.co.siskiyou.ca.us/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.siskiyoucounty.gov/publichealth/page/maternal-child-and-adolescent-health-mcah",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Women, Infant, and Children (WIC)",
+          "url": "https://www.siskiyoucounty.gov/publichealth/page/women-infant-children-wic",
+          "link_text": "Women, Infant, and Children (WIC)",
+          "nav_path": "search → https://www.siskiyoucounty.gov/publichealth/page/maternal-child-and-adolescent-health-mcah",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Postpartum Depression",
+          "url": "https://www.siskiyoucounty.gov/publichealth/page/postpartum-depression",
+          "link_text": "Postpartum Depression",
+          "nav_path": "search → https://www.siskiyoucounty.gov/publichealth/page/maternal-child-and-adolescent-health-mcah",
+          "category": "Perinatal Care",
+          "relevance_score": 2.6
+        }
+      ]
+    },
+    {
+      "county_name": "Solano",
+      "county_url": "https://www.solanocounty.com/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Comprehensive Perinatal Services Program (CPSP) Provider Information",
+          "url": "https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health/comprehensive-perinatal-services-program-cpsp-provider-information",
+          "link_text": "Comprehensive Perinatal Services Program (CPSP) Provider Information",
+          "nav_path": "search → https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health",
+          "category": "Perinatal Care",
+          "relevance_score": 6.0
+        },
+        {
+          "name": "Fetal Infant Mortality Review FIMR is a community-based program that reviews the contributing factors to fetal and infant deaths.",
+          "url": "https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health/child-fatality-review-response-program/fetal-infant-mortality-review-fimr-program",
+          "link_text": "Fetal Infant Mortality Review FIMR is a community-based program that reviews the contributing factors to fetal and infant deaths.",
+          "nav_path": "search → https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health",
+          "category": "Health Equity",
+          "relevance_score": 5.6
+        },
+        {
+          "name": "Solano County Black Infant Health",
+          "url": "https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health/solano-county-black-infant-health-program",
+          "link_text": "Solano County Black Infant Health",
+          "nav_path": "search → https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health",
+          "category": "Health Equity",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Nurse-Family Partnership",
+          "url": "https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health/nurse-family-partnership",
+          "link_text": "Nurse-Family Partnership",
+          "nav_path": "search → https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health",
+          "category": "Home Visiting",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "MCAH Contacts",
+          "url": "https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health/mcah-contacts",
+          "link_text": "MCAH Contacts",
+          "nav_path": "search → https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "MCAH Coalitions and Committees",
+          "url": "https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health/mcah-coalitions-committees",
+          "link_text": "MCAH Coalitions and Committees",
+          "nav_path": "search → https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "​​Healthy Families Solano County™​",
+          "url": "https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health/healthy-families-solano-countytm",
+          "link_text": "​​Healthy Families Solano County™​",
+          "nav_path": "search → https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health",
+          "category": "Home Visiting",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Confidential Referral Form",
+          "url": "https://www.solanocounty.gov/archival-document?document=https://content.solanocounty.gov/sites/default/files/2026-03/Confidential_Referral_Form_-_Dec2024.pdf&ad=aHR0cHM6Ly9jb250ZW50LnNvbGFub2NvdW50eS5nb3Yvc2l0ZXMvZGVmYXVsdC9maWxlcy8yMDI2LTAzL0NvbmZpZGVudGlhbF9SZWZlcnJhbF9Gb3JtXy1fRGVjMjAyNC5wZGY=&title=Archival%20document:%20MCAH%20Confidential%20Referral%20Form",
+          "link_text": "Confidential Referral Form",
+          "nav_path": "search → https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health",
+          "category": "Maternal Child Health",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Prenatal Care Guidance",
+          "url": "https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health/prenatal-care-guidance-program-pcg-perinatal-outreach-education",
+          "link_text": "Prenatal Care Guidance",
+          "nav_path": "search → https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health",
+          "category": "Perinatal Care",
+          "relevance_score": 2.4
+        },
+        {
+          "name": "Community Nursing IMPACT Program Public Health Nurses (PHN) provide nurse, home-visits to resident of all ages in Solano.",
+          "url": "https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health/community-nursing-impact-program",
+          "link_text": "Community Nursing IMPACT Program Public Health Nurses (PHN) provide nurse, home-visits to resident of all ages in Solano.",
+          "nav_path": "search → https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health",
+          "category": "Home Visiting",
+          "relevance_score": 2.4
+        },
+        {
+          "name": "Health Care Program for Children in Foster Care Public Health Nurses provide consultation, oversight, and management of the medical, dental, behavioral, and developmental needs of youth in out of home placement.",
+          "url": "https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health/health-care-programs-children-foster-care-hcpcfc",
+          "link_text": "Health Care Program for Children in Foster Care Public Health Nurses provide consultation, oversight, and management of the medical, dental, behavioral, and developmental needs of youth in out of home placement.",
+          "nav_path": "search → https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health",
+          "category": "Home Visiting",
+          "relevance_score": 2.2
+        },
+        {
+          "name": "Childhood Lead Poisoning Prevention Program Public Health Nurses offer education, screening, diagnosis and case management of lead poisoning in children and young adults, from birth up to 21 years old.",
+          "url": "https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health/childhood-lead-poisoning-prevention-program",
+          "link_text": "Childhood Lead Poisoning Prevention Program Public Health Nurses offer education, screening, diagnosis and case management of lead poisoning in children and young adults, from birth up to 21 years old.",
+          "nav_path": "search → https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health",
+          "category": "Home Visiting",
+          "relevance_score": 2.2
+        },
+        {
+          "name": "Sudden Infant Death Syndrome Provides the support and bereavement services of Public Health Nurse Home Visitors to families grieving the death of an infant less than 1 year of age due to a SIDS.",
+          "url": "https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health/child-fatality-review-response-program/sudden-infant-death-syndrome-sids-program",
+          "link_text": "Sudden Infant Death Syndrome Provides the support and bereavement services of Public Health Nurse Home Visitors to families grieving the death of an infant less than 1 year of age due to a SIDS.",
+          "nav_path": "search → https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health",
+          "category": "Home Visiting",
+          "relevance_score": 2.2
+        }
+      ]
+    },
+    {
+      "county_name": "Sonoma",
+      "county_url": "https://sonomacounty.ca.gov/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://sonomacounty.gov/health-and-human-services/health-services/divisions/public-health/maternal-child-and-adolescent-health",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Comprehensive Perinatal Services Program",
+          "url": "https://sonomacounty.gov/health-and-human-services/health-services/divisions/public-health/maternal-child-and-adolescent-health/comprehensive-perinatal-services-program",
+          "link_text": "Comprehensive Perinatal Services Program",
+          "nav_path": "search → https://sonomacounty.gov/health-and-human-services/health-services/divisions/public-health/maternal-child-and-adolescent-health",
+          "category": "Perinatal Care",
+          "relevance_score": 5.8
+        },
+        {
+          "name": "Resources and Toolkits for Perinatal Service Providers",
+          "url": "https://sonomacounty.gov/health-and-human-services/health-services/divisions/public-health/maternal-child-and-adolescent-health/resources-and-toolkits-for-perinatal-service-providers",
+          "link_text": "Resources and Toolkits for Perinatal Service Providers",
+          "nav_path": "search → https://sonomacounty.gov/health-and-human-services/health-services/divisions/public-health/maternal-child-and-adolescent-health",
+          "category": "Perinatal Care",
+          "relevance_score": 2.2
+        },
+        {
+          "name": "Birth Control",
+          "url": "https://sonomacounty.gov/health-and-human-services/health-services/divisions/public-health/maternal-child-and-adolescent-health/birth-control",
+          "link_text": "Birth Control",
+          "nav_path": "search → https://sonomacounty.gov/health-and-human-services/health-services/divisions/public-health/maternal-child-and-adolescent-health",
+          "category": "Reproductive Health",
+          "relevance_score": 2.2
+        }
+      ]
+    },
+    {
+      "county_name": "Stanislaus",
+      "county_url": "https://www.stancounty.com/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.schsa.org/PublicHealth/programs/maternal-child-adolescent-health/",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Comprehensive Perinatal Services Program",
+          "url": "https://www.schsa.org/PublicHealth/programs/comprehensive-perinatal-services/",
+          "link_text": "Comprehensive Perinatal Services Program",
+          "nav_path": "search → https://www.schsa.org/PublicHealth/programs/maternal-child-adolescent-health/",
+          "category": "Perinatal Care",
+          "relevance_score": 5.8
+        },
+        {
+          "name": "WIC",
+          "url": "https://www.schsa.org/publichealth/programs/wic/",
+          "link_text": "WIC",
+          "nav_path": "search → https://www.schsa.org/PublicHealth/programs/maternal-child-adolescent-health/",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Nurse-Family Partnership",
+          "url": "https://www.schsa.org/PublicHealth/programs/nurse-family-partnership",
+          "link_text": "Nurse-Family Partnership",
+          "nav_path": "search → https://www.schsa.org/PublicHealth/programs/maternal-child-adolescent-health/",
+          "category": "Home Visiting",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Healthy Families Stanislaus",
+          "url": "https://www.schsa.org/PublicHealth/programs/healthy-families-stanislaus/",
+          "link_text": "Healthy Families Stanislaus",
+          "nav_path": "search → https://www.schsa.org/PublicHealth/programs/maternal-child-adolescent-health/",
+          "category": "Home Visiting",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Adolescent Family Life and Cal Learn for pregnant or parenting teens",
+          "url": "https://www.schsa.org/PublicHealth/programs/adolescent-family-life-program-cal-learn/",
+          "link_text": "Adolescent Family Life and Cal Learn for pregnant or parenting teens",
+          "nav_path": "search → https://www.schsa.org/PublicHealth/programs/maternal-child-adolescent-health/",
+          "category": "Adolescent Health",
+          "relevance_score": 2.4
+        }
+      ]
+    },
+    {
+      "county_name": "Sutter",
+      "county_url": "https://www.suttercounty.org/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.sutter.gov/government/county-departments/health-and-human-services/public-health-branch/maternal-child-adolescent-health",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Reproductive Health and Prenatal Care Access",
+          "url": "https://www.sutter.gov/government/county-departments/health-and-human-services/public-health-branch/maternal-child-adolescent-health/reproductive-health-and-prenatal-care-access",
+          "link_text": "Reproductive Health and Prenatal Care Access",
+          "nav_path": "search → https://www.sutter.gov/government/county-departments/health-and-human-services/public-health-branch/maternal-child-adolescent-health",
+          "category": "Perinatal Care",
+          "relevance_score": 2.4
+        }
+      ]
+    },
+    {
+      "county_name": "Tehama",
+      "county_url": "https://www.co.tehama.ca.us/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.tehamacohealthservices.net/our-services/public-health/services/wic/",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "Your WIC Foods",
+          "url": "https://www.tehamacohealthservices.net/wp-content/uploads/2025/10/WIC-Foods-2025.pdf",
+          "link_text": "Your WIC Foods",
+          "nav_path": "search → https://www.tehamacohealthservices.net/our-services/public-health/services/wic/",
+          "category": "Nutrition",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Breastfeeding Support",
+          "url": "https://www.tehamacohealthservices.net/our-services/public-health/services/wic/#21ae510f73ede3422",
+          "link_text": "Breastfeeding Support",
+          "nav_path": "search → https://www.tehamacohealthservices.net/our-services/public-health/services/wic/",
+          "category": "Breastfeeding",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Other Services",
+          "url": "https://www.tehamacohealthservices.net/our-services/public-health/services/wic/#ee110d241786f5fc9",
+          "link_text": "Other Services",
+          "nav_path": "search → https://www.tehamacohealthservices.net/our-services/public-health/services/wic/",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Online Nutrition Education Classes",
+          "url": "https://www.tehamacohealthservices.net/our-services/public-health/services/wic/#d71e5dd10c1d7d1e7",
+          "link_text": "Online Nutrition Education Classes",
+          "nav_path": "search → https://www.tehamacohealthservices.net/our-services/public-health/services/wic/",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Eligibility",
+          "url": "https://www.tehamacohealthservices.net/our-services/public-health/services/wic/#bc5e3e115bc66cd0c",
+          "link_text": "Eligibility",
+          "nav_path": "search → https://www.tehamacohealthservices.net/our-services/public-health/services/wic/",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Farmers Market",
+          "url": "https://www.tehamacohealthservices.net/our-services/public-health/services/wic/#6f9cb32b9da6d86dd",
+          "link_text": "Farmers Market",
+          "nav_path": "search → https://www.tehamacohealthservices.net/our-services/public-health/services/wic/",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Infant Formula Information",
+          "url": "https://www.tehamacohealthservices.net/our-services/public-health/services/wic/#533a8fc03b9fad36b",
+          "link_text": "Infant Formula Information",
+          "nav_path": "search → https://www.tehamacohealthservices.net/our-services/public-health/services/wic/",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Complaint Filing",
+          "url": "https://www.tehamacohealthservices.net/our-services/public-health/services/wic/#4570c65a606b7cae9",
+          "link_text": "Complaint Filing",
+          "nav_path": "search → https://www.tehamacohealthservices.net/our-services/public-health/services/wic/",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Food Benefits",
+          "url": "https://www.tehamacohealthservices.net/our-services/public-health/services/wic/#2e1fdfcfb8cd7350c",
+          "link_text": "Food Benefits",
+          "nav_path": "search → https://www.tehamacohealthservices.net/our-services/public-health/services/wic/",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Service location",
+          "url": "https://www.tehamacohealthservices.net/our-services/public-health/services/wic/#26fa9835209a54132",
+          "link_text": "Service location",
+          "nav_path": "search → https://www.tehamacohealthservices.net/our-services/public-health/services/wic/",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Page load link",
+          "url": "https://www.tehamacohealthservices.net/our-services/public-health/services/wic/",
+          "link_text": "Page load link",
+          "nav_path": "search → https://www.tehamacohealthservices.net/our-services/public-health/services/wic/",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Patients Rights",
+          "url": "https://www.tehamacohealthservices.net/our-administration/patients-rights/",
+          "link_text": "Patients Rights",
+          "nav_path": "search → https://www.tehamacohealthservices.net/our-services/public-health/services/wic/",
+          "category": "Unknown",
+          "relevance_score": 3.0
+        }
+      ]
+    },
+    {
+      "county_name": "Trinity",
+      "county_url": "https://www.trinitycounty.org/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.trinitycounty.org/441/Women-Infants-Children-WIC",
+      "discovery_tier": "tier1_validated",
+      "programs": [
+        {
+          "name": "How to Keep Your Breast Pump Kit Clean (PDF)",
+          "url": "https://www.trinitycounty.org/DocumentCenter/View/1532/How-to-Keep-Your-Breast-Pump-Kit-Clean-PDF",
+          "link_text": "How to Keep Your Breast Pump Kit Clean (PDF)",
+          "nav_path": "search → https://www.trinitycounty.org/441/Women-Infants-Children-WIC",
+          "category": "Breastfeeding",
+          "relevance_score": 2.2
+        }
+      ]
+    },
+    {
+      "county_name": "Tulare",
+      "county_url": "https://tularecounty.ca.gov/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://wicprogram.us/wic-program-provider/tulare_county_health_human_services_agency_tulare_wic_tulare_ca",
+      "discovery_tier": "tier2_search",
+      "programs": [
+        {
+          "name": "Tulare WIC Clinics",
+          "url": "https://wicprogram.us/wic_programs-city/tulare_ca",
+          "link_text": "Tulare WIC Clinics",
+          "nav_path": "search → https://wicprogram.us/wic-program-provider/tulare_county_health_human_services_agency_tulare_wic_tulare_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "California WIC Program",
+          "url": "https://wicprogram.us/wic-programs-state/california",
+          "link_text": "California WIC Program",
+          "nav_path": "search → https://wicprogram.us/wic-program-provider/tulare_county_health_human_services_agency_tulare_wic_tulare_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Breastfeeding vs. Formula: What WIC Moms Need to Know",
+          "url": "https://wicprogram.us/resources/breastfeeding-vs-formula-what-wic-moms-need-to-know",
+          "link_text": "Breastfeeding vs. Formula: What WIC Moms Need to Know",
+          "nav_path": "search → https://wicprogram.us/wic-program-provider/tulare_county_health_human_services_agency_tulare_wic_tulare_ca",
+          "category": "Breastfeeding",
+          "relevance_score": 5.4
+        },
+        {
+          "name": "Register",
+          "url": "https://wicprogram.us/user/new",
+          "link_text": "Register",
+          "nav_path": "search → https://wicprogram.us/wic-program-provider/tulare_county_health_human_services_agency_tulare_wic_tulare_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "WIC-Approved Foods: A Complete List",
+          "url": "https://wicprogram.us/resources/wic-approved-foods-a-complete-list",
+          "link_text": "WIC-Approved Foods: A Complete List",
+          "nav_path": "search → https://wicprogram.us/wic-program-provider/tulare_county_health_human_services_agency_tulare_wic_tulare_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "What is WIC? An Overview of the Program",
+          "url": "https://wicprogram.us/resources/what-is-wic-an-overview-of-the-program",
+          "link_text": "What is WIC? An Overview of the Program",
+          "nav_path": "search → https://wicprogram.us/wic-program-provider/tulare_county_health_human_services_agency_tulare_wic_tulare_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Managing Food Allergies with WIC",
+          "url": "https://wicprogram.us/resources/managing-food-allergies-with-wic",
+          "link_text": "Managing Food Allergies with WIC",
+          "nav_path": "search → https://wicprogram.us/wic-program-provider/tulare_county_health_human_services_agency_tulare_wic_tulare_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "How WIC Works with Local Food Banks and Pantries",
+          "url": "https://wicprogram.us/resources/how-wic-works-with-local-food-banks-and-pantries",
+          "link_text": "How WIC Works with Local Food Banks and Pantries",
+          "nav_path": "search → https://wicprogram.us/wic-program-provider/tulare_county_health_human_services_agency_tulare_wic_tulare_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "General",
+          "url": "https://wicprogram.us/resources/category/general",
+          "link_text": "General",
+          "nav_path": "search → https://wicprogram.us/wic-program-provider/tulare_county_health_human_services_agency_tulare_wic_tulare_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Resources",
+          "url": "https://wicprogram.us/resources",
+          "link_text": "Resources",
+          "nav_path": "search → https://wicprogram.us/wic-program-provider/tulare_county_health_human_services_agency_tulare_wic_tulare_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Update Program Information",
+          "url": "https://wicprogram.us/program/update?id=6162",
+          "link_text": "Update Program Information",
+          "nav_path": "search → https://wicprogram.us/wic-program-provider/tulare_county_health_human_services_agency_tulare_wic_tulare_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Privacy Policy",
+          "url": "https://wicprogram.us/privacy",
+          "link_text": "Privacy Policy",
+          "nav_path": "search → https://wicprogram.us/wic-program-provider/tulare_county_health_human_services_agency_tulare_wic_tulare_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Report Incorrect Information",
+          "url": "https://wicprogram.us/contact?id=6162",
+          "link_text": "Report Incorrect Information",
+          "nav_path": "search → https://wicprogram.us/wic-program-provider/tulare_county_health_human_services_agency_tulare_wic_tulare_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "Contact",
+          "url": "https://wicprogram.us/contact",
+          "link_text": "Contact",
+          "nav_path": "search → https://wicprogram.us/wic-program-provider/tulare_county_health_human_services_agency_tulare_wic_tulare_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        },
+        {
+          "name": "About",
+          "url": "https://wicprogram.us/about",
+          "link_text": "About",
+          "nav_path": "search → https://wicprogram.us/wic-program-provider/tulare_county_health_human_services_agency_tulare_wic_tulare_ca",
+          "category": "Nutrition",
+          "relevance_score": 5.2
+        }
+      ]
+    },
+    {
+      "county_name": "Tuolumne",
+      "county_url": "https://www.tuolumnecounty.ca.gov/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.tuolumnecounty.ca.gov/259/Women-Infants-Children",
+      "discovery_tier": "tier2_search",
+      "programs": []
+    },
+    {
+      "county_name": "Ventura",
+      "county_url": "https://www.ventura.org/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://hca.venturacounty.gov/public-health/health-care-for-all/",
+      "discovery_tier": "tier1_validated_relaxed_extract_seed_program",
+      "programs": [
+        {
+          "name": "Health Care for All",
+          "url": "https://hca.venturacounty.gov/public-health/health-care-for-all/",
+          "link_text": "Health Care for All",
+          "nav_path": "seed → https://hca.venturacounty.gov/public-health/health-care-for-all/",
+          "category": "Maternal Child Health",
+          "relevance_score": 2.4
+        }
+      ]
+    },
+    {
+      "county_name": "Yolo",
+      "county_url": "https://www.yolocounty.org/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://www.yolocounty.gov/government/general-government-departments/health-human-services/children-youth/women-infants-children-wic",
+      "discovery_tier": "tier2_search",
+      "programs": []
+    },
+    {
+      "county_name": "Yuba",
+      "county_url": "https://www.yuba.org/",
+      "health_dept_url": "",
+      "maternal_section_url": "https://agendasuite.org/iip/yuba/file/getfile/30813",
+      "discovery_tier": "tier1_validated_relaxed_extract_seed_program",
+      "programs": [
+        {
+          "name": "Maternal Program",
+          "url": "https://agendasuite.org/iip/yuba/file/getfile/30813",
+          "link_text": "Maternal Program",
+          "nav_path": "seed → https://agendasuite.org/iip/yuba/file/getfile/30813",
+          "category": "Unknown",
+          "relevance_score": 2.0
+        }
+      ]
+    }
+  ]
+}

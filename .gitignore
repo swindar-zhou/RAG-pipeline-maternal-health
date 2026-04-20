@@ -2,6 +2,9 @@
 .venv/
 venv/
 
+# Claude Code internal worktrees
+.claude/worktrees/
+
 # Python
 __pycache__/
 *.pyc

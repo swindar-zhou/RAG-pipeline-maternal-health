@@ -181,11 +181,23 @@ def main():
 
     counties: List[str] = TARGET_COUNTIES
     if args.counties:
-        counties = [c.strip() for c in args.counties.split(",") if c.strip()]
-        unknown = [c for c in counties if c not in CALIFORNIA_COUNTIES]
+        # Build a case-insensitive lookup so "mendocino" → "Mendocino"
+        _ci = {k.lower(): k for k in CALIFORNIA_COUNTIES}
+        raw = [c.strip() for c in args.counties.split(",") if c.strip()]
+        counties = []
+        unknown = []
+        for c in raw:
+            canonical = _ci.get(c.lower())
+            if canonical:
+                counties.append(canonical)
+            else:
+                unknown.append(c)
         if unknown:
             print(f"⚠  Unknown counties (not in CALIFORNIA_COUNTIES): {unknown}")
             print("   Check spelling or add the county to src/config.py first.")
+        if not counties:
+            print("   No valid counties — exiting.")
+            return
 
     print("\n" + "=" * 60)
     print(f"🚀  iTREDS Pipeline — {len(counties)} counties")

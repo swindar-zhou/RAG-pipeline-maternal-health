@@ -152,6 +152,12 @@ DELAY_BETWEEN_REQUESTS = 2
 MAX_CONTENT_LENGTH = 12000
 MAX_TEXT_CHARS = 20000
 
+# Manual HTML overrides — for Cloudflare-blocked counties the operator cannot
+# bypass programmatically. To use: open the county page in Chrome, File → Save
+# As → Webpage Complete, save as data/manual_html/<County Name>.html
+# (spaces preserved, e.g. "Contra Costa.html").
+MANUAL_HTML_DIR = os.path.join(PROJECT_ROOT, "data", "manual_html")
+
 # Counties whose MCAH pages block automated requests (403 / bot-detection).
 # For these counties the scraper uses a three-tier fetch chain:
 #   1. curl-cffi  — Chrome TLS fingerprint impersonation (fastest, no browser)
@@ -159,6 +165,7 @@ MAX_TEXT_CHARS = 20000
 #   3. aiohttp    — plain HTTP fallback (rarely succeeds for these counties)
 # Updated 2026-04-17 based on Phase 1 zero-result run.
 BOT_BLOCKED_COUNTIES: set = {
+    "Alameda",        # HTTP 403 — Incapsula WAF
     "Amador",
     "Contra Costa",
     "El Dorado",
@@ -168,8 +175,12 @@ BOT_BLOCKED_COUNTIES: set = {
     "Madera",
     "Mendocino",
     "Monterey",
+    "Santa Barbara",  # JS-rendered CivicPlus site — aiohttp returns empty body
+    "Santa Clara",    # HTTP 403 — Incapsula WAF
     "Shasta",
+    "Tulare",         # HTTP 403 — Incapsula WAF
     "Tuolumne",
+    "Ventura",        # HTTP 403 — Incapsula WAF
     "Yolo",
 }
 
@@ -183,7 +194,7 @@ PLAYWRIGHT_REQUIRED_COUNTIES = BOT_BLOCKED_COUNTIES
 MATERNAL_HEALTH_URLS = {
     # ── Bay Area ──────────────────────────────────────────────────────────────
     "Alameda":        "https://health.alamedacountyca.gov/department/public-health-department/",  # acphd.org/mpcah/ redirects here; new domain health.alamedacountyca.gov
-    "Contra Costa":   "https://www.cchealth.org/services-and-programs/support-for-families",  # updated URL; 403 — blocks automated requests
+    "Contra Costa":   "https://www.cchealth.org/services-and-programs/support-for-families/family-maternal-child-health-fmch",  # direct FMCH sub-page; 403 — blocks automated requests
     "Marin":          "https://www.marinhhs.org/maternal-child-adolescent-health",
     "Napa":           "https://www.napacounty.gov/3237/Home-Visiting-Programs",  # closest entry — see INFERRED note
     "San Francisco":  "https://www.sf.gov/departments--department-public-health--maternal-child-and-adolescent-health",
@@ -213,7 +224,7 @@ MATERNAL_HEALTH_URLS = {
     "Sacramento":     "https://dhs.saccounty.gov/PUB/Program/Pages/SP-Maternal-Child-and-Adolescent-Health-Program.aspx",
     "Sutter":         "https://www.sutter.gov/government/county-departments/health-and-human-services/public-health-branch/maternal-child-adolescent-health",  # suttercounty.org → sutter.gov (domain moved)
     "Yolo":           "https://www.yolocounty.gov/government/general-government-departments/health-human-services/boards-committees/mcah-advisory-board",  # advisory board only — see INFERRED note; 403 — blocks automated requests
-    "Yuba":           "https://agendasuite.org/iip/yuba/file/getfile/30813",  # no MCAH page — see INFERRED note
+    "Yuba":           "https://agendasuite.org/iip/yuba/file/getfile/30813",  # PDF seed — handled by pdf-seed detection; no dedicated MCAH page
     # ── San Diego & Imperial ──────────────────────────────────────────────────
     "Imperial":       "https://www.icphd.org/health-information-and-resources/maternal-child-adolescent-health",
     "San Diego":      "https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/maternal_child_family_health_services.html",

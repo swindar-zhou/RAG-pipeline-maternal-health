@@ -1,6 +1,4 @@
-# Maternal Health Data Extraction Pipeline
-
-**iTREDS Project** - Extract maternal health program data from U.S. county websites using LLMs.
+# Closing the Maternal Health Information Gap: An Agentic RAG Pipeline for County-Level Program Discovery
 
 ## Background
 
@@ -91,13 +89,17 @@ This pipeline discovers and extracts **maternal health programs** (WIC, Black In
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+pip install -r requirements-langchain.txt   # for RAG + Program Finder
 
 # 2. Configure API key
 cp .env.example .env
 # Edit .env and add your OpenAI API key
 
-# 3. Run the full pipeline
+# 3. Run the full pipeline (scrape → structure → index)
 python run_pipeline.py
+
+# 4. Launch the interactive Program Finder
+python -m src.knowledge_graph
 ```
 
 ## How It Works
@@ -110,14 +112,25 @@ PHASE 1: DISCOVERY          PHASE 2: EXTRACTION           PHASE 3: STRUCTURING
 │ + fallback crawl │        │ (text, contacts,   │        │ + registry match    │
 │                  │        │  PDF links)        │        │ + gap candidates    │
 └──────────────────┘        └────────────────────┘        └─────────────────────┘
-                                                                    │
-                                                                    ▼
-                                                         ┌─────────────────────┐
-                                                         │ GAP ANALYSIS        │
-                                                         │ TF-IDF similarity   │
-                                                         │ vs. 31-program      │
-                                                         │ federal registry    │
-                                                         └─────────────────────┘
+         │                           │                              │
+         │                           ▼                              ▼
+         │                  ┌────────────────────┐        ┌─────────────────────┐
+         │                  │ RAG INDEX          │        │ GAP ANALYSIS        │
+         │                  │ ChromaDB per-county│        │ TF-IDF similarity   │
+         │                  │ vectorstore        │        │ vs. 31-program      │
+         │                  │ (text-embedding-   │        │ federal registry    │
+         │                  │  3-small, 800-char │        └─────────────────────┘
+         │                  │  chunks)           │
+         │                  └─────────┬──────────┘
+         │                            │
+         ▼                            ▼
+┌──────────────────────────────────────────────────────┐
+│ PROGRAM FINDER  (src/knowledge_graph.py)             │
+│ ZIP code → county (pgeocode, offline)                │
+│   Path A: Structured CSV (fast, no LLM)             │
+│   Path B: RAG + GPT-4o-mini (fallback for           │
+│           counties without structured CSV)           │
+└──────────────────────────────────────────────────────┘
 ```
 
 ### Phase 1 — Discovery (`scraper_discovery.py`)
@@ -143,6 +156,47 @@ Link scoring uses a 2-layer taxonomy:
 - Each extracted program is matched to a `program_id` from the Federal Program Registry
 - Unmatched programs flagged as gap candidates
 - Output saved to a new versioned directory (`data/structured/vN`) on every run
+
+### RAG Index (`src/vector_store.py`)
+
+Builds a per-county **ChromaDB vectorstore** from the raw Phase 2 JSON files, enabling semantic retrieval for counties that have not yet been structured into CSVs.
+
+- Embedding model: `text-embedding-3-small` (OpenAI)
+- Chunk size: 800 chars, 100-char overlap
+- One Chroma collection per county, persisted to `data/vectorstore/{county}/`
+- Idempotent — skips counties whose vectorstore already exists unless `--force` is passed
+
+```bash
+python -m src.vector_store                        # all 58 counties
+python -m src.vector_store --counties "Fresno"    # specific county
+python -m src.vector_store --force                # rebuild all
+python -m src.vector_store --list                 # list built stores
+```
+
+### Program Finder (`src/knowledge_graph.py`)
+
+A conversational LangGraph agent that answers "what maternal health programs are available near me?" from a ZIP code.
+
+**Flow:**
+1. User enters a 5-digit California ZIP code
+2. ZIP resolved to county via `pgeocode` (fully offline, no API call)
+3. User confirms county
+4. Programs retrieved via **Path A → Path B** priority:
+   - **Path A** — Structured CSV (fast, no LLM): reads `data/structured/vN/California_{County}_Healthcare_Data.csv`
+   - **Path B** — RAG fallback: ChromaDB similarity search (k=10) → GPT-4o-mini extraction
+
+```bash
+# Interactive CLI
+python -m src.knowledge_graph
+
+# Programmatic (e.g. FastAPI / Streamlit)
+from src.knowledge_graph import chat, initial_state
+state = initial_state()
+response, state = chat("94103", state)   # ZIP → confirms San Francisco
+response, state = chat("yes", state)     # → lists programs
+```
+
+**Current coverage:** 58 counties vectorized; 9 counties with pre-structured CSVs (LA, SF, Sacramento, San Diego, Marin, Napa, Orange, Lake, Mono).
 
 ### Gap Analysis (`eval/gap_detector.py`)
 
@@ -178,6 +232,9 @@ DATA_COLLECTOR_NAME=Your Name
 │   ├── config.py                # County URLs, API settings, budget guardrails
 │   ├── federal_program_registry.py  # 31-program ground-truth registry (CA/IN/TX)
 │   ├── maternal_taxonomy.py     # Keyword taxonomy (25 types, 14 categories)
+│   ├── knowledge_graph.py       # LangGraph Program Finder agent (ZIP → programs)
+│   ├── vector_store.py          # ChromaDB vectorstore builder + retriever factory
+│   ├── phase2_enhanced.py       # Async BFS crawler with Playwright bot-bypass
 │   ├── llm_program_classifier.py    # (legacy) LLM-based re-classification
 │   └── utils.py                 # save_to_csv, get_next_structured_version_dir
 │
@@ -190,12 +247,15 @@ DATA_COLLECTOR_NAME=Your Name
 │
 ├── data/
 │   ├── discovery_results.json   # Phase 1 output (all 58 counties)
-│   ├── raw/{county}/*.json      # Phase 2 output (per-page JSON)
+│   ├── raw/{county}/*.json      # Phase 2 output (889 files, 58 counties)
 │   ├── structured/              # Phase 3 output (auto-versioned)
-│   │   ├── v1/ … v4/            # Each run creates a new vN folder
+│   │   ├── v1/ … vN/            # Each run creates a new vN folder
 │   │   └── vN/California_{County}_Healthcare_Data.csv
+│   ├── vectorstore/{county}/    # RAG index (ChromaDB, one dir per county)
 │   └── gap_analysis/
 │       └── gap_report.txt       # Latest gap detection report
+│
+├── check_raw_data.py            # Diagnostic: county coverage + extraction quality
 │
 └── docs/
     ├── QUICK_START.md
@@ -210,10 +270,21 @@ DATA_COLLECTOR_NAME=Your Name
 python run_pipeline.py
 
 # Individual phases
-python scraper_discovery.py              # Phase 1 only
-python scraper_discovery.py --county "Alameda" "Fresno"   # specific counties
-python scraper_extract.py                # Phase 2 only
-python scraper_structure.py             # Phase 3 only
+python scraper_discovery.py                           # Phase 1: discovery only
+python scraper_discovery.py --county "Alameda"        # specific counties
+python scraper_extract.py                             # Phase 2: content extraction
+python scraper_structure.py                           # Phase 3: LLM structuring
+
+# RAG index — build vectorstores from data/raw/
+python -m src.vector_store                            # all counties
+python -m src.vector_store --counties "Fresno,Kern"   # subset
+python -m src.vector_store --force                    # force rebuild
+
+# Program Finder — interactive chatbot
+python -m src.knowledge_graph
+
+# Diagnostics — check data/raw coverage and extraction quality
+python check_raw_data.py
 
 # Gap analysis only (uses existing data/structured and data/raw)
 python eval/gap_detector.py
@@ -227,8 +298,9 @@ python eval/run_eval.py
 | Path | Description |
 |------|-------------|
 | `data/discovery_results.json` | Discovered program links per county |
-| `data/raw/{county}/*.json` | Raw page content (text, contacts, PDF links) |
-| `data/structured/vN/` | Structured CSVs — new folder created every run |
+| `data/raw/{county}/*.json` | Raw page content (text, contacts, PDF links) — 889 files, 58 counties |
+| `data/structured/vN/` | Structured CSVs — new versioned folder created every run |
+| `data/vectorstore/{county}/` | Per-county ChromaDB RAG index |
 | `data/gap_analysis/gap_report.txt` | Gap detection report |
 
 ## Federal Program Registry

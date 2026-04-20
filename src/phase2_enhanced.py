@@ -50,6 +50,7 @@ from bs4 import BeautifulSoup
 from src.config import (
     MAX_TEXT_CHARS,
     MATERNAL_HEALTH_URLS,
+    MANUAL_HTML_DIR,
     PLAYWRIGHT_REQUIRED_COUNTIES,
 )
 from src.federal_program_registry import get_aliases_flat
@@ -187,45 +188,60 @@ async def _fetch_playwright(url: str) -> Optional[str]:
     except ImportError:
         print("  [warn] playwright not installed — run: pip install playwright && playwright install chromium")
         return None
-    try:
-        async with async_playwright() as pw:
-            browser = await pw.chromium.launch(
-                headless=True,
-                args=[
-                    "--disable-blink-features=AutomationControlled",
-                    "--no-sandbox",
-                    "--disable-dev-shm-usage",
-                ],
-            )
-            ctx = await browser.new_context(
-                user_agent=BROWSER_HEADERS["User-Agent"],
-                locale="en-US",
-                extra_http_headers={
-                    "Accept-Language": "en-US,en;q=0.9",
-                    "Accept": BROWSER_HEADERS["Accept"],
-                },
-            )
-            # Patch navigator.webdriver to undefined so JS bot-checks pass
-            await ctx.add_init_script(
-                "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
-            )
-            page = await ctx.new_page()
-            # "networkidle" gives Cloudflare JS challenges time to resolve
-            try:
-                await page.goto(url, wait_until="networkidle", timeout=FETCH_TIMEOUT * 2 * 1000)
-            except Exception:
-                # Fallback to domcontentloaded if networkidle times out
-                await page.goto(url, wait_until="domcontentloaded", timeout=FETCH_TIMEOUT * 1000)
-            html = await page.content()
-            await browser.close()
-            # Surface Cloudflare blocks clearly so the operator can act
-            if "just a moment" in html[:500].lower():
-                print(f"  [cloudflare] Playwright hit Cloudflare managed challenge — {url}")
-                return None
-            return html
-    except Exception as exc:
-        print(f"  [warn] Playwright fetch failed for {url}: {exc}")
-        return None
+    launch_configs = [
+        # Tier A: real installed Chrome — most convincing fingerprint against Incapsula/Imperva
+        {"channel": "chrome", "headless": True,
+         "args": ["--disable-blink-features=AutomationControlled", "--no-sandbox"]},
+        # Tier B: bundled Chromium fallback (used when Chrome is not installed)
+        {"headless": True,
+         "args": ["--disable-blink-features=AutomationControlled", "--no-sandbox",
+                  "--disable-dev-shm-usage"]},
+    ]
+    for launch_kwargs in launch_configs:
+        try:
+            async with async_playwright() as pw:
+                browser = await pw.chromium.launch(**launch_kwargs)
+                ctx = await browser.new_context(
+                    user_agent=BROWSER_HEADERS["User-Agent"],
+                    locale="en-US",
+                    extra_http_headers={
+                        "Accept-Language": "en-US,en;q=0.9",
+                        "Accept": BROWSER_HEADERS["Accept"],
+                    },
+                )
+                await ctx.add_init_script(
+                    "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
+                )
+                page = await ctx.new_page()
+                resp = None
+                try:
+                    resp = await page.goto(url, wait_until="networkidle",
+                                           timeout=FETCH_TIMEOUT * 2 * 1000)
+                except Exception:
+                    resp = await page.goto(url, wait_until="domcontentloaded",
+                                           timeout=FETCH_TIMEOUT * 1000)
+                # Treat HTTP 4xx/5xx as a fetch failure so the crawler knows to skip/override
+                if resp and resp.status >= 400:
+                    await browser.close()
+                    print(f"  [bot-block] Playwright HTTP {resp.status} for {url[:80]}")
+                    return None
+                html = await page.content()
+                await browser.close()
+                if "just a moment" in html[:500].lower():
+                    print(f"  [cloudflare] Playwright hit Cloudflare challenge — {url[:80]}")
+                    return None
+                # Imperva/Incapsula WAF: $(SERVE_403) is an unresolved template variable
+                # that appears in Incapsula error pages; Reference #18. is its bot-score prefix
+                if "$(serve_403)" in html.lower() or "reference #18." in html.lower():
+                    print(f"  [incapsula] Playwright hit Imperva WAF block — {url[:80]}")
+                    return None
+                return html
+        except Exception as exc:
+            if "chrome" in str(launch_kwargs.get("channel", "")):
+                continue  # Chrome not installed — try bundled Chromium
+            print(f"  [warn] Playwright fetch failed for {url}: {exc}")
+            return None
+    return None
 
 
 async def fetch_html(
@@ -266,7 +282,17 @@ def _parse_html(html: str, base_url: str) -> Tuple[str, List[str], List[str], Di
     pdf_links  — absolute URLs of PDF files linked from the page
     contacts   — {phones: [...], emails: [...]}
     """
-    soup = BeautifulSoup(html, "lxml")
+    parser = "lxml"
+    try:
+        soup = BeautifulSoup(html, "lxml")
+    except Exception:
+        parser = "html.parser"
+        soup = BeautifulSoup(html, "html.parser")
+
+    # Parse again for link extraction — nav/sidebar links matter for index pages,
+    # but we strip those elements from the text soup to keep content clean.
+    link_soup = BeautifulSoup(html, parser)
+
     for el in soup(["script", "style", "nav", "footer", "header", "aside", "noscript"]):
         el.decompose()
 
@@ -283,7 +309,7 @@ def _parse_html(html: str, base_url: str) -> Tuple[str, List[str], List[str], Di
     pdf_links: List[str] = []
     seen: Set[str] = set()
 
-    for a in soup.find_all("a", href=True):
+    for a in link_soup.find_all("a", href=True):
         href, _ = urldefrag(urljoin(base_url, a["href"]))
         if href in seen or not href.startswith("http"):
             continue
@@ -460,6 +486,57 @@ async def _crawl_county(
     # Queue entries: (url, depth, link_text)
     queue: deque[Tuple[str, int, str]] = deque([(seed_url, 0, "MCAH landing page")])
 
+    # Manual HTML override — operator saves page via "File → Save As" in browser
+    manual_html_path = os.path.join(MANUAL_HTML_DIR, f"{county}.html")
+    if os.path.exists(manual_html_path):
+        with open(manual_html_path, encoding="utf-8", errors="replace") as fh:
+            manual_html = fh.read()
+        print(f"   [manual] using saved HTML override for {county}")
+        queue.clear()
+        queue.append((seed_url, 0, "MCAH landing page (manual)"))
+        # Inject the manual content directly — skip fetch for seed
+        text, sub_links, pdf_links, contacts = _parse_html(manual_html, seed_url)
+        all_pdf_links.extend(pdf_links)
+        ok, reason = _is_program_page(text)
+        if ok:
+            fp = _fingerprint(text)
+            if fp not in seen_fingerprints:
+                seen_fingerprints.add(fp)
+                _, matched = _score_content(text)
+                record = _make_record(county, seed_url, text, contacts, pdf_links,
+                                      matched, link_text="MCAH landing page (manual)", source_depth=0)
+                path = _save_raw(county, record)
+                saved_paths.append(path)
+                print(f"   ✓ saved  (depth=0, {len(matched)} signals): {os.path.basename(path)}")
+        else:
+            print(f"   ○ manual content gate ({reason}): {seed_url[:120]}")
+        visited_urls.add(seed_url)
+        for link in sub_links:
+            queue.append((link, 1, ""))
+
+    # PDF seed — URL resolves directly to a PDF document
+    seed_lower = seed_url.lower()
+    if any(seed_lower.endswith(ext) for ext in (".pdf",)) or "getfile" in seed_lower:
+        print(f"   [pdf-seed] treating seed as PDF: {seed_url[:120]}")
+        pdf_text = _extract_pdf_text(seed_url)
+        if pdf_text:
+            ok, reason = _is_program_page(pdf_text)
+            if ok:
+                fp = _fingerprint(pdf_text)
+                if fp not in seen_fingerprints:
+                    seen_fingerprints.add(fp)
+                    _, matched = _score_content(pdf_text)
+                    record = _make_record(county, seed_url, pdf_text, {"phones": [], "emails": []},
+                                          [], matched, link_text="PDF seed", source_depth=0)
+                    path = _save_raw(county, record)
+                    saved_paths.append(path)
+                    print(f"   ✓ saved PDF seed ({len(matched)} signals): {os.path.basename(path)}")
+            else:
+                print(f"   ○ pdf-seed content gate ({reason}): {seed_url[:120]}")
+        else:
+            print(f"   ○ pdf-seed extraction failed: {seed_url[:120]}")
+        return saved_paths
+
     while queue and len(saved_paths) < MAX_PAGES_PER_COUNTY:
         url, depth, link_text = queue.popleft()
 
@@ -471,7 +548,7 @@ async def _crawl_county(
             html = await fetch_html(county, url, session)
 
         if not html:
-            print(f"   ○ fetch failed  (depth={depth}): {url[:80]}")
+            print(f"   ○ fetch failed  (depth={depth}): {url[:120]}")
             continue
 
         text, sub_links, pdf_links, contacts = _parse_html(html, url)
@@ -485,7 +562,10 @@ async def _crawl_county(
                 for link in sub_links:
                     if link not in visited_urls:
                         queue.append((link, depth + 1, ""))
-            print(f"   ○ content gate ({reason})  (depth={depth}): {url[:80]}")
+                # Debug: show a snippet of what was fetched so operator can diagnose
+                snippet = text[:300].replace("\n", " ").strip()
+                print(f"   [debug] depth-0 content snippet: {snippet[:200]!r}")
+            print(f"   ○ content gate ({reason})  (depth={depth}): {url[:120]}")
             continue
 
         # Dedup

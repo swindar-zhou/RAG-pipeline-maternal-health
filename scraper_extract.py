@@ -225,7 +225,10 @@ async def async_fetch(
 
 def parse_page(html: str, base_url: str) -> Tuple[str, List[str], Dict]:
     """Extract text, PDF links, and contacts from raw HTML."""
-    soup = BeautifulSoup(html, "lxml")
+    try:
+        soup = BeautifulSoup(html, "lxml")
+    except ValueError:
+        soup = BeautifulSoup(html, "html.parser")
     for el in soup(["script", "style", "nav", "footer", "header", "aside", "noscript"]):
         el.decompose()
 
@@ -465,9 +468,6 @@ def process_program_page_sync(county: str, program: Dict) -> Optional[str]:
     }
     return save_raw(county, record)
 
-
-# alias for run_pipeline.py import compatibility
-process_program_page = process_program_page_sync
 
 
 # ─────────────────────────────────────────────────────────────────────────────

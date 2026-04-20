@@ -71,6 +71,10 @@ def initial_state() -> ConversationState:
 # ZIP → county (pgeocode, offline)
 # ─────────────────────────────────────────────────────────────────────────────
 
+_COUNTY_ALIASES: dict[str, str] = {
+    "city and county of san francisco": "San Francisco",
+}
+
 def zip_to_county(zip_code: str) -> Optional[str]:
     """
     Resolve a US ZIP code to a California county name.
@@ -80,8 +84,6 @@ def zip_to_county(zip_code: str) -> Optional[str]:
         import pgeocode
         nomi = pgeocode.Nominatim("us")
         result = nomi.query_postal_code(zip_code)
-        # pgeocode returns a pandas Series; check for NaN
-        import math
         if result is None:
             return None
         county_raw = result.get("county_name", "") if hasattr(result, "get") else getattr(result, "county_name", "")
@@ -91,6 +93,10 @@ def zip_to_county(zip_code: str) -> Optional[str]:
         county_raw = str(county_raw)
         if str(state_code) != "CA":
             return None
+        # Resolve known pgeocode alias names before stripping suffix
+        normalized = _COUNTY_ALIASES.get(county_raw.lower())
+        if normalized:
+            return normalized
         # Strip " County" suffix
         return re.sub(r'\s+county$', '', county_raw, flags=re.IGNORECASE).strip()
     except ImportError:
@@ -471,7 +477,7 @@ def _cli():
         try:
             user_input = input("You: ").strip()
         except (KeyboardInterrupt, EOFError):
-            print("\nGoodbye.")
+            print("\nThank you! Hope this is helpful. Wish you a great day :)")
             break
 
         if not user_input:
@@ -487,7 +493,7 @@ def _cli():
                 state = initial_state()
                 print(f"\nBot: {state['response']}\n")
             else:
-                print("Goodbye.")
+                print("Thank you! Hope this is helpful. Wish you a great day :)")
                 break
 
 

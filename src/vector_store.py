@@ -138,7 +138,7 @@ def build_county_vectorstore(
     """
     from langchain_openai import OpenAIEmbeddings
     from langchain_chroma import Chroma
-    from langchain.text_splitter import RecursiveCharacterTextSplitter
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
 
     persist_dir     = vectorstore_path(county)
     collection_name = county_to_collection_name(county)
