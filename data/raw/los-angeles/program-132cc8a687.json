@@ -1,0 +1,34 @@
+{
+  "county": "Los Angeles",
+  "page_url": "http://publichealth.lacounty.gov/mch/homevisiting.htm",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:02:06.429102",
+  "registry_signals": [
+    "home visits",
+    "hfa",
+    "nfp",
+    "mcah",
+    "pat",
+    "home visiting",
+    "aim",
+    "healthy families",
+    "parents as teachers",
+    "nurse-family partnership"
+  ],
+  "text": "LA County Public Health - Maternal, Child, & Adolescent Health\nSkip to main content\nHome Visiting Programs\nAbout Home Visiting Programs\nHome visiting services are delivered directly in the family's home, a place where\n everyday moments naturally present opportunities for learning and growth. Parents\n receive personalized support from a trained professional who offers practical advice,\n helpful resources, and guidance to ensure both parent and child thrive. Through\n one-on-one interactions, families can ask questions, voice concerns, and receive\n valuable information tailored to their unique needs. Home visitors work closely with\n families to provide services that may include:\nTeaching effective parenting skills and demonstrating positive parenting\n techniques.\nOffering guidance on essential topics such as safe sleep practices, injury\n prevention, and nutrition.\nReferring families to services for substance use disorders, family violence,\n and maternal depression.\nScreening children for developmental delays and facilitating early\n intervention.\nPromoting early learning within the home, emphasizing positive parenting,\n and creating a language-rich environment.\nPrograms Available\nNurse Family Partnership (NFP)\nThe\nNurse-Family Partnership (NFP) Program\nis an\n evidence-based model program that was developed by Dr. David Olds in Elmira, New York in\n 1977 to help young women take better care of themselves and their babies. NFP uses specially\n trained public health nurses (PHNs) who begin follow-up of high-risk, low income pregnant\n youth/women who are pregnant and who are living in poverty. All services are free, voluntary\n and families are followed and supported using an intensive home visiting schedule until the\n child reaches the age of 2 years old.\nParents as Teachers (PAT)\nParents as Teachers (PAT)\nis a home-visiting program\n that provides parents and caregivers with information and support to help them become their\n child’s first and most important teacher. It focuses on early childhood development,\n parenting education, and creating a strong, supportive environment for children,\n particularly in the early years (birth to age 5). PAT helps parents understand their child’s\n developmental stages and provides tools to foster healthy development.\nHealthy Families America (HFA)\nHealthy Families America (HFA)\nis a nationally\n recognized, evidence-based home visiting program aimed at preventing child abuse and neglect\n by providing support to parents during the critical early years of their child's development\n (from birth to age 5). The program focuses on promoting positive parenting, healthy child\n development, and strong family relationships through personalized, in-home visits by trained\n home visitors. Families are eligible to receive HFA services beginning prenatally or within\n three months of birth. The goal is to empower families with the tools, resources, and\n support they need to ensure the health and well-being of both the parents and their\n children.\nParenting Support for People\nExperiencing Homelessness\nProject HOPE\nProject HOPE\nis a pilot program to support families\n experiencing homelessness. The program pairs families with a public health nurse\n specializing in maternity and pediatrics, alongside a trained family partner. Together, they\n provide essential support during pregnancy and the early stages of childbearing, helping to\n ensure healthier beginnings for both mothers and children.\nFlyer:\nProject\n H.O.P.E. Flyer.pdf\nServices Offered\nCare team focused on the needs of each family\nPregnancy and Parenting Support\nMental Health Support\nResource Navigation and Connection to Community Resources\nSchool Readiness\nSupport child development and successful school enrollment\nFamily Goal Planning\nEligibility\nUnhoused or unstable housing & at least ONE of\n the following criteria need to be met:\nPregnant\nParenting with children through age 4\n(other primary caregivers included)\nHave to reside in LA county\nLive in one of our Service Planning Areas\n (SPA):\nSPA 2-San\n Fernando Valley\nSPA 6-South Los\n Angeles\nHome Visiting Program Enrollment\n1. Complete the Confidential Referral Form\nDownload and fill out the\nHome Visiting Confidential Referral Form\nFOR PROJECT HOPE ONLY:\nMCAH Project HOPE Confidential Referral eForm\n2. Submit Your Form\nEmail the completed form to\nHomeVisit@ph.lacounty.gov\n. Our team will review your submission and follow up with you.\n3. Get Connected\nOnce we receive your form, a program representative will reach out to discuss\n your enrollment.",
+  "contacts": {
+    "phones": [],
+    "emails": [
+      "HomeVisit@ph.lacounty.gov"
+    ]
+  },
+  "pdf_links": [
+    "http://publichealth.lacounty.gov/mch/docs/Project_H.O.P.E._Flyer.pdf",
+    "http://publichealth.lacounty.gov/mch/docs/MCAH_HV_Confidential_Referral_eForm.pdf",
+    "http://publichealth.lacounty.gov/mch/docs/MCA_HOPE_Project_Confidential_Referral_eForm.pdf"
+  ],
+  "source_depth": 1,
+  "scraper_version": "phase2_enhanced"
+}

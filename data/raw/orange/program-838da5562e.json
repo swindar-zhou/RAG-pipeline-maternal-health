@@ -1,0 +1,24 @@
+{
+  "county": "Orange",
+  "page_url": "https://www.ochealthinfo.com/services-programs/pregnancy-and-parenting/family-planning",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:02:37.301971",
+  "registry_signals": [
+    "family planning"
+  ],
+  "text": "Family Planning Services | Orange County California - Health Care Agency\nPage content\nContent block block-countyoc-pagetitle\nFamily Planning Services\nContent block block-countyoc-content\nContent block block-639629409-1776445356\nBody\nFor support in connecting with a local provider or additional resources, please call the\nHealth Referral Line at 1 (800) 564-8448\nfor assistance. The Health Referral Line is available Monday through Friday, 8 a.m. to 5 p.m.\nYou may request your medical records with the Office of Custodian of Records at:\n200 W. Santa Ana Blvd., Suite 180. Hours: Monday to Friday , 8 a.m. to 5 p.m.\n1 (714) 834-3536\nFax 1(714)835-9312\nContent block block-sociallinksblock\nShare This\nShare this page to Facebook\nShare this page to Twitter\nShare this page to Linkedin\nCopy this page as a Link",
+  "contacts": {
+    "phones": [
+      "(714) 834-3536",
+      "(714)835-9312",
+      "(800) 564-8448",
+      "629409-1776"
+    ],
+    "emails": []
+  },
+  "pdf_links": [],
+  "source_depth": 2,
+  "scraper_version": "phase2_enhanced"
+}

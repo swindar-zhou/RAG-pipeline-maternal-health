@@ -1,0 +1,24 @@
+{
+  "county": "San Francisco",
+  "page_url": "https://www.sf.gov/information--family-planning-services/",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T12:58:17.632277",
+  "registry_signals": [
+    "pat",
+    "health center",
+    "family planning",
+    "title x"
+  ],
+  "text": "Family Planning Services | SF.gov\nSkip to main content\nINFO PAGE\nFamily Planning Services\nFamily planning empowers people to choose if and when they have children.\nMaternal, Child, and Adolescent Health\nFamily planning services include:\nEmergency Contraception\nPregnancy Tests, Counseling and Referral\nBirth Control Counseling & Prescriptions\nSTI Testing and Treatment\nHIV Counseling and Testing\nReproductive Health Exams\nInfertility Assessment & Referral\nReproductive Life Planning\nSexual Health Education and Counseling\nPreconception Health Screening and Education\nServices are free or low-cost. They are also completely confidential.\nFamily Planning services are available at the following SF Health Network clinics:\nCastro-Mission Health Center\nMaxine Hall Health Center\nMaria X Martinez Health Resource Center\nPotrero Hill Health Center\nSan Francisco City Clinic\n*\nSilver Avenue Family Health Center\nSoutheast Family Health Center\nZuckerberg San Francisco General Family Health Center\nZuckerberg San Francisco General Obstetrics, Midwifery and Gynecology Services\nZuckerberg San Francisco General Women's Options Center\n*You do not need to be SF Health Network patient to be seen at City Clinic\nAnd at these SF Health Network youth clinics:\nBalboa Teen Health Center\nCole Street Youth Clinic\nMichael Baxter Larkin Street Youth Clinic\nNew Generation Health Center\n3rd Street Youth Clinic\nFamily Planning Services at DPH are supported by the Family Planning Program\nWe provide support and technical help to clinic sites.\nThose services include:\nSupport with Family Pact and Title X programs\nReproductive health trainings for staff and medical providers\nFamily planning protocols and screening tools\nCulturally and linguistically appropriate client education materials\nOutreach and community education\nFor more information, email\nFamilyPlanningProgram@sfdph.org\n.\nDepartments\nDepartment of Public Health\nMaternal, Child, and Adolescent Health\nSan Francisco Health Network\nTopics\nReproductive health\nRelated\nSan Francisco Health Network Clinics",
+  "contacts": {
+    "phones": [],
+    "emails": [
+      "FamilyPlanningProgram@sfdph.org"
+    ]
+  },
+  "pdf_links": [],
+  "source_depth": 1,
+  "scraper_version": "phase2_enhanced"
+}

@@ -1,0 +1,32 @@
+{
+  "county": "San Mateo",
+  "page_url": "https://www.smchealth.org/cpsp",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T12:58:43.594841",
+  "registry_signals": [
+    "medi-cal",
+    "health center",
+    "perinatal services"
+  ],
+  "text": "Medical Care for Pregnant Women - San Mateo County Health\nSkip to main content\nSkip to site navigation\nMedical Care for Pregnant Women\nGeneral information\nMay 17, 2016\nIf you’re pregnant or gave birth in the past two months and are eligible for Medi-Cal, we’re here to help you get medical care, prenatal vitamins, health education, nutrition services, help with family, financial and personal issues, all for free.\nTo apply, contact any of the care providers listed below. If you don’t have health insurance, they can help you apply for coverage too.\nFair Oaks Health Center\n2710 Middlefield Road\nRedwood City CA 94063\n(650) 364-6010\n(650) 366-4732 Fax\nRavenswood Family Health Center\n1798-A Bay Road\nEast Palo Alto CA 94303\n(650) 330-7400\n(650) 321-1156 Fax\nSan Mateo Medical Center\n222 West 39th Ave\nSan Mateo CA 94403\n(650) 573-2992\n(650) 573-2237 Fax\nSan Mateo Medical Center Coastside Clinic\n225 S Cabrillo Hwy\nSuite 100 A\nHalf Moon Bay CA 94019\n(650) 573-3941\n(650) 712-1014 Fax\nStanford Hospital\n770 Welch Road #201\nPalo Alto CA 94303\n(650) 724-7288\n(650) 725-2062 Fax\nRelated Content\nGeneral information\nJune 28, 2016\nComprehensive Perinatal Services Program (CPSP) Provider Information\nWho is eligible to be a CPSP provider?\nA CPSP-approved provider must be one of the following:\nPDF\nRead more\nLog in\nE-mail or username:\n*\nPassword:\n*\nRemember me\nRequest new password\nCommands\nSupport portal\nLog in",
+  "contacts": {
+    "phones": [
+      "(650) 321-1156",
+      "(650) 330-7400",
+      "(650) 364-6010",
+      "(650) 366-4732",
+      "(650) 573-2237",
+      "(650) 573-2992",
+      "(650) 573-3941",
+      "(650) 712-1014",
+      "(650) 724-7288",
+      "(650) 725-2062"
+    ],
+    "emails": []
+  },
+  "pdf_links": [],
+  "source_depth": 2,
+  "scraper_version": "phase2_enhanced"
+}

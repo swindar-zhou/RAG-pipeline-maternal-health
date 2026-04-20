@@ -1,0 +1,30 @@
+{
+  "county": "Marin",
+  "page_url": "https://www.marinhhs.org/maternal-child-adolescent-health",
+  "link_text": "MCAH landing page",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T12:58:03.766899",
+  "registry_signals": [
+    "mcah program",
+    "medi-cal",
+    "mcah",
+    "home visiting",
+    "perinatal services",
+    "wic"
+  ],
+  "text": "Maternal, Child, And Adolescent Health | Marin Health and Human Services\nSkip to main content\nThe Maternal Child and Adolescent Health Program (MCAH) develops prevention and early intervention strategies to promote the health of the women, infants, children, and adolescents of Marin County with a special focus on low-income populations. MCAH program staff is involved in outreach, advocacy, policy development, assessment, and program planning to increase access to family-centered, culturally-competent systems of health services.\nProgram Contact\nSandra Rosenblum, Director\n(415) 473-4023\nsandra.rosenblum@marincounty.gov\nResources & Information\nPerinatal Services Network\nAbortion Access & Reproductive Rights\nMaternal Mental Health Resource Inventory\nSafe Sleep for Infants\nMarin Breastfeeding Coalition\nMedi-Cal Postpartum Care Extension (English)\nMed-Cal Postpartum Care Extension (Spanish)\nCalifornia Department of Public Health Maternal Child and Adolescent Health Program\nPartners\nMarin Community Clinics\nFirst 5\nHelp Me Grow\nHuckleberry Youth Programs\nNovato Teen Clinic\nMarin 9 to 25\nCommunity Action Marin\nWIC\nHealth Families Marin Home Visiting Program\nPostpartum Support Center\nRelated Pages\nPublic Health",
+  "contacts": {
+    "phones": [
+      "(415) 473-4023"
+    ],
+    "emails": [
+      "sandra.rosenblum@marincounty.gov"
+    ]
+  },
+  "pdf_links": [
+    "https://www.marinhhs.org/sites/default/files/files/servicepages/2018_04/maternal_mental_health_resource_inventory_v3.pdf"
+  ],
+  "source_depth": 0,
+  "scraper_version": "phase2_enhanced"
+}

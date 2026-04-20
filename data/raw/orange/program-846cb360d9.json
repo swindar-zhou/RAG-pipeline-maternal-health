@@ -1,0 +1,23 @@
+{
+  "county": "Orange",
+  "page_url": "https://www.ochealthinfo.com/services-programs/pregnancy-and-parenting",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:02:26.052052",
+  "registry_signals": [
+    "perinatal mental health",
+    "wic"
+  ],
+  "text": "Pregnancy & Parenting | Orange County California - Health Care Agency\nPage content\nContent block block-countyoc-content\nPregnancy and Parenting\nContent block block-1279437137-1776445345\nContact Us\nImage\nImage\nbaby_mom1.jpg\nBreastfeeding Support\nBody\nImage\nImage\nBaby-Immunizations.jpg\nImmunizations/Flu Vaccinations\nImage\nImage\nPregnant-STI-1000x500.jpg\nPregnant and Parenting Teens and Young Adults\nBody\nImage\nImage\nprenatal_visit.jpg\nPrenatal Care Guidance (PCG)\nBody\nImage\nImage\n20070621_144295945-Male doctor with 2 female nurses examining a boy-2.jpg\nPublic Health Nurse Home-Visitation\nImage\nImage\nNutrition-768x512.jpg\nWomen, Infants Children (WIC)\nBody\nEducation and Resources\nBody\nCar Seat Safety\nChildhood Lead Poisoning Prevention\n(OC CLPPP)\nChildren’s Environmental Health\nHealth Care Resources\nNutrition Education and Information\nParent/Guardian Forms\nParent/Guardian Resources\nParenting Skills and Education\nSafe Sleep and Sudden Infant Death Syndrome (SIDS)\nStop Smoking or Vaping\nText4Baby Health and Safety Education\nTobacco Use Prevention\nBehavioral and Mental Health Services\nBody\nAlcohol and Substance Use Prevention\nChildren’s Mental Health\nMental Health Clinics\nPerinatal Mental Health Conditions",
+  "contacts": {
+    "phones": [
+      "1279437137",
+      "1776445345"
+    ],
+    "emails": []
+  },
+  "pdf_links": [],
+  "source_depth": 2,
+  "scraper_version": "phase2_enhanced"
+}

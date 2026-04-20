@@ -62,7 +62,7 @@ GOLD_PATH      = os.path.join("eval", "gold_maternal.jsonl")
 STRUCTURED_DIR = os.path.join("data", "structured")
 RAW_DIR        = os.path.join("data", "raw")
 RESULTS_DIR    = os.path.join("eval", "results")
-VERSIONS       = ["v1", "v2", "v3", "v4"]
+VERSIONS       = ["v1", "v2", "v3", "v4", "v5"]
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -238,10 +238,10 @@ def print_b1(results: List[B1Result]) -> None:
     print(f"  {'County':<20}", end="")
     for v in VERSIONS:
         print(f"  {v:>4}", end="")
-    print(f"  {'Gold':>4}  {'v1→v4':>6}  {'Regress?':>8}")
-    print("  " + "─" * 64)
+    print(f"  {'Gold':>4}  {'v1→v5':>6}  {'Regress?':>8}")
+    print("  " + "─" * 68)
     for r in results:
-        delta = r.delta("v1", "v4")
+        delta = r.delta("v1", "v5")
         flag = "  ⚠" if any(r.delta(VERSIONS[i], VERSIONS[i+1]) < 0 for i in range(len(VERSIONS)-1)) else ""
         print(f"  {r.county:<20}", end="")
         for v in VERSIONS:

@@ -1,0 +1,26 @@
+{
+  "county": "Fresno",
+  "page_url": "https://www.fresnocountyca.gov/Departments/Public-Health-Legacy/Public-Health-Nursing/Maternal-Child-and-Adolescent-Health-MCAH?oc_lang=es",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T12:59:47.673962",
+  "registry_signals": [
+    "mcah",
+    "medicaid",
+    "nas"
+  ],
+  "text": "Salud Materna, Infantil y Adolescente (MCAH) - Condado de Fresno\nSaltar al contenido principal\nSe abre en una pestaña o ventana nueva.\nSalud Materna, Infantil y Adolescente (MCAH)\nNuestra ubicación:\n1221 Fulton Street, Fresno CA 93721\nDirección postal:\nPO Box 11867, Fresno CA 93775-1867\nTeléfono:\n(559) 600-3330\nFax:\n(559) 455-4705\nHorario:\nLunes a viernes, de 8:00 a 17:00\nMCAH promueve un estilo de vida saludable para las madres y sus familias mediante programas de salud reproductiva, planificación familiar, embarazo, defectos congénitos, atención a bebés, niños, adolescentes e investigación con células madre humanas. La financiación proviene de los Títulos V y XIX (Medicaid) y del Fondo General del Estado.\nPara obtener más información sobre los programas de MCAH, visite\ncdph.ca.gov\n.\nEnlaces útiles:\nIniciativa de parto prematuro\nMarcha de Diez Centavos\nServicios de derivación de enfermería de salud pública\n(PDF, 122 KB)\nGuía de recursos de MCAH\nPágina de inicio para las categorías de recursos de MCAH.\nObservancias sanitarias\nObservancias sanitarias\nDirectorio de recursos sobre lactancia materna del condado de Fresno\nDirectorio de recursos sobre lactancia materna\nVolver arriba\nOriginal text\nRate this translation\nYour feedback will be used to help improve Google Translate",
+  "contacts": {
+    "phones": [
+      "(559) 455-4705",
+      "(559) 600-3330"
+    ],
+    "emails": []
+  },
+  "pdf_links": [
+    "https://www.fresnocountyca.gov/files/assets/county/v/2/public-health/public-health-nursing/update-phn-referral-9.3.2025.pdf"
+  ],
+  "source_depth": 1,
+  "scraper_version": "phase2_enhanced"
+}

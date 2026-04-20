@@ -1,0 +1,25 @@
+{
+  "county": "Ventura",
+  "page_url": "https://hca.venturacounty.gov/social-services/medical/",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:03:43.259983",
+  "registry_signals": [
+    "medi-cal",
+    "medicaid",
+    "wic",
+    "aim",
+    "women, infants and children"
+  ],
+  "text": "Medi Cal – Ventura County Health Care Agency\nSkip to content\nCalFresh\nCovered California\nGold Coast Health Plan\nHuman Services & Aging Adults\nMedi-Cal\nWIC-Women, Infants and Children\nMedi-Cal\nMedi-Cal\nis California’s Medicaid healthcare program that provides comprehensive health coverage for people with\nlow or no income\n.\nIn Ventura County, Medi-Cal is administered by the Human Services Agency.\nTo qualify for Medi-Cal, you have to live in California and meet program eligibility rules.\nFor more information or to enroll,\nclick here\n.\nTranslation Disclaimer\nThe hca.venturacounty.gov website has been translated for your convenience using translation software powered by Google Translate. Reasonable efforts have been made to provide an accurate translation, however, no automated translation is perfect nor is it intended to replace human translators. Translations are provided as a service to users of the hca.venturacounty.gov website, and are provided “as is.” No warranty of any kind, either expressed or implied, is made as to the accuracy, reliability, or correctness of any translations made from English into any other language. Some content (such as images, videos, Flash, etc.) may not be accurately translated due to the limitations of the translation software.\nThe official text is the English version of the website. Any discrepancies or differences created in the translation are not binding and have no legal effect for compliance or enforcement purposes. If any questions arise related to the accuracy of the information contained in the translated website, please refer to the English version of the website which is the official version.",
+  "contacts": {
+    "phones": [],
+    "emails": []
+  },
+  "pdf_links": [
+    "https://s47353.pcdn.co/wp-content/uploads/2024/07/HospitalBillComplaintProgram.pdf"
+  ],
+  "source_depth": 2,
+  "scraper_version": "phase2_enhanced"
+}

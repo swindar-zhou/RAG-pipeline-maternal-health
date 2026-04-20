@@ -1,0 +1,27 @@
+{
+  "county": "San Joaquin",
+  "page_url": "https://cms.sjcphs.org/phs/programs-and-services/birth-death-certificates",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:01:52.991368",
+  "registry_signals": [],
+  "text": "Death & Birth Certificates\nDeath & Birth Certificates\nEffective January 1, 2026, the California Department of Public Health - Vital Records (CDPH-VR) will increase vital records fee for certified copies, pursuant to Assembly Bill (AB) 64 (chapter 662, Statutes of 2025)\nPHS only has access to records for the current and past year. Older records are maintained by:\nCounty Recorder's Office - Vital Records\n44 N. San Joaquin St., 2nd Floor Ste. 260\nStockton, CA 95202\nPhone: (209) 468-3939\nTo purchase record copies in person for current and past calendar year only:\nPHS Vital Records Office\n1601 E. Hazelton Ave\nStockton, CA 95205\nPhone: (209) 468-3401\nTo order certified record copies* by mail for the current and past calendar year only, print the application forms below and mail with a check or money order to:\nPublic Health Services - Vital Records\nP.O. Box 2009\nStockton,\n CA 95201\nFee Schedule\nType of Record\nNew Fee- Effective January 1, 2026 (per Copy)\nDeath Record\nAny type (except veteran or natural disaster victims)\n$26.00\nVeterans per GC 6107\n$0.00\nVictims of Natural Disasters per Exec. Orders\n$0.00\nBirth Records\nGeneral Public\n$31.00\nGovernment / Law enforcement Agency  (official Use)\n$24.00\nHomeless Person per HSC 103577\n$0.00\nFoster Youth per HSC 103578\n$0.00\nDisposition (Burial) Permit\n$12.00\nFetal Death Record\n$23.00\nForms\nForms\nEnglish\nSpanish\nDeath Record\nDeath Certificate Application (PDF)\nDeath Certificate Application (PDF)\nBirth Record\nBirth Certificate Application (PDF)\nBirth Certificate Application (PDF)\nHomeless Person per HSC 103577\nAffidavit for Free Certified Copy of Birth Certificate\nComing Soon\nFoster Youth per HSC 103578\nAffidavit For Free Certified Copy of Birth Certificate\nComing Soon\nFuneral Home Application\nApplication (English)\n* In an attempt to stop the illegal use of birth and death certificates, and as part of the effort to reduce identity theft, there has been a change in law and the way that certified copies of birth and death certificates can be obtained.\nAdditional Information\nCalifornia Law Regarding Birth and Death Certificates (PDF)\n(pdf)\nHours of Operation\nHours:\nMonday - Friday, 8:00 am - 4:30 pm\nPhones answered until 5:00 pm\nPhone:\n(209) 468-3401\n×\nWhat can we help you find?\nsearch",
+  "contacts": {
+    "phones": [
+      "(209) 468-3401",
+      "(209) 468-3939"
+    ],
+    "emails": []
+  },
+  "pdf_links": [
+    "https://sjcphs.org/docs/default-source/phs-documents/birth-death-certificates/deathvs_2026-1-cleaned.pdf",
+    "https://sjcphs.org/docs/default-source/phs-documents/birth-death-certificates/deathvs_2026_spanish-1-cleaned.pdf",
+    "https://sjcphs.org/docs/default-source/phs-documents/birth-death-certificates/birthvs_2026-2-cleaned.pdf",
+    "https://sjcphs.org/docs/default-source/phs-documents/birth-death-certificates/birthvs_2026_spanish-1.pdf",
+    "https://sjcphs.org/docs/default-source/phs-documents/birth-death-certificates/affidavit-for-free-certified-copy-of-birth-certificate_homeless-cleaned.pdf",
+    "https://sjcphs.org/docs/default-source/phs-documents/birth-death-certificates/affidavit_for_free_certified_copy_of_birth_certicate_foster-youth.pdf"
+  ],
+  "source_depth": 1,
+  "scraper_version": "phase2_enhanced"
+}

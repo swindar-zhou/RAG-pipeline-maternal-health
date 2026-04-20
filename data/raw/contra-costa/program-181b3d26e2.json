@@ -1,0 +1,22 @@
+{
+  "county": "Contra Costa",
+  "page_url": "https://www.cchealth.org/health-insurance/get-insured/medi-cal",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T16:16:51.259021",
+  "registry_signals": [
+    "medi-cal"
+  ],
+  "text": "Medi-Cal | Contra Costa Health\nMedi-Cal provides medical, dental, and vision insurance to low-income families in California.\nWho Is Eligible?\nTo be eligible for Medi-Cal, you must live in California and either be income eligible or meet one of the other qualifying requirements. Visit the\nMedi-Cal website\nto see if you qualify based on income or other circumstances.\nThe type of Medi-Cal coverage you can get depends on your age and\nimmigration status\n.\nDental Services\nMedi-Cal covers dental services that are provided through Denti-Cal. To obtain a listing of Denti-Cal providers, call 1-800-322-6384 or visit the main\nDenti-Cal website\n.\nHow Much Does It Cost?\nCosts for Medi-Cal services vary.\nHow Do I Apply?\nCall toll-free 1-800-709-8348 in Contra Costa County or visit the\nContra Costa Employment and Human Services Department Medi-Cal website\n.\nState Medi-Cal website\nOriginal text\nRate this translation\nYour feedback will be used to help improve Google Translate\nLoading ...",
+  "contacts": {
+    "phones": [
+      "800-322-6384",
+      "800-709-8348"
+    ],
+    "emails": []
+  },
+  "pdf_links": [],
+  "source_depth": 1,
+  "scraper_version": "phase2_enhanced"
+}

@@ -1,0 +1,19 @@
+{
+  "county": "San Mateo",
+  "page_url": "https://www.smchealth.org/department-contact-info/contact-wic",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T12:58:46.542224",
+  "registry_signals": [
+    "wic"
+  ],
+  "text": "Contact WIC - San Mateo County Health\nSkip to main content\nSkip to site navigation\nContact WIC\nContact\nMay 4, 2016\nLog in\nE-mail or username:\n*\nPassword:\n*\nRemember me\nRequest new password\nCommands\nSupport portal\nLog in",
+  "contacts": {
+    "phones": [],
+    "emails": []
+  },
+  "pdf_links": [],
+  "source_depth": 2,
+  "scraper_version": "phase2_enhanced"
+}

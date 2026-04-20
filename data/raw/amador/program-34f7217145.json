@@ -1,0 +1,19 @@
+{
+  "county": "Amador",
+  "page_url": "https://www.amadorcounty.gov/services/amador-patient-navigator",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T16:20:48.850434",
+  "registry_signals": [
+    "pat"
+  ],
+  "text": "Amador Patient Navigator | Amador County\nSkip to Main Content\nConnecting Care. Connecting Community.\nThe Amador Patient Navigator Program is a free service from Amador County Public Health, in partnership with Sutter Health, Anthem, Health Net, and Kaiser Permanente, designed to connect residents with the support they need most. Whether it’s medical resources, finding transportation, or accessing food and community resources, our Patient Navigator provides one-on-one guidance to reduce barriers and and improves access to care. It’s about helping people get connected, stay healthy, and move forward—one step at a time.\nHelpful services include:\nConnecting uninsured/underinsured  people with primary care doctor\nSchedule appointments for patients with a new primary care provider\nProvide reminder calls for first primary care visit\nArrange transportation\nConnect to community resources (housing, food, etc.)\nAdditional Resources:\nReferral Form\nPatient Navigator Flyer\nView Full Site\nLoading ...",
+  "contacts": {
+    "phones": [],
+    "emails": []
+  },
+  "pdf_links": [],
+  "source_depth": 1,
+  "scraper_version": "phase2_enhanced"
+}

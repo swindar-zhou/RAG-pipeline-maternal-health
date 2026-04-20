@@ -1,0 +1,38 @@
+{
+  "county": "Ventura",
+  "page_url": "https://hca.venturacounty.gov/public-health/cpsp/",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:03:29.395476",
+  "registry_signals": [
+    "medi-cal",
+    "mcah",
+    "pat",
+    "perinatal services",
+    "wic",
+    "aim",
+    "parents as teachers",
+    "nurse-family partnership"
+  ],
+  "text": "Comprehensive Perinatal Services Program – Ventura County Public Health\nSkip to content\nAdolescent Family Life Program\nCal-Learn Program\nComprehensive Perinatal Services\nNurse-Family Partnership\nParents as Teachers\nPerinatal Substance Use Services\nSudden Infant Death Syndrome\nWIC- Women, Infants, and Children\nComprehensive Perinatal Services Program\nThe Comprehensive Perinatal Services Program (CPSP) is a Medi-Cal benefit that provides a wide range of culturally competent services to pregnant women from conception through 60 days postpartum. The CPSP model was founded on the belief that pregnancy and birth outcomes improve when routine obstetric care (prenatal, delivery, and postpartum care) is integrated with specific nutrition, health education, and psychosocial services.\nCPSP has uniquely divided authority between the Department of Health Care Services (DHCS) and the California Department of Public Health (CDPH). CDPH is responsible for CPSP provider enrollment and monitoring/oversight of the implementation of the CPSP Program. As a Medi-Cal benefit, DHCS is responsible for reimbursement to approved CPSP providers for performing CPSP services to eligible beneficiaries.​​​​​​​​​​​\nCPSP Provider Application\nThe most current CPSP Provider Application and instructions can be found on the\nCDPH CPSP Website\n.\nEligible CPSP Provider Types:\nPhysician specializing in obstetrics and gynecology, pediatrics, family medicine, or general medicine\nPhysician group\nCertified nurse midwife (CNM)\nLicensed midwife (LM)\nHospital outpatient clinic\nCommunity clinic\nCounty clinic\nAlternative birth center\nCPSP State Contact Information\nFor general questions and assistance with CPSP training and CPSP protocols email\nMCAHCPSPGeneralInquiry@cdph.ca.gov\n.\nFor billing inquiries contact Medi-Cal’s Telephone Service Center at 1-800-541-5555.\nLocal Perinatal Services Contact Information\nLayne Casillas, BSN, RN, PHN, IBCLC\nPerinatal Service Coordinator\n(805) 833-0964\nVeronica Martinez, MSN, RN, PHN\nMaternal Child & Adolescent Health Coordinator\n(805) 981-5380\nSelect a Department\nTranslation Disclaimer\nThe hca.venturacounty.gov website has been translated for your convenience using translation software powered by Google Translate. Reasonable efforts have been made to provide an accurate translation, however, no automated translation is perfect nor is it intended to replace human translators. Translations are provided as a service to users of the hca.venturacounty.gov website, and are provided “as is.” No warranty of any kind, either expressed or implied, is made as to the accuracy, reliability, or correctness of any translations made from English into any other language. Some content (such as images, videos, Flash, etc.) may not be accurately translated due to the limitations of the translation software.\nThe official text is the English version of the website. Any discrepancies or differences created in the translation are not binding and have no legal effect for compliance or enforcement purposes. If any questions arise related to the accuracy of the information contained in the translated website, please refer to the English version of the website which is the official version.\n[language-switcher]",
+  "contacts": {
+    "phones": [
+      "(805) 833-0964",
+      "(805) 981-5380",
+      "800-541-5555"
+    ],
+    "emails": [
+      "MCAHCPSPGeneralInquiry@cdph.ca.gov"
+    ]
+  },
+  "pdf_links": [
+    "https://s47353.pcdn.co/public-health/wp-content/uploads/sites/3/2026/03/PH-Office-of-the-Director_03.18.2026.pdf",
+    "https://s47353.pcdn.co/public-health/wp-content/uploads/sites/3/2024/05/EMS-QI-Plan-Final_Fall2023.cleaned.pdf",
+    "https://s47353.pcdn.co/public-health/wp-content/uploads/sites/3/2026/04/Ventura-County-Public-Health-Internship-Program_4-2025_rev2.pdf",
+    "https://s47353.pcdn.co/public-health/wp-content/uploads/sites/3/2025/05/VCPH-Nursing-Student-Preceptor-Program.pdf",
+    "https://s47353.pcdn.co/public-health/wp-content/uploads/sites/3/2026/03/VC-Resource-Guide-2026-Final.pdf"
+  ],
+  "source_depth": 1,
+  "scraper_version": "phase2_enhanced"
+}

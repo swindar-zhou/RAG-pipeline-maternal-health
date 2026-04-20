@@ -1,0 +1,23 @@
+{
+  "county": "Los Angeles",
+  "page_url": "http://publichealth.lacounty.gov/mch/LAHOPE/LAHOPE.htm",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:02:08.114266",
+  "registry_signals": [
+    "health center",
+    "aim"
+  ],
+  "text": "LA County Department of Public Health\nCounty Directory of Information & Services\n|\nPublic Alerts\n|\nPublic Information\n|\nCounty Contact Information\nMaternal, Child, & Adolescent Health\nDPH Home\n|\nProgram Home\n|\nAbout\n|\nFAQ\n|\nComment\n|\nContact\n|\nA-Z Index\nFont Size |\nA\nA\nA\nSearch\nService Locator\nSelect a Center\nAntelope Valley Public Health Center\nCentral Public Health Center\nCurtis-Tucker Public Health Center\nGlendale Public Health Center\nHollywood/Wilshire Public Health Center\nMartin Luther King, Jr. Center for Public Health\nMonrovia Public Health Center\nNorth Hollywood Public Health Center\nPacoima Public Health Center\nPomona Public Health Center\nRuth-Temple Public Health Center\nSimms/Mann Health and Wellness Center\nTorrance Public Health Center\nWhittier Public Health Center\nLA HOPE\nNote: The LA HOPE Project ended in 2021. No data will be shared with external researchers.\nLos Angeles Health \n\t\tOverview of a Pregnancy Event\nInformation For Providers\nInformation For Families\nHome  |\nMaternal, Child, & Adolescent Health\nPublic Health\nLA County\nCareers  |\nDPH Programs  |\nEmail: Webmaster  |\nNotice of Privacy Practices |\nEnglish\nSpanish\nWebsite Privacy Policy  |\nLanguage  |\nAccessibility  |\nDisclaimer |\nEmployee  |\nAdmin Use\nOutlook E-mail\nDPH Intranet (At Work)",
+  "contacts": {
+    "phones": [],
+    "emails": []
+  },
+  "pdf_links": [
+    "http://publichealth.lacounty.gov/docs/NoticeofPrivacy-ENG.pdf",
+    "http://publichealth.lacounty.gov/docs/NoticeofPrivacy-SPN.pdf"
+  ],
+  "source_depth": 2,
+  "scraper_version": "phase2_enhanced"
+}

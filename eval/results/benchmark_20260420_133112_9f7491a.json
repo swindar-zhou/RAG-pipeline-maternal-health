@@ -1,0 +1,591 @@
+{
+  "run_id": "20260420_133112_9f7491a",
+  "timestamp": "2026-04-20T13:31:12.481856",
+  "B1_version_regression": [
+    {
+      "county": "San Diego",
+      "counts": {
+        "v1": 0,
+        "v2": 9,
+        "v3": 9,
+        "v4": 12,
+        "v5": 37
+      },
+      "gold_count": 3
+    },
+    {
+      "county": "Los Angeles",
+      "counts": {
+        "v1": 0,
+        "v2": 17,
+        "v3": 53,
+        "v4": 49,
+        "v5": 112
+      },
+      "gold_count": 3
+    },
+    {
+      "county": "Sacramento",
+      "counts": {
+        "v1": 0,
+        "v2": 3,
+        "v3": 3,
+        "v4": 4,
+        "v5": 24
+      },
+      "gold_count": 2
+    },
+    {
+      "county": "San Francisco",
+      "counts": {
+        "v1": 0,
+        "v2": 11,
+        "v3": 11,
+        "v4": 19,
+        "v5": 63
+      },
+      "gold_count": 2
+    }
+  ],
+  "B2_recall_at_k": [
+    {
+      "county": "San Diego",
+      "version": "v1",
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "recall_at_20": 0.0,
+      "ndcg_at_10": 0.0,
+      "n_extracted": 0,
+      "n_gold": 3
+    },
+    {
+      "county": "San Diego",
+      "version": "v2",
+      "recall_at_5": 0.3333333333333333,
+      "recall_at_10": 0.6666666666666666,
+      "recall_at_20": 0.6666666666666666,
+      "ndcg_at_10": 0.7701035286296694,
+      "n_extracted": 9,
+      "n_gold": 3
+    },
+    {
+      "county": "San Diego",
+      "version": "v3",
+      "recall_at_5": 0.3333333333333333,
+      "recall_at_10": 0.6666666666666666,
+      "recall_at_20": 0.6666666666666666,
+      "ndcg_at_10": 0.7701035286296694,
+      "n_extracted": 9,
+      "n_gold": 3
+    },
+    {
+      "county": "San Diego",
+      "version": "v4",
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.6666666666666666,
+      "recall_at_20": 0.6666666666666666,
+      "ndcg_at_10": 0.23599633571930026,
+      "n_extracted": 12,
+      "n_gold": 3
+    },
+    {
+      "county": "San Diego",
+      "version": "v5",
+      "recall_at_5": 0.3333333333333333,
+      "recall_at_10": 0.6666666666666666,
+      "recall_at_20": 0.6666666666666666,
+      "ndcg_at_10": 0.4658230948382866,
+      "n_extracted": 37,
+      "n_gold": 3
+    },
+    {
+      "county": "Los Angeles",
+      "version": "v1",
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "recall_at_20": 0.0,
+      "ndcg_at_10": 0.0,
+      "n_extracted": 0,
+      "n_gold": 3
+    },
+    {
+      "county": "Los Angeles",
+      "version": "v2",
+      "recall_at_5": 0.6666666666666666,
+      "recall_at_10": 0.6666666666666666,
+      "recall_at_20": 1.0,
+      "ndcg_at_10": 0.39673781793804724,
+      "n_extracted": 17,
+      "n_gold": 3
+    },
+    {
+      "county": "Los Angeles",
+      "version": "v3",
+      "recall_at_5": 0.3333333333333333,
+      "recall_at_10": 0.6666666666666666,
+      "recall_at_20": 0.6666666666666666,
+      "ndcg_at_10": 0.23047380976071707,
+      "n_extracted": 53,
+      "n_gold": 3
+    },
+    {
+      "county": "Los Angeles",
+      "version": "v4",
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_20": 1.0,
+      "ndcg_at_10": 0.3340514446642156,
+      "n_extracted": 49,
+      "n_gold": 3
+    },
+    {
+      "county": "Los Angeles",
+      "version": "v5",
+      "recall_at_5": 0.3333333333333333,
+      "recall_at_10": 0.3333333333333333,
+      "recall_at_20": 0.6666666666666666,
+      "ndcg_at_10": 0.1736666713479918,
+      "n_extracted": 112,
+      "n_gold": 3
+    },
+    {
+      "county": "Sacramento",
+      "version": "v1",
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "recall_at_20": 0.0,
+      "ndcg_at_10": 0.0,
+      "n_extracted": 0,
+      "n_gold": 2
+    },
+    {
+      "county": "Sacramento",
+      "version": "v2",
+      "recall_at_5": 0.5,
+      "recall_at_10": 0.5,
+      "recall_at_20": 0.5,
+      "ndcg_at_10": 0.6309297535714575,
+      "n_extracted": 3,
+      "n_gold": 2
+    },
+    {
+      "county": "Sacramento",
+      "version": "v3",
+      "recall_at_5": 0.5,
+      "recall_at_10": 0.5,
+      "recall_at_20": 0.5,
+      "ndcg_at_10": 0.6309297535714575,
+      "n_extracted": 3,
+      "n_gold": 2
+    },
+    {
+      "county": "Sacramento",
+      "version": "v4",
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "recall_at_20": 0.0,
+      "ndcg_at_10": 0.0,
+      "n_extracted": 4,
+      "n_gold": 2
+    },
+    {
+      "county": "Sacramento",
+      "version": "v5",
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.5,
+      "recall_at_20": 1.0,
+      "ndcg_at_10": 0.1480409554829326,
+      "n_extracted": 24,
+      "n_gold": 2
+    },
+    {
+      "county": "San Francisco",
+      "version": "v1",
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "recall_at_20": 0.0,
+      "ndcg_at_10": 0.0,
+      "n_extracted": 0,
+      "n_gold": 2
+    },
+    {
+      "county": "San Francisco",
+      "version": "v2",
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_20": 1.0,
+      "ndcg_at_10": 0.9197207891481876,
+      "n_extracted": 11,
+      "n_gold": 2
+    },
+    {
+      "county": "San Francisco",
+      "version": "v3",
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_20": 1.0,
+      "ndcg_at_10": 0.9197207891481876,
+      "n_extracted": 11,
+      "n_gold": 2
+    },
+    {
+      "county": "San Francisco",
+      "version": "v4",
+      "recall_at_5": 0.5,
+      "recall_at_10": 0.5,
+      "recall_at_20": 0.5,
+      "ndcg_at_10": 0.6131471927654584,
+      "n_extracted": 19,
+      "n_gold": 2
+    },
+    {
+      "county": "San Francisco",
+      "version": "v5",
+      "recall_at_5": 0.5,
+      "recall_at_10": 0.5,
+      "recall_at_20": 1.0,
+      "ndcg_at_10": 0.20124768870643617,
+      "n_extracted": 63,
+      "n_gold": 2
+    }
+  ],
+  "B3_extraction_f1": [
+    {
+      "county": "San Diego",
+      "version": "v1",
+      "program_name_f1": 0.0,
+      "exact_match_rate": 0.0,
+      "n_matched": 0,
+      "n_gold": 3
+    },
+    {
+      "county": "San Diego",
+      "version": "v2",
+      "program_name_f1": 0.6666666666666666,
+      "exact_match_rate": 0.6666666666666666,
+      "n_matched": 2,
+      "n_gold": 3
+    },
+    {
+      "county": "San Diego",
+      "version": "v3",
+      "program_name_f1": 0.6666666666666666,
+      "exact_match_rate": 0.6666666666666666,
+      "n_matched": 2,
+      "n_gold": 3
+    },
+    {
+      "county": "San Diego",
+      "version": "v4",
+      "program_name_f1": 0.6666666666666666,
+      "exact_match_rate": 0.6666666666666666,
+      "n_matched": 2,
+      "n_gold": 3
+    },
+    {
+      "county": "San Diego",
+      "version": "v5",
+      "program_name_f1": 0.6666666666666666,
+      "exact_match_rate": 0.6666666666666666,
+      "n_matched": 2,
+      "n_gold": 3
+    },
+    {
+      "county": "Los Angeles",
+      "version": "v1",
+      "program_name_f1": 0.0,
+      "exact_match_rate": 0.0,
+      "n_matched": 0,
+      "n_gold": 3
+    },
+    {
+      "county": "Los Angeles",
+      "version": "v2",
+      "program_name_f1": 1.0,
+      "exact_match_rate": 1.0,
+      "n_matched": 3,
+      "n_gold": 3
+    },
+    {
+      "county": "Los Angeles",
+      "version": "v3",
+      "program_name_f1": 1.0,
+      "exact_match_rate": 1.0,
+      "n_matched": 3,
+      "n_gold": 3
+    },
+    {
+      "county": "Los Angeles",
+      "version": "v4",
+      "program_name_f1": 0.8333333333333334,
+      "exact_match_rate": 0.6666666666666666,
+      "n_matched": 3,
+      "n_gold": 3
+    },
+    {
+      "county": "Los Angeles",
+      "version": "v5",
+      "program_name_f1": 0.8888888888888888,
+      "exact_match_rate": 0.6666666666666666,
+      "n_matched": 3,
+      "n_gold": 3
+    },
+    {
+      "county": "Sacramento",
+      "version": "v1",
+      "program_name_f1": 0.0,
+      "exact_match_rate": 0.0,
+      "n_matched": 0,
+      "n_gold": 2
+    },
+    {
+      "county": "Sacramento",
+      "version": "v2",
+      "program_name_f1": 0.5333333333333333,
+      "exact_match_rate": 0.0,
+      "n_matched": 1,
+      "n_gold": 2
+    },
+    {
+      "county": "Sacramento",
+      "version": "v3",
+      "program_name_f1": 0.5333333333333333,
+      "exact_match_rate": 0.0,
+      "n_matched": 1,
+      "n_gold": 2
+    },
+    {
+      "county": "Sacramento",
+      "version": "v4",
+      "program_name_f1": 0.14285714285714285,
+      "exact_match_rate": 0.0,
+      "n_matched": 0,
+      "n_gold": 2
+    },
+    {
+      "county": "Sacramento",
+      "version": "v5",
+      "program_name_f1": 0.9166666666666667,
+      "exact_match_rate": 0.5,
+      "n_matched": 2,
+      "n_gold": 2
+    },
+    {
+      "county": "San Francisco",
+      "version": "v1",
+      "program_name_f1": 0.0,
+      "exact_match_rate": 0.0,
+      "n_matched": 0,
+      "n_gold": 2
+    },
+    {
+      "county": "San Francisco",
+      "version": "v2",
+      "program_name_f1": 0.7878787878787878,
+      "exact_match_rate": 0.0,
+      "n_matched": 2,
+      "n_gold": 2
+    },
+    {
+      "county": "San Francisco",
+      "version": "v3",
+      "program_name_f1": 0.7878787878787878,
+      "exact_match_rate": 0.0,
+      "n_matched": 2,
+      "n_gold": 2
+    },
+    {
+      "county": "San Francisco",
+      "version": "v4",
+      "program_name_f1": 0.6212121212121212,
+      "exact_match_rate": 0.0,
+      "n_matched": 1,
+      "n_gold": 2
+    },
+    {
+      "county": "San Francisco",
+      "version": "v5",
+      "program_name_f1": 0.7045454545454546,
+      "exact_match_rate": 0.0,
+      "n_matched": 2,
+      "n_gold": 2
+    }
+  ],
+  "B4_field_completeness": [
+    {
+      "version": "v2",
+      "n_programs": 40,
+      "field_fill_rates": {
+        "Eligibility_Requirements": 0.325,
+        "Application_Process": 0.225,
+        "Program_Description": 1.0,
+        "Program_Website_URL": 0.85,
+        "Target_Population": 1.0
+      },
+      "critical_complete_rate": 0.175
+    },
+    {
+      "version": "v3",
+      "n_programs": 81,
+      "field_fill_rates": {
+        "Eligibility_Requirements": 0.32098765432098764,
+        "Application_Process": 0.1728395061728395,
+        "Program_Description": 0.9629629629629629,
+        "Program_Website_URL": 0.8765432098765432,
+        "Target_Population": 0.9629629629629629
+      },
+      "critical_complete_rate": 0.09876543209876543
+    },
+    {
+      "version": "v4",
+      "n_programs": 165,
+      "field_fill_rates": {
+        "Eligibility_Requirements": 0.26666666666666666,
+        "Application_Process": 0.23030303030303031,
+        "Program_Description": 1.0,
+        "Program_Website_URL": 1.0,
+        "Target_Population": 0.9818181818181818
+      },
+      "critical_complete_rate": 0.12727272727272726
+    },
+    {
+      "version": "v5",
+      "n_programs": 1426,
+      "field_fill_rates": {
+        "Eligibility_Requirements": 0.25666199158485276,
+        "Application_Process": 0.21598877980364656,
+        "Program_Description": 0.9971949509116409,
+        "Program_Website_URL": 0.9992987377279102,
+        "Target_Population": 0.9817671809256662
+      },
+      "critical_complete_rate": 0.12482468443197756
+    }
+  ],
+  "B5_knowledge_graph": [
+    {
+      "county": "San Diego",
+      "n_gold": 3,
+      "n_returned": 37,
+      "answer_recall": 0.6666666666666666,
+      "answer_precision": 0.2702702702702703
+    },
+    {
+      "county": "Los Angeles",
+      "n_gold": 3,
+      "n_returned": 112,
+      "answer_recall": 1.0,
+      "answer_precision": 0.4017857142857143
+    },
+    {
+      "county": "Sacramento",
+      "n_gold": 2,
+      "n_returned": 24,
+      "answer_recall": 1.0,
+      "answer_precision": 0.125
+    },
+    {
+      "county": "San Francisco",
+      "n_gold": 2,
+      "n_returned": 63,
+      "answer_recall": 1.0,
+      "answer_precision": 0.14285714285714285
+    }
+  ],
+  "B6_zip_accuracy": {
+    "accuracy": 1.0,
+    "n_correct": 15,
+    "n_total": 15,
+    "details": [
+      {
+        "zip": "94103",
+        "expected": "San Francisco",
+        "got": "San Francisco",
+        "ok": true
+      },
+      {
+        "zip": "90012",
+        "expected": "Los Angeles",
+        "got": "Los Angeles",
+        "ok": true
+      },
+      {
+        "zip": "95814",
+        "expected": "Sacramento",
+        "got": "Sacramento",
+        "ok": true
+      },
+      {
+        "zip": "92101",
+        "expected": "San Diego",
+        "got": "San Diego",
+        "ok": true
+      },
+      {
+        "zip": "94577",
+        "expected": "Alameda",
+        "got": "Alameda",
+        "ok": true
+      },
+      {
+        "zip": "93301",
+        "expected": "Kern",
+        "got": "Kern",
+        "ok": true
+      },
+      {
+        "zip": "93726",
+        "expected": "Fresno",
+        "got": "Fresno",
+        "ok": true
+      },
+      {
+        "zip": "95301",
+        "expected": "Merced",
+        "got": "Merced",
+        "ok": true
+      },
+      {
+        "zip": "95482",
+        "expected": "Mendocino",
+        "got": "Mendocino",
+        "ok": true
+      },
+      {
+        "zip": "96001",
+        "expected": "Shasta",
+        "got": "Shasta",
+        "ok": true
+      },
+      {
+        "zip": "95901",
+        "expected": "Yuba",
+        "got": "Yuba",
+        "ok": true
+      },
+      {
+        "zip": "96130",
+        "expected": "Lassen",
+        "got": "Lassen",
+        "ok": true
+      },
+      {
+        "zip": "93940",
+        "expected": "Monterey",
+        "got": "Monterey",
+        "ok": true
+      },
+      {
+        "zip": "93030",
+        "expected": "Ventura",
+        "got": "Ventura",
+        "ok": true
+      },
+      {
+        "zip": "95695",
+        "expected": "Yolo",
+        "got": "Yolo",
+        "ok": true
+      }
+    ]
+  }
+}

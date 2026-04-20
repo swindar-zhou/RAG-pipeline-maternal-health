@@ -1,0 +1,24 @@
+{
+  "county": "Los Angeles",
+  "page_url": "http://publichealth.lacounty.gov/mch/cpsp/CPSPwebpages/cpsp_2rev.htm",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:02:07.159095",
+  "registry_signals": [
+    "medi-cal"
+  ],
+  "text": "LA County Public Health - Maternal, Child, & Adolescent Health\nCPSP Provider Information and Resources\nWho Can Be\n\t\t\t\t\t\t\t\tA CPSP Provider?\nAny physician, certified nurse midwife, hospital, community clinic, or medical group who\nprovides prenatal care\n,\nhas a valid Medi-Cal provider\n\t\t\t\t\t\t\t\t\tnumber\n, and\nis in good standing with state licensing and regulatory\n\t\t\t\t\t\t\t\t\tagencies\n.\nProvider\n\t\t\t\t\t\t\t\tEnrollment\nMedi-Cal Managed Care Providers must enroll with Medi-Cal and have each clinic site\n\t\t\t\t\t\t\t\tenrolled. An application and letter of approval is not needed to begin\nCPSP or\n\t\t\t\t\t\t\t\t\tCPSP-like services\n.\nAccording to the\n2024 Managed Care Boilerplate Contract\n, which can be\n\t\t\t\t\t\t\t\tfound\nhere\n, you will see on page 367 that the contract\n\t\t\t\t\t\t\t\trequires providers to use the most current standards of ACOG and\nCPSP\n.\nFor questions or confirmation regarding enrollment, contact your Managed Care Plan or\n\t\t\t\t\t\t\t\tDHCS via email at\ndhcsmedicalpolicy@dhcs.ca.gov\n.\nReimbursement for CPSP Services\nAny physician, certified nurse midwife, hospital, community clinic, or medical group who\nprovides prenatal care\n,\nhas a valid Medi-Cal provider\n\t\t\t\t\t\t\t\t\tnumber\n, and\nis in good standing with state licensing and regulatory\n\t\t\t\t\t\t\t\t\tagencies\n.\nBilling Questions?\nContact your\nManaged Care Plan\nor\nMedi-Cal\n:\nCall Us\nEmail Us\nFor more information, visit:\nMedi-Cal Outreach & Education Website",
+  "contacts": {
+    "phones": [],
+    "emails": [
+      "dhcsmedicalpolicy@dhcs.ca.gov"
+    ]
+  },
+  "pdf_links": [
+    "https://www.dhcs.ca.gov/provgovpart/Documents/2024-Managed-Care-Boilerplate-Contract.pdf",
+    "https://www.cdph.ca.gov/Programs/CFH/DMCAH/CPSP/CDPH%20Document%20Library/CPSP-Title22CPSPRegulations.pdf"
+  ],
+  "source_depth": 2,
+  "scraper_version": "phase2_enhanced"
+}

@@ -1,0 +1,20 @@
+{
+  "county": "Riverside",
+  "page_url": "https://www.ruhealth.org/wic-app",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:03:06.189303",
+  "registry_signals": [
+    "wic clinic",
+    "wic"
+  ],
+  "text": "WIC App | Riverside University Health System\nSkip to main content\nWIC App\nApply 4 WIC\nWho Qualifies\nWIC App\nWIC Card\nWIC Shopping\nWIC Messaging\nMy WIC Portal App\nThe CA WIC app is free for all WIC Card users. Download today to receive all the information you need to make your shopping experience fun and easy. You can track your appointments and benefits.\nGuide for WIC Apps\nUser-friendly Features\nFood Balance screen includes a display of available vs. used food items.\nWIC Food Scan linked with your food balance. Use the scanner to quickly identify which foods you can buy with your benefits.\nAppointment screen lists the documents you will need for your upcoming phone appointment, and more.\nLocations of WIC Stores and WIC Clinics across the State of California.\nDownload the WIC app for iPhone\nDownload the WIC app for Android",
+  "contacts": {
+    "phones": [],
+    "emails": []
+  },
+  "pdf_links": [],
+  "source_depth": 2,
+  "scraper_version": "phase2_enhanced"
+}

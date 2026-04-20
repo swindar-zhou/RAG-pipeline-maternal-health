@@ -1,0 +1,22 @@
+{
+  "county": "Modoc",
+  "page_url": "https://publichealth.co.modoc.ca.us/children___families/index.php",
+  "link_text": "Prevention Services",
+  "program_name_guess": "Prevention Services",
+  "nav_path": "seed → https://publichealth.co.modoc.ca.us/children___families/index.php",
+  "scraped_at": "2026-04-20T09:54:54.743025",
+  "registry_signals": [
+    "parents as teachers",
+    "home visits",
+    "perinatal services",
+    "home visiting"
+  ],
+  "text": "MODOC COUNTY, CA HEALTH SERVICES\nnathan-dumlao-Wr3comVZJxU-unsplash\nFont Size\nIncrease font size\nDecrease font size\nPrevention Services\nModoc Food Policy Council\nParents as Teachers -\nthis program is an Evidence-Based Home Visiting model that provides a wide array of services to families with children from prenatal through kindergarten ages and also offers deep insights into early childhood development.\nMaternal, Child and Adolescent Health\nBreastfeeding Support - Phone, office, or home visits with lactation educator. Pumps and supplies available as needed.\nPerinatal Services - Pregnancy testing, prenatal and childbirth education, and post-partum support.\nInjury Prevention - Car seat education, bike safety, pedestrian safety and other childhood safety concerns.\nAdolescent Health - Assistance with accessing health care services and resources.\nHealthy Aging\n-\nThis program focuses on collaborative ways to help individuals gain the knowledge, tools, and\nconfidence necessary for successful self-management of chronic diseases and other health conditions.\nWe utilize an evidence-based program called EnhanceWellness as our guide. It features one-on-one health\ncoaching.\nFor more information, call Public Health at 530-233-6311.",
+  "contacts": {
+    "phones": [
+      "530-233-6311"
+    ],
+    "emails": []
+  },
+  "pdf_links": []
+}

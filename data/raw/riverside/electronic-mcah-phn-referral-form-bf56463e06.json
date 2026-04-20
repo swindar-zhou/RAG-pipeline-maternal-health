@@ -1,0 +1,17 @@
+{
+  "county": "Riverside",
+  "page_url": "https://www.ruhealth.org/form/mcah-phn-referral-form",
+  "link_text": "Electronic MCAH/PHN Referral Form",
+  "program_name_guess": "Electronic MCAH/PHN Referral Form",
+  "nav_path": "search → https://www.ruhealth.org/public-health/nursing-maternal-child-adolescent-health",
+  "scraped_at": "2026-04-20T09:55:02.302456",
+  "registry_signals": [
+    "mcah"
+  ],
+  "text": "MCAH/PHN Referral Form | Riverside University Health System\nSkip to main content\nWe are here to help! This is the Electronic MCAH/PHN Referral Form, please fill out the below information and click 'Submit' when done.\nReferral Source Program Name\nContact Name\nContact Phone Number\nContact Email Address\nClient Name\nDate of Birth\nRace/Ethnicity\n- None -\nAmerican Indian or Alaska Native\nAsian\nBlack or African American\nHispanic or Latino\nNative Hawaiian or Other Pacific Isalander\nWhite\nAddress\nPhone Number\nEmail Address\nPregnant (Due Date)?\nList of Children's Names and DOBs\nReasons for your referral (Select all that apply):\nFirst time pregnancy\nMultiple (2 or more) pregnancies\nPostpartum care\nPostpartum depression/anxiety\nNICU Baby\nFailure to thrive baby\nParenting education\nDevelopmental delay\nHousing\nCommunity resources\nPlease Add Any Additional Information Here:\nCAPTCHA\nThis question is for testing whether or not you are a human visitor and to prevent automated spam submissions.\nLeave this field blank",
+  "contacts": {
+    "phones": [],
+    "emails": []
+  },
+  "pdf_links": []
+}

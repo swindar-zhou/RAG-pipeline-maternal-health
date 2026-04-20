@@ -1,0 +1,28 @@
+{
+  "county": "San Luis Obispo",
+  "page_url": "https://www.slocounty.ca.gov/departments/health-agency/public-health/all-public-health-services/maternal-child-health/maternal,-child-adolescent-health",
+  "link_text": "MCAH landing page",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:06:18.204037",
+  "registry_signals": [
+    "mcah program",
+    "mcah",
+    "pat",
+    "home visiting",
+    "perinatal services",
+    "nurse home visiting",
+    "wic",
+    "women, infants and children"
+  ],
+  "text": "Maternal, Child & Adolescent Health - County of San Luis Obispo\nSkip to main content\nHealth Agency | Public Health\nCounty of San Luis Obispo\nHome\n»\nDepartments\n»\nHealth Agency\n»\nPublic Health\n»\nAll Public Health Services\n»\nMaternal & Child Health\n»\nMaternal, Child & Adolescent Health\nMaternal, Child & Adolescent Health\nMaternal, Child and Adolescent Health (MCAH) promotes the health and well-being of women of childbearing age, infants, children and adolescents who are at increased risk of adverse health outcomes. By virtue of financial, language or cultural barriers, or mental or physical disabilities, MCAH assures access to health promotion and health care services. These activities include community assessment, planning, evaluation, outreach, advocacy, education, training, and policy development. As part of these efforts, MCAH staff participate in the Child Death Review Team (CDRT) to identify potential system failures and inform strategies for future prevention.\nMCAH Programs\nBeginning life as a healthy baby provides one of the best opportunities for lifelong health. For this reason, Public Health offers a variety of maternal, child and adolescent health programs, including:\nCalifornia Children's Services\nCar Seat Inspections\nChildhood Lead Poisoning Prevention\nChildhood Vaccines\nComprehensive Perinatal Services Program\nMartha's Place\nMedical Therapy Program\nNurse Home Visiting\nOral Health\nPerinatal Mood and Anxiety Disorder (PMAD)\nReproductive Health Services\nSudden Infant Death Syndrome (SIDS)\nSubstance Use in Pregnancy\nSuspected Abuse Response Team\nVoluntary Services Program\nWomen, Infants and Children (WIC)\nContact Us\nFor information on any of these services, contact us at (805) 781-5500.",
+  "contacts": {
+    "phones": [
+      "(805) 781-5500"
+    ],
+    "emails": []
+  },
+  "pdf_links": [],
+  "source_depth": 0,
+  "scraper_version": "phase2_enhanced"
+}

@@ -1,0 +1,24 @@
+{
+  "county": "Santa Cruz",
+  "page_url": "https://www.santacruzhealth.org/PublicHealth/ChildrenFamilyHealth/MCAH/PregnancyandPost-PartumGuide.aspx",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T12:59:30.396618",
+  "registry_signals": [
+    "mcah",
+    "home visiting",
+    "nurse home visiting"
+  ],
+  "text": "Pregnancy and Post-Partum Guide\n0\nSearch\nPress Esc to cancel\nSuggested content\nSearch\nPregnancy and Post-Partum Resource Guide\nYou are here:\nHSA Home\nPublic Health\nChildren & Family Health\nMaternal, Child and Adolescent Health (MCAH)\nPregnancy and Post-Partum Guide\nCalifornia Children Services (CCS)\nChildhood Lead Poisoning Prevention Program (CLPPP)\nCommon Sources of Lead\nPaint and Home\nSoil\nCooking Spices\nCeramic Dishes and Cookware\nHome Remedies\nJewelry\nWorkplace\nHousing Resources\nFor Property Owners\nAdditional Resources\nHealth Care Program for Children in Foster Care (HCPCFC)\nMaternal, Child and Adolescent Health (MCAH)\nSudden Infant Death Syndrome Program\nBreastfeeding Coalition\nPregnancy and Post-Partum Guide\nNurse Home Visiting Programs\nNurse Family Partnership\nInformation Request Form\nInformation Request Form SP\nTrauma-Informed Approach Public Health Field Nursing\nThe Pregnancy and Post-Partum Resource Guide includes various health-related services located throughout Santa Cruz County, developed and maintained by Children and Family Health staff from the Santa Cruz County Health Services Agency.\nSubstance Use Treatment and Recovery Resources\nContact Us\nIf you have questions, or if you believe your organization should be listed in our guide, please contact us using the form below.\nTOP",
+  "contacts": {
+    "phones": [],
+    "emails": []
+  },
+  "pdf_links": [
+    "https://www.santacruzhealth.org/Portals/7/Pdfs/PublicHealth/FamilyHealth/Treatment%20and%20Recovery%20Resources%20for%20Santa%20Cruz%20County_092320.pdf",
+    "https://www.santacruzhealth.org/Portals/7/Pdfs/NPPCombinedENG.pdf"
+  ],
+  "source_depth": 1,
+  "scraper_version": "phase2_enhanced"
+}

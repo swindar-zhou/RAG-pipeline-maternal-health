@@ -1,0 +1,20 @@
+{
+  "county": "Riverside",
+  "page_url": "https://www.ruhealth.org/behavioral-health/outpatient-provider-manual",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:02:51.004347",
+  "registry_signals": [
+    "medi-cal",
+    "pat"
+  ],
+  "text": "RUHSBH Outpatient Provider Manual | Riverside University Health System\nSkip to main content\nRUHSBH Outpatient Manual\nWe would like to welcome you as a Riverside University Health System – Behavioral Health Plan (RUHSBHP), and Department of Public Social Services (DPSS) Project network provider. The RUHSBHP authorizes mental health services through the Community Access, Referral, Evaluation, & Support (CARES) to children and adults with Medi-Cal. including those children who reside in Group Homes and Foster Family Agencies.\nThe DPSS Project authorizes mental health services through the Assessment and Consultation Tem (ACT) to children (excluding those placed in group homes/FFA placements) and adults who have open cases through the DPSS.\nWe look forward to working with you to provide quality cost effective mental health treatment to our Medi-Cal and DPSS consumers.",
+  "contacts": {
+    "phones": [],
+    "emails": []
+  },
+  "pdf_links": [],
+  "source_depth": 1,
+  "scraper_version": "phase2_enhanced"
+}

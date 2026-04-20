@@ -1,0 +1,19 @@
+{
+  "county": "Santa Clara",
+  "page_url": "https://publichealth.santaclaracounty.gov/programs-and-services/black-infant-health-program/black-infant-health-interest-card",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T12:59:04.056813",
+  "registry_signals": [
+    "black infant health"
+  ],
+  "text": "Black Infant Health interest card | Public Health | County of Santa Clara\nSkip to main content\nBlack Infant Health interest card\nPlease fill out below\nFirst Name\nLast Name\nPhone of participant\nZip Code\nEmail of Participant\nName of referral agency or person\nPhone from referral\nEmail from referral\nComment/Questions\nWas this page helpful?\nYes\nNo\nYour comments\nPlease do not include personal information, for example home address, tax ID, or social security number.\nYour feedback about this page:\nIf you need us to contact you, please provide an email address:\nIf this is an emergency, call 911.",
+  "contacts": {
+    "phones": [],
+    "emails": []
+  },
+  "pdf_links": [],
+  "source_depth": 2,
+  "scraper_version": "phase2_enhanced"
+}

@@ -1,0 +1,19 @@
+{
+  "county": "Sutter",
+  "page_url": "https://www.sutter.gov/government/county-departments/health-and-human-services/public-health-branch/the-women-infants-and-children-wic-program/updates-and-social-media",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:05:54.626517",
+  "registry_signals": [
+    "wic"
+  ],
+  "text": "WIC Sites and Offices | Sutter County, CA\nShow/Hide\nROAD CLOSURES\nCOMMUNITY ACADEMY\nEmpty heading\nSutter County Public Health\n(Main Office)\nAddress:\n1445 Veterans Memorial Circle,\nYuba City, CA 95993\nHours:\nMonday to Thursday, 8:00 am - 5:30 pm\nClosed for lunch from 12:00 pm - 12:30 pm\nFriday, 8:00 am - 5:00 pm\nClosed for lunch from 12:00 pm - 1:00 pm\nLive Oak Boy Scout Building\nAddress:\n2670 Myrtle Street,\nLive Oak, CA 95993\nHours:\n2nd Thursday of the month,\n9:00 am - 4:30 pm\nRichland Neighborhood Center\nAddress:\n420 Miles Ave, Yuba City, CA 95591\nHours:\n1st Thursday of the month, 9:00 am - 4:30 pm\nLast Updated December 29, 2025",
+  "contacts": {
+    "phones": [],
+    "emails": []
+  },
+  "pdf_links": [],
+  "source_depth": 1,
+  "scraper_version": "phase2_enhanced"
+}

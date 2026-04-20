@@ -1,0 +1,30 @@
+{
+  "county": "San Luis Obispo",
+  "page_url": "https://www.slocounty.ca.gov/departments/health-agency/public-health/all-public-health-services/health-promotion/women,-infants-and-children-(wic)/california-wic-formula",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:06:25.639631",
+  "registry_signals": [
+    "wic office",
+    "wic",
+    "women, infants and children"
+  ],
+  "text": "California WIC Formula - County of San Luis Obispo\nSkip to main content\nHealth Agency | Public Health\nCounty of San Luis Obispo\nHome\n»\nDepartments\n»\nHealth Agency\n»\nPublic Health\n»\nAll Public Health Services\n»\nHealth Promotion\n»\nWomen, Infants and Children (WIC)\n»\nCalifornia WIC Formula\nCalifornia WIC Formula\nEn Español\nCalifornia WIC Formula\nS\ntarting on August 1, 2025,\nCalifornia WIC will provide\nEnfamil milk-based\nand\nSimilac soy-based\ninfant formulas.\nMost babies transition easily from one brand of formula to another without any problems. All major brand-name formulas contain similar ingredients and will meet your baby's nutritional needs.\nWIC also provides breastfeeding support and infant feeding guidance to all families.\nWIC contract formulas:\nEnfamil Infant (12.5 oz powder or 13 fl. oz liquid concentrate) This is recommended as the first choice for milk-based formula\nEnfamil Gentlease (12.4 oz powder only)\nEnfamil Reguline (12.4 oz powder only)\nEnfamil A.R. (12.9 oz powder)\nSimilac Soy Isomil (12.4 oz powder or 13 fl oz liquid concentrate)\nInfant Formula Flyer:\nEnglish (PDF)\nSpanish (PDF)\n_____________\nWIC Medical Formula and Nutritionals Request\nPediatric Referral Form\nYou should use the California\nWIC App\nto check your WIC food benefits and to make sure you are getting the right formula.\nWIC also provides breastfeeding and infant feeding support to all families. Call your\nWIC office\nor text (888) 417-6180\nfor more information on breastfeeding support, what formulas are available, infant feeding tips and answers to your formula questions\nWIC Formula Change Questions\n_____________\nFormula Updates\nUpdated formula information for California -\nhttps://cdph.ca.gov/formula\nAdditional Resources\nWhen You Feed Me Formula -\nEnglish\n|\nSpanish\nLet Your Baby Set the Pace For Bottle Feeding -\nEnglish\n|\nSpanish",
+  "contacts": {
+    "phones": [
+      "(888) 417-6180"
+    ],
+    "emails": []
+  },
+  "pdf_links": [
+    "https://www.cdph.ca.gov/CDPH%20Document%20Library/ControlledForms/cdph247.pdf",
+    "https://www.cdph.ca.gov/CDPH%20Document%20Library/ControlledForms/cdph247a.PDF",
+    "https://docs.wic.ca.gov/Flyers/Ed/Formula.pdf",
+    "https://docs.wic.ca.gov/Flyers/Ed/Formula-Sp.pdf",
+    "https://docs.wic.ca.gov/Content/Documents/NutritionHealth/Infants/Let-Baby-Set-Pace.pdf",
+    "https://docs.wic.ca.gov/Content/Documents/NutritionHealth/Infants/Let-Baby-Set-Pace-Sp.pdf"
+  ],
+  "source_depth": 2,
+  "scraper_version": "phase2_enhanced"
+}

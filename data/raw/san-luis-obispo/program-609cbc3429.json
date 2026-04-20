@@ -1,0 +1,31 @@
+{
+  "county": "San Luis Obispo",
+  "page_url": "https://www.slocounty.ca.gov/departments/health-agency/public-health/all-public-health-services/health-promotion/women,-infants-and-children-(wic)/california-wic-card",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:06:27.711609",
+  "registry_signals": [
+    "wic program",
+    "wic benefits",
+    "wic office",
+    "wic",
+    "women, infants and children"
+  ],
+  "text": "California WIC Card - County of San Luis Obispo\nSkip to main content\nHealth Agency | Public Health\nCounty of San Luis Obispo\nHome\n»\nDepartments\n»\nHealth Agency\n»\nPublic Health\n»\nAll Public Health Services\n»\nHealth Promotion\n»\nWomen, Infants and Children (WIC)\n»\nCalifornia WIC Card\nCalifornia WIC Card\nTranslate this page\nThe WIC Card is Here!  A new and easier way to shop for your WIC foods.\nShopping With Your California WIC Card\nYour WIC Food Packages\nEnglish (PDF)\n|\nSpanish (PDF)\nStores accepting the California WIC Card\nDownload the WIC App\niPhone\niPhone App Store- California WIC App\nAndroid phone\nGoogle Play – California WIC App\nLearn more about the California WIC Card\nThe California WIC Card Video will show you how to use your new WIC Card at the store, how to check your WIC food balance and more!\nEnglish\nSpanish\nFAQs\n▾\nHow do I activate my WIC Card?\nTo activate your new WIC Card and set a 4-digit PIN, call Customer Service at 1-844-469-3264.\nYou will need to know:\nThe 16-digit WIC Card number\nYour mailing address ZIP code\nYour date of birth (two digits for month and day and four digits for year)\nChoose a 4-digit pin that is easy for you to remember and difficult for others to guess\nYou will need the 4-digit pin to use your WIC Card at the store\n▾\nWhen will my WIC benefits be available to use?\nBenefits will be loaded after your initial enrollment appointment\nBenefits are good for 30 days\nThere is a \"start\" and \"end\" date to use your benefits (see WIC App or contact your local WIC office)\nBenefits expire at midnight on the \"end\" date\nNew benefits are automatically loaded each month following the \"end\" date of your previous month's benefits\n▾\nHow can I find my WIC Card balance?\nUse the free WIC App on your smart phone\nLook at your store receipt from your last shopping trip\nAsk a cashier or customer service person at the store to print your WIC Food Balance\nCall the toll free number on the back of your WIC Card, 1-844-469-3264\n▾\nWhat if I enter the wrong PIN at the store?\nYour WIC Card will lock after 4 tries.  You can call the number on the back of your WIC Card, 1-844-469-3264 or your local WIC office or wait until after midnight for the PIN to reset.\n▾\nWhat if I lose my WIC Card?\nCall the toll-free number on the back of your WIC Card, 1-844-469-3264 24/7 to report your card lost, stolen or damaged\nTo receive a replacement card, call (805) 781-5570 or text toll free (888) 417-6180\nThe new card can be mailed or you can make arrangements to pick it up at the nearest WIC office\n▾\nWhat if I need to change my WIC food benefits?\nContact your local WIC office, call (805) 781-5570 or text (888) 417-6180 to request a change to your WIC food benefits\n▾\nWhat if I have questions or problems at the grocery store?\nAsk to speak with the store manager\nContact your local WIC office, call (805) 781-5570 or text (888) 417-6180 if you are not satisfied, or\nContact the State WIC Program at 1-800-852-5770 or\n[email protected]\nSave your store receipt\nReport the following information:\ndate,\ntime,\nstore name,\nnames of the store staff involved and\ndetails of the situation",
+  "contacts": {
+    "phones": [
+      "(805) 781-5570",
+      "(888) 417-6180",
+      "800-852-5770",
+      "844-469-3264"
+    ],
+    "emails": []
+  },
+  "pdf_links": [
+    "https://www.cdph.ca.gov/Programs/CFH/DWICSN/CDPH%20Document%20Library/WICCard/YourWICFoods-EN.pdf",
+    "https://www.cdph.ca.gov/Programs/CFH/DWICSN/CDPH%20Document%20Library/WICCard/YourWICFoods-SP.pdf"
+  ],
+  "source_depth": 2,
+  "scraper_version": "phase2_enhanced"
+}

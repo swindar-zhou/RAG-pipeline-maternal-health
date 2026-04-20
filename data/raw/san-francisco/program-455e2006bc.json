@@ -1,0 +1,35 @@
+{
+  "county": "San Francisco",
+  "page_url": "https://www.sf.gov/zh-hant/pregnancy-tests/",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T12:58:26.798792",
+  "registry_signals": [
+    "medi-cal",
+    "pat",
+    "health center",
+    "family planning"
+  ],
+  "text": "Think you're pregnant? | SF.gov\nSkip to main content\nINFO PAGE\nThink you're pregnant?\nYou can get a free pregnancy test by contacting any of the clinics below\nDepartment of Public Health\nVisit or call a clinic now and ask for a free pregnancy test!\nChinatown Public Health Center\n, 415-364-7600,1490 Mason Street, 94133, Services in English, Cantonese, Mandarin, Vietnamese\nFamily Health Center at Zuckerberg SF General Hospital\n, 415-206-5252, 995 Potrero Avenue, 94110, Services in English, Spanish, Cantonese, Mandarin, Arabic, Vietnamese\nMaxine Hall Health Center\n, 415-292-1300, 1301 Pierce Street, 94115, Services in English, Spanish,Cantonese, Mandarin, Korean\nMission Neighborhood Excelsior Group\n, 415-406-1353, 4434 Mission Street, 94112, Services in English, Spanish, Korean\nMission Neighborhood Health Center\n, 415-552-3870, 240 Shotwell Street, 94110, Services in English, Spanish\nNorth East Medical Services\n, 415-391-9686, Services in English, Cantonese, Mandarin, Spanish Burmese (Stockton Street location) Vietnamese (Stockton Street and San Bruno Avenue locations)\n1520 Stockton Street, 94133\n1450 Noriega Street, 94122\n2574 San Bruno Avenue, 94134\nPotrero Hill Health Center\n, 415-920-1250, 1050 Wisconsin Street, 94107, Services in English, Spanish, Cantonese, Mandarin, Tagalog\nSF General Hospital Women’s Health Center\n(5M) 415-206-3409, 1001 Potrero Avenue, 94110 Services in English, Spanish, Cantonese, Mandarin, Tagalog\nSilver Avenue Family Health Center\n, 415-657-17101525 Silver Avenue, 94134, Services in English, Spanish, Cantonese, Mandarin, Vietnamese\nSoutheast Health Center\n, 415-671-7000, 2401 Keith Street, 94124, Services in English, Spanish, Cantonese, Mandarin, Tagalog, French\nSt. Luke’s Women’s Clinic\n, 415-641-69961580 Valencia Street #508, 94110, Services in English, Spanish, Russian\nMost clinics have interpreter services and patient care in all languages. Call 1-800-300-9950 for any questions about where to get health care. These services are paid for by Presumptive Eligibility which is a short term Medi-Cal program for women and teens who think they may be pregnant or are pregnant. If you are not pregnant and would like family planning services you can sign up for Family PACT at any of the clinics.",
+  "contacts": {
+    "phones": [
+      "415-206-3409",
+      "415-206-5252",
+      "415-292-1300",
+      "415-364-7600",
+      "415-391-9686",
+      "415-406-1353",
+      "415-552-3870",
+      "415-641-6996",
+      "415-657-1710",
+      "415-671-7000",
+      "415-920-1250",
+      "800-300-9950"
+    ],
+    "emails": []
+  },
+  "pdf_links": [],
+  "source_depth": 2,
+  "scraper_version": "phase2_enhanced"
+}

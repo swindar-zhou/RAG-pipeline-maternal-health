@@ -1,0 +1,24 @@
+{
+  "county": "Contra Costa",
+  "page_url": "https://www.cchealth.org/health-insurance/information-for-providers/claims-information",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T16:17:01.639129",
+  "registry_signals": [
+    "aim"
+  ],
+  "text": "Claims Information | Contra Costa Health\nSubmitting Claims\nThe claim submission timeframe for Contra Costa Health Plan is 180 days from the date of service, or primary explanation of benefits (EOB), for both contracted and non-contracted providers. Claims received after 180 days will be denied for untimely filing. Providers have 365 days to dispute claim processing.\nTo check status of a claim or if you have a Provider dispute question, please email\nClaimStatus@cchealth.org\n.\nUsing Availity\nContra Costa Health Plan (CCHP) uses\nAvaility\nas our clearinghouse.\nYou must register with Availity in order to submit EDI claims to CCHP. You may begin your registration process on the\nAvaility site\n.\nThe CCHP payer ID is\nCCHS\n.\nUsing the ccLink Provider Portal\nYou may also sign up for CCHP's ccLink Provider Portal where you can enter and submit claims directly to CCHP.\nSign up on\nInformation for Providers\n, complete the ccLink Provider Portal Access Agreement form, and email it to\nCCHPportalsupport@cchealth.org\n.\nIf you have already signed up for ccLink Provider Portal access, reference the website for instructions on submitting claims.\nPaper Claims\nIf you must submit a paper claim, mail your completed claim form along with all required supporting documents to:\nCCHP Claims Department\nP.O. Box 5122\nLake Forest, CA 92609\nIf you are a\nnon-contracting provider\nand have never submitted a claim to CCHP or within the last 2 years, you must submit a current W9 to\nARsupport@cchealth.org\nfor IRS verification through the County Auditor's office. If you do not submit a W9 before submitting claims, your claims will not be processed until we receive a W9. As a courtesy, CCHP may reach out to you to request a W9. However, if a W9 is not received within 14 calendar days, your claims will be voided and you must resubmit your claims to be processed.\nPayments\nCCHP continues to offer\nelectronic payments\nto providers. To register, please submit your request to\nEDIsupport@cchealth.org\n. To receive a RA (Remittance Advice) electronically, please sign up for our ccLink Provider Portal based on the instruction above.\nResources\nEFT Deposit Agreement\nccLink Claims Entry Process Tip Sheets\nCMS1500 Claim Submission Guide\nUB04 Claim Submission Guide\nDHCS Encounter data reporting Mother and Newborn Coding Guidance\nNDC Required HCPCS, revised 4/2021\nDHCS Local Code Crosswalk\nCDC Supplement Coding encounters related to COVID-19, eff 2/20/20\nEPSDT Reporting Guide\nSubmitting Hospice Paperwork\n1st Level Disputes\n2nd\nLevel Appeals (D-SNP)\nWaiver of Liability\nLoading ...",
+  "contacts": {
+    "phones": [],
+    "emails": [
+      "ARsupport@cchealth.org",
+      "CCHPportalsupport@cchealth.org",
+      "ClaimStatus@cchealth.org",
+      "EDIsupport@cchealth.org"
+    ]
+  },
+  "pdf_links": [],
+  "source_depth": 1,
+  "scraper_version": "phase2_enhanced"
+}

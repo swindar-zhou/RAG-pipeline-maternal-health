@@ -1,0 +1,26 @@
+{
+  "county": "Fresno",
+  "page_url": "https://www.fresnocountyca.gov/Departments/Auditor-Controller-Treasurer-Tax-Collector/Unclaimed-Property-Lookup",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:00:24.106417",
+  "registry_signals": [
+    "aim"
+  ],
+  "text": "Unclaimed Property Lookup - County of Fresno\nSkip to main content\nopens in new tab or window\nUnclaimed Property Lookup\nUnclaimed Property Lookup\nUse the Unclaimed Property Lookup tool below to search for unclaimed checks that are considered outstanding for a period of six months or longer.\nPlease note that the checks on this list are showing as outstanding in our system, however, further research is required once a request has been made for the reissuance of any check. The reasons for the additional research are due to the way our system updates, when a check is reissued, and the required verification performed by staff.\nPlease contact General Accounting before you submit a request, as the process requires you to complete specific forms. They can be reached by phone at (559) 600-3609 or by email at\nACTTC-GeneralAccounting@fresnocountyca.gov\n.\nFor additional information beyond what has been provided on this webpage, please submit a request using the County of Fresno\nPublic Request Portal\n.\nFrom:\nTo:\n(the above Date Range fields are mandatory)\nSearch\nClear\nFilter names by:\nCSV\nExcel\nCheck Number\nName\nAmount\nDate\nNo property records match the above filters\nPrevious\nNext\nInformation\nOnline Property Tax Payment\nOscar J. Garcia, CPA\nAuditor-Controller/Treasurer-Tax Collector\nMario Cabrera\nDeputy Auditor-Controller\nFrank Gomez\nDeputy Treasurer-Tax Collector\nPhone\nProperty Tax\n(559) 600-3482\nAdministration\n(559) 600-3496\nFax\n(559) 600-1444\nHours Of Operation\nMonday - Friday\n8:00am to 5:00pm\n(excluding\nCounty Holidays\n)\nLocation\nCounty of Fresno Hall of Records, Room 105\n2281 Tulare Street\nFresno, CA 93721\nView Map\nQuick Links\nDepartment Home Page\nProperty Tax Information\nRevenue Collections Payment\nContact Information\nBusiness Licenses\nFraud Hotline\nPublications\nAbout Us\nBack to top",
+  "contacts": {
+    "phones": [
+      "(559) 600-1444",
+      "(559) 600-3482",
+      "(559) 600-3496",
+      "(559) 600-3609"
+    ],
+    "emails": [
+      "ACTTC-GeneralAccounting@fresnocountyca.gov"
+    ]
+  },
+  "pdf_links": [],
+  "source_depth": 1,
+  "scraper_version": "phase2_enhanced"
+}

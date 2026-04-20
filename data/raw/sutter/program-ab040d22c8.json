@@ -1,0 +1,21 @@
+{
+  "county": "Sutter",
+  "page_url": "https://www.sutter.gov/government/county-departments/health-and-human-services/children-s-services-branch/youth-and-family-behavioral-health-services/youth-outpatient-services",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:05:46.198567",
+  "registry_signals": [
+    "pat"
+  ],
+  "text": "Youth Outpatient Services | Sutter County, CA\nShow/Hide\nROAD CLOSURES\nCOMMUNITY ACADEMY\nThe Youth Outpatient Services site operates the Open Access Clinic and ensures that children are referred to the necessary level of care to meet their needs. The Youth Outpatient Services site also provides office-based psychotherapy that includes behavioral health assessment, individual, group, and family therapy, medication support, and case management for youth ages 0-20 years of age.\nOpen Access Clinic\nThe Open Access Clinic is the entry point for all behavioral health services provided through the Youth and Family Services Program. The Open Access clinic utilizes a hybrid model of scheduled and walk-in triages and occurs on Mondays, Wednesdays, Thursdays, and Fridays at 8:00 AM & 10:00 AM. Appointments can be made by calling (530) 822-7513 before 3:00 PM. Please refer to this document for further information about the Open Access Clinic.\nOpen Access Clinic Schedule and Walk-in Triages\nIt is preferred that caregivers NOT bring children to the Open Access Clinic, as this is an opportunity for the caregiver to explain concerns about the child’s emotional and behavioral health needs. Please make sure to bring the child’s insurance card, your identification, and proof of your legal ability to consent to mental health treatment for the child.\nOpen Access Clinic Schedule and Location\nMondays, Wednesday, Thursdays, and Friday\n8:00 AM – 10:00 AM\nSutter-Yuba Behavioral Health\n1445 Veterans Memorial Circle\nYuba City, CA 95993\n(530) 822-7513",
+  "contacts": {
+    "phones": [
+      "(530) 822-7513"
+    ],
+    "emails": []
+  },
+  "pdf_links": [],
+  "source_depth": 1,
+  "scraper_version": "phase2_enhanced"
+}

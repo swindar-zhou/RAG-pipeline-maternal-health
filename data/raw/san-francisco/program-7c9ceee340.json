@@ -1,0 +1,27 @@
+{
+  "county": "San Francisco",
+  "page_url": "https://www.sf.gov/resource--2023--maternal-child-and-adolescent-health-data-and-reports/",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T12:58:18.081664",
+  "registry_signals": [
+    "mcah",
+    "pat"
+  ],
+  "text": "Maternal, Child, and Adolescent Health Epidemiology Unit | SF.gov\nSkip to main content\nRESOURCE COLLECTION\nMaternal, Child, and Adolescent Health Epidemiology Unit\nData and reports about the health of pregnant people, children, and young adults in San Francisco.\nMaternal, Child, and Adolescent Health\nSF.gov is the new home for SFDPH MCAH Epidemiology.\nResources\nData dashboards and data briefs\nHealth needs assessment data for women, children, and adolescents in San Francisco\nTables, graphs, and maps about women, ages 15 to 50, pregnant people, infants, children, and youths, up to age 24. \nInformation about a wide range of health topics, including medical conditions, nutrition, dehydration, oral health, mental health, safety, access to health care, and basic needs, like housing. \nCounty-level prevalence rates, time trends, and disparities. Local information about national Healthy People 2030 priorities, such as preterm birth, infant death, childhood obesity, adolescent depression, and young adult substance use, high blood pressure, diabetes, and kidney disease.\nPopulation data from the 2023-2024 San Francisco Maternal Child and Adolescent Health (MCAH) needs assessment to share with community partners, plan services, and promote health.\nNumber of live births in San Francisco\nTotal number of live births born to San Francisco residents by year\nChild and young adult population by age and race\nChanges in San Francisco's under-25 population from 2010 to 2020.\nPreterm birth data\nData about preterm births in San Francisco. Numbers, rates, trends, disparities, and maps.\nChildren's Oral Health Data\nChildren's Oral Health Data\nMental health data\nA pdf data brief summarizing mental health data for women and youth in San Francisco.\nPeer-reviewed publications about local health priorities\nPreterm birth: Conceptual framework for preterm birth review\nChild overweight or obesity: Healthy Apple Program evaluation\nChildren's oral health: Drinking water effects on caries risk factors\nData sources with information about San Francisco residents\nPublicly available data\nData questions and answers\nAbout\nThe Maternal, Child, and Adolescent Health (MCAH) Section Epidemiology Unit of the San Francisco Department of Public Health regularly monitors population-level health data and health program information. We use these findings to identify issues that may affect families, pregnant and preconception individuals, children, and adolescents in San Francisco. Analyzing this information helps us improve health care and develop policies, plans, and services that ensure everyone in San Francisco has an equitable opportunity to achieve good health.\nContact\nCity and County of San Francisco\nDepartment of Public Health\nMaternal, Child and Adolescent Health Section\nEpidemiology Unit\n333 Valencia St\nSan Francisco, CA 94103\nPeople\nJodi Stookey, Ph.D.\nSenior Epidemiologist\njodi.stookey@sfdph.org\nJennifer Salcedo\nHealth Care Analyst\njennifer.salcedo@sfdph.org\nRowena Cape\nProject Coordinator Trainee\nrowena.cape.DPH@sfdph.org\nRocio Flores\nEpidemiologist Trainee\nrocio.flores@sfdph.org\nMCAH Epidemiology Trainees, Interns, and Fellows, 2021–2025:\nDeena Abu Amara,\nStephanie Bazarini\n, Ankita Bhalla, Eva Mae Baucom, Mimansa Cholera, Kawa Chiu,\nFardowsa Dahir\n,\nMaria Allesandra April Elsasser\n,\nYuchen Gao\n,\nShreya Gautam\n,\nAlicia Gunness\n, Hannah Hecht,\nHelen Kong\n, Matthew Leong,\nAvelyn Liang\n, Anuradha Nayudu, Rachel Ohtake, Deep Kumar Patel,\nRiya Patel\n,\nClaire Penzel\n,\nMatthew Sao\n,\nNoor Shahzad,\nNayoung Song\n, Ameya Thorat, and\nYuhui Zhou\n.\nPartner agencies\nMaternal, Child, and Adolescent Health\nDepartment of Public Health",
+  "contacts": {
+    "phones": [],
+    "emails": [
+      "jennifer.salcedo@sfdph.org",
+      "jodi.stookey@sfdph.org",
+      "rocio.flores@sfdph.org",
+      "rowena.cape.DPH@sfdph.org"
+    ]
+  },
+  "pdf_links": [
+    "https://www.sf.gov/sites/default/files/2024-11/8-MCAH_mental_health_2021.pdf"
+  ],
+  "source_depth": 1,
+  "scraper_version": "phase2_enhanced"
+}

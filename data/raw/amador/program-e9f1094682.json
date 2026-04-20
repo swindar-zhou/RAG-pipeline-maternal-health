@@ -1,0 +1,25 @@
+{
+  "county": "Amador",
+  "page_url": "https://www.amadorcounty.gov/services/public-health/medi-cal-resources",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T16:21:01.970806",
+  "registry_signals": [
+    "medicaid",
+    "medi-cal"
+  ],
+  "text": "Medi-Cal Resources | Amador County\nSkip to Main Content\nWhat is Medi-Cal?\nMedi-Cal is California’s Medicaid Program. This is a public health insurance program that provides needed health care services for low-income people including families with children, seniors, persons with disabilities, foster care, pregnant women, and low-income people with specific disease such as tuberculosis, breast cancer or HIV/AIDs.\nTo Contact the Medi-Cal services in Amador County\nCall Social Services (209) 223-6550\nHow Do I Apply for Medi-Cal?\nApplications for the Medi-Cal can be requested by Phone, In-Person, via US Mail or\nonline\n.\nDid you know that you can apply for Medi-Cal, view documents, submit verifications, report new information and much more using\nbenefitscal.com\n? BenefitsCal is also available on your mobile phone by going to the App Store or Google Play.\nAmador County Social Services: 10877 Conductor Blvd, Suite 200\nSutter Creek, CA 95685 (\n209) 223-6550\nWho Qualifies for Medi-Cal?\nFamilies of any size are eligible if they meet income guidelines.\nThe following persons may be eligible:\n65 or older\nBlind\nDisabled\nUnder 21\nPregnant\nIn a skilled nursing or intermediate care home\nOn refugee status for a limited time, depending how long you have been in the United States\nA parent or caretaker relative of an age eligible child\nHave been screened for breast and/or cervical cancer (\nBreast and Cervical Cancer Treatment Program\n)\nFoster Youth Can Maintain Health Coverage Until Age 26\nIf you are enrolled in one of the following programs, you can also get Medi-Cal:\nCalFresh\nSSI/SSP\nCalWorks (AFDC)\nRefugee Assistance\nFoster Care or Adoption Assistance Program\nManaged Care Plans\nWhen you first qualify for Medi-Cal, you are covered under Medi-Cal Fee-for-Service.  Depending on the county where you live, you may have to choose a health plan within 30 days. If you do not choose a health plan within 30 days, Medi-Cal will choose a health plan for you.\nAmador Managed Care Plan options: Click on logo below for resources\nCompare Plans\nLearn more about Medi-Cal from the following links:\nWhat does Medi-Cal cover?\nView Full Site\nLoading ...",
+  "contacts": {
+    "phones": [
+      "(209) 223-6550",
+      "209) 223-6550"
+    ],
+    "emails": []
+  },
+  "pdf_links": [
+    "https://www.dhcs.ca.gov/services/medi-cal/Documents/Benefits-Chart.pdf"
+  ],
+  "source_depth": 1,
+  "scraper_version": "phase2_enhanced"
+}

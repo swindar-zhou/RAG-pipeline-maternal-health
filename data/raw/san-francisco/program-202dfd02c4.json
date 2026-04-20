@@ -1,0 +1,20 @@
+{
+  "county": "San Francisco",
+  "page_url": "https://www.sf.gov/information--disclaimer-sfgov",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T12:58:18.161197",
+  "registry_signals": [
+    "pat",
+    "aim"
+  ],
+  "text": "Disclaimer for SF.gov | SF.gov\nSkip to main content\nINFO PAGE\nDisclaimer for SF.gov\nSF.gov terms of use, liability and browser compatibility.\nDigital Services\nInformation presented on this website is collected, maintained, and provided for the convenience of the reader. While every effort is made to keep the information accurate, the City does not certify the authenticity of information that originates from third parties.\nLiability\nUnder no circumstances shall the City and County of San Francisco be liable for any actions taken or omissions made from reliance on any information contained herein from whatever source nor shall the City and County be liable for any other consequences from any such reliance.\nThe City cannot guarantee the accuracy of translations on SF.gov. We offer translations for you to use at your own risk. The City will not accept any liability for damages or losses of any kind caused by the use of our translations.\nBrowser compatibility\nSF.gov supports the latest versions of Internet Explorer, Firefox, Chrome, and Safari in standard view, as well as Safari and Chrome for mobile.",
+  "contacts": {
+    "phones": [],
+    "emails": []
+  },
+  "pdf_links": [],
+  "source_depth": 1,
+  "scraper_version": "phase2_enhanced"
+}

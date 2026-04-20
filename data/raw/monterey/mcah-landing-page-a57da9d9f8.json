@@ -1,0 +1,21 @@
+{
+  "county": "Monterey",
+  "page_url": "https://www.countyofmonterey.gov/government/departments-a-h/health/public-health/maternal-child-adolescent-health-mcah",
+  "link_text": "MCAH landing page",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:06:10.445433",
+  "registry_signals": [
+    "mcah"
+  ],
+  "text": "Access Denied\nAccess Denied\nYou don't have permission to access \"http://www.countyofmonterey.gov/government/departments-a-h/health/public-health/maternal-child-adolescent-health-mcah\" on this server.\nReference #18.5018d017.1776445569.7179af8a\nhttps://errors.edgesuite.net/18.5018d017.1776445569.7179af8a",
+  "contacts": {
+    "phones": [
+      "017.1776445"
+    ],
+    "emails": []
+  },
+  "pdf_links": [],
+  "source_depth": 0,
+  "scraper_version": "phase2_enhanced"
+}

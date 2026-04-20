@@ -1,0 +1,28 @@
+{
+  "county": "Santa Cruz",
+  "page_url": "https://www.santacruzhealth.org/HealthCenters/LocationsServices/WHC.aspx",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T12:59:30.802796",
+  "registry_signals": [
+    "medi-cal",
+    "pat",
+    "health center"
+  ],
+  "text": "Watsonville Health Center\n0\nSearch\nPress Esc to cancel\nSuggested content\nSearch\nWatsonville Health Center\nEspañol\n.\n1430 Freedom Blvd. Suite D. Watsonville\nHours:\nMonday - Thursday: 7:30am - 6:30pm\nFriday: 7:30am - 5pm\nWatsonville Health Center provides comprehensive medical care for individuals and families in Santa Cruz County. The health center offers a variety of services including:\nCancer Screenings (Breast, Colon, Lung, Cervical)\nBirth Control\nHospital Emergency Department Follow-Up\nImmunization Services\nIntegrated Behavioral Health\nMedication Assisted Treatment\nOrthopedic Services\nPediatric Care\nPrimary Care and Preventive Health\nSexually Transmitted Infections\nWell Child Examinations\nAppointments\nSame day appointments on a limited basis for established clinic adult and pediatric patients with urgent medical problems.\nTo schedule an appointment, contact:\nGeneral Information/Appointments:\n(831) 763-8400\nBusiness Offices - Billing Inquiries:\n(831) 763-8030\nAfter Hours Patient Calls:\n(831) 763-8227\nLaboratory:\n(831) 763-8173\nMedi-Cal, Medi-Cruz, Central California Alliance for Health and self-pay clients are accepted.\nOPEN PAYMENTS DATABASE NOTICE\nOpen Payments database is a federal tool used to search payments made by drug and device companies to physicians and teaching hospitals. The federal Physician Payments Sunshine Act requires that detailed information about payment and other payments of value worth over ten dollars ($10) from manufacturers of drugs, medical devices, and biologics to physicians and teaching hospitals be made available to the public. Please note that this notice is required by California Assembly Bill 1278, which went into effect on January 1, 2023.\nAccess Open Payments Database\nTOP",
+  "contacts": {
+    "phones": [
+      "(831) 763-8030",
+      "(831) 763-8173",
+      "(831) 763-8227",
+      "(831) 763-8400"
+    ],
+    "emails": []
+  },
+  "pdf_links": [
+    "https://www.santacruzhealth.org/Portals/7/Pdfs/NPPCombinedENG.pdf"
+  ],
+  "source_depth": 2,
+  "scraper_version": "phase2_enhanced"
+}

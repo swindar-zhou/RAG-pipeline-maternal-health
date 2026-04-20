@@ -1,0 +1,28 @@
+{
+  "county": "Fresno",
+  "page_url": "https://www.fresnocountyca.gov/Departments/Public-Health/Public-Health-Nursing/Maternal-Child-and-Adolescent-Health-MCAH",
+  "link_text": "MCAH landing page",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T12:59:44.100001",
+  "registry_signals": [
+    "mcah program",
+    "mcah",
+    "family planning",
+    "medicaid",
+    "title v"
+  ],
+  "text": "Maternal Child and Adolescent Health (MCAH) - County of Fresno\nSkip to main content\nopens in new tab or window\nMaternal Child and Adolescent Health (MCAH)\nOur Location:\n1221 Fulton Street, Fresno CA 93721\nMailing:\nPO Box 11867, Fresno CA 93775-1867\nPhone:\n(559) 600-3330\nFax:\n(559) 455-4705\nHours:\nMonday - Friday, 8:00am - 5:00pm\nMCAH promotes healthy living for mothers and their families through programs for reproductive health, family planning, pregnancy, birth defects, infants, children, teens, and human stem cell research. Funding is provided through Title V, XIX (Medicaid), and State General Fund.\nFor more information on MCAH programs, visit\ncdph.ca.gov\n.\nUseful Links:\nPreterm Birth Initiative\nMarch of Dimes\nPublic Health Nursing Services Referral\n(PDF, 122KB)\nMCAH Resource Guide\nLanding page for MCAH Resource categories.\nHealth Observances\nHealth Observances\nFresno County Breastfeeding Resource Directory\nBreastfeeding Resource Directory\nBack to top",
+  "contacts": {
+    "phones": [
+      "(559) 455-4705",
+      "(559) 600-3330"
+    ],
+    "emails": []
+  },
+  "pdf_links": [
+    "https://www.fresnocountyca.gov/files/assets/county/v/2/public-health/public-health-nursing/update-phn-referral-9.3.2025.pdf"
+  ],
+  "source_depth": 0,
+  "scraper_version": "phase2_enhanced"
+}

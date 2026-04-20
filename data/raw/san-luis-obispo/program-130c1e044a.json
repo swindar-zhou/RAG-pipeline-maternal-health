@@ -1,0 +1,26 @@
+{
+  "county": "San Luis Obispo",
+  "page_url": "https://www.slocounty.ca.gov/departments/health-agency/public-health/all-public-health-services/health-promotion/women,-infants-and-children-(wic)/california-wic-app",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:06:25.702546",
+  "registry_signals": [
+    "wic benefits",
+    "wic",
+    "women, infants and children"
+  ],
+  "text": "California WIC App - County of San Luis Obispo\nSkip to main content\nHealth Agency | Public Health\nCounty of San Luis Obispo\nHome\n»\nDepartments\n»\nHealth Agency\n»\nPublic Health\n»\nAll Public Health Services\n»\nHealth Promotion\n»\nWomen, Infants and Children (WIC)\n»\nCalifornia WIC App\nCalifornia WIC App\nTranslate this page\nMobile WIC Phone App. Check your balance, foods, and more from the convenience of your phone.\nDownload the FREE\nCalifornia WIC App\nfor\niPhone\nor\nAndroid\nphones\niPhone\nAndroid\nDownload the guide to set-up the WIC App:\nCalifornia WIC App Set-up Guide - iPhone:\nEnglish (PDF)\n|\nSpanish (PDF)\nCalifornia WIC App Set-up Guide - Android:\nEnglish (PDF)\n|\nSpanish (PDF)\nBefore you go shopping for your WIC foods, follow these steps:\nRegister your WIC Card in the California WIC App\nHave your phone and your WIC Card ready to shop\nStores accepting the California WIC Card\nYou can use the California WIC App to:\nScan food items to identify WIC authorized foods\nCheck your food balance and when your WIC benefits expire\nFind WIC approved grocery stores\nLook up the WIC Shopping Guide\nCheck on your next WIC appointment\nPlus much more!",
+  "contacts": {
+    "phones": [],
+    "emails": []
+  },
+  "pdf_links": [
+    "https://wicforyou.org/wp-content/uploads/2015/02/WIC-App-Guide-iPhone-English.pdf",
+    "https://wicparausted.org/wp-content/uploads/2015/02/WIC-App-Guide-iPhone-Spanish.pdf",
+    "https://wicforyou.org/wp-content/uploads/2015/02/WIC-App-Guide-Android-English.pdf",
+    "https://wicforyou.org/wp-content/uploads/2015/02/WIC-App-Guide-Android-Spanish.pdf"
+  ],
+  "source_depth": 2,
+  "scraper_version": "phase2_enhanced"
+}

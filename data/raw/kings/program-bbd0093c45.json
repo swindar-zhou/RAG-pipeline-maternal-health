@@ -1,0 +1,24 @@
+{
+  "county": "Kings",
+  "page_url": "https://www.kcdph.com/wic-application",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:01:49.268701",
+  "registry_signals": [
+    "medi-cal",
+    "wic office",
+    "wic"
+  ],
+  "text": "WIC Application | KCDPH\ntop of page\nWIC - Women, Infants & Children\nDo you live in Kings County? WIC is here to help!\nBefore applying, be sure to:\nCheck if you qualify:\nhttps://myfamily.wic.ca.gov/Home/AmIEligible\nFind the closest WIC office near you:\nhttps://myfamily.wic.ca.gov/Home/WICOfficeGrocer#wicLocations\n​\nRemember, if you have active Medi-Cal, CalFresh (SNAP), or CalWorks, you are qualified for WIC. To apply for Medi-Cal, click here.\nhttps://benefitscal.com/ApplyForBenefits/begin/ABOVR\nMilitary families are able to apply with their LES or W2 along with proof of ID and residency. To learn more, click here.\nhttps://myfamily.wic.ca.gov/Home/MilitaryFamilies#qualify\nSign up for Kings County WIC\nKings County WIC provides healthy foods, nutrition education, breastfeeding support, health care referrals and community resources. Enter your information below and someone will call you to complete your enrollment. To check the status of your application or if you have any questions, call us at 559-582-0180.\n​\nParent/Guardian Information\nFirst Name\nLast Name\n(Your) Date of Birth\nDo you currently have Medi-Cal?\nChoose an option\nMedi-Cal #\nAre you currently pregnant?\nChoose an option\nDo you have children under the age of 5?\nChoose an option\nIs your child under the age of 1?\nChoose an option\nAre you breastfeeding?\nChoose an option\nChild's First Name\nChild's Last Name\nDoes your child currently have Medi-Cal?\nChoose an option\nMedi-Cal #\n(Child's) Date of Birth\nHousehold Information\nHousehold Size (Anyone who lives at your address that also shares expenses with you)\nWhat is your current housing situation?\nChoose an option\nAre you a migrant worker?\nChoose an option\nStreet Address\nStreet Address Line 2\nCity\nState\nPostal / Zip code\nContact Information\nPhone Number\nWhat is your preferred language?\nChoose an option\nPlease list your preferred language\nWhat is your preferred method of contact?\n*\nRequired\nText\nCall\nPlease select your preferred WIC office\nChoose a location\nHave you ever been a WIC participant before?\nChoose a location\nHow did you hear about WIC?\nChoose a location\nSubmit\nThank you for your submission. You should be expecting a call from us in the next few days to finalize your first appointment. For questions, please call (559) 582-0180.\nbottom of page",
+  "contacts": {
+    "phones": [
+      "(559) 582-0180",
+      "559-582-0180"
+    ],
+    "emails": []
+  },
+  "pdf_links": [],
+  "source_depth": 2,
+  "scraper_version": "phase2_enhanced"
+}

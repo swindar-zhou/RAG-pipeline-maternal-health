@@ -1,0 +1,35 @@
+{
+  "county": "Ventura",
+  "page_url": "https://hca.venturacounty.gov/public-health/wic/provider-resources/",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:03:37.276631",
+  "registry_signals": [
+    "wic program",
+    "pat",
+    "health center",
+    "community health center",
+    "wic",
+    "aim"
+  ],
+  "text": "Provider Resources – Ventura County Public Health\nSkip to content\nWIC: Home\nAbout WIC\nFind local WIC agency near you\nProvider Resources\nBreastfeeding Resources\nAdditional Resources\nProvider Resources\nContract Formula Change\nAs of August 1, 2025, the WIC standard contract formulas have changed.\nInformation for providers can be found in the\nletter to Health Care Providers\nfrom CDPH.\nInformation for families on the new WIC contract infant formulas can be found on\nMyFamily.WIC.ca.gov\n.\nWorking with WIC\nHow WIC helps\nMedical Documentation\nBlood Work Requirement\nWIC Eligible Formulas\nWIC Medical Formula and Nutritionals Request Form\nPediatric Referral Form\nPregnant Woman Referral Form\nPostpartum Referral Form\n9 Steps to a Breastfeeding Friendly Clinic: Guidelines for Community Health Centers & Outpatient Care Settings\nWIC Breastfeeding Services\nAbout Regional Breastfeeding Liaison (RBL) Program\nPartnering with RBL Program\nWIC Breastfeeding Support Services and Resources for Clinicians\nVentura County WIC Program Breastfeeding Services Flyer\nVentura County WIC Breastfeeding Support\nABM Publishes Protocols To Facilitate Best Practices in Breastfeeding Medicine. Click the logo above to learn more.\nClick the following image to learn more:\nContact Information\nLaura Flores\n, RD, CLEC\nProgram Director\nSelect a Department\nTranslation Disclaimer\nThe hca.venturacounty.gov website has been translated for your convenience using translation software powered by Google Translate. Reasonable efforts have been made to provide an accurate translation, however, no automated translation is perfect nor is it intended to replace human translators. Translations are provided as a service to users of the hca.venturacounty.gov website, and are provided “as is.” No warranty of any kind, either expressed or implied, is made as to the accuracy, reliability, or correctness of any translations made from English into any other language. Some content (such as images, videos, Flash, etc.) may not be accurately translated due to the limitations of the translation software.\nThe official text is the English version of the website. Any discrepancies or differences created in the translation are not binding and have no legal effect for compliance or enforcement purposes. If any questions arise related to the accuracy of the information contained in the translated website, please refer to the English version of the website which is the official version.\n[language-switcher]",
+  "contacts": {
+    "phones": [],
+    "emails": []
+  },
+  "pdf_links": [
+    "https://s47353.pcdn.co/public-health/wp-content/uploads/sites/3/2026/03/PH-Office-of-the-Director_03.18.2026.pdf",
+    "https://s47353.pcdn.co/public-health/wp-content/uploads/sites/3/2024/05/EMS-QI-Plan-Final_Fall2023.cleaned.pdf",
+    "https://s47353.pcdn.co/public-health/wp-content/uploads/sites/3/2026/04/Ventura-County-Public-Health-Internship-Program_4-2025_rev2.pdf",
+    "https://s47353.pcdn.co/public-health/wp-content/uploads/sites/3/2025/05/VCPH-Nursing-Student-Preceptor-Program.pdf",
+    "https://www.cdph.ca.gov/Programs/CFH/DWICSN/CDPH%20Document%20Library/HealthCareProviders/HCP-Contract-Formula-Letter-2025.pdf",
+    "https://www.cdph.ca.gov/CDPH%20Document%20Library/ControlledForms/cdph247.pdf",
+    "https://www.cdph.ca.gov/CDPH%20Document%20Library/ControlledForms/cdph247a.PDF",
+    "https://www.cdph.ca.gov/CDPH%20Document%20Library/ControlledForms/cdph247c.pdf",
+    "https://www.cdph.ca.gov/CDPH%20Document%20Library/ControlledForms/cdph247b.pdf",
+    "https://s47353.pcdn.co/public-health/wp-content/uploads/sites/3/2024/04/VC_WIC_Breastfeeding_Services_Card.pdf"
+  ],
+  "source_depth": 1,
+  "scraper_version": "phase2_enhanced"
+}

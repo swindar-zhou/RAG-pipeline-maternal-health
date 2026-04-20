@@ -1,0 +1,31 @@
+{
+  "county": "Solano",
+  "page_url": "https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health/california-childrens-services",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T12:59:31.029651",
+  "registry_signals": [
+    "pat"
+  ],
+  "text": "California Children's Services | Solano County, California\nSkip to main content\nHome\nGovernment\nHealth and Social Services (H&SS)\nSolano Public Health\nMaternal, Child and Adolescent Health\nCalifornia Children's Services\nShare:\nMaternal, Child and Adolescent Health\nCalifornia Children's Services\nCalifornia Children's Services (CCS)\n275 Beck Ave, MS 5-175\nFairfield, CA 94533\nEmail:\nCCS@solanocounty.gov\nPhone:\n707-784-8650\nToll Free:\n1-800-826-3452\nFax:\n707-421-7484\nAbout the Program\nCalifornia Children’s Services (CCS) is a countywide program for children birth to 21 years of age with certain physical limitations and chronic health conditions or diseases.\nCCS can authorize and pay for specific medical services and equipment provided by CCS-approved specialists with prior authorization. In addition, CCS offers a medical therapy program that provides occupational and physical therapy services to medically eligible children.\nCCS will not meet all your child’s health needs, only those related to the CCS eligible condition. CCS is not a health insurance program.\nEligibility Requirements\nCounty Resident Requirement\nAge Requirement\nFinancial Conditions\nMedically Eligible Condition\nClient Application Process\nA CCS referral form can be completed by anyone. However, a CCS application for services must be completed by the child’s parent or legal guardians.\nReferrals and applications are accepted by phone, mail, or fax.\nPlease be sure to submit both the referral and the application form.\nApplication to Determine CCS Program Eligibility\n(\nSolicitude Para Determinar la Elegibilidad del Programa CCS)\nReferral Form\nGrievance, Appeal, and State Hearing Factsheets\nEnglish and Spanish factsheets can be found below:\nCCS English Factsheet.pdf\nCCS Spanish Factsheet.pdf\nDepartment of Health Care Services – Family Resources\nVisit the\nDepartment of Health Care Services\nfor additional information on family resources.",
+  "contacts": {
+    "phones": [
+      "707-421-7484",
+      "707-784-8650",
+      "800-826-3452"
+    ],
+    "emails": [
+      "CCS@solanocounty.gov"
+    ]
+  },
+  "pdf_links": [
+    "https://www.dhcs.ca.gov/formsandpubs/forms/Documents/DHCS-4480.pdf",
+    "https://www.dhcs.ca.gov/formsandpubs/forms/Documents/DHCS-4480-SP-2023.pdf",
+    "https://www.dhcs.ca.gov/formsandpubs/forms/Forms/ChildMedSvcForms/dhcs4488.pdf",
+    "https://www.solanocounty.gov/archival-document?document=https://content.solanocounty.gov/sites/default/files/2025-05/CCS%20English%20Factsheet.pdf&ad=aHR0cHM6Ly9jb250ZW50LnNvbGFub2NvdW50eS5nb3Yvc2l0ZXMvZGVmYXVsdC9maWxlcy8yMDI1LTA1L0NDUyUyMEVuZ2xpc2glMjBGYWN0c2hlZXQucGRm&title=CCS%20English%20Factsheet.pdf",
+    "https://www.solanocounty.gov/archival-document?document=https://content.solanocounty.gov/sites/default/files/2025-05/CCS%20Spanish%20Factsheet.pdf&ad=aHR0cHM6Ly9jb250ZW50LnNvbGFub2NvdW50eS5nb3Yvc2l0ZXMvZGVmYXVsdC9maWxlcy8yMDI1LTA1L0NDUyUyMFNwYW5pc2glMjBGYWN0c2hlZXQucGRm&title=CCS%20Spanish%20Factsheet.pdf"
+  ],
+  "source_depth": 1,
+  "scraper_version": "phase2_enhanced"
+}

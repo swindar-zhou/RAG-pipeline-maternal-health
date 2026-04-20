@@ -1,0 +1,25 @@
+{
+  "county": "Orange",
+  "page_url": "https://www.ochealthinfo.com/services-programs/pregnancy-and-parenting/women-infants-children-wic/food-benefits",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:02:28.357525",
+  "registry_signals": [
+    "nutrition program",
+    "wic"
+  ],
+  "text": "Food Benefits | Orange County California - Health Care Agency\nPage content\nContent block block-countyoc-pagetitle\nFood Benefits\nContent block block-countyoc-content\nContent block block-505984445-1776445347\nBody\nEach family will receive one WIC Card for all of their family's food benefits. The WIC Card provides a more convenient way for families to shop for WIC foods and provides flexibility to get just what they need at each shopping trip. In addition, families will not lose their WIC food benefits if their WIC Card is lost, stolen or damaged.\nSee what foods you can buy:\nYour WIC Foods (\nEnglish\n,\nEspañol\n)\nImage\nYour_WIC_Foods.jpg\nFarmers' Market Nutrition Program (FMNP)\nThis program helps families buy farm fresh fruits, vegetables, and fresh-cut herbs. WIC offers a limited number of FMNP benefits each year which are:\n-\nLimited to $30 total for eligible households.\n-\nUsed with WIC authorized farmers at WIC authorized farmers’ markets only.\nAuthorized WIC Farmers' Market Locations\nContent block block-sociallinksblock\nShare This\nShare this page to Facebook\nShare this page to Twitter\nShare this page to Linkedin\nCopy this page as a Link",
+  "contacts": {
+    "phones": [
+      "984445-1776"
+    ],
+    "emails": []
+  },
+  "pdf_links": [
+    "https://www.cdph.ca.gov/Programs/CFH/DWICSN/CDPH%20Document%20Library/WICCard/YourWICFoods-EN.pdf",
+    "https://www.cdph.ca.gov/Programs/CFH/DWICSN/CDPH%20Document%20Library/WICCard/YourWICFoods-SP.pdf"
+  ],
+  "source_depth": 2,
+  "scraper_version": "phase2_enhanced"
+}

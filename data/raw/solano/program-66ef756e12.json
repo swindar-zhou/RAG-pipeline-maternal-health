@@ -1,0 +1,24 @@
+{
+  "county": "Solano",
+  "page_url": "https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health/child-fatality-review-response-program",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T12:59:31.204099",
+  "registry_signals": [
+    "fimr",
+    "mcah",
+    "pat",
+    "infant mortality review"
+  ],
+  "text": "Child Fatality Review & Response Program | Solano County, California\nSkip to main content\nHome\nGovernment\nHealth and Social Services (H&SS)\nSolano Public Health\nMaternal, Child and Adolescent Health\nChild Fatality Review & Response Program\nShare:\nMaternal, Child and Adolescent Health\nChild Fatality Review & Response Program\nThe Child Fatality Review and Response Program (CFRRP) represents three programs which address fetal, infant, and child death in Solano County: Fetal Infant Mortality Review (FIMR), Sudden Infant Death Syndrome (SIDS), and Child Death Review (CDR).\nObjectives of CFRRP:\nExamine significant socio-economic, safety and health-system factors that are associated with fetal, infant, and child mortality\nRecommend interventions and policies to improve the service system and community resources\nParticipate in the implementation of community-based interventions and policies\nAssess the progress of the interventions\nFetal Infant Mortality Review (FIMR) Program\nSudden Infant Death Syndrome (SIDS) Program\nChild Death Review Program\nContact Information\nIf you would like to join the FIMR, SIDS, and/or CDR teams, or have questions, please contact the MCAH Bureau at 707-784-8600.",
+  "contacts": {
+    "phones": [
+      "707-784-8600"
+    ],
+    "emails": []
+  },
+  "pdf_links": [],
+  "source_depth": 1,
+  "scraper_version": "phase2_enhanced"
+}

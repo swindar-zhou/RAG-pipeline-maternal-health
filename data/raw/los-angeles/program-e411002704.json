@@ -1,0 +1,29 @@
+{
+  "county": "Los Angeles",
+  "page_url": "http://publichealth.lacounty.gov/mch/cpsp/CPSPwebpages/cpsp_resourcerev.htm",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:02:07.525421",
+  "registry_signals": [
+    "pat",
+    "perinatal services"
+  ],
+  "text": "LA County Public Health - Maternal, Child, & Adolescent Health\nCPSP Resources\nPlease explore these resources put together by the\nLA County CPSP\nTeam to support pregnant and postpartum individuals who are being serviced by CPSP providers. This page brings together key guidance, handouts, and practical tools across CPSP service areas—including General CPSP resources, Health Education, Nutrition, Psychosocial support, and Breast/Chestfeeding—to help teams deliver patient-centered education, counseling, screening, referrals, and ongoing client support.\nResources are organized by topic for easy use in clinical care, coordination, and referrals. This is not an exhaustive list and may be updated over time. If you experience access issues (such as broken links or download errors), please report them using the\ncontact section below\n.\nGeneral CPSP Resources\nThis section includes core CPSP program resources that support service\n\t\t\t\t\t\t\t\t\timplementation, compliance, and high-quality care delivery across the perinatal\n\t\t\t\t\t\t\t\t\tperiod.\nCPSP Provider Handbook:\nThe\nComprehensive Perinatal Services Program (CPS) Provider\n\t\t\t\t\t\t\t\t\t\t\t\tHandbook\nis designed to help a CPSP provider with the\n\t\t\t\t\t\t\t\t\t\t\tinformation and tools needed to implement the program at their site.\nSteps to Take Guidelines:\nThe purpose of these guidelines is to provide CPSP staff members with the\n\t\t\t\t\t\t\t\t\t\t\tinformation they need to effectively assess situations, provide\n\t\t\t\t\t\t\t\t\t\t\tinterventions, and refer appropriately.\nSteps to Take (Reproducible Handout):\nPrintable client education handouts that support CPSP interventions and are\n\t\t\t\t\t\t\t\t\t\t\tavailable in\nEnglish and Spanish\n.\nTitle 22 CPSP Regulations:\nThe official state regulations that define CPSP program standards,\n\t\t\t\t\t\t\t\t\t\t\trequirements, and allowable services.\nHealth Education\nThis section features health education resources that support counseling,\n\t\t\t\t\t\t\t\t\tprevention, and informed decision-making for pregnant and postpartum individuals\n\t\t\t\t\t\t\t\t\tacross a range of perinatal health topics.\nView:\n5\n10\n15\n20\nFirst\nPrev\nNext\nLast\nNutrition\nThis section includes nutrition resources to support counseling, education, and\n\t\t\t\t\t\t\t\t\treferrals related to healthy eating, weight management, food access, and\n\t\t\t\t\t\t\t\t\tnutrition-related conditions during pregnancy and the postpartum period.\nView:\n5\n10\n15\n20\nFirst\nPrev\nNext\nLast\nPsychosocial\nThis section includes psychosocial resources to support screening, counseling,\n\t\t\t\t\t\t\t\t\tcrisis response, and referrals related to safety, mental health, and emotional\n\t\t\t\t\t\t\t\t\twell-being during pregnancy and the postpartum period.\nView:\n5\n10\n15\n20\nFirst\nPrev\nNext\nLast\nThe following are worksheets designed to facilitate seamless communication, enhance\n\t\t\t\t\t\t\t\t\tthe quality of care, and support positive outcomes for both providers and patients\n\t\t\t\t\t\t\t\t\tin the perinatal period.\nCognitive Behavioral Strategies for Mothers:\nThis\nCBT worksheet\nis designed to support new mothers\n\t\t\t\t\t\t\t\t\t\t\t\tin building resilience, enhancing emotional well-being, and navigating\n\t\t\t\t\t\t\t\t\t\t\t\tthe joys and challenges of motherhood with confidence.\nTips for Anxiety & Stress:\nThis resource helps birthing parents\nidentify, understand, and\n\t\t\t\t\t\t\t\t\t\t\t\t\tmanage common stressors and anxieties\nassociated with\n\t\t\t\t\t\t\t\t\t\t\t\tcaring for a newborn.\nTips for Managing Sleep:\nThis worksheet provides\npractical strategies to support rest and\n\t\t\t\t\t\t\t\t\t\t\t\t\tmaintain well-being\nduring the postpartum period.\nBreast / Chestfeeding\nThis section includes breast/chestfeeding resources that support lactation\n\t\t\t\t\t\t\t\t\teducation, peer and community support, and referrals for pregnant and postpartum\n\t\t\t\t\t\t\t\t\tindividuals.\nView:\n5\n10\n15\n20\nFirst\nPrev\nNext\nLast\nReport Problems\nIf you experience any issues while viewing this page (broken links, files not\n\t\t\t\t\t\t\t\t\t\tdownloading), please contact us.\ncpsp@ph.lacounty.gov\nLeave this field empty\n✓\n✗\n✓\n✗\n✓\n✗\nSend Message",
+  "contacts": {
+    "phones": [],
+    "emails": [
+      "cpsp@ph.lacounty.gov"
+    ]
+  },
+  "pdf_links": [
+    "http://publichealth.lacounty.gov/mch/docs/cpsp/resources/general/cpsp-provider-handbook.pdf",
+    "http://publichealth.lacounty.gov/mch/docs/cpsp/resources/general/steps-to-take-guidelines.pdf",
+    "http://publichealth.lacounty.gov/mch/docs/cpsp/resources/general/cpsp-title22-cpsp-regulations.pdf",
+    "http://publichealth.lacounty.gov/mch/docs/cpsp/resources/psychosocial/cognitive-behavioral-strategies-for-mothers.pdf",
+    "http://publichealth.lacounty.gov/mch/docs/cpsp/resources/psychosocial/tips-for-anxiety-stress.pdf",
+    "http://publichealth.lacounty.gov/mch/docs/cpsp/resources/psychosocial/tips-for-managing-sleep.pdf"
+  ],
+  "source_depth": 2,
+  "scraper_version": "phase2_enhanced"
+}

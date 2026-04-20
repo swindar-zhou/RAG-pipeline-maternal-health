@@ -1,0 +1,23 @@
+{
+  "county": "Los Angeles",
+  "page_url": "http://publichealth.lacounty.gov/mch/cpsp/CPSPwebpages/cpsp_requiredservices.htm",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:02:07.273154",
+  "registry_signals": [
+    "pat"
+  ],
+  "text": "LA County Public Health - Maternal, Child, & Adolescent Health\nSkip to main content\nCPSP Provider Information and Resources\nCPSP Scope of Services\nWhat does CPSP's scope of services include?\n(Click below to learn more about each\n\t\t\t\t\t\t\t\t\tservice.)\nClient Orientation\nInitial Assessments\nIndividualized Care Plan (ICP)\nInterventions\nReassessments\nPostpartum Assessment and Care Plan\nClient Orientation\nCPSP practitioners provide an initial orientation and continue to orient the client to\n\t\t\t\t\t\t\t\tneeded\nservices\n,\nprocedures\n, and\ntreatments\n\t\t\t\t\t\t\t\t\tthroughout her pregnancy\n. Patient also signs to acknowledge her right and\n\t\t\t\t\t\t\t\tresponsibilities.\nClient Orientation\n\t\t\t\t\t\t\t\t\tDocument\nInitial Assessments\nThe initial\nobstetric, nutrition, health education, and psychosocial\n\t\t\t\t\t\t\t\t\tassessments\nare the first steps taken to determine a client's\nindividual strengths, risks, and needs\nin relation to her health and\n\t\t\t\t\t\t\t\twell-being during pregnancy. Ideally, all four assessments are completed within\nfour weeks of entering care\n.\nInitial Assessment Document\nInterventions\nAppropriate\nobstetric, nutrition, health education, and psychosocial\n\t\t\t\t\t\t\t\t\tinterventions\nduring pregnancy enable a woman to increase control over and\n\t\t\t\t\t\t\t\timprove her health and the health of her baby. Interventions can include\nservices, classes, counseling, referrals, and instructions\nas\n\t\t\t\t\t\t\t\tappropriate to the needs and risks identified on the ICP.\nIndividualized Care Plan (ICP)\nThe ICP identifies and documents the client's strengths and a prioritized list of risk\n\t\t\t\t\t\t\t\tconditions/problems, sets goals for interventions, and identifies appropriate referrals.\nReassessments\nReassessments are offered at least once each trimester and postpartum and serve as an\n\t\t\t\t\t\t\t\topportunity to identify other risks and check the client's progress on those issues the\n\t\t\t\t\t\t\t\twoman wants to change.\nPostpartum Assessment and Care Plan\nThe postpartum period is the time to assess the client's health, strengths, and needs in\n\t\t\t\t\t\t\t\trelation to infant care skills as well as any needs of the baby. A client may receive\n\t\t\t\t\t\t\t\tnutrition, health education, and psychosocial support services anytime throughout the\n365-day postpartum eligibility period\n.\n\t\t\t\t\t\t\t\tHowever, according to the Los Angeles County CPSP Protocols, the\npostpartum assessment should be completed within 60 days of\n\t\t\t\t\t\t\t\t\tdelivery\n.\nPostpartum\n\t\t\t\t\t\t\t\t\tAssessment Document",
+  "contacts": {
+    "phones": [],
+    "emails": []
+  },
+  "pdf_links": [
+    "http://publichealth.lacounty.gov/mch/docs/client-orientation-checklist.pdf",
+    "http://publichealth.lacounty.gov/mch/docs/prenatal-assessment-icp-lac-cpsp.pdf",
+    "http://publichealth.lacounty.gov/mch/docs/postpartum-assessment-icp-tool-lac-cpsp.pdf"
+  ],
+  "source_depth": 2,
+  "scraper_version": "phase2_enhanced"
+}

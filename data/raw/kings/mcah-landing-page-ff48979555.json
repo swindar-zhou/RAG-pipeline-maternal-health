@@ -1,0 +1,31 @@
+{
+  "county": "Kings",
+  "page_url": "https://www.kcdph.com/nursing",
+  "link_text": "MCAH landing page",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:01:48.796298",
+  "registry_signals": [
+    "mcah program",
+    "home visits",
+    "medi-cal",
+    "mcah",
+    "pat",
+    "perinatal services"
+  ],
+  "text": "Nursing | KCDPH\ntop of page\nQuick Links & Documents\nPrescription Drug Disposal Guidelines\nReferral Agencies Brochure\nPfizer RxPathways\nPediatric Providers List\nChildren's Presumptive Eligibility\nNursing\nThe Division of Nursing for the Kings County Department of Public Health, is staffed by public health nurses, community health nurses, community medical service workers, community health worker, community health aid, physical therapist, health educator, and office assistants that deliver an array of health and wellness services, health education and outreach to individuals, families, and communities throughout Kings County. These services are delivered on the phone, and in homes, clinics, community centers, schools, and other locations.\nStarting May 2, 2022, the Department of Public Health will no longer accept referrals for nurse home visits. If you have a health need, contact your medical provider or your managed care provider.\nCalifornia Children's Services (CCS)\nHealth Care Program for Children in Foster Care (HCPCFC)\nLocal Oral Health Program (LOHP)\n​​\n​Maternal, Child, and Adolescent Health (MCAH)\n​\n​\nThe MCAH program maximizes health through education and encouraging positive health behaviors resulting in individual responsibility in the health process coupled with equal access and awareness of community resources, prevention services, and primary health services leading to a sense of self-worth and responsibility to self, culture, and society.\nBreastfeeding Support\nIf you have questions about the following programs, please contact our toll-free number:​\n1-800-649-5399\nPreconception Health\nSudden Infant Death Syndrome (SIDS)\nComprehensive Perinatal Services Program (CPSP)\nChildhood Lead Poisoning Prevention\nTo locate a pediatric provider that can assist with lead testing, please refer to the\nPediatric Providers List\n.\nContact\nMaternal, Child, and Adolescent Health (MCAH)\n1-800-649-5399\nKings County Medi-Cal Managed Care Plans\nAnthem Blue Cross\n1-800-407-4627\nTTY 711\nCalViva HealthNet\n1-888-893-1569\nTTY 711\nKaiser Permanente\n1-800-557-4515\nTTY 711\nFor more local resources, visit\nKings County 211\n. Call 211 or text your zip code to 898211.\nbottom of page",
+  "contacts": {
+    "phones": [
+      "800-407-4627",
+      "800-557-4515",
+      "800-649-5399",
+      "888-893-1569"
+    ],
+    "emails": []
+  },
+  "pdf_links": [
+    "https://www.kcdph.com/_files/ugd/7bd2e7_e3c87770efbe49a0ac92bf426f44d843.pdf"
+  ],
+  "source_depth": 0,
+  "scraper_version": "phase2_enhanced"
+}

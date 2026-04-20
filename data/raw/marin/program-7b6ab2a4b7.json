@@ -1,0 +1,30 @@
+{
+  "county": "Marin",
+  "page_url": "https://www.marinhhs.org/printable-wic-forms",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T12:58:04.954029",
+  "registry_signals": [
+    "wic clinic",
+    "wic"
+  ],
+  "text": "Printable WIC Forms | Marin Health and Human Services\nSkip to main content\nIndex of Printable WIC Forms\nWhat To Bring To Your First Appointment\n(read first)\nNutrition Questionnaires\n- Please fill out the day before your WIC appointment\nPregnancy Nutrition Questions\n(pdf) (if you are pregnant)\nBreastfeeding/Postpartum Woman Nutrition Questions\n(pdf) (for nursing mother or postpartum woman)\nBaby Nutrition Question\ns (Birth-3 months) (pdf) (for each infant from birth to age 5 months)\nBaby/Child Nutrition Questions\n(4-11 months) (pdf) (for each infant and child between 6 and 23 months)\nChild Nutrition Questions\n(1-4 years) (pdf) (for each child between the ages of 2 and 5)\nMedical Referrals\n- Filled out by your health care provider. Please keep your appointment even if you do not have the forms filled out.\nWIC Referral for Pregnant Woman\n(pdf)\nWIC Referral for Postpartum / Breastfeeding Woman\n(pdf) (for nursing mother or postpartum woman)\nDownload the WIC app today! The California WIC App will give WIC participants the opportunity to view upcoming appointments, view food benefits that have been issued to them in the clinic, scan UPCs while shopping at the store to see if the UPC is a WIC Approved item or not, and provide information on locations of WIC Stores and WIC Clinics across the State of California. The goal of the California WIC App is to give participants all the information they need at their fingertips to make their shopping experience fun and easy\nDocuments\nWhat to Bring for Your WIC Appointment",
+  "contacts": {
+    "phones": [],
+    "emails": []
+  },
+  "pdf_links": [
+    "https://www.marinhhs.org/sites/default/files/files/servicepages/2013_08/wic-whattobringforappointment_english.pdf",
+    "https://www.cdph.ca.gov/programs/wicworks/Documents/OSPOrderForms/WIC-Forms-NutritionQuestionnaire-Pregnancy-EnglishSpanish.pdf",
+    "https://www.cdph.ca.gov/programs/wicworks/Documents/OSPOrderForms/WIC-Forms-NutritionQuestionnaire-Postpartum-EnglishSpanish.pdf",
+    "https://www.cdph.ca.gov/programs/wicworks/Documents/OSPOrderForms/WIC-Forms-NutritionQuestionnaire-B-3Months.pdf",
+    "https://www.cdph.ca.gov/programs/wicworks/Documents/OSPOrderForms/WIC-Forms-NutritionQuestionnaire-4-11Months.pdf",
+    "https://www.cdph.ca.gov/programs/wicworks/Documents/OSPOrderForms/WIC-Forms-NutritionQuestionnaire-1-4Years.pdf",
+    "https://www.cdph.ca.gov/programs/wicworks/Documents/WIC-Forms-CDPH-PM247-Pregnant.pdf",
+    "https://www.cdph.ca.gov/programs/wicworks/Documents/WIC-Forms-CDPH-PM247-PostpartumBF.pdf",
+    "https://www.marinhhs.org/sites/default/files/files/servicepages/2014_03/wic_what_to_bring_appointment_reminder_slip.pdf"
+  ],
+  "source_depth": 2,
+  "scraper_version": "phase2_enhanced"
+}

@@ -1,0 +1,19 @@
+{
+  "county": "Los Angeles",
+  "page_url": "http://publichealth.lacounty.gov/mch/cpsp/CPSPwebpages/cpspforms_rev.htm",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:02:07.383179",
+  "registry_signals": [
+    "perinatal services"
+  ],
+  "text": "LA County Public Health - Maternal, Child, & Adolescent Health\nSkip to main content\nComprehensive Perinatal Services Program Resources\nComprehensive Perinatal Services\nProgram Resources\nBrowse and download CPSP forms and protocols including content on health education, nutrition, and\n psychosocial.\nSort:\nDefault\nDefault\nTitle (A-Z)\nType\nDefault\nTitle (A-Z)\nType",
+  "contacts": {
+    "phones": [],
+    "emails": []
+  },
+  "pdf_links": [],
+  "source_depth": 2,
+  "scraper_version": "phase2_enhanced"
+}

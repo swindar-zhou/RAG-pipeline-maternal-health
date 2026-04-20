@@ -1,0 +1,34 @@
+{
+  "county": "Los Angeles",
+  "page_url": "http://publichealth.lacounty.gov/mch/MCAH%20Data%20Resources/MCAH%20Data%20Resources.htm",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:02:08.518049",
+  "registry_signals": [
+    "black infant health",
+    "mcah program",
+    "bih",
+    "nfp",
+    "fimr",
+    "mcah",
+    "health center",
+    "perinatal services",
+    "infant mortality review",
+    "aim"
+  ],
+  "text": "LA County Public Health - Maternal, Child, & Adolescent Health\nCounty Directory of Information & Services\n|\nPublic Alerts\n|\nPublic Information\n|\nCounty Contact Information\nMaternal, Child, & Adolescent Health\nDPH Home\n|\nProgram Home\n|\nAbout\n|\nFAQ\n|\nComment\n|\nContact\n|\nA-Z Index\nFont Size |\nA\nA\nA\nSearch\nService Locator\nSelect a Center\nAntelope Valley Public Health Center\nCentral Public Health Center\nCurtis-Tucker Public Health Center\nGlendale Public Health Center\nHollywood/Wilshire Public Health Center\nMartin Luther King, Jr. Center for Public Health\nMonrovia Public Health Center\nNorth Hollywood Public Health Center\nPacoima Public Health Center\nPomona Public Health Center\nRuth-Temple Public Health Center\nSimms/Mann Health and Wellness Center\nTorrance Public Health Center\nWhittier Public Health Center\nKnow Your Rights: Resouces for Immigrant Communities\nMCAH Programs\nAfrican American Infant & Maternal Mortality Prevention Initiative (AAIMM)\nAsthma Coalition of Los Angeles County\nBlack Infant Health (BIH)\nChild and Adolescent Health Program & Policy (CAHPP)\nChildhood Lead Poisoning Prevention Program (CLPPP)\nCOMMUNITY Health Outreach Initiatives (CHOI)\nComprehensive Perinatal Services Program (CPSP)\nFetal Infant Mortality Review\n(FIMR) Program\nHelp Me Grow (HMG) LA\nLos Angeles Health Overview of a Pregnancy Event (LA HOPE) Project\nLos Angeles Mommy and Baby\nProject (LAMB)\nLAMB Follow-Up Project\nMCAH Data \n\t\tResource Center\nNewborn Screening Program\nNurse-Family Partnership (NFP)\nPreconception Health Collaborative\nResearch, Evaluation & Planning\nSudden Infant Death Syndrome\n(SIDS) Program\nContact Information\nLos Angeles County\nDepartment of Public Health\nMaternal, Child, & Adolescent Health Programs\n600 S. Commonwealth Ave.,\n8th Floor\nLos Angeles, CA 90005\nTel: (213) 639-6400\nFax: (213) 639-1034\nMCAH Data Resource \n\t\t\t\t\t\tCenter\nThe purpose of the MCAH Data Resource Center project \n\t\t\t\t\t\t\tis to promote access to local MCAH data. The goal of \n\t\t\t\t\t\t\tthe Data Center is to provide a comprehensive online \n\t\t\t\t\t\t\tcatalog of local MCAH datasets, interactive tools, \n\t\t\t\t\t\t\tand other related data resources for public health \n\t\t\t\t\t\t\tprofessionals, researchers, practitioners, policy \n\t\t\t\t\t\t\tmakers and students.'\nHome  |\nMaternal, Child, & Adolescent Health\nPublic Health\nLA County\nCareers  |\nDPH Programs  |\nEmail: Webmaster  |\nNotice of Privacy Practices |\nEnglish\nSpanish\nWebsite Privacy Policy  |\nAccessibility  |\nDisclaimer |\nEmployee  |\nAdmin Use\nOutlook E-mail\nDPH Intranet (At Work)",
+  "contacts": {
+    "phones": [
+      "(213) 639-1034",
+      "(213) 639-6400"
+    ],
+    "emails": []
+  },
+  "pdf_links": [
+    "http://publichealth.lacounty.gov/docs/NoticeofPrivacy-ENG.pdf",
+    "http://publichealth.lacounty.gov/docs/NoticeofPrivacy-SPN.pdf"
+  ],
+  "source_depth": 2,
+  "scraper_version": "phase2_enhanced"
+}

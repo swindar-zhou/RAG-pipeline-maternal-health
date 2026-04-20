@@ -1,0 +1,23 @@
+{
+  "county": "Solano",
+  "page_url": "https://www.solanocounty.gov/government/health-social-services-hss/solano-public-health/maternal-child-adolescent-health/mcah-contacts",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T12:59:31.554499",
+  "registry_signals": [
+    "mcah",
+    "healthy families",
+    "healthy families america"
+  ],
+  "text": "MCAH Contacts | Solano County, California\nSkip to main content\nHome\nGovernment\nHealth and Social Services (H&SS)\nSolano Public Health\nMaternal, Child and Adolescent Health\nMCAH Contacts\nShare:\nMaternal, Child and Adolescent Health\nMCAH Contacts\nMaternal, Child and Adolescent Health Bureau\nPhone: (707) 784-8600\nHours: 8 am - 5 pm\n275 Beck Avenue, MS 5-240\nFairfield CA 94533\nBabyFirst Solano Healthy Families America\nPhone: (877) 680-BABY (2229)\nHours: 8 am - 5 pm\n275 Beck Avenue, MS 5-240\nFairfield CA 94533",
+  "contacts": {
+    "phones": [
+      "(707) 784-8600"
+    ],
+    "emails": []
+  },
+  "pdf_links": [],
+  "source_depth": 1,
+  "scraper_version": "phase2_enhanced"
+}

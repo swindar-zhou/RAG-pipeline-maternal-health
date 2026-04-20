@@ -1,0 +1,22 @@
+{
+  "county": "Riverside",
+  "page_url": "https://www.ruhealth.org/medical-center/patients-visitors/patient-family-services",
+  "link_text": "",
+  "program_name_guess": "",
+  "nav_path": "",
+  "scraped_at": "2026-04-17T13:02:54.080474",
+  "registry_signals": [
+    "medi-cal",
+    "pat"
+  ],
+  "text": "Patient & Family Services | Riverside University Health System\nSkip to main content\nPatient & Family Services\nOffice Hours: 8 am - 4:30pm, Monday through Friday\nPhone:\n(951) 486-4350\nThe Patient and Family Services staff is available to assist patients and their families with communication between themselves and health care providers, as well as providing access to essential resources. Social Work staff are available in the hospital after hours for urgent consultations or referrals with emergency room and inpatients.\nPatient and Family Services Department Staff Includes\nChild Life Specialist\nClinical Therapist\nMedical Social Workers\nChild Life Specialists help ensure age appropriate care and interventions are provided to young patients and young family members of hospital patients. Interventions focus on the emotional and developmental needs of children and families and strive to reduce stress associated with healthcare experiences.\nServices Include, But Are Not Limited To\nEducation\nTherapeutic/Medical Play\nProcedure Preparation/Accompaniment\nSupportive Intervention\nClinical Therapist/Medical Social Workers provide indicated clinical counseling and advocacy services to patients and family members admitted to the hospital and/or visiting outpatient clinics or the emergency department, while ensuring necessary collaboration with medical and hospital staff regarding a patients response to hospitalization and identified needs required for aftercare. Social work staff intervene wherever necessary based on comprehensive assessments, to increase a patient’s awareness and utilization of and access to personal, familial, community and/or social resources. Assistance and/or referrals provided may include, but are not limited to:\nMental Health counseling and resources, such as crisis intervention, alcohol or drug rehabilitation\nPlacement in alternative living situations due to changed or changing level of care needs at home, such as nursing homes, assisted living or acute rehabilitation\nCommunity Resources such as shelter or transportation referrals, In-Home Support Services (IHSS), Multi-Senior Services Program (MSSP)\nHome Care referrals, such as home health, hospice or home infusion\nDurable Medical Equipment needs like walkers, wheelchairs, home oxygen, hospital beds\nFinancial Assist​ance, such as assisting with and advocating for access to Medi-Cal, Medically Indigent Services Program (MISP), State Disability, Supplemental Security Income (SSI), Victims of Crime",
+  "contacts": {
+    "phones": [
+      "(951) 486-4350"
+    ],
+    "emails": []
+  },
+  "pdf_links": [],
+  "source_depth": 1,
+  "scraper_version": "phase2_enhanced"
+}
