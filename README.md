@@ -2,7 +2,7 @@
 
 # Closing the Maternal Health Information Gap: An Agentic RAG Pipeline for County-Level Program Discovery
 
-## Paper Link (https://drive.google.com/file/d/12XLt5OXnlSFes3R4pPXsMXbYCfNT3a_1/view?usp=sharing)
+## ([Paper Link](https://drive.google.com/file/d/12XLt5OXnlSFes3R4pPXsMXbYCfNT3a_1/view?usp=sharing))
 
 ## Background
 
